@@ -4,11 +4,12 @@ set -euo pipefail
 usage() {
     cat <<'EOF'
 Usage:
-  ./export_stl <name-without-extension> [--source path/to/model.scad] [-- <openscad args>]
+  ./export_stl <name-without-extension> [--source path/to/model.scad] [--output-dir path] [-- <openscad args>]
 
 Examples:
   ./export_stl iphoneHolder
   ./export_stl bolt --source models/2026-07-02_sample_screw_and_hole.scad -- -D show_plate=false
+  ./export_stl cube --source models/super_cubes/cube1.scad --output-dir /path/to/stl -- -D 'part="cube"'
 EOF
 }
 
@@ -32,6 +33,7 @@ fi
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source_scad="${script_dir}/models/${output_name}.scad"
+output_dir="${script_dir}/stl"
 openscad_args=()
 
 while [[ $# -gt 0 ]]; do
@@ -42,6 +44,14 @@ while [[ $# -gt 0 ]]; do
                 exit 2
             fi
             source_scad="$2"
+            shift 2
+            ;;
+        --output-dir)
+            if [[ $# -lt 2 ]]; then
+                echo "--output-dir requires a directory path" >&2
+                exit 2
+            fi
+            output_dir="$2"
             shift 2
             ;;
         --)
@@ -70,22 +80,27 @@ if [[ ! -f "${source_scad}" ]]; then
     exit 1
 fi
 
-if ! command -v openscad >/dev/null 2>&1; then
+openscad_bin="$(command -v openscad || true)"
+if [[ -z "${openscad_bin}" && -x /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD ]]; then
+    openscad_bin="/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
+fi
+
+if [[ -z "${openscad_bin}" ]]; then
     echo "openscad executable not found in PATH" >&2
     exit 1
 fi
 
-mkdir -p "${script_dir}/stl"
+mkdir -p "${output_dir}"
 today="$(date +%F)"
-output_stl="${script_dir}/stl/${today}_${output_name}.stl"
+output_stl="${output_dir%/}/${today}_${output_name}.stl"
 
 echo "Rendering ${source_scad}"
 echo "Exporting ${output_stl}"
 
 if [[ ${#openscad_args[@]} -gt 0 ]]; then
-    openscad "${openscad_args[@]}" -o "${output_stl}" "${source_scad}"
+    "${openscad_bin}" "${openscad_args[@]}" -o "${output_stl}" "${source_scad}"
 else
-    openscad -o "${output_stl}" "${source_scad}"
+    "${openscad_bin}" -o "${output_stl}" "${source_scad}"
 fi
 
 echo "Done: ${output_stl}"
