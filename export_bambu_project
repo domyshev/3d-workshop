@@ -1,0 +1,170 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+    cat <<'EOF'
+Usage:
+  ./export_bambu_project <project-name> [options]
+
+Options:
+  --source PATH       Assembly SCAD source (default: models/super_cubes/cube1.scad)
+  --output-dir PATH   Export directory (default: stl_exports)
+  --machine PATH      Full Bambu Studio machine profile JSON
+  --process PATH      Full Bambu Studio process profile JSON
+  --filament PATH     Full Bambu Studio filament profile JSON
+  --slice             Slice all plates before saving the 3MF project
+  -h, --help          Show this help
+
+The SCAD source must support part="cube" and part="threaded_cylinder".
+Slicing requires all three profile options.
+EOF
+}
+
+if [[ $# -lt 1 ]]; then
+    usage >&2
+    exit 2
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    usage
+    exit 0
+fi
+
+project_name="$1"
+shift
+
+if [[ "$project_name" == *.* || "$project_name" == */* ]]; then
+    echo "Use a project name without an extension or path: ${project_name}" >&2
+    exit 2
+fi
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source_scad="${script_dir}/models/super_cubes/cube1.scad"
+output_dir="${script_dir}/stl_exports"
+machine_profile=""
+process_profile=""
+filament_profile=""
+slice_project=false
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --source)
+            [[ $# -ge 2 ]] || { echo "--source requires a path" >&2; exit 2; }
+            source_scad="$2"
+            shift 2
+            ;;
+        --output-dir)
+            [[ $# -ge 2 ]] || { echo "--output-dir requires a path" >&2; exit 2; }
+            output_dir="$2"
+            shift 2
+            ;;
+        --machine)
+            [[ $# -ge 2 ]] || { echo "--machine requires a profile path" >&2; exit 2; }
+            machine_profile="$2"
+            shift 2
+            ;;
+        --process)
+            [[ $# -ge 2 ]] || { echo "--process requires a profile path" >&2; exit 2; }
+            process_profile="$2"
+            shift 2
+            ;;
+        --filament)
+            [[ $# -ge 2 ]] || { echo "--filament requires a profile path" >&2; exit 2; }
+            filament_profile="$2"
+            shift 2
+            ;;
+        --slice)
+            slice_project=true
+            shift
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            echo "Unknown argument: $1" >&2
+            usage >&2
+            exit 2
+            ;;
+    esac
+done
+
+if [[ "${source_scad}" != /* ]]; then
+    source_scad="${script_dir}/${source_scad}"
+fi
+if [[ "${output_dir}" != /* ]]; then
+    output_dir="${script_dir}/${output_dir}"
+fi
+
+[[ -f "${source_scad}" ]] || { echo "SCAD file not found: ${source_scad}" >&2; exit 1; }
+
+provided_profiles=0
+for profile in "${machine_profile}" "${process_profile}" "${filament_profile}"; do
+    if [[ -n "${profile}" ]]; then
+        provided_profiles=$((provided_profiles + 1))
+        [[ -f "${profile}" ]] || { echo "Profile not found: ${profile}" >&2; exit 1; }
+    fi
+done
+
+if [[ ${provided_profiles} -ne 0 && ${provided_profiles} -ne 3 ]]; then
+    echo "Provide --machine, --process, and --filament together" >&2
+    exit 2
+fi
+if [[ "${slice_project}" == true && ${provided_profiles} -ne 3 ]]; then
+    echo "--slice requires --machine, --process, and --filament" >&2
+    exit 2
+fi
+
+bambu_bin="$(command -v bambu-studio || true)"
+if [[ -z "${bambu_bin}" && -x /Applications/BambuStudio.app/Contents/MacOS/BambuStudio ]]; then
+    bambu_bin="/Applications/BambuStudio.app/Contents/MacOS/BambuStudio"
+fi
+[[ -n "${bambu_bin}" ]] || {
+    echo "Bambu Studio CLI not found; install it with: brew install --cask bambu-studio" >&2
+    exit 1
+}
+
+mkdir -p "${output_dir}"
+today="$(date +%F)"
+cube_name="${project_name}_cube"
+cylinder_name="${project_name}_threaded_cylinder"
+cube_stl="${output_dir}/${today}_${cube_name}.stl"
+cylinder_stl="${output_dir}/${today}_${cylinder_name}.stl"
+project_3mf="${output_dir}/${today}_${project_name}.3mf"
+
+"${script_dir}/export_stl" "${cube_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="cube"'
+
+"${script_dir}/export_stl" "${cylinder_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="threaded_cylinder"'
+
+bambu_args=(
+    --debug 2
+    --arrange 1
+    --ensure-on-bed
+    --export-3mf "${project_3mf}"
+)
+
+if [[ ${provided_profiles} -eq 3 ]]; then
+    bambu_args+=(
+        --load-settings "${machine_profile};${process_profile}"
+        --load-filaments "${filament_profile}"
+    )
+fi
+if [[ "${slice_project}" == true ]]; then
+    bambu_args+=(--slice 0)
+fi
+
+(
+    cd "${output_dir}"
+    "${bambu_bin}" "${bambu_args[@]}" "${cube_stl}" "${cylinder_stl}"
+)
+
+[[ -s "${project_3mf}" ]] || { echo "Bambu project was not created: ${project_3mf}" >&2; exit 1; }
+unzip -tqq "${project_3mf}"
+
+echo "Done: ${project_3mf}"
