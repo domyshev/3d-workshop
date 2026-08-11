@@ -12,10 +12,15 @@ Options:
   --machine PATH      Full Bambu Studio machine profile JSON
   --process PATH      Full Bambu Studio process profile JSON
   --filament PATH     Full Bambu Studio filament profile JSON
+  --filament-template PATH
+                      Bambu 3MF whose first white filament becomes the only
+                      project filament
   --slice             Slice all plates before saving the 3MF project
   -h, --help          Show this help
 
-The SCAD source must support part="cube" and part="threaded_cylinder".
+The SCAD source must support part="cube", part="threaded_cylinder",
+part="threaded_sleeve", part="threaded_cylinder_40mm", and
+part="threaded_sleeve_26mm".
 Slicing requires all three profile options.
 EOF
 }
@@ -44,6 +49,7 @@ output_dir="${script_dir}/stl_exports"
 machine_profile=""
 process_profile=""
 filament_profile=""
+filament_template="${script_dir}/stl_exports/2026-08-10_super_cube_good.3mf"
 slice_project=false
 
 while [[ $# -gt 0 ]]; do
@@ -73,6 +79,11 @@ while [[ $# -gt 0 ]]; do
             filament_profile="$2"
             shift 2
             ;;
+        --filament-template)
+            [[ $# -ge 2 ]] || { echo "--filament-template requires a path" >&2; exit 2; }
+            filament_template="$2"
+            shift 2
+            ;;
         --slice)
             slice_project=true
             shift
@@ -95,8 +106,15 @@ fi
 if [[ "${output_dir}" != /* ]]; then
     output_dir="${script_dir}/${output_dir}"
 fi
+if [[ "${filament_template}" != /* ]]; then
+    filament_template="${script_dir}/${filament_template}"
+fi
 
 [[ -f "${source_scad}" ]] || { echo "SCAD file not found: ${source_scad}" >&2; exit 1; }
+[[ -f "${filament_template}" ]] || {
+    echo "Filament template not found: ${filament_template}" >&2
+    exit 1
+}
 
 provided_profiles=0
 for profile in "${machine_profile}" "${process_profile}" "${filament_profile}"; do
@@ -128,8 +146,14 @@ mkdir -p "${output_dir}"
 today="$(date +%F)"
 cube_name="${project_name}_cube"
 cylinder_name="${project_name}_threaded_cylinder"
+sleeve_name="${project_name}_threaded_sleeve"
+long_cylinder_name="${project_name}_threaded_cylinder_40mm"
+long_sleeve_name="${project_name}_threaded_sleeve_26mm"
 cube_stl="${output_dir}/${today}_${cube_name}.stl"
 cylinder_stl="${output_dir}/${today}_${cylinder_name}.stl"
+sleeve_stl="${output_dir}/${today}_${sleeve_name}.stl"
+long_cylinder_stl="${output_dir}/${today}_${long_cylinder_name}.stl"
+long_sleeve_stl="${output_dir}/${today}_${long_sleeve_name}.stl"
 project_3mf="${output_dir}/${today}_${project_name}.3mf"
 
 "${script_dir}/export_stl" "${cube_name}" \
@@ -141,6 +165,21 @@ project_3mf="${output_dir}/${today}_${project_name}.3mf"
     --source "${source_scad}" \
     --output-dir "${output_dir}" \
     -- -D 'part="threaded_cylinder"'
+
+"${script_dir}/export_stl" "${sleeve_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="threaded_sleeve"'
+
+"${script_dir}/export_stl" "${long_cylinder_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="threaded_cylinder_40mm"'
+
+"${script_dir}/export_stl" "${long_sleeve_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="threaded_sleeve_26mm"'
 
 bambu_args=(
     --debug 2
@@ -161,10 +200,18 @@ fi
 
 (
     cd "${output_dir}"
-    "${bambu_bin}" "${bambu_args[@]}" "${cube_stl}" "${cylinder_stl}"
+    "${bambu_bin}" "${bambu_args[@]}" \
+        "${cube_stl}" \
+        "${cylinder_stl}" \
+        "${sleeve_stl}" \
+        "${long_cylinder_stl}" \
+        "${long_sleeve_stl}"
 )
 
 [[ -s "${project_3mf}" ]] || { echo "Bambu project was not created: ${project_3mf}" >&2; exit 1; }
+python3 "${script_dir}/scripts/apply_bambu_filament_template.py" \
+    --reference "${filament_template}" \
+    --target "${project_3mf}"
 unzip -tqq "${project_3mf}"
 
 echo "Done: ${project_3mf}"

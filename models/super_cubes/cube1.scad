@@ -1,8 +1,9 @@
-// Chamfered cube and a separate M8 threaded cylinder.
+// Chamfered cube, M8 threaded cylinder, and threaded sleeve.
 
 use <../../lib/core/threads/threads.scad>
 
-// Export selector: "all", "cube", or "threaded_cylinder".
+// Export selector: "all", "cube", "threaded_cylinder", "threaded_sleeve",
+// "threaded_cylinder_40mm", or "threaded_sleeve_26mm".
 part = "all";
 
 cube_size = 20;
@@ -10,9 +11,13 @@ chamfer = 1.2;
 
 thread_diameter = 8;
 thread_length = 20;
+long_thread_length = 40;
 thread_pitch = 1.25; // Standard coarse pitch for M8.
 hex_key_size = 5;    // Distance across flats.
 hex_socket_depth = 8;
+sleeve_outer_diameter = 12;
+sleeve_length = 6;
+long_sleeve_length = thread_length + sleeve_length; // 26 mm.
 thread_hole_depth = 8;
 thread_fit_clearance = 0.4; // Diametral clearance for FDM printing.
 part_gap = 5;
@@ -49,21 +54,21 @@ module chamfered_cube(size, edge_chamfer) {
     }
 }
 
-module internal_thread_cutter() {
+module internal_thread_cutter(cutter_length, leadin_style) {
     if ($preview) {
         // Keep F5 responsive: full threads create an oversized OpenCSG tree.
         cylinder(
             d = thread_diameter + thread_fit_clearance,
-            h = thread_hole_depth + cut_epsilon,
+            h = cutter_length,
             $fn = 48
         );
     } else {
         metric_thread(
             diameter = thread_diameter + thread_fit_clearance,
             pitch = thread_pitch,
-            length = thread_hole_depth + cut_epsilon,
+            length = cutter_length,
             internal = true,
-            leadin = 3
+            leadin = leadin_style
         );
     }
 }
@@ -81,25 +86,43 @@ module chamfered_cube_with_threaded_holes(size, edge_chamfer) {
         // Holes centered on the +Z and -Z faces.
         translate([0, 0, face + cut_epsilon])
             rotate([180, 0, 0])
-                internal_thread_cutter();
+                internal_thread_cutter(
+                    thread_hole_depth + cut_epsilon,
+                    3
+                );
         translate([0, 0, -face - cut_epsilon])
-            internal_thread_cutter();
+            internal_thread_cutter(
+                thread_hole_depth + cut_epsilon,
+                3
+            );
 
         // Holes centered on the +X and -X faces.
         translate([face + cut_epsilon, 0, 0])
             rotate([0, -90, 0])
-                internal_thread_cutter();
+                internal_thread_cutter(
+                    thread_hole_depth + cut_epsilon,
+                    3
+                );
         translate([-face - cut_epsilon, 0, 0])
             rotate([0, 90, 0])
-                internal_thread_cutter();
+                internal_thread_cutter(
+                    thread_hole_depth + cut_epsilon,
+                    3
+                );
 
         // Holes centered on the +Y and -Y faces.
         translate([0, face + cut_epsilon, 0])
             rotate([90, 0, 0])
-                internal_thread_cutter();
+                internal_thread_cutter(
+                    thread_hole_depth + cut_epsilon,
+                    3
+                );
         translate([0, -face - cut_epsilon, 0])
             rotate([-90, 0, 0])
-                internal_thread_cutter();
+                internal_thread_cutter(
+                    thread_hole_depth + cut_epsilon,
+                    3
+                );
 
         // Remove the core isolated by the six opposing holes.
         if (inner_core_size > 0)
@@ -118,20 +141,20 @@ module hex_socket(size_across_flats, depth) {
     );
 }
 
-module threaded_cylinder_with_hex_sockets() {
+module threaded_cylinder_with_hex_sockets(length) {
     difference() {
         if ($preview) {
             // Smooth stand-in for fast F5 preview.
             cylinder(
                 d = thread_diameter,
-                h = thread_length,
+                h = length,
                 $fn = 48
             );
         } else {
             metric_thread(
                 diameter = thread_diameter,
                 pitch = thread_pitch,
-                length = thread_length,
+                length = length,
                 internal = false,
                 leadin = 2
             );
@@ -148,11 +171,27 @@ module threaded_cylinder_with_hex_sockets() {
         translate([
             0,
             0,
-            thread_length - hex_socket_depth
+            length - hex_socket_depth
         ])
             hex_socket(
                 hex_key_size,
                 hex_socket_depth + cut_epsilon
+            );
+    }
+}
+
+module threaded_sleeve(length) {
+    difference() {
+        cylinder(
+            d = sleeve_outer_diameter,
+            h = length,
+            $fn = 64
+        );
+
+        translate([0, 0, -cut_epsilon])
+            internal_thread_cutter(
+                length + 2 * cut_epsilon,
+                2
             );
     }
 }
@@ -163,13 +202,23 @@ module printable_cube() {
             chamfered_cube_with_threaded_holes(cube_size, chamfer);
 }
 
-module printable_threaded_cylinder() {
+module printable_threaded_cylinder(length = thread_length) {
     color(thread_color)
-        threaded_cylinder_with_hex_sockets();
+        threaded_cylinder_with_hex_sockets(length);
+}
+
+module printable_threaded_sleeve(length = sleeve_length) {
+    color(thread_color)
+        threaded_sleeve(length);
 }
 
 assert(
-    part == "all" || part == "cube" || part == "threaded_cylinder",
+    part == "all"
+        || part == "cube"
+        || part == "threaded_cylinder"
+        || part == "threaded_sleeve"
+        || part == "threaded_cylinder_40mm"
+        || part == "threaded_sleeve_26mm",
     str("Unknown part: ", part)
 );
 
@@ -183,8 +232,47 @@ if (part == "all") {
         0
     ])
         printable_threaded_cylinder();
+
+    // Assembly view: place the sleeve after the cylinder.
+    translate([
+        cube_size / 2
+            + 2 * part_gap
+            + thread_diameter
+            + sleeve_outer_diameter / 2,
+        0,
+        0
+    ])
+        printable_threaded_sleeve();
+
+    // Assembly view: place the 26 mm sleeve after the short sleeve.
+    translate([
+        cube_size / 2
+            + 3 * part_gap
+            + thread_diameter
+            + 1.5 * sleeve_outer_diameter,
+        0,
+        0
+    ])
+        printable_threaded_sleeve(long_sleeve_length);
+
+    // Assembly view: place the 40 mm cylinder last.
+    translate([
+        cube_size / 2
+            + 4 * part_gap
+            + 1.5 * thread_diameter
+            + 2 * sleeve_outer_diameter,
+        0,
+        0
+    ])
+        printable_threaded_cylinder(long_thread_length);
 } else if (part == "cube") {
     printable_cube();
 } else if (part == "threaded_cylinder") {
     printable_threaded_cylinder();
+} else if (part == "threaded_sleeve") {
+    printable_threaded_sleeve();
+} else if (part == "threaded_cylinder_40mm") {
+    printable_threaded_cylinder(long_thread_length);
+} else if (part == "threaded_sleeve_26mm") {
+    printable_threaded_sleeve(long_sleeve_length);
 }
