@@ -5,10 +5,12 @@ import json
 import os
 import tempfile
 import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
 PROJECT_SETTINGS = "Metadata/project_settings.config"
+MODEL_SETTINGS = "Metadata/model_settings.config"
 
 
 def load_settings(archive_path):
@@ -124,13 +126,7 @@ def single_filament_settings(reference_settings, filament_index):
     return result
 
 
-def replace_project_settings(target_path, settings):
-    encoded = json.dumps(
-        settings,
-        ensure_ascii=False,
-        indent=4,
-        sort_keys=True,
-    ).encode("utf-8")
+def replace_archive_entries(target_path, replacements):
 
     with tempfile.NamedTemporaryFile(
         dir=target_path.parent,
@@ -144,10 +140,9 @@ def replace_project_settings(target_path, settings):
         with zipfile.ZipFile(target_path, "r") as source:
             with zipfile.ZipFile(temporary_path, "w") as destination:
                 for item in source.infolist():
-                    data = (
-                        encoded
-                        if item.filename == PROJECT_SETTINGS
-                        else source.read(item.filename)
+                    data = replacements.get(
+                        item.filename,
+                        source.read(item.filename),
                     )
                     destination.writestr(item, data)
         os.replace(temporary_path, target_path)
@@ -155,20 +150,106 @@ def replace_project_settings(target_path, settings):
         temporary_path.unlink(missing_ok=True)
 
 
+def encode_project_settings(settings):
+    return json.dumps(
+        settings,
+        ensure_ascii=False,
+        indent=4,
+        sort_keys=True,
+    ).encode("utf-8")
+
+
+def apply_strong_object_settings(model_settings, source_files):
+    root = ET.fromstring(model_settings)
+    matched = []
+
+    for object_node in root.findall("object"):
+        object_sources = {
+            metadata.get("value")
+            for part in object_node.findall("part")
+            for metadata in part.findall("metadata")
+            if metadata.get("key") == "source_file"
+        }
+        matching_sources = object_sources.intersection(source_files)
+        if not matching_sources:
+            continue
+
+        settings = {
+            "sparse_infill_density": "100%",
+            "sparse_infill_pattern": "zig-zag",
+            "wall_loops": "5",
+        }
+        metadata_by_key = {
+            metadata.get("key"): metadata
+            for metadata in object_node.findall("metadata")
+            if metadata.get("key")
+        }
+        insert_at = len(object_node.findall("metadata"))
+        for key, value in settings.items():
+            metadata = metadata_by_key.get(key)
+            if metadata is None:
+                metadata = ET.Element("metadata", key=key, value=value)
+                object_node.insert(insert_at, metadata)
+                insert_at += 1
+            else:
+                metadata.set("value", value)
+        matched.extend(sorted(matching_sources))
+
+    missing = source_files.difference(matched)
+    if missing:
+        raise ValueError(
+            "strong objects not found in project: " + ", ".join(sorted(missing))
+        )
+
+    ET.indent(root, space="  ")
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        + ET.tostring(root, encoding="unicode")
+        + "\n"
+    ).encode("utf-8")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reference", required=True, type=Path)
     parser.add_argument("--target", required=True, type=Path)
+    parser.add_argument("--infill-density")
+    parser.add_argument("--wall-loops")
+    parser.add_argument(
+        "--strong-object",
+        action="append",
+        default=[],
+        help="STL source filename that should use 100%% infill and 5 walls",
+    )
     args = parser.parse_args()
 
     reference_settings = load_settings(args.reference)
     filament_index = find_white_filament(reference_settings)
     settings = single_filament_settings(reference_settings, filament_index)
-    replace_project_settings(args.target, settings)
+    if args.infill_density is not None:
+        settings["sparse_infill_density"] = args.infill_density
+        if args.infill_density.strip() in {"100", "100%"}:
+            # Bambu Studio rejects grid/cubic patterns at full density.
+            settings["sparse_infill_pattern"] = "zig-zag"
+    if args.wall_loops is not None:
+        settings["wall_loops"] = args.wall_loops
+    replacements = {
+        PROJECT_SETTINGS: encode_project_settings(settings),
+    }
+    if args.strong_object:
+        with zipfile.ZipFile(args.target) as archive:
+            model_settings = archive.read(MODEL_SETTINGS)
+        replacements[MODEL_SETTINGS] = apply_strong_object_settings(
+            model_settings,
+            set(args.strong_object),
+        )
+    replace_archive_entries(args.target, replacements)
 
     profile_name = settings["filament_settings_id"][0]
     colour = settings["filament_colour"][0]
     print(f"Applied single filament: {profile_name} ({colour})")
+    if args.strong_object:
+        print("Applied 100% infill and 5 walls to: " + ", ".join(args.strong_object))
 
 
 if __name__ == "__main__":
