@@ -15,12 +15,15 @@ Options:
   --filament-template PATH
                       Bambu 3MF whose first white filament becomes the only
                       project filament
+  --infill-density N  Infill for the Bambu project (default: 100%)
+  --wall-loops N      Wall loops for the Bambu project (default: 5)
   --slice             Slice all plates before saving the 3MF project
   -h, --help          Show this help
 
 The SCAD source must support part="cube", part="threaded_cylinder",
 part="threaded_sleeve", part="threaded_cylinder_40mm", and
-part="threaded_sleeve_26mm".
+part="threaded_sleeve_26mm", part="double_thread_socket_30mm", and
+part="threaded_axis_12mm".
 Slicing requires all three profile options.
 EOF
 }
@@ -50,6 +53,8 @@ machine_profile=""
 process_profile=""
 filament_profile=""
 filament_template="${script_dir}/stl_exports/2026-08-10_super_cube_good.3mf"
+infill_density="100%"
+wall_loops="5"
 slice_project=false
 
 while [[ $# -gt 0 ]]; do
@@ -82,6 +87,16 @@ while [[ $# -gt 0 ]]; do
         --filament-template)
             [[ $# -ge 2 ]] || { echo "--filament-template requires a path" >&2; exit 2; }
             filament_template="$2"
+            shift 2
+            ;;
+        --infill-density)
+            [[ $# -ge 2 ]] || { echo "--infill-density requires a value" >&2; exit 2; }
+            infill_density="$2"
+            shift 2
+            ;;
+        --wall-loops)
+            [[ $# -ge 2 ]] || { echo "--wall-loops requires a value" >&2; exit 2; }
+            wall_loops="$2"
             shift 2
             ;;
         --slice)
@@ -149,11 +164,15 @@ cylinder_name="${project_name}_threaded_cylinder"
 sleeve_name="${project_name}_threaded_sleeve"
 long_cylinder_name="${project_name}_threaded_cylinder_40mm"
 long_sleeve_name="${project_name}_threaded_sleeve_26mm"
+double_socket_name="${project_name}_double_thread_socket_30mm"
+short_axis_name="${project_name}_threaded_axis_12mm"
 cube_stl="${output_dir}/${today}_${cube_name}.stl"
 cylinder_stl="${output_dir}/${today}_${cylinder_name}.stl"
 sleeve_stl="${output_dir}/${today}_${sleeve_name}.stl"
 long_cylinder_stl="${output_dir}/${today}_${long_cylinder_name}.stl"
 long_sleeve_stl="${output_dir}/${today}_${long_sleeve_name}.stl"
+double_socket_stl="${output_dir}/${today}_${double_socket_name}.stl"
+short_axis_stl="${output_dir}/${today}_${short_axis_name}.stl"
 project_3mf="${output_dir}/${today}_${project_name}.3mf"
 
 "${script_dir}/export_stl" "${cube_name}" \
@@ -181,6 +200,16 @@ project_3mf="${output_dir}/${today}_${project_name}.3mf"
     --output-dir "${output_dir}" \
     -- -D 'part="threaded_sleeve_26mm"'
 
+"${script_dir}/export_stl" "${double_socket_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="double_thread_socket_30mm"'
+
+"${script_dir}/export_stl" "${short_axis_name}" \
+    --source "${source_scad}" \
+    --output-dir "${output_dir}" \
+    -- -D 'part="threaded_axis_12mm"'
+
 bambu_args=(
     --debug 2
     --arrange 1
@@ -205,13 +234,18 @@ fi
         "${cylinder_stl}" \
         "${sleeve_stl}" \
         "${long_cylinder_stl}" \
-        "${long_sleeve_stl}"
+        "${long_sleeve_stl}" \
+        "${double_socket_stl}" \
+        "${short_axis_stl}" \
+        "${short_axis_stl}"
 )
 
 [[ -s "${project_3mf}" ]] || { echo "Bambu project was not created: ${project_3mf}" >&2; exit 1; }
 python3 "${script_dir}/scripts/apply_bambu_filament_template.py" \
     --reference "${filament_template}" \
-    --target "${project_3mf}"
+    --target "${project_3mf}" \
+    --infill-density "${infill_density}" \
+    --wall-loops "${wall_loops}"
 unzip -tqq "${project_3mf}"
 
 echo "Done: ${project_3mf}"
