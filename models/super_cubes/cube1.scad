@@ -4,7 +4,8 @@ use <../../lib/core/threads/threads.scad>
 
 // Export selector: "all", "cube", "threaded_cylinder", "threaded_sleeve",
 // "threaded_cylinder_40mm", "threaded_sleeve_26mm",
-// "double_thread_socket_30mm", or "threaded_axis_12mm".
+// "double_thread_socket_30mm", "threaded_axis_12mm",
+// "threaded_axis_10mm", or "threaded_axis_5mm".
 part = "all";
 
 cube_size = 20;
@@ -26,6 +27,14 @@ double_thread_socket_depth = 8;
 short_axis_length = 12;
 short_axis_core = 4;
 short_axis_hex_depth = (short_axis_length - short_axis_core) / 2; // 4 mm.
+short_axis_10_length = 10;
+short_axis_10_thread_diameter = 7.9; // 0.1 mm looser diametral fit.
+short_axis_10_hex_key_size = 4.1; // Minimal clearance for a 4 mm key.
+short_axis_10_hex_depth = (short_axis_10_length - short_axis_core) / 2; // 3 mm.
+short_axis_5_length = 5;
+short_axis_5_thread_diameter = short_axis_10_thread_diameter;
+short_axis_5_hex_depth = 4;
+short_axis_5_back_wall = short_axis_5_length - short_axis_5_hex_depth; // 1 mm.
 thread_fit_clearance = 0.4; // Diametral clearance for FDM printing.
 short_sleeve_clearance = 0.6; // Looser fit for the 6 mm sleeve.
 part_gap = 5;
@@ -35,6 +44,7 @@ cube_color = "#DDE8B0";   // Pale pistachio.
 thread_color = "#8B5A2B"; // Brown.
 updated_part_color = "#F28C28"; // Orange.
 new_part_color = "#CC7722"; // Ochre.
+short_axis_10_color = "#7E57C2"; // Purple.
 
 module octahedron(radius) {
     polyhedron(
@@ -159,19 +169,20 @@ module threaded_cylinder_with_hex_sockets(
     length,
     key_size,
     socket_depth = hex_socket_depth,
-    socket_ends = "both"
+    socket_ends = "both",
+    outer_diameter = thread_diameter
 ) {
     difference() {
         if ($preview) {
             // Smooth stand-in for fast F5 preview.
             cylinder(
-                d = thread_diameter,
+                d = outer_diameter,
                 h = length,
                 $fn = 48
             );
         } else {
             metric_thread(
-                diameter = thread_diameter,
+                diameter = outer_diameter,
                 pitch = thread_pitch,
                 length = length,
                 internal = false,
@@ -254,8 +265,8 @@ module double_thread_socket(
     }
 }
 
-module printable_cube() {
-    color(cube_color)
+module printable_cube(part_color = cube_color) {
+    color(part_color)
         translate([0, 0, cube_size / 2])
             chamfered_cube_with_threaded_holes(cube_size, chamfer);
 }
@@ -265,14 +276,16 @@ module printable_threaded_cylinder(
     key_size = short_hex_key_size,
     part_color = updated_part_color,
     socket_depth = hex_socket_depth,
-    socket_ends = "both"
+    socket_ends = "both",
+    outer_diameter = thread_diameter
 ) {
     color(part_color)
         threaded_cylinder_with_hex_sockets(
             length,
             key_size,
             socket_depth,
-            socket_ends
+            socket_ends,
+            outer_diameter
         );
 }
 
@@ -285,8 +298,8 @@ module printable_threaded_sleeve(
         threaded_sleeve(length, fit_clearance);
 }
 
-module printable_double_thread_socket() {
-    color(new_part_color)
+module printable_double_thread_socket(part_color = new_part_color) {
+    color(part_color)
         double_thread_socket(
             double_thread_socket_length,
             double_thread_socket_depth
@@ -303,6 +316,31 @@ module printable_threaded_axis_12mm() {
     );
 }
 
+module printable_threaded_axis_10mm(part_color = short_axis_10_color) {
+    printable_threaded_cylinder(
+        short_axis_10_length,
+        short_axis_10_hex_key_size,
+        part_color,
+        short_axis_10_hex_depth,
+        "both",
+        short_axis_10_thread_diameter
+    );
+}
+
+module printable_threaded_axis_5mm(part_color = short_axis_10_color) {
+    assert(short_axis_5_back_wall == 1,
+        "The 5 mm axis must retain a 1 mm back wall");
+
+    printable_threaded_cylinder(
+        short_axis_5_length,
+        short_axis_10_hex_key_size,
+        part_color,
+        short_axis_5_hex_depth,
+        "top",
+        short_axis_5_thread_diameter
+    );
+}
+
 assert(
     part == "all"
         || part == "cube"
@@ -311,7 +349,9 @@ assert(
         || part == "threaded_cylinder_40mm"
         || part == "threaded_sleeve_26mm"
         || part == "double_thread_socket_30mm"
-        || part == "threaded_axis_12mm",
+        || part == "threaded_axis_12mm"
+        || part == "threaded_axis_10mm"
+        || part == "threaded_axis_5mm",
     str("Unknown part: ", part)
 );
 
@@ -390,6 +430,30 @@ if (part == "all") {
             0
         ])
             printable_threaded_axis_12mm();
+
+    // Assembly view: slightly looser 10 mm axis with two 4.1 mm sockets.
+    translate([
+        cube_size / 2
+            + 6 * part_gap
+            + 2.5 * thread_diameter
+            + 3 * sleeve_outer_diameter
+            + 2 * (thread_diameter + part_gap),
+        0,
+        0
+    ])
+        printable_threaded_axis_10mm();
+
+    // Assembly view: 5 mm axis with a single 4 mm deep hex socket.
+    translate([
+        cube_size / 2
+            + 6 * part_gap
+            + 2.5 * thread_diameter
+            + 3 * sleeve_outer_diameter
+            + 3 * (thread_diameter + part_gap),
+        0,
+        0
+    ])
+        printable_threaded_axis_5mm();
 } else if (part == "cube") {
     printable_cube();
 } else if (part == "threaded_cylinder") {
@@ -412,4 +476,8 @@ if (part == "all") {
     printable_double_thread_socket();
 } else if (part == "threaded_axis_12mm") {
     printable_threaded_axis_12mm();
+} else if (part == "threaded_axis_10mm") {
+    printable_threaded_axis_10mm();
+} else if (part == "threaded_axis_5mm") {
+    printable_threaded_axis_5mm();
 }
