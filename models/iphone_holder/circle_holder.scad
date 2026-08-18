@@ -29,9 +29,15 @@ block_radial_width = 20 * block_face_scale; // 32 mm along X.
 block_height_z = 22 * block_face_scale; // 35.2 mm along Z.
 block_thickness = 6;
 block_gap = 5;
+block_corner_radius = 16;
 removed_ring_width = 2 * block_thickness + block_gap; // 17 mm.
 block_join_overlap = 0.2;
-block_inner_x = flange_opening_diameter / 2;
+flange_opening_radius = flange_opening_diameter / 2;
+block_outer_y = removed_ring_width / 2 + block_join_overlap;
+block_inner_x = sqrt(
+    flange_opening_radius * flange_opening_radius
+        - block_outer_y * block_outer_y
+);
 block_front_z = magsafe_protrusion;
 block_hole_center_x = block_inner_x + block_radial_width / 2;
 block_hole_center_z = block_front_z + block_height_z / 2;
@@ -131,40 +137,68 @@ module split_ring_with_flange() {
     }
 }
 
-module clamp_blocks() {
-    overlap_thickness = block_thickness + block_join_overlap;
+module clamp_block_profile_2d() {
+    radius = block_corner_radius;
+    width = block_radial_width;
+    height = block_height_z;
 
-    // The two blocks occupy 6 mm each inside the removed 17 mm section.
-    translate([
-        block_inner_x,
-        block_gap / 2,
-        block_front_z
-    ])
-        cube([
-            block_radial_width,
-            overlap_thickness,
-            block_height_z
-        ]);
+    union() {
+        // Full middle strips shared by all four corners.
+        translate([0, radius])
+            square([width, height - 2 * radius]);
+        translate([radius, 0])
+            square([width - 2 * radius, height]);
 
-    translate([
-        block_inner_x,
-        -block_gap / 2 - overlap_thickness,
-        block_front_z
-    ])
-        cube([
-            block_radial_width,
-            overlap_thickness,
-            block_height_z
-        ]);
+        // Keep the inner/front corner square where the block meets the ring.
+        square([radius, radius]);
+
+        // Round the other three free corners.
+        translate([width - radius, radius])
+            circle(r = radius);
+        translate([radius, height - radius])
+            circle(r = radius);
+        translate([width - radius, height - radius])
+            circle(r = radius);
+    }
 }
 
-module magsafe_envelope_cut() {
-    // Blocks reach the Ø48 flange boundary behind the puck, but this cut keeps
-    // their cavity-facing surfaces flush with the Ø56 MagSafe circumference.
+module upper_clamp_block() {
+    overlap_thickness = block_thickness + block_join_overlap;
+
+    translate([
+        block_inner_x,
+        block_gap / 2 + overlap_thickness,
+        block_front_z
+    ])
+        rotate([90, 0, 0])
+            linear_extrude(height = overlap_thickness)
+                clamp_block_profile_2d();
+}
+
+module clamp_blocks() {
+    // The two blocks occupy 6 mm each inside the removed 17 mm section.
+    upper_clamp_block();
+    mirror([0, 1, 0])
+        upper_clamp_block();
+}
+
+module holder_inner_envelope_cuts() {
+    // Keep the front portion flush with the Ø56 MagSafe circumference.
     translate([0, 0, -epsilon])
         cylinder(
             d = magsafe_diameter,
             h = magsafe_edge_thickness + 2 * epsilon
+        );
+
+    // Continue the blocks exactly to the cylindrical Ø48 boundary of the
+    // retaining flange throughout their rearward extension.
+    translate([0, 0, magsafe_edge_thickness - epsilon])
+        cylinder(
+            d = flange_opening_diameter,
+            h = block_front_z
+                + block_height_z
+                - magsafe_edge_thickness
+                + 2 * epsilon
         );
 }
 
@@ -192,7 +226,7 @@ module circle_holder() {
             }
 
             clamp_bolt_hole();
-            magsafe_envelope_cut();
+            holder_inner_envelope_cuts();
         }
 }
 
@@ -265,14 +299,12 @@ module magsafe_reference() {
 }
 
 module fastener_fit_preview() {
-    outer_block_y = removed_ring_width / 2 + block_join_overlap;
-
     circle_holder();
 
     // Bolt head sits against the outside of the lower clamp block.
     translate([
         block_hole_center_x,
-        -outer_block_y - bolt_head_height,
+        -block_outer_y - bolt_head_height,
         block_hole_center_z
     ])
         rotate([-90, 0, 0])
@@ -281,7 +313,7 @@ module fastener_fit_preview() {
     // Nut sits against the outside of the upper clamp block.
     translate([
         block_hole_center_x,
-        outer_block_y,
+        block_outer_y,
         block_hole_center_z
     ])
         rotate([-90, 0, 0])
