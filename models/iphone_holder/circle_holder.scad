@@ -4,7 +4,8 @@ $fn = 96;
 
 use <../../lib/core/threads/threads.scad>
 
-// Export selector: "all", "holder", "bolt", "nut", or "fit_preview".
+// Export selector: "all", "holder", "bolt", "stand_bolt", "nut",
+// "stand", or "fit_preview".
 part = "all";
 show_magsafe_reference = false;
 
@@ -60,6 +61,10 @@ closed_clamp_width = 2 * effective_block_thickness;
 bolt_under_head_length = closed_clamp_width + nut_height;
 bolt_thread_length = 16;
 bolt_smooth_length = bolt_under_head_length - bolt_thread_length;
+stand_bolt_under_head_length = 30;
+stand_bolt_thread_length = 16;
+stand_bolt_smooth_length = stand_bolt_under_head_length
+    - stand_bolt_thread_length; // 14 mm.
 initial_nut_engagement = bolt_under_head_length - open_clamp_width;
 closed_bolt_protrusion = bolt_under_head_length
     - closed_clamp_width
@@ -73,11 +78,52 @@ hex_ring_clearance = sqrt(
         * (block_hole_center_z - magsafe_edge_thickness - flange_thickness)
 ) - hex_corner_radius;
 
+// Vertical support stand. Z=0 is the tabletop; the stand begins on the
+// 6 mm base plate and holds the upper bolt axis 76 mm above the table.
+stand_top_axis_height = 76;
+stand_base_thickness = 6;
+stand_hole_diameter = 13;
+stand_hole_edge = 5;
+stand_fork_tail = 20;
+stand_upper_fork_length = stand_hole_edge
+    + stand_hole_diameter
+    + stand_fork_tail; // 38 mm.
+stand_face_width = 2 * stand_hole_edge
+    + stand_hole_diameter; // 23 mm in X.
+stand_end_radius = stand_face_width / 2; // 11.5 mm.
+stand_lower_fork_length = 24; // 23 mm wide with 1 mm rotational allowance.
+stand_outer_thickness = 30;
+stand_upper_free_gap = 18;
+stand_upper_body_gap = 15;
+stand_lower_gap = 18;
+stand_upper_free_arm_thickness = (
+    stand_outer_thickness - stand_upper_free_gap
+) / 2; // 6 mm.
+stand_upper_body_arm_thickness = (
+    stand_outer_thickness - stand_upper_body_gap
+) / 2; // 7.5 mm.
+stand_lower_arm_thickness = (
+    stand_outer_thickness - stand_lower_gap
+) / 2; // 6 mm.
+stand_lower_axis_height = stand_base_thickness
+    + stand_hole_edge
+    + stand_hole_diameter / 2; // 17.5 mm.
+stand_upper_tip_z = stand_top_axis_height
+    + stand_hole_edge
+    + stand_hole_diameter / 2;
+stand_upper_body_z = stand_top_axis_height
+    - stand_hole_diameter / 2
+    - stand_fork_tail;
+stand_lower_tip_z = stand_base_thickness;
+stand_lower_body_z = stand_lower_tip_z + stand_lower_fork_length;
+stand_body_height = stand_upper_body_z - stand_lower_body_z;
+
 epsilon = 0.05;
 
 holder_color = "#4F86C6";
 bolt_color = "#E07A3F";
 nut_color = "#7E57C2";
+stand_color = "#F3E5C8";
 magsafe_color = [0.85, 0.85, 0.85, 0.35];
 
 assert(
@@ -104,6 +150,28 @@ assert(
 assert(
     bolt_thread_length >= nut_height + block_gap,
     "Bolt thread must cover the nut and the full clamp travel"
+);
+assert(
+    stand_bolt_smooth_length + stand_bolt_thread_length
+        == stand_bolt_under_head_length,
+    "Stand bolt shank lengths must equal 30 mm"
+);
+assert(
+    stand_upper_free_arm_thickness == 6
+        && stand_upper_body_arm_thickness == 7.5,
+    "Upper stand arms must taper from 6 to 7.5 mm"
+);
+assert(
+    stand_lower_arm_thickness == 6,
+    "Lower stand arms must be 6 mm thick"
+);
+assert(
+    stand_body_height > 0,
+    "Upper and lower stand forks need a solid central bridge"
+);
+assert(
+    abs(stand_body_height - 19.5) < 0.001,
+    "Stand central body must be 19.5 mm high"
 );
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
@@ -271,6 +339,150 @@ module circle_holder() {
         }
 }
 
+module stand_face_envelope(profile = "upper") {
+    translate([0, stand_outer_thickness / 2 + epsilon, 0])
+        rotate([90, 0, 0])
+            linear_extrude(height = stand_outer_thickness + 2 * epsilon)
+                if (profile == "upper") {
+                    // Full-width root plus a concentric semicircular free end.
+                    union() {
+                        translate([
+                            -stand_face_width / 2,
+                            stand_upper_body_z
+                        ])
+                            square([
+                                stand_face_width,
+                                stand_top_axis_height - stand_upper_body_z
+                            ]);
+                        translate([0, stand_top_axis_height])
+                            circle(r = stand_end_radius);
+                    }
+                } else {
+                    // 23 x 24 mm lower ear with a rounded free end and a
+                    // full-width attachment to the central body.
+                    union() {
+                        translate([
+                            -stand_face_width / 2,
+                            stand_lower_axis_height
+                        ])
+                            square([
+                                stand_face_width,
+                                stand_lower_body_z - stand_lower_axis_height
+                            ]);
+                        translate([0, stand_lower_axis_height])
+                            circle(r = stand_end_radius);
+                    }
+                }
+}
+
+module stand_upper_positive_arm() {
+    intersection() {
+        hull() {
+            // Rear/body end: 15 mm gap, therefore 7.5 mm arm thickness.
+            translate([
+                -stand_face_width / 2,
+                stand_upper_body_gap / 2,
+                stand_upper_body_z - epsilon
+            ])
+                cube([
+                    stand_face_width,
+                    stand_upper_body_arm_thickness,
+                    2 * epsilon
+                ]);
+
+            // Free/front end: 18 mm gap and 6 mm arm thickness.
+            translate([
+                -stand_face_width / 2,
+                stand_upper_free_gap / 2,
+                stand_upper_tip_z - epsilon
+            ])
+                cube([
+                    stand_face_width,
+                    stand_upper_free_arm_thickness,
+                    2 * epsilon
+                ]);
+        }
+
+        stand_face_envelope("upper");
+    }
+}
+
+module stand_upper_fork() {
+    stand_upper_positive_arm();
+    mirror([0, 1, 0])
+        stand_upper_positive_arm();
+}
+
+module stand_lower_positive_arm() {
+    intersection() {
+        translate([
+            -stand_face_width / 2,
+            stand_lower_gap / 2,
+            stand_lower_tip_z
+        ])
+            cube([
+                stand_face_width,
+                stand_lower_arm_thickness,
+                stand_lower_body_z - stand_lower_tip_z + epsilon
+            ]);
+
+        stand_face_envelope("lower");
+    }
+}
+
+module stand_lower_fork() {
+    stand_lower_positive_arm();
+    mirror([0, 1, 0])
+        stand_lower_positive_arm();
+}
+
+module stand_central_body() {
+    translate([
+        -stand_face_width / 2,
+        -stand_outer_thickness / 2,
+        stand_lower_body_z - epsilon
+    ])
+        cube([
+            stand_face_width,
+            stand_outer_thickness,
+            stand_body_height + 2 * epsilon
+        ]);
+}
+
+module stand_bolt_hole(axis_height) {
+    translate([
+        0,
+        -stand_outer_thickness / 2 - epsilon,
+        axis_height
+    ])
+        rotate([-90, 0, 0])
+            cylinder(
+                d = stand_hole_diameter,
+                h = stand_outer_thickness + 2 * epsilon
+            );
+}
+
+module vertical_support_stand() {
+    color(stand_color)
+        difference() {
+            union() {
+                stand_lower_fork();
+                stand_central_body();
+                stand_upper_fork();
+            }
+
+            stand_bolt_hole(stand_lower_axis_height);
+            stand_bolt_hole(stand_top_axis_height);
+        }
+}
+
+module vertical_support_stand_for_print() {
+    // The design uses the real tabletop as Z=0 and starts the stand on the
+    // future 6 mm base. Move only the standalone export down onto the bed.
+    translate([0, 0, -stand_base_thickness])
+        vertical_support_stand();
+}
+
 module external_bolt_thread(length) {
     metric_thread(
         diameter = bolt_diameter,
@@ -293,7 +505,7 @@ module internal_nut_thread(length) {
     );
 }
 
-module m12_bolt() {
+module m12_bolt_with_shank(smooth_length, thread_length) {
     color(bolt_color)
         union() {
             cylinder(
@@ -305,16 +517,27 @@ module m12_bolt() {
             translate([0, 0, bolt_head_height - epsilon])
                 cylinder(
                     d = bolt_diameter,
-                    h = bolt_smooth_length + 2 * epsilon
+                    h = smooth_length + 2 * epsilon
                 );
 
             translate([
                 0,
                 0,
-                bolt_head_height + bolt_smooth_length - epsilon
+                bolt_head_height + smooth_length - epsilon
             ])
-                external_bolt_thread(bolt_thread_length + epsilon);
+                external_bolt_thread(thread_length + epsilon);
         }
+}
+
+module m12_bolt() {
+    m12_bolt_with_shank(bolt_smooth_length, bolt_thread_length);
+}
+
+module m12_stand_bolt() {
+    m12_bolt_with_shank(
+        stand_bolt_smooth_length,
+        stand_bolt_thread_length
+    );
 }
 
 module m12_nut() {
@@ -365,7 +588,9 @@ assert(
     part == "all"
         || part == "holder"
         || part == "bolt"
+        || part == "stand_bolt"
         || part == "nut"
+        || part == "stand"
         || part == "fit_preview",
     str("Unknown part: ", part)
 );
@@ -379,14 +604,24 @@ if (part == "all") {
     translate([-48, 0, 0])
         m12_bolt();
 
+    translate([-48, 36, 0])
+        m12_stand_bolt();
+
     translate([-72, 0, 0])
         m12_nut();
+
+    translate([-110, 0, 0])
+        vertical_support_stand();
 } else if (part == "holder") {
     circle_holder();
 } else if (part == "bolt") {
     m12_bolt();
+} else if (part == "stand_bolt") {
+    m12_stand_bolt();
 } else if (part == "nut") {
     m12_nut();
+} else if (part == "stand") {
+    vertical_support_stand_for_print();
 } else if (part == "fit_preview") {
     fastener_fit_preview();
 }
