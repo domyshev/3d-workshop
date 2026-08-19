@@ -5,7 +5,8 @@ $fn = 96;
 use <../../lib/core/threads/threads.scad>
 
 // Export selector: "all", "holder", "bolt", "stand_bolt", "nut",
-// "stand", "stand_flat", "stand_long_side", or "fit_preview".
+// "stand", "stand_flat", "stand_long_side", "platform",
+// "platform_lid", "platform_preview", or "fit_preview".
 part = "all";
 show_magsafe_reference = false;
 
@@ -137,12 +138,61 @@ stand_upper_inner_face_angle = -atan(
     ) / (2 * stand_face_width)
 );
 
+// Hollow weighted base platform and removable sliding bottom lid.
+platform_length = 100;
+platform_width = 74;
+platform_height = 14;
+platform_side_wall = 5;
+platform_top_wall = 4;
+platform_corner_radius = 3;
+platform_top_chamfer = 1;
+platform_inner_length = platform_length - 2 * platform_side_wall; // 90 mm.
+platform_inner_width = platform_width - 2 * platform_side_wall; // 64 mm.
+platform_lid_thickness = 2;
+platform_lid_groove_bottom = 2;
+platform_lid_groove_height = 2.7;
+platform_lid_groove_depth = 2.35;
+platform_lid_clearance = 0.35;
+platform_lid_width = platform_inner_width
+    + 2 * (platform_lid_groove_depth - platform_lid_clearance); // 68 mm.
+platform_lid_length = platform_length
+    - platform_side_wall
+    + platform_lid_groove_depth
+    - platform_lid_clearance; // 97 mm, flush with the insertion end.
+platform_lid_corner_radius = 1;
+platform_lid_closed_center_x = -platform_length / 2
+    + platform_lid_length / 2;
+platform_lug_reinforcement_length = 40;
+platform_lug_reinforcement_width = 30;
+platform_lug_reinforcement_depth = 4;
+platform_lug_reinforcement_chamfer = 1;
+
+// The lower stand fork has an 18 mm nominal gap. Complementary serrations
+// need 0.8 mm per interface (0.7 mm tooth plus 0.1 mm valley), followed by
+// 0.3 mm assembly clearance on each side.
+platform_lug_interface_clearance = 0.3;
+platform_lug_serration_stack = stand_index_tooth_height
+    + stand_index_valley_height; // 0.8 mm per side.
+platform_lug_thickness = stand_lower_gap
+    - 2 * (
+        platform_lug_serration_stack
+            + platform_lug_interface_clearance
+    ); // 15.8 mm core.
+platform_lug_depth = stand_face_width; // 23 mm along X.
+platform_lug_height = stand_face_width; // 23 mm above the platform.
+platform_lug_radius = stand_end_radius; // 11.5 mm.
+platform_lug_hole_diameter = stand_hole_diameter;
+platform_lug_axis_height = platform_height + platform_lug_height / 2;
+platform_lug_top_z = platform_height + platform_lug_height;
+
 epsilon = 0.05;
 
 holder_color = "#4F86C6";
 bolt_color = "#E07A3F";
 nut_color = "#7E57C2";
 stand_color = "#F3E5C8";
+platform_color = "#B7A58A";
+platform_lid_color = "#D8CDBA";
 magsafe_color = [0.85, 0.85, 0.85, 0.35];
 
 assert(
@@ -204,6 +254,25 @@ assert(
 assert(
     stand_index_outer_diameter <= stand_face_width - 2,
     "Stand serrations need at least 1 mm to the outer ear edge"
+);
+assert(
+    abs(platform_lid_width - 68) < 0.001
+        && abs(platform_lid_length - 97) < 0.001,
+    "Platform lid must be 97 x 68 mm"
+);
+assert(
+    abs(platform_lug_thickness - 15.8) < 0.001,
+    "Indexed platform lug core must be 15.8 mm thick"
+);
+assert(
+    abs(platform_lug_top_z - platform_height - 23) < 0.001,
+    "Platform lug must project exactly 23 mm above the top surface"
+);
+assert(
+    platform_height - platform_top_wall
+        - platform_lug_reinforcement_depth >= platform_lid_groove_bottom
+            + platform_lid_groove_height,
+    "Lug reinforcement must stay above the sliding-lid groove"
 );
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
@@ -701,6 +770,251 @@ module vertical_support_stand_long_side_for_print() {
             vertical_support_stand_for_print();
 }
 
+module rounded_rectangle_2d(length, width, radius) {
+    offset(r = radius)
+        square([
+            length - 2 * radius,
+            width - 2 * radius
+        ], center = true);
+}
+
+module platform_outer_body() {
+    union() {
+        linear_extrude(height = platform_height - platform_top_chamfer)
+            rounded_rectangle_2d(
+                platform_length,
+                platform_width,
+                platform_corner_radius
+            );
+
+        translate([0, 0, platform_height - platform_top_chamfer])
+            linear_extrude(
+                height = platform_top_chamfer,
+                scale = [
+                    (platform_length - 2 * platform_top_chamfer)
+                        / platform_length,
+                    (platform_width - 2 * platform_top_chamfer)
+                        / platform_width
+                ]
+            )
+                rounded_rectangle_2d(
+                    platform_length,
+                    platform_width,
+                    platform_corner_radius
+                );
+    }
+}
+
+module platform_inner_cavity_cut() {
+    translate([0, 0, -epsilon])
+        linear_extrude(
+            height = platform_height
+                - platform_top_wall
+                + 2 * epsilon
+        )
+            rounded_rectangle_2d(
+                platform_inner_length,
+                platform_inner_width,
+                0.5
+            );
+}
+
+module platform_lid_guide_cuts() {
+    groove_z = platform_lid_groove_bottom;
+    groove_h = platform_lid_groove_height;
+    groove_back_x = platform_length / 2
+        - platform_side_wall
+        + platform_lid_groove_depth;
+    groove_outer_y = platform_inner_width / 2
+        + platform_lid_groove_depth;
+
+    // Guides in both long walls, open at the -X insertion end.
+    for (side = [-1, 1])
+        translate([
+            -platform_length / 2 - epsilon,
+            side > 0
+                ? platform_inner_width / 2 - epsilon
+                : -groove_outer_y,
+            groove_z
+        ])
+            cube([
+                groove_back_x + platform_length / 2 + 2 * epsilon,
+                platform_lid_groove_depth + epsilon,
+                groove_h
+            ]);
+
+    // Closed stop groove in the +X short wall.
+    translate([
+        platform_length / 2 - platform_side_wall - epsilon,
+        -groove_outer_y,
+        groove_z
+    ])
+        cube([
+            platform_lid_groove_depth + epsilon,
+            2 * groove_outer_y,
+            groove_h
+        ]);
+
+    // Insertion slot through the whole -X short wall. Extending the cut
+    // beyond both rounded side corners prevents thin vertical slivers from
+    // remaining where the slot meets the long-wall guides.
+    translate([
+        -platform_length / 2 - epsilon,
+        -platform_width / 2 - epsilon,
+        groove_z
+    ])
+        cube([
+            platform_side_wall + 2 * epsilon,
+            platform_width + 2 * epsilon,
+            groove_h
+        ]);
+}
+
+module hollow_platform_shell() {
+    difference() {
+        platform_outer_body();
+        platform_inner_cavity_cut();
+        platform_lid_guide_cuts();
+    }
+}
+
+module platform_lug_profile_2d() {
+    union() {
+        square([
+            platform_lug_depth,
+            platform_lug_height / 2
+        ], center = false);
+
+        translate([
+            platform_lug_depth / 2,
+            platform_lug_height / 2
+        ])
+            circle(r = platform_lug_radius);
+    }
+}
+
+module platform_lug_core() {
+    translate([
+        -platform_lug_depth / 2,
+        platform_lug_thickness / 2,
+        platform_height
+    ])
+        rotate([90, 0, 0])
+            linear_extrude(height = platform_lug_thickness)
+                platform_lug_profile_2d();
+}
+
+module platform_lug_reinforcement() {
+    reinforcement_bottom_z = platform_height
+        - platform_top_wall
+        - platform_lug_reinforcement_depth;
+    straight_height = platform_lug_reinforcement_depth
+        - platform_lug_reinforcement_chamfer
+        + 2 * epsilon;
+
+    translate([0, 0, reinforcement_bottom_z]) {
+        // One-millimetre chamfer around the lower edge of the internal boss.
+        linear_extrude(
+            height = platform_lug_reinforcement_chamfer,
+            scale = [
+                platform_lug_reinforcement_length
+                    / (
+                        platform_lug_reinforcement_length
+                            - 2 * platform_lug_reinforcement_chamfer
+                    ),
+                platform_lug_reinforcement_width
+                    / (
+                        platform_lug_reinforcement_width
+                            - 2 * platform_lug_reinforcement_chamfer
+                    )
+            ]
+        )
+            square([
+                platform_lug_reinforcement_length
+                    - 2 * platform_lug_reinforcement_chamfer,
+                platform_lug_reinforcement_width
+                    - 2 * platform_lug_reinforcement_chamfer
+            ], center = true);
+
+        translate([0, 0, platform_lug_reinforcement_chamfer])
+            linear_extrude(height = straight_height)
+                square([
+                    platform_lug_reinforcement_length,
+                    platform_lug_reinforcement_width
+                ], center = true);
+    }
+}
+
+module platform_lug_positive_index_ring() {
+    translate([
+        0,
+        platform_lug_thickness / 2,
+        platform_lug_axis_height
+    ])
+        rotate([-90, 0, 0])
+            rotate([0, 0, stand_index_step_angle])
+                stand_index_serration_ring();
+}
+
+module platform_lug_index_rings() {
+    platform_lug_positive_index_ring();
+    mirror([0, 1, 0])
+        platform_lug_positive_index_ring();
+}
+
+module platform_lug_hole() {
+    translate([
+        0,
+        -platform_lug_thickness / 2
+            - stand_index_tooth_height
+            - epsilon,
+        platform_lug_axis_height
+    ])
+        rotate([-90, 0, 0])
+            cylinder(
+                d = platform_lug_hole_diameter,
+                h = platform_lug_thickness
+                    + 2 * stand_index_tooth_height
+                    + 2 * epsilon
+            );
+}
+
+module weighted_base_platform() {
+    color(platform_color)
+        difference() {
+            union() {
+                hollow_platform_shell();
+                platform_lug_reinforcement();
+                platform_lug_core();
+                platform_lug_index_rings();
+            }
+
+            platform_lug_hole();
+        }
+}
+
+module platform_slider_lid() {
+    color(platform_lid_color)
+        linear_extrude(height = platform_lid_thickness)
+            rounded_rectangle_2d(
+                platform_lid_length,
+                platform_lid_width,
+                platform_lid_corner_radius
+            );
+}
+
+module platform_fit_preview() {
+    weighted_base_platform();
+
+    translate([
+        platform_lid_closed_center_x,
+        0,
+        platform_lid_groove_bottom
+            + (platform_lid_groove_height - platform_lid_thickness) / 2
+    ])
+        platform_slider_lid();
+}
+
 module external_bolt_thread(length) {
     metric_thread(
         diameter = bolt_diameter,
@@ -811,6 +1125,9 @@ assert(
         || part == "stand"
         || part == "stand_flat"
         || part == "stand_long_side"
+        || part == "platform"
+        || part == "platform_lid"
+        || part == "platform_preview"
         || part == "fit_preview",
     str("Unknown part: ", part)
 );
@@ -832,6 +1149,12 @@ if (part == "all") {
 
     translate([-110, 0, 0])
         vertical_support_stand();
+
+    translate([130, 0, 0])
+        weighted_base_platform();
+
+    translate([130, -90, 0])
+        platform_slider_lid();
 } else if (part == "holder") {
     circle_holder();
 } else if (part == "bolt") {
@@ -846,6 +1169,12 @@ if (part == "all") {
     vertical_support_stand_flat_for_print();
 } else if (part == "stand_long_side") {
     vertical_support_stand_long_side_for_print();
+} else if (part == "platform") {
+    weighted_base_platform();
+} else if (part == "platform_lid") {
+    platform_slider_lid();
+} else if (part == "platform_preview") {
+    platform_fit_preview();
 } else if (part == "fit_preview") {
     fastener_fit_preview();
 }
