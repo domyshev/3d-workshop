@@ -21,6 +21,9 @@ flange_thickness = 2;
 ring_outer_diameter = magsafe_diameter + 2 * ring_wall; // 64 mm.
 flange_opening_diameter = magsafe_diameter - 2 * flange_radial_width; // 48 mm.
 ring_total_depth = pocket_depth + flange_thickness; // 6.7 mm.
+ring_inner_radius = magsafe_diameter / 2;
+flange_relief_base_width = 4;
+flange_relief_angles = [-90, 90, 180];
 
 // Clamp blocks. Scale the original 20 x 22 mm face proportionally so an
 // M12 hex head and nut have wrench clearance from the holder ring.
@@ -48,12 +51,19 @@ bolt_diameter = 12;
 bolt_pitch = 1.75;
 bolt_head_across_flats = 19;
 bolt_head_height = 7.5;
-bolt_under_head_length = 30;
-bolt_smooth_length = removed_ring_width;
-bolt_thread_length = bolt_under_head_length - bolt_smooth_length;
 nut_across_flats = 19;
 nut_height = 10;
-nut_thread_diameter = 12.5;
+nut_thread_diameter = 12.8;
+effective_block_thickness = block_thickness + block_join_overlap;
+open_clamp_width = 2 * effective_block_thickness + block_gap;
+closed_clamp_width = 2 * effective_block_thickness;
+bolt_under_head_length = closed_clamp_width + nut_height;
+bolt_thread_length = 16;
+bolt_smooth_length = bolt_under_head_length - bolt_thread_length;
+initial_nut_engagement = bolt_under_head_length - open_clamp_width;
+closed_bolt_protrusion = bolt_under_head_length
+    - closed_clamp_width
+    - nut_height;
 minimum_hex_ring_clearance = 1;
 hex_corner_radius = hex_vertex_diameter(bolt_head_across_flats) / 2;
 hex_ring_clearance = sqrt(
@@ -76,12 +86,24 @@ assert(
 );
 assert(removed_ring_width == 17, "Clamp opening must be 17 mm wide");
 assert(
+    initial_nut_engagement >= 2 * bolt_pitch,
+    "Bolt needs enough initial thread engagement to catch the nut"
+);
+assert(
+    abs(closed_bolt_protrusion) < 0.001,
+    "Bolt end must be flush with the nut when the clamp is closed"
+);
+assert(
     hex_ring_clearance >= minimum_hex_ring_clearance,
     "M12 hex head and nut need at least 1 mm clearance from the ring"
 );
 assert(
     bolt_smooth_length + bolt_thread_length == bolt_under_head_length,
     "Bolt shank lengths must match its under-head length"
+);
+assert(
+    bolt_thread_length >= nut_height + block_gap,
+    "Bolt thread must cover the nut and the full clamp travel"
 );
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
@@ -117,6 +139,22 @@ module closed_ring_with_flange() {
     }
 }
 
+module flange_relief_cut() {
+    translate([0, 0, magsafe_edge_thickness - epsilon])
+        linear_extrude(height = flange_thickness + 2 * epsilon)
+            polygon([
+                [ring_inner_radius, 0],
+                [flange_opening_radius, -flange_relief_base_width / 2],
+                [flange_opening_radius, flange_relief_base_width / 2]
+            ]);
+}
+
+module flange_relief_cuts() {
+    for (relief_angle = flange_relief_angles)
+        rotate([0, 0, relief_angle])
+            flange_relief_cut();
+}
+
 module split_ring_with_flange() {
     difference() {
         closed_ring_with_flange();
@@ -134,6 +172,9 @@ module split_ring_with_flange() {
                     + flange_thickness
                     + 2 * epsilon
             ]);
+
+        // Three triangular flex cuts in the lower retaining flange.
+        flange_relief_cuts();
     }
 }
 
