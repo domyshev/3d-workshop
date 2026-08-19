@@ -5,7 +5,7 @@ $fn = 96;
 use <../../lib/core/threads/threads.scad>
 
 // Export selector: "all", "holder", "bolt", "stand_bolt", "nut",
-// "stand", or "fit_preview".
+// "stand", "stand_flat", "stand_long_side", or "fit_preview".
 part = "all";
 show_magsafe_reference = false;
 
@@ -54,17 +54,17 @@ bolt_head_across_flats = 19;
 bolt_head_height = 7.5;
 nut_across_flats = 19;
 nut_height = 10;
-nut_thread_diameter = 12.8;
+nut_thread_diameter = 12.7;
 effective_block_thickness = block_thickness + block_join_overlap;
 open_clamp_width = 2 * effective_block_thickness + block_gap;
 closed_clamp_width = 2 * effective_block_thickness;
 bolt_under_head_length = closed_clamp_width + nut_height;
 bolt_thread_length = 16;
 bolt_smooth_length = bolt_under_head_length - bolt_thread_length;
-stand_bolt_under_head_length = 30;
+stand_bolt_under_head_length = 40;
 stand_bolt_thread_length = 16;
 stand_bolt_smooth_length = stand_bolt_under_head_length
-    - stand_bolt_thread_length; // 14 mm.
+    - stand_bolt_thread_length; // 24 mm.
 initial_nut_engagement = bolt_under_head_length - open_clamp_width;
 closed_bolt_protrusion = bolt_under_head_length
     - closed_clamp_width
@@ -93,15 +93,16 @@ stand_face_width = 2 * stand_hole_edge
 stand_end_radius = stand_face_width / 2; // 11.5 mm.
 stand_lower_fork_length = 24; // 23 mm wide with 1 mm rotational allowance.
 stand_outer_thickness = 30;
-stand_upper_free_gap = 18;
-stand_upper_body_gap = 15;
+stand_upper_wide_gap = 17;
+stand_upper_narrow_gap = 13;
+stand_upper_outer_thickness = stand_outer_thickness;
+stand_upper_thin_arm_thickness = (
+    stand_upper_outer_thickness - stand_upper_wide_gap
+) / 2; // 6.5 mm.
+stand_upper_thick_arm_thickness = (
+    stand_upper_outer_thickness - stand_upper_narrow_gap
+) / 2; // 8.5 mm.
 stand_lower_gap = 18;
-stand_upper_free_arm_thickness = (
-    stand_outer_thickness - stand_upper_free_gap
-) / 2; // 6 mm.
-stand_upper_body_arm_thickness = (
-    stand_outer_thickness - stand_upper_body_gap
-) / 2; // 7.5 mm.
 stand_lower_arm_thickness = (
     stand_outer_thickness - stand_lower_gap
 ) / 2; // 6 mm.
@@ -117,6 +118,24 @@ stand_upper_body_z = stand_top_axis_height
 stand_lower_tip_z = stand_base_thickness;
 stand_lower_body_z = stand_lower_tip_z + stand_lower_fork_length;
 stand_body_height = stand_upper_body_z - stand_lower_body_z;
+
+// Fine radial locking serrations on the four inward-facing fork surfaces.
+stand_index_tooth_count = 48;
+stand_index_tooth_height = 0.7;
+stand_index_valley_height = 0.1;
+stand_index_embed = 0.2;
+stand_index_inner_diameter = 14;
+stand_index_outer_diameter = 21;
+stand_index_station_count = 2 * stand_index_tooth_count;
+stand_index_step_angle = 360 / stand_index_station_count;
+stand_upper_inner_face_mid_y = (
+    stand_upper_wide_gap + stand_upper_narrow_gap
+) / 4; // 7.5 mm on the positive arm.
+stand_upper_inner_face_angle = -atan(
+    (
+        stand_upper_wide_gap - stand_upper_narrow_gap
+    ) / (2 * stand_face_width)
+);
 
 epsilon = 0.05;
 
@@ -154,12 +173,21 @@ assert(
 assert(
     stand_bolt_smooth_length + stand_bolt_thread_length
         == stand_bolt_under_head_length,
-    "Stand bolt shank lengths must equal 30 mm"
+    "Stand bolt shank lengths must equal 40 mm"
 );
 assert(
-    stand_upper_free_arm_thickness == 6
-        && stand_upper_body_arm_thickness == 7.5,
-    "Upper stand arms must taper from 6 to 7.5 mm"
+    stand_upper_thin_arm_thickness == 6.5
+        && stand_upper_thick_arm_thickness == 8.5,
+    "Upper stand arms must thicken from 6.5 to 8.5 mm"
+);
+assert(
+    stand_upper_wide_gap
+        - 2 * (
+            stand_upper_thick_arm_thickness
+                - stand_upper_thin_arm_thickness
+        )
+        == stand_upper_narrow_gap,
+    "Upper stand gap must taper across X from 17 to 13 mm"
 );
 assert(
     stand_lower_arm_thickness == 6,
@@ -173,8 +201,139 @@ assert(
     abs(stand_body_height - 19.5) < 0.001,
     "Stand central body must be 19.5 mm high"
 );
+assert(
+    stand_index_outer_diameter <= stand_face_width - 2,
+    "Stand serrations need at least 1 mm to the outer ear edge"
+);
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
+
+function stand_index_polar3(radius, angle, normal_position) = [
+    radius * cos(angle),
+    radius * sin(angle),
+    normal_position
+];
+
+function stand_index_height(station_index) =
+    station_index % 2 == 0
+        ? stand_index_tooth_height
+        : stand_index_valley_height;
+
+function stand_index_sector_midpoint(
+    radius,
+    station_index,
+    normal_position
+) = stand_index_polar3(
+    radius,
+    (station_index + 0.5) * stand_index_step_angle,
+    normal_position
+);
+
+module stand_index_serration_ring() {
+    inner_radius = stand_index_inner_diameter / 2;
+    outer_radius = stand_index_outer_diameter / 2;
+    points = [
+        for (
+            station_index = [0 : stand_index_station_count - 1]
+        )
+            let(
+                next_index = (
+                    station_index + 1
+                ) % stand_index_station_count,
+                top_mid_normal = (
+                    stand_index_height(station_index)
+                        + stand_index_height(next_index)
+                ) / 2,
+                side_mid_normal = (
+                    -stand_index_embed + top_mid_normal
+                ) / 2
+            )
+                each [
+                    stand_index_polar3(
+                        inner_radius,
+                        station_index * stand_index_step_angle,
+                        -stand_index_embed
+                    ),
+                    stand_index_polar3(
+                        outer_radius,
+                        station_index * stand_index_step_angle,
+                        -stand_index_embed
+                    ),
+                    stand_index_polar3(
+                        inner_radius,
+                        station_index * stand_index_step_angle,
+                        stand_index_height(station_index)
+                    ),
+                    stand_index_polar3(
+                        outer_radius,
+                        station_index * stand_index_step_angle,
+                        stand_index_height(station_index)
+                    ),
+                    stand_index_sector_midpoint(
+                        (inner_radius + outer_radius) / 2,
+                        station_index,
+                        top_mid_normal
+                    ),
+                    stand_index_sector_midpoint(
+                        (inner_radius + outer_radius) / 2,
+                        station_index,
+                        -stand_index_embed
+                    ),
+                    stand_index_sector_midpoint(
+                        outer_radius,
+                        station_index,
+                        side_mid_normal
+                    ),
+                    stand_index_sector_midpoint(
+                        inner_radius,
+                        station_index,
+                        side_mid_normal
+                    )
+                ]
+    ];
+    faces = [
+        for (
+            station_index = [0 : stand_index_station_count - 1]
+        )
+            let(
+                next_index = (
+                    station_index + 1
+                ) % stand_index_station_count,
+                bottom_inner = 8 * station_index,
+                bottom_outer = bottom_inner + 1,
+                top_inner = bottom_inner + 2,
+                top_outer = bottom_inner + 3,
+                top_midpoint = bottom_inner + 4,
+                bottom_midpoint = bottom_inner + 5,
+                outer_midpoint = bottom_inner + 6,
+                inner_midpoint = bottom_inner + 7,
+                next_bottom_inner = 8 * next_index,
+                next_bottom_outer = next_bottom_inner + 1,
+                next_top_inner = next_bottom_inner + 2,
+                next_top_outer = next_bottom_inner + 3
+            )
+                each [
+                    [top_inner, top_outer, top_midpoint],
+                    [top_outer, next_top_outer, top_midpoint],
+                    [next_top_outer, next_top_inner, top_midpoint],
+                    [next_top_inner, top_inner, top_midpoint],
+                    [bottom_inner, next_bottom_inner, bottom_midpoint],
+                    [next_bottom_inner, next_bottom_outer, bottom_midpoint],
+                    [next_bottom_outer, bottom_outer, bottom_midpoint],
+                    [bottom_outer, bottom_inner, bottom_midpoint],
+                    [bottom_outer, next_bottom_outer, outer_midpoint],
+                    [next_bottom_outer, next_top_outer, outer_midpoint],
+                    [next_top_outer, top_outer, outer_midpoint],
+                    [top_outer, bottom_outer, outer_midpoint],
+                    [bottom_inner, top_inner, inner_midpoint],
+                    [top_inner, next_top_inner, inner_midpoint],
+                    [next_top_inner, next_bottom_inner, inner_midpoint],
+                    [next_bottom_inner, bottom_inner, inner_midpoint]
+                ]
+    ];
+
+    polyhedron(points = points, faces = faces, convexity = 4);
+}
 
 module annulus(outer_diameter, inner_diameter, height) {
     difference() {
@@ -377,31 +536,34 @@ module stand_face_envelope(profile = "upper") {
 
 module stand_upper_positive_arm() {
     intersection() {
-        hull() {
-            // Rear/body end: 15 mm gap, therefore 7.5 mm arm thickness.
-            translate([
-                -stand_face_width / 2,
-                stand_upper_body_gap / 2,
-                stand_upper_body_z - epsilon
-            ])
-                cube([
-                    stand_face_width,
-                    stand_upper_body_arm_thickness,
-                    2 * epsilon
+        // The inner face changes across the 23 mm X width, not along Z:
+        // 17 mm fork gap at -X and 13 mm at +X. The outer face remains
+        // parallel and flush with the 30 mm body, so each arm thickens
+        // from 6.5 to 8.5 mm.
+        translate([0, 0, stand_upper_body_z - epsilon])
+            linear_extrude(
+                height = stand_upper_tip_z
+                    - stand_upper_body_z
+                    + 2 * epsilon
+            )
+                polygon([
+                    [
+                        -stand_face_width / 2,
+                        stand_upper_wide_gap / 2
+                    ],
+                    [
+                        stand_face_width / 2,
+                        stand_upper_narrow_gap / 2
+                    ],
+                    [
+                        stand_face_width / 2,
+                        stand_upper_outer_thickness / 2
+                    ],
+                    [
+                        -stand_face_width / 2,
+                        stand_upper_outer_thickness / 2
+                    ]
                 ]);
-
-            // Free/front end: 18 mm gap and 6 mm arm thickness.
-            translate([
-                -stand_face_width / 2,
-                stand_upper_free_gap / 2,
-                stand_upper_tip_z - epsilon
-            ])
-                cube([
-                    stand_face_width,
-                    stand_upper_free_arm_thickness,
-                    2 * epsilon
-                ]);
-        }
 
         stand_face_envelope("upper");
     }
@@ -462,6 +624,44 @@ module stand_bolt_hole(axis_height) {
             );
 }
 
+module stand_upper_positive_index_ring() {
+    translate([
+        0,
+        stand_upper_inner_face_mid_y,
+        stand_top_axis_height
+    ])
+        rotate([0, 0, stand_upper_inner_face_angle])
+            rotate([90, 0, 0])
+                stand_index_serration_ring();
+}
+
+module stand_upper_index_rings() {
+    stand_upper_positive_index_ring();
+    mirror([0, 1, 0])
+        stand_upper_positive_index_ring();
+}
+
+module stand_lower_positive_index_ring() {
+    translate([
+        0,
+        stand_lower_gap / 2,
+        stand_lower_axis_height
+    ])
+        rotate([90, 0, 0])
+            stand_index_serration_ring();
+}
+
+module stand_lower_index_rings() {
+    stand_lower_positive_index_ring();
+    mirror([0, 1, 0])
+        stand_lower_positive_index_ring();
+}
+
+module stand_index_rings() {
+    stand_upper_index_rings();
+    stand_lower_index_rings();
+}
+
 module vertical_support_stand() {
     color(stand_color)
         difference() {
@@ -469,6 +669,7 @@ module vertical_support_stand() {
                 stand_lower_fork();
                 stand_central_body();
                 stand_upper_fork();
+                stand_index_rings();
             }
 
             stand_bolt_hole(stand_lower_axis_height);
@@ -481,6 +682,23 @@ module vertical_support_stand_for_print() {
     // future 6 mm base. Move only the standalone export down onto the bed.
     translate([0, 0, -stand_base_thickness])
         vertical_support_stand();
+}
+
+module vertical_support_stand_flat_for_print() {
+    // Lay a broad outer ear face on the print bed. After the X rotation,
+    // the original 30 mm Y envelope becomes the Z print height.
+    translate([0, 0, stand_outer_thickness / 2])
+        rotate([90, 0, 0])
+            vertical_support_stand_for_print();
+}
+
+module vertical_support_stand_long_side_for_print() {
+    // Put the 81.5 mm length along the bed while keeping the broad ear
+    // planes vertical. A +Y rotation sends the +X edge (13 mm gap,
+    // 8.5 mm upper-arm thickness) down onto the print bed.
+    translate([0, 0, stand_face_width / 2])
+        rotate([0, 90, 0])
+            vertical_support_stand_for_print();
 }
 
 module external_bolt_thread(length) {
@@ -591,6 +809,8 @@ assert(
         || part == "stand_bolt"
         || part == "nut"
         || part == "stand"
+        || part == "stand_flat"
+        || part == "stand_long_side"
         || part == "fit_preview",
     str("Unknown part: ", part)
 );
@@ -622,6 +842,10 @@ if (part == "all") {
     m12_nut();
 } else if (part == "stand") {
     vertical_support_stand_for_print();
+} else if (part == "stand_flat") {
+    vertical_support_stand_flat_for_print();
+} else if (part == "stand_long_side") {
+    vertical_support_stand_long_side_for_print();
 } else if (part == "fit_preview") {
     fastener_fit_preview();
 }
