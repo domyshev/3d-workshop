@@ -4,12 +4,13 @@ $fn = 96;
 
 use <../../lib/core/threads/threads.scad>
 
-// Export selector: "all", "holder", "bolt", "stand_bolt", "nut",
+// Display/export selector: "all", "assembly", "holder", "stand_bolt", "nut",
 // "stand", "stand_flat", "stand_long_side", "platform",
 // "base_socket_x", "base_socket_y", "base_end_block",
-// "base_connector", "platform_preview", or "fit_preview".
-part = "all";
+// "base_connector", or "platform_preview".
+part = "assembly";
 show_magsafe_reference = false;
+show_labels = true;
 
 // Measured MagSafe dimensions.
 magsafe_diameter = 56;
@@ -61,20 +62,10 @@ bolt_head_height = 7.5;
 nut_across_flats = 19;
 nut_height = bolt_head_height; // 7.5 mm, matching the bolt head.
 nut_thread_diameter = 12.7;
-effective_block_thickness = block_thickness + block_join_overlap;
-open_clamp_width = 2 * effective_block_thickness + block_gap;
-closed_clamp_width = 2 * effective_block_thickness;
-bolt_under_head_length = 22.4; // Preserve 5 mm initial nut engagement.
-bolt_thread_length = 16;
-bolt_smooth_length = bolt_under_head_length - bolt_thread_length;
 stand_bolt_under_head_length = 37.5;
 stand_bolt_thread_length = 16;
 stand_bolt_smooth_length = stand_bolt_under_head_length
     - stand_bolt_thread_length; // 21.5 mm.
-initial_nut_engagement = bolt_under_head_length - open_clamp_width;
-closed_bolt_protrusion = bolt_under_head_length
-    - closed_clamp_width
-    - nut_height;
 minimum_hex_ring_clearance = 1;
 hex_corner_radius = hex_vertex_diameter(bolt_head_across_flats) / 2;
 hex_ring_clearance = sqrt(
@@ -145,7 +136,7 @@ base_connector_length = 16;
 base_connector_hex_key_size = 5;
 base_connector_hex_clearance_per_side = 0.05;
 base_connector_hex_socket_size = base_connector_hex_key_size
-    + 2 * base_connector_hex_clearance_per_side; // 5.5 mm across flats.
+    + 2 * base_connector_hex_clearance_per_side; // 5.1 mm across flats.
 base_connector_hex_socket_depth = 4;
 base_connector_solid_core = base_connector_length
     - 2 * base_connector_hex_socket_depth; // 8 mm.
@@ -198,6 +189,9 @@ base_socket_color = "#8B5A2B";
 base_end_block_color = "#DDE8B0";
 base_connector_color = "#7E57C2";
 magsafe_color = [0.85, 0.85, 0.85, 0.35];
+label_color = "#333333";
+label_size = 3.6;
+label_height = 0.35;
 
 assert(
     abs(pocket_depth - 4.7) < 0.001,
@@ -205,16 +199,8 @@ assert(
 );
 assert(removed_ring_width == 17, "Clamp opening must be 17 mm wide");
 assert(
-    initial_nut_engagement >= 2 * bolt_pitch,
-    "Bolt needs enough initial thread engagement to catch the nut"
-);
-assert(
     nut_height == bolt_head_height,
     "Nut height must match the bolt-head height"
-);
-assert(
-    abs(closed_bolt_protrusion - 2.5) < 0.001,
-    "The original holder bolt must project 2.5 mm past the thinner nut"
 );
 assert(
     hex_ring_clearance >= minimum_hex_ring_clearance,
@@ -223,14 +209,6 @@ assert(
 assert(
     block_gap - clamp_alignment_collar_depth == 2,
     "The alignment collar must leave 2 mm between the clamp arms"
-);
-assert(
-    bolt_smooth_length + bolt_thread_length == bolt_under_head_length,
-    "Bolt shank lengths must match its under-head length"
-);
-assert(
-    bolt_thread_length >= nut_height + block_gap,
-    "Bolt thread must cover the nut and the full clamp travel"
 );
 assert(
     stand_bolt_smooth_length + stand_bolt_thread_length
@@ -1080,6 +1058,63 @@ module platform_fit_preview() {
     }
 }
 
+module base_assembled_connector(axis, sign) {
+    if (axis == "x") {
+        interface_x = sign * (
+            platform_lug_depth / 2 + base_socket_x_length
+        );
+
+        if (sign > 0)
+            translate([
+                interface_x - base_connector_length / 2,
+                0,
+                base_stud_axis_height
+            ])
+                rotate([0, 90, 0])
+                    base_threaded_connector();
+        else
+            translate([
+                interface_x + base_connector_length / 2,
+                0,
+                base_stud_axis_height
+            ])
+                rotate([0, -90, 0])
+                    base_threaded_connector();
+    } else {
+        interface_y = sign * (
+            platform_lug_thickness / 2 + base_socket_y_length
+        );
+
+        if (sign > 0)
+            translate([
+                0,
+                interface_y - base_connector_length / 2,
+                base_stud_axis_height
+            ])
+                rotate([-90, 0, 0])
+                    base_threaded_connector();
+        else
+            translate([
+                0,
+                interface_y + base_connector_length / 2,
+                base_stud_axis_height
+            ])
+                rotate([90, 0, 0])
+                    base_threaded_connector();
+    }
+}
+
+module assembled_modular_base() {
+    platform_fit_preview();
+
+    // Each 16 mm connector bridges the sleeve/end-block interface with
+    // 8 mm of engagement on either side.
+    for (sign = [-1, 1]) {
+        base_assembled_connector("x", sign);
+        base_assembled_connector("y", sign);
+    }
+}
+
 module external_bolt_thread(length) {
     metric_thread(
         diameter = bolt_diameter,
@@ -1126,10 +1161,6 @@ module m12_bolt_with_shank(smooth_length, thread_length) {
         }
 }
 
-module m12_bolt() {
-    m12_bolt_with_shank(bolt_smooth_length, bolt_thread_length);
-}
-
 module m12_stand_bolt() {
     m12_bolt_with_shank(
         stand_bolt_smooth_length,
@@ -1159,32 +1190,139 @@ module magsafe_reference() {
         );
 }
 
-module fastener_fit_preview() {
-    circle_holder();
+module positioned_holder_at_joint(axis_height, tilt = 90) {
+    // Move the clamp-hole axis to the origin before applying the phone tilt,
+    // then place that axis concentrically inside the upper stand fork.
+    translate([0, 0, axis_height])
+        rotate([0, tilt, 0])
+            translate([
+                -block_hole_center_x,
+                0,
+                -block_hole_center_z
+            ])
+                circle_holder();
+}
 
-    // Bolt head sits against the outside of the lower clamp block.
-    translate([
-        block_hole_center_x,
-        -block_outer_y - bolt_head_height,
-        block_hole_center_z
-    ])
-        rotate([-90, 0, 0])
-            m12_bolt();
+module positioned_magsafe_at_joint(axis_height, tilt = 90) {
+    translate([0, 0, axis_height])
+        rotate([0, tilt, 0])
+            translate([
+                -block_hole_center_x,
+                0,
+                -block_hole_center_z
+            ])
+                magsafe_reference();
+}
 
-    // Nut sits against the outside of the upper clamp block.
+module assembled_joint_fastener(axis_height) {
+    // The 37.5 mm under-head length spans the complete 30 mm fork and the
+    // 7.5 mm nut without protruding beyond it.
     translate([
-        block_hole_center_x,
-        block_outer_y,
-        block_hole_center_z
+        0,
+        stand_outer_thickness / 2 + bolt_head_height,
+        axis_height
     ])
-        rotate([-90, 0, 0])
+        rotate([90, 0, 0])
+            m12_stand_bolt();
+
+    translate([
+        0,
+        -stand_outer_thickness / 2,
+        axis_height
+    ])
+        rotate([90, 0, 0])
             m12_nut();
+}
+
+module complete_assembly() {
+    stand_assembly_z = platform_lug_axis_height
+        - stand_lower_axis_height;
+    upper_joint_axis_height = stand_assembly_z
+        + stand_top_axis_height;
+
+    assembled_modular_base();
+
+    translate([0, 0, stand_assembly_z])
+        vertical_support_stand();
+
+    // Start from the vertical 90-degree position and lean the top of the
+    // holder 20 degrees toward the support stand.
+    positioned_holder_at_joint(upper_joint_axis_height, 110);
+
+    if (show_magsafe_reference)
+        positioned_magsafe_at_joint(upper_joint_axis_height, 110);
+
+    assembled_joint_fastener(platform_lug_axis_height);
+    assembled_joint_fastener(upper_joint_axis_height);
+}
+
+module layout_label(label_text, position, size = label_size) {
+    color(label_color)
+        translate([position[0], position[1], epsilon])
+            linear_extrude(height = label_height)
+                text(
+                    label_text,
+                    size = size,
+                    halign = "center",
+                    valign = "center"
+                );
+}
+
+module current_parts_labels() {
+    layout_label("MagSafe clamp ring", [-91, 12]);
+    layout_label("Vertical support", [0, 28]);
+    layout_label("Threaded base", [91, 28]);
+
+    layout_label("M12 long bolt", [-91, -69]);
+    layout_label("M12 nut", [-54.6, -69]);
+    layout_label("Hex connector", [-20.8, -69]);
+    layout_label("Long sleeve", [19.5, -69]);
+    layout_label("Short sleeve", [55.9, -69]);
+    layout_label("End block", [91, -69]);
+}
+
+module current_parts_layout() {
+    // The two row centerlines sit equally far from the X axis. The outer
+    // structural parts align with the outer fasteners, and the stand is
+    // centered between them.
+    translate([-91, 52.5, 0])
+        rotate([0, 0, 180])
+            circle_holder();
+
+    translate([0, 52.5, 0])
+        vertical_support_stand();
+
+    translate([91, 52.5, 0])
+        compact_threaded_base();
+
+    // Fasteners and one representative of every modular base component.
+    // Their former X spacing is increased by 30 percent around X=0.
+    translate([-91, -52.5, 0])
+        m12_stand_bolt();
+
+    translate([-54.6, -52.5, 0])
+        m12_nut();
+
+    translate([-20.8, -52.5, 0])
+        base_threaded_connector();
+
+    translate([19.5, -52.5, 0])
+        base_double_socket(base_socket_x_length);
+
+    translate([55.9, -52.5, 0])
+        base_double_socket(base_socket_y_length);
+
+    translate([91, -52.5, 0])
+        base_end_block();
+
+    if (show_labels)
+        current_parts_labels();
 }
 
 assert(
     part == "all"
+        || part == "assembly"
         || part == "holder"
-        || part == "bolt"
         || part == "stand_bolt"
         || part == "nut"
         || part == "stand"
@@ -1195,47 +1333,20 @@ assert(
         || part == "base_socket_y"
         || part == "base_end_block"
         || part == "base_connector"
-        || part == "platform_preview"
-        || part == "fit_preview",
+        || part == "platform_preview",
     str("Unknown part: ", part)
 );
 
 if (part == "all") {
-    circle_holder();
+    current_parts_layout();
 
     if (show_magsafe_reference)
-        magsafe_reference();
-
-    translate([-48, 0, 0])
-        m12_bolt();
-
-    translate([-48, 36, 0])
-        m12_stand_bolt();
-
-    translate([-72, 0, 0])
-        m12_nut();
-
-    translate([-110, 0, 0])
-        vertical_support_stand();
-
-    translate([130, 0, 0])
-        compact_threaded_base();
-
-    translate([100, -50, 0])
-        base_double_socket(base_socket_x_length);
-
-    translate([125, -50, 0])
-        base_double_socket(base_socket_y_length);
-
-    translate([150, -50, 0])
-        base_end_block();
-
-    translate([175, -50, 0])
-        base_threaded_connector();
+        translate([-91, 52.5, 0])
+            magsafe_reference();
+} else if (part == "assembly") {
+    complete_assembly();
 } else if (part == "holder") {
     circle_holder();
-} else if (part == "bolt") {
-    m12_bolt();
 } else if (part == "stand_bolt") {
     m12_stand_bolt();
 } else if (part == "nut") {
@@ -1258,6 +1369,4 @@ if (part == "all") {
     base_threaded_connector();
 } else if (part == "platform_preview") {
     platform_fit_preview();
-} else if (part == "fit_preview") {
-    fastener_fit_preview();
 }
