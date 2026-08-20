@@ -6,7 +6,8 @@ use <../../lib/core/threads/threads.scad>
 
 // Export selector: "all", "holder", "bolt", "stand_bolt", "nut",
 // "stand", "stand_flat", "stand_long_side", "platform",
-// "platform_lid", "platform_preview", or "fit_preview".
+// "base_socket_x", "base_socket_y", "base_end_block",
+// "base_connector", "platform_preview", or "fit_preview".
 part = "all";
 show_magsafe_reference = false;
 
@@ -49,23 +50,27 @@ block_hole_center_z = block_front_z + block_height_z / 2;
 
 // M12 clamp fastener.
 block_hole_diameter = 13;
+clamp_alignment_collar_depth = 3;
+clamp_alignment_collar_radial_wall = 3;
+clamp_alignment_collar_outer_diameter = block_hole_diameter
+    + 2 * clamp_alignment_collar_radial_wall; // 19 mm.
 bolt_diameter = 12;
 bolt_pitch = 1.75;
 bolt_head_across_flats = 19;
 bolt_head_height = 7.5;
 nut_across_flats = 19;
-nut_height = 10;
+nut_height = bolt_head_height; // 7.5 mm, matching the bolt head.
 nut_thread_diameter = 12.7;
 effective_block_thickness = block_thickness + block_join_overlap;
 open_clamp_width = 2 * effective_block_thickness + block_gap;
 closed_clamp_width = 2 * effective_block_thickness;
-bolt_under_head_length = closed_clamp_width + nut_height;
+bolt_under_head_length = 22.4; // Preserve 5 mm initial nut engagement.
 bolt_thread_length = 16;
 bolt_smooth_length = bolt_under_head_length - bolt_thread_length;
-stand_bolt_under_head_length = 40;
+stand_bolt_under_head_length = 37.5;
 stand_bolt_thread_length = 16;
 stand_bolt_smooth_length = stand_bolt_under_head_length
-    - stand_bolt_thread_length; // 24 mm.
+    - stand_bolt_thread_length; // 21.5 mm.
 initial_nut_engagement = bolt_under_head_length - open_clamp_width;
 closed_bolt_protrusion = bolt_under_head_length
     - closed_clamp_width
@@ -94,15 +99,10 @@ stand_face_width = 2 * stand_hole_edge
 stand_end_radius = stand_face_width / 2; // 11.5 mm.
 stand_lower_fork_length = 24; // 23 mm wide with 1 mm rotational allowance.
 stand_outer_thickness = 30;
-stand_upper_wide_gap = 17;
-stand_upper_narrow_gap = 13;
-stand_upper_outer_thickness = stand_outer_thickness;
-stand_upper_thin_arm_thickness = (
-    stand_upper_outer_thickness - stand_upper_wide_gap
-) / 2; // 6.5 mm.
-stand_upper_thick_arm_thickness = (
-    stand_upper_outer_thickness - stand_upper_narrow_gap
-) / 2; // 8.5 mm.
+stand_upper_gap = 18;
+stand_upper_arm_thickness = (
+    stand_outer_thickness - stand_upper_gap
+) / 2; // 6 mm.
 stand_lower_gap = 18;
 stand_lower_arm_thickness = (
     stand_outer_thickness - stand_lower_gap
@@ -129,43 +129,22 @@ stand_index_inner_diameter = 14;
 stand_index_outer_diameter = 21;
 stand_index_station_count = 2 * stand_index_tooth_count;
 stand_index_step_angle = 360 / stand_index_station_count;
-stand_upper_inner_face_mid_y = (
-    stand_upper_wide_gap + stand_upper_narrow_gap
-) / 4; // 7.5 mm on the positive arm.
-stand_upper_inner_face_angle = -atan(
-    (
-        stand_upper_wide_gap - stand_upper_narrow_gap
-    ) / (2 * stand_face_width)
-);
+stand_upper_inner_face_mid_y = stand_upper_gap / 2; // 9 mm.
+stand_upper_inner_face_angle = 0;
 
-// Hollow weighted base platform and removable sliding bottom lid.
-platform_length = 100;
-platform_width = 74;
-platform_height = 14;
-platform_side_wall = 5;
-platform_top_wall = 4;
-platform_corner_radius = 3;
-platform_top_chamfer = 1;
-platform_inner_length = platform_length - 2 * platform_side_wall; // 90 mm.
-platform_inner_width = platform_width - 2 * platform_side_wall; // 64 mm.
-platform_lid_thickness = 2;
-platform_lid_groove_bottom = 2;
-platform_lid_groove_height = 2.7;
-platform_lid_groove_depth = 2.35;
-platform_lid_clearance = 0.35;
-platform_lid_width = platform_inner_width
-    + 2 * (platform_lid_groove_depth - platform_lid_clearance); // 68 mm.
-platform_lid_length = platform_length
-    - platform_side_wall
-    + platform_lid_groove_depth
-    - platform_lid_clearance; // 97 mm, flush with the insertion end.
-platform_lid_corner_radius = 1;
-platform_lid_closed_center_x = -platform_length / 2
-    + platform_lid_length / 2;
-platform_lug_reinforcement_length = 40;
-platform_lug_reinforcement_width = 30;
-platform_lug_reinforcement_depth = 4;
-platform_lug_reinforcement_chamfer = 1;
+// Compact modular base. Four end blocks and socket bodies form an exact
+// 110 x 78 mm footprint around the central indexed ear.
+base_target_length_x = 110;
+base_target_width_y = 78;
+base_stud_axis_height = 10;
+base_stud_length = 8;
+base_attachment_outer_diameter = 18;
+base_attachment_clearance = 1;
+base_socket_depth = 8.35;
+base_connector_length = 16;
+base_end_block_cross_section = 20;
+base_end_block_axis_length = 10;
+base_end_block_chamfer = 1.2;
 
 // The lower stand fork has an 18 mm nominal gap. Complementary serrations
 // need 0.8 mm per interface (0.7 mm tooth plus 0.1 mm valley), followed by
@@ -179,11 +158,27 @@ platform_lug_thickness = stand_lower_gap
             + platform_lug_interface_clearance
     ); // 15.8 mm core.
 platform_lug_depth = stand_face_width; // 23 mm along X.
-platform_lug_height = stand_face_width; // 23 mm above the platform.
+platform_lug_height = stand_face_width; // 23 mm tall D-shaped ear.
 platform_lug_radius = stand_end_radius; // 11.5 mm.
 platform_lug_hole_diameter = stand_hole_diameter;
-platform_lug_axis_height = platform_height + platform_lug_height / 2;
-platform_lug_top_z = platform_height + platform_lug_height;
+platform_lug_bottom_z = base_stud_axis_height
+    + base_attachment_outer_diameter / 2
+    + base_attachment_clearance; // 20 mm.
+platform_lug_axis_height = platform_lug_bottom_z
+    + platform_lug_height / 2; // 31.5 mm.
+platform_lug_top_z = platform_lug_bottom_z + platform_lug_height; // 43 mm.
+base_socket_x_length = (
+    base_target_length_x
+        - platform_lug_depth
+        - 2 * base_end_block_axis_length
+) / 2; // 33.5 mm.
+base_socket_y_length = (
+    base_target_width_y
+        - platform_lug_thickness
+        - 2 * base_end_block_axis_length
+) / 2; // 21.1 mm.
+base_socket_x_solid_core = base_socket_x_length - 2 * base_socket_depth;
+base_socket_y_solid_core = base_socket_y_length - 2 * base_socket_depth;
 
 epsilon = 0.05;
 
@@ -192,7 +187,9 @@ bolt_color = "#E07A3F";
 nut_color = "#7E57C2";
 stand_color = "#F3E5C8";
 platform_color = "#B7A58A";
-platform_lid_color = "#D8CDBA";
+base_socket_color = "#8B5A2B";
+base_end_block_color = "#DDE8B0";
+base_connector_color = "#7E57C2";
 magsafe_color = [0.85, 0.85, 0.85, 0.35];
 
 assert(
@@ -205,12 +202,20 @@ assert(
     "Bolt needs enough initial thread engagement to catch the nut"
 );
 assert(
-    abs(closed_bolt_protrusion) < 0.001,
-    "Bolt end must be flush with the nut when the clamp is closed"
+    nut_height == bolt_head_height,
+    "Nut height must match the bolt-head height"
+);
+assert(
+    abs(closed_bolt_protrusion - 2.5) < 0.001,
+    "The original holder bolt must project 2.5 mm past the thinner nut"
 );
 assert(
     hex_ring_clearance >= minimum_hex_ring_clearance,
     "M12 hex head and nut need at least 1 mm clearance from the ring"
+);
+assert(
+    block_gap - clamp_alignment_collar_depth == 2,
+    "The alignment collar must leave 2 mm between the clamp arms"
 );
 assert(
     bolt_smooth_length + bolt_thread_length == bolt_under_head_length,
@@ -223,21 +228,12 @@ assert(
 assert(
     stand_bolt_smooth_length + stand_bolt_thread_length
         == stand_bolt_under_head_length,
-    "Stand bolt shank lengths must equal 40 mm"
+    "Stand bolt shank lengths must equal 37.5 mm"
 );
 assert(
-    stand_upper_thin_arm_thickness == 6.5
-        && stand_upper_thick_arm_thickness == 8.5,
-    "Upper stand arms must thicken from 6.5 to 8.5 mm"
-);
-assert(
-    stand_upper_wide_gap
-        - 2 * (
-            stand_upper_thick_arm_thickness
-                - stand_upper_thin_arm_thickness
-        )
-        == stand_upper_narrow_gap,
-    "Upper stand gap must taper across X from 17 to 13 mm"
+    stand_upper_gap == 18
+        && stand_upper_arm_thickness == 6,
+    "Upper stand arms must be uniformly 6 mm thick"
 );
 assert(
     stand_lower_arm_thickness == 6,
@@ -256,23 +252,32 @@ assert(
     "Stand serrations need at least 1 mm to the outer ear edge"
 );
 assert(
-    abs(platform_lid_width - 68) < 0.001
-        && abs(platform_lid_length - 97) < 0.001,
-    "Platform lid must be 97 x 68 mm"
-);
-assert(
     abs(platform_lug_thickness - 15.8) < 0.001,
     "Indexed platform lug core must be 15.8 mm thick"
 );
 assert(
-    abs(platform_lug_top_z - platform_height - 23) < 0.001,
-    "Platform lug must project exactly 23 mm above the top surface"
+    abs(platform_lug_bottom_z - 20) < 0.001
+        && abs(platform_lug_axis_height - 31.5) < 0.001
+        && abs(platform_lug_top_z - 43) < 0.001,
+    "Compact base ear heights must preserve 1 mm attachment clearance"
 );
 assert(
-    platform_height - platform_top_wall
-        - platform_lug_reinforcement_depth >= platform_lid_groove_bottom
-            + platform_lid_groove_height,
-    "Lug reinforcement must stay above the sliding-lid groove"
+    abs(base_socket_x_length - 33.5) < 0.001
+        && abs(base_socket_y_length - 21.1) < 0.001,
+    "Socket bodies must produce an exact 110 x 78 mm assembly"
+);
+assert(
+    abs(base_socket_x_solid_core - 16.8) < 0.001
+        && abs(base_socket_y_solid_core - 4.4) < 0.001,
+    "Opposing 8.35 mm sockets must leave the calculated solid centers"
+);
+assert(
+    base_stud_length < base_socket_depth,
+    "M12 base studs need axial seating clearance in their sockets"
+);
+assert(
+    base_connector_length / 2 < base_socket_depth,
+    "The 16 mm connector needs seating clearance at both ends"
 );
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
@@ -554,12 +559,28 @@ module clamp_bolt_hole() {
             );
 }
 
+module clamp_alignment_collar() {
+    // A single annular guide projects from the +Y clamp arm into the gap.
+    // The common bolt-hole subtraction supplies its 13 mm inner diameter.
+    translate([
+        block_hole_center_x,
+        block_gap / 2 + epsilon,
+        block_hole_center_z
+    ])
+        rotate([90, 0, 0])
+            cylinder(
+                d = clamp_alignment_collar_outer_diameter,
+                h = clamp_alignment_collar_depth + epsilon
+            );
+}
+
 module circle_holder() {
     color(holder_color)
         difference() {
             union() {
                 split_ring_with_flange();
                 clamp_blocks();
+                clamp_alignment_collar();
             }
 
             clamp_bolt_hole();
@@ -605,34 +626,18 @@ module stand_face_envelope(profile = "upper") {
 
 module stand_upper_positive_arm() {
     intersection() {
-        // The inner face changes across the 23 mm X width, not along Z:
-        // 17 mm fork gap at -X and 13 mm at +X. The outer face remains
-        // parallel and flush with the 30 mm body, so each arm thickens
-        // from 6.5 to 8.5 mm.
-        translate([0, 0, stand_upper_body_z - epsilon])
-            linear_extrude(
-                height = stand_upper_tip_z
-                    - stand_upper_body_z
-                    + 2 * epsilon
-            )
-                polygon([
-                    [
-                        -stand_face_width / 2,
-                        stand_upper_wide_gap / 2
-                    ],
-                    [
-                        stand_face_width / 2,
-                        stand_upper_narrow_gap / 2
-                    ],
-                    [
-                        stand_face_width / 2,
-                        stand_upper_outer_thickness / 2
-                    ],
-                    [
-                        -stand_face_width / 2,
-                        stand_upper_outer_thickness / 2
-                    ]
-                ]);
+        // Match the lower fork: a constant 18 mm gap and two uniform
+        // 6 mm arms across the complete 23 mm face width.
+        translate([
+            -stand_face_width / 2,
+            stand_upper_gap / 2,
+            stand_upper_body_z - epsilon
+        ])
+            cube([
+                stand_face_width,
+                stand_upper_arm_thickness,
+                stand_upper_tip_z - stand_upper_body_z + 2 * epsilon
+            ]);
 
         stand_face_envelope("upper");
     }
@@ -763,119 +768,10 @@ module vertical_support_stand_flat_for_print() {
 
 module vertical_support_stand_long_side_for_print() {
     // Put the 81.5 mm length along the bed while keeping the broad ear
-    // planes vertical. A +Y rotation sends the +X edge (13 mm gap,
-    // 8.5 mm upper-arm thickness) down onto the print bed.
+    // planes vertical. Both X edges now have the same 6 mm thickness.
     translate([0, 0, stand_face_width / 2])
         rotate([0, 90, 0])
             vertical_support_stand_for_print();
-}
-
-module rounded_rectangle_2d(length, width, radius) {
-    offset(r = radius)
-        square([
-            length - 2 * radius,
-            width - 2 * radius
-        ], center = true);
-}
-
-module platform_outer_body() {
-    union() {
-        linear_extrude(height = platform_height - platform_top_chamfer)
-            rounded_rectangle_2d(
-                platform_length,
-                platform_width,
-                platform_corner_radius
-            );
-
-        translate([0, 0, platform_height - platform_top_chamfer])
-            linear_extrude(
-                height = platform_top_chamfer,
-                scale = [
-                    (platform_length - 2 * platform_top_chamfer)
-                        / platform_length,
-                    (platform_width - 2 * platform_top_chamfer)
-                        / platform_width
-                ]
-            )
-                rounded_rectangle_2d(
-                    platform_length,
-                    platform_width,
-                    platform_corner_radius
-                );
-    }
-}
-
-module platform_inner_cavity_cut() {
-    translate([0, 0, -epsilon])
-        linear_extrude(
-            height = platform_height
-                - platform_top_wall
-                + 2 * epsilon
-        )
-            rounded_rectangle_2d(
-                platform_inner_length,
-                platform_inner_width,
-                0.5
-            );
-}
-
-module platform_lid_guide_cuts() {
-    groove_z = platform_lid_groove_bottom;
-    groove_h = platform_lid_groove_height;
-    groove_back_x = platform_length / 2
-        - platform_side_wall
-        + platform_lid_groove_depth;
-    groove_outer_y = platform_inner_width / 2
-        + platform_lid_groove_depth;
-
-    // Guides in both long walls, open at the -X insertion end.
-    for (side = [-1, 1])
-        translate([
-            -platform_length / 2 - epsilon,
-            side > 0
-                ? platform_inner_width / 2 - epsilon
-                : -groove_outer_y,
-            groove_z
-        ])
-            cube([
-                groove_back_x + platform_length / 2 + 2 * epsilon,
-                platform_lid_groove_depth + epsilon,
-                groove_h
-            ]);
-
-    // Closed stop groove in the +X short wall.
-    translate([
-        platform_length / 2 - platform_side_wall - epsilon,
-        -groove_outer_y,
-        groove_z
-    ])
-        cube([
-            platform_lid_groove_depth + epsilon,
-            2 * groove_outer_y,
-            groove_h
-        ]);
-
-    // Insertion slot through the whole -X short wall. Extending the cut
-    // beyond both rounded side corners prevents thin vertical slivers from
-    // remaining where the slot meets the long-wall guides.
-    translate([
-        -platform_length / 2 - epsilon,
-        -platform_width / 2 - epsilon,
-        groove_z
-    ])
-        cube([
-            platform_side_wall + 2 * epsilon,
-            platform_width + 2 * epsilon,
-            groove_h
-        ]);
-}
-
-module hollow_platform_shell() {
-    difference() {
-        platform_outer_body();
-        platform_inner_cavity_cut();
-        platform_lid_guide_cuts();
-    }
 }
 
 module platform_lug_profile_2d() {
@@ -897,52 +793,11 @@ module platform_lug_core() {
     translate([
         -platform_lug_depth / 2,
         platform_lug_thickness / 2,
-        platform_height
+        platform_lug_bottom_z
     ])
         rotate([90, 0, 0])
             linear_extrude(height = platform_lug_thickness)
                 platform_lug_profile_2d();
-}
-
-module platform_lug_reinforcement() {
-    reinforcement_bottom_z = platform_height
-        - platform_top_wall
-        - platform_lug_reinforcement_depth;
-    straight_height = platform_lug_reinforcement_depth
-        - platform_lug_reinforcement_chamfer
-        + 2 * epsilon;
-
-    translate([0, 0, reinforcement_bottom_z]) {
-        // One-millimetre chamfer around the lower edge of the internal boss.
-        linear_extrude(
-            height = platform_lug_reinforcement_chamfer,
-            scale = [
-                platform_lug_reinforcement_length
-                    / (
-                        platform_lug_reinforcement_length
-                            - 2 * platform_lug_reinforcement_chamfer
-                    ),
-                platform_lug_reinforcement_width
-                    / (
-                        platform_lug_reinforcement_width
-                            - 2 * platform_lug_reinforcement_chamfer
-                    )
-            ]
-        )
-            square([
-                platform_lug_reinforcement_length
-                    - 2 * platform_lug_reinforcement_chamfer,
-                platform_lug_reinforcement_width
-                    - 2 * platform_lug_reinforcement_chamfer
-            ], center = true);
-
-        translate([0, 0, platform_lug_reinforcement_chamfer])
-            linear_extrude(height = straight_height)
-                square([
-                    platform_lug_reinforcement_length,
-                    platform_lug_reinforcement_width
-                ], center = true);
-    }
 }
 
 module platform_lug_positive_index_ring() {
@@ -979,40 +834,218 @@ module platform_lug_hole() {
             );
 }
 
-module weighted_base_platform() {
+module base_external_thread(length) {
+    metric_thread(
+        diameter = bolt_diameter,
+        pitch = bolt_pitch,
+        length = length,
+        internal = false,
+        leadin = 2,
+        test = $preview
+    );
+}
+
+module base_internal_thread_cutter(length) {
+    if ($preview) {
+        cylinder(d = nut_thread_diameter, h = length, $fn = 48);
+    } else {
+        metric_thread(
+            diameter = nut_thread_diameter,
+            pitch = bolt_pitch,
+            length = length,
+            internal = true,
+            leadin = 3
+        );
+    }
+}
+
+module compact_base_stud(direction) {
+    half_x = platform_lug_depth / 2;
+    half_y = platform_lug_thickness / 2;
+
+    if (direction == "+x")
+        translate([half_x - epsilon, 0, base_stud_axis_height])
+            rotate([0, 90, 0])
+                base_external_thread(base_stud_length + epsilon);
+    else if (direction == "-x")
+        translate([-half_x + epsilon, 0, base_stud_axis_height])
+            rotate([0, -90, 0])
+                base_external_thread(base_stud_length + epsilon);
+    else if (direction == "+y")
+        translate([0, half_y - epsilon, base_stud_axis_height])
+            rotate([-90, 0, 0])
+                base_external_thread(base_stud_length + epsilon);
+    else
+        translate([0, -half_y + epsilon, base_stud_axis_height])
+            rotate([90, 0, 0])
+                base_external_thread(base_stud_length + epsilon);
+}
+
+module compact_threaded_base() {
     color(platform_color)
         difference() {
             union() {
-                hollow_platform_shell();
-                platform_lug_reinforcement();
+                translate([
+                    -platform_lug_depth / 2,
+                    -platform_lug_thickness / 2,
+                    0
+                ])
+                    cube([
+                        platform_lug_depth,
+                        platform_lug_thickness,
+                        platform_lug_bottom_z + epsilon
+                    ]);
                 platform_lug_core();
                 platform_lug_index_rings();
+                for (direction = ["+x", "-x", "+y", "-y"])
+                    compact_base_stud(direction);
             }
 
             platform_lug_hole();
         }
 }
 
-module platform_slider_lid() {
-    color(platform_lid_color)
-        linear_extrude(height = platform_lid_thickness)
-            rounded_rectangle_2d(
-                platform_lid_length,
-                platform_lid_width,
-                platform_lid_corner_radius
+module base_double_socket(length, part_color = base_socket_color) {
+    color(part_color)
+        difference() {
+            cylinder(
+                d = base_attachment_outer_diameter,
+                h = length,
+                $fn = 96
             );
+
+            translate([0, 0, -epsilon])
+                base_internal_thread_cutter(base_socket_depth + epsilon);
+
+            translate([0, 0, length + epsilon])
+                rotate([180, 0, 0])
+                    base_internal_thread_cutter(
+                        base_socket_depth + epsilon
+                    );
+        }
+}
+
+module base_chamfer_octahedron(radius) {
+    polyhedron(
+        points = [
+            [ radius, 0, 0], [-radius, 0, 0],
+            [0, radius, 0], [0, -radius, 0],
+            [0, 0, radius], [0, 0, -radius]
+        ],
+        faces = [
+            [0, 2, 4], [2, 1, 4], [1, 3, 4], [3, 0, 4],
+            [2, 0, 5], [1, 2, 5], [3, 1, 5], [0, 3, 5]
+        ],
+        convexity = 2
+    );
+}
+
+module base_chamfered_end_block_body() {
+    chamfer = base_end_block_chamfer;
+
+    translate([0, 0, base_end_block_axis_length / 2])
+        minkowski() {
+            cube([
+                base_end_block_cross_section - 2 * chamfer,
+                base_end_block_cross_section - 2 * chamfer,
+                base_end_block_axis_length - 2 * chamfer
+            ], center = true);
+            base_chamfer_octahedron(chamfer);
+        }
+}
+
+module base_end_block() {
+    color(base_end_block_color)
+        difference() {
+            base_chamfered_end_block_body();
+
+            // The only opening is centered on one 20 x 20 mm face.
+            translate([
+                0,
+                0,
+                base_end_block_axis_length + epsilon
+            ])
+                rotate([180, 0, 0])
+                    base_internal_thread_cutter(
+                        base_socket_depth + epsilon
+                    );
+        }
+}
+
+module base_threaded_connector() {
+    color(base_connector_color)
+        base_external_thread(base_connector_length);
+}
+
+module base_assembled_end_block(axis, sign) {
+    if (axis == "x") {
+        socket_length = base_socket_x_length;
+        socket_start = platform_lug_depth / 2;
+        block_center = base_target_length_x / 2
+            - base_end_block_axis_length / 2;
+
+        if (sign > 0) {
+            translate([socket_start, 0, base_stud_axis_height])
+                rotate([0, 90, 0])
+                    base_double_socket(socket_length);
+            translate([
+                block_center + base_end_block_axis_length / 2,
+                0,
+                base_stud_axis_height
+            ])
+                rotate([0, -90, 0])
+                    base_end_block();
+        } else {
+            translate([-socket_start, 0, base_stud_axis_height])
+                rotate([0, -90, 0])
+                    base_double_socket(socket_length);
+            translate([
+                -block_center - base_end_block_axis_length / 2,
+                0,
+                base_stud_axis_height
+            ])
+                rotate([0, 90, 0])
+                    base_end_block();
+        }
+    } else {
+        socket_length = base_socket_y_length;
+        socket_start = platform_lug_thickness / 2;
+        block_center = base_target_width_y / 2
+            - base_end_block_axis_length / 2;
+
+        if (sign > 0) {
+            translate([0, socket_start, base_stud_axis_height])
+                rotate([-90, 0, 0])
+                    base_double_socket(socket_length);
+            translate([
+                0,
+                block_center + base_end_block_axis_length / 2,
+                base_stud_axis_height
+            ])
+                rotate([90, 0, 0])
+                    base_end_block();
+        } else {
+            translate([0, -socket_start, base_stud_axis_height])
+                rotate([90, 0, 0])
+                    base_double_socket(socket_length);
+            translate([
+                0,
+                -block_center - base_end_block_axis_length / 2,
+                base_stud_axis_height
+            ])
+                rotate([-90, 0, 0])
+                    base_end_block();
+        }
+    }
 }
 
 module platform_fit_preview() {
-    weighted_base_platform();
+    compact_threaded_base();
 
-    translate([
-        platform_lid_closed_center_x,
-        0,
-        platform_lid_groove_bottom
-            + (platform_lid_groove_height - platform_lid_thickness) / 2
-    ])
-        platform_slider_lid();
+    for (sign = [-1, 1]) {
+        base_assembled_end_block("x", sign);
+        base_assembled_end_block("y", sign);
+    }
 }
 
 module external_bolt_thread(length) {
@@ -1126,7 +1159,10 @@ assert(
         || part == "stand_flat"
         || part == "stand_long_side"
         || part == "platform"
-        || part == "platform_lid"
+        || part == "base_socket_x"
+        || part == "base_socket_y"
+        || part == "base_end_block"
+        || part == "base_connector"
         || part == "platform_preview"
         || part == "fit_preview",
     str("Unknown part: ", part)
@@ -1151,10 +1187,19 @@ if (part == "all") {
         vertical_support_stand();
 
     translate([130, 0, 0])
-        weighted_base_platform();
+        compact_threaded_base();
 
-    translate([130, -90, 0])
-        platform_slider_lid();
+    translate([100, -50, 0])
+        base_double_socket(base_socket_x_length);
+
+    translate([125, -50, 0])
+        base_double_socket(base_socket_y_length);
+
+    translate([150, -50, 0])
+        base_end_block();
+
+    translate([175, -50, 0])
+        base_threaded_connector();
 } else if (part == "holder") {
     circle_holder();
 } else if (part == "bolt") {
@@ -1170,9 +1215,15 @@ if (part == "all") {
 } else if (part == "stand_long_side") {
     vertical_support_stand_long_side_for_print();
 } else if (part == "platform") {
-    weighted_base_platform();
-} else if (part == "platform_lid") {
-    platform_slider_lid();
+    compact_threaded_base();
+} else if (part == "base_socket_x") {
+    base_double_socket(base_socket_x_length);
+} else if (part == "base_socket_y") {
+    base_double_socket(base_socket_y_length);
+} else if (part == "base_end_block") {
+    base_end_block();
+} else if (part == "base_connector") {
+    base_threaded_connector();
 } else if (part == "platform_preview") {
     platform_fit_preview();
 } else if (part == "fit_preview") {
