@@ -142,6 +142,13 @@ base_attachment_outer_diameter = 18;
 base_attachment_clearance = 1;
 base_socket_depth = 8.35;
 base_connector_length = 16;
+base_connector_hex_key_size = 5;
+base_connector_hex_clearance_per_side = 0.05;
+base_connector_hex_socket_size = base_connector_hex_key_size
+    + 2 * base_connector_hex_clearance_per_side; // 5.5 mm across flats.
+base_connector_hex_socket_depth = 4;
+base_connector_solid_core = base_connector_length
+    - 2 * base_connector_hex_socket_depth; // 8 mm.
 base_end_block_cross_section = 20;
 base_end_block_axis_length = 10;
 base_end_block_chamfer = 1.2;
@@ -278,6 +285,10 @@ assert(
 assert(
     base_connector_length / 2 < base_socket_depth,
     "The 16 mm connector needs seating clearance at both ends"
+);
+assert(
+    base_connector_solid_core == 8,
+    "Opposing 4 mm hex sockets must leave an 8 mm solid core"
 );
 
 function hex_vertex_diameter(across_flats) = across_flats / cos(30);
@@ -974,7 +985,28 @@ module base_end_block() {
 
 module base_threaded_connector() {
     color(base_connector_color)
-        base_external_thread(base_connector_length);
+        difference() {
+            base_external_thread(base_connector_length);
+
+            translate([0, 0, -epsilon])
+                cylinder(
+                    h = base_connector_hex_socket_depth + epsilon,
+                    r = base_connector_hex_socket_size / sqrt(3),
+                    $fn = 6
+                );
+
+            translate([
+                0,
+                0,
+                base_connector_length
+                    - base_connector_hex_socket_depth
+            ])
+                cylinder(
+                    h = base_connector_hex_socket_depth + epsilon,
+                    r = base_connector_hex_socket_size / sqrt(3),
+                    $fn = 6
+                );
+        }
 }
 
 module base_assembled_end_block(axis, sign) {
