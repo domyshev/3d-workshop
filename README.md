@@ -249,3 +249,9 @@ For example, after resolving the destination directory:
 [`export_bambu_project`](export_bambu_project) prepares Bambu Studio projects. See the [thread fit reference](docs/printing/thread-fit.md), [PETG printing notes](BAMBU_LAB.md), and [holder development notes](models/iphone_holder/DEVELOPMENT_NOTES.md) for recorded parameters and context.
 
 Historical models are preserved with their development context. Successful check records apply to the stated milestone: rerunning older checks may require restoring source paths and historical artifacts. Local exports under `stl_exports/` are ignored by Git.
+
+## Licensing
+
+The bundled Dan Kirshner `threads.scad` library (version 2.7) is licensed under GPL-3.0-or-later. The repository-authored OpenSCAD models using it directly or indirectly are distributed under the same terms; their scope is listed in [Licensing and Third-Party Notices](THIRD_PARTY_NOTICES.md).
+
+The [complete GPLv3 text](LICENSES/GPL-3.0-or-later.txt) is included. Original library credits and notices are preserved. Unrelated repository content has no blanket license assigned by this notice.
