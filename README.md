@@ -1,152 +1,251 @@
-# OpenSCAD models
-
-Проект содержит модели OpenSCAD, библиотеку резьбы и небольшой скрипт для
-экспорта STL.
-
-## Экспорт STL
-
-Скрипт в корне проекта экспортирует модель в папку `stl/` с датой в имени:
-
-```bash
-./export_stl bathroomHolderCircle
-```
-
-Он возьмет `models/bathroomHolderCircle.scad` и создаст файл вида:
-
 ```text
-stl/YYYY-MM-DD_bathroomHolderCircle.stl
+*****  ****        ‖   ‖  *****  ****   *****  ‖      *****  ‖   ‖  *****
+    ‖  ‖   ‖       ‖* *‖  ‖   ‖  ‖   ‖  ‖      ‖        ‖    ‖*  ‖  ‖
+*****  ‖   ‖       ‖ * ‖  ‖   ‖  ‖   ‖  ****   ‖        ‖    ‖ * ‖  ‖ ***
+    ‖  ‖   ‖       ‖   ‖  ‖   ‖  ‖   ‖  ‖      ‖        ‖    ‖  *‖  ‖   ‖
+*****  ****        ‖   ‖  *****  ****   *****  *****  *****  ‖   ‖  *****
 ```
 
-Для сборочной модели, где детали включаются флагами:
+# Personal Engineering Workshop
+
+This project is my working space for OpenSCAD models, experiments with printable mechanisms, and practical experience with 3D printing.
+
+It preserves source files, intermediate designs, tested solutions, and a history of internal achievements. An achievement can be a new model, a working fit, an established workflow, or a useful finding from a physical test.
+
+Individual models are published through separate projects. This repository preserves their development history and the workshop's shared tools.
+
+## Development History and Achievements
+
+This chronology was reconstructed from Git history, source files, notes, and surviving artifacts. Dates identify recorded milestones and may differ from when the work actually began. Geometry checks and print preparation are distinguished from printing and physical testing.
+
+### March 9, 2026 — Funny ATV begins
+
+Created the first side of a vehicle model. This is the beginning of the project's recorded history.
+
+### March 10–21, 2026 — Gears and axle placement
+
+Added gears, additional large gears, gear phase control, and paired mirrored gears. Developed calculations for axle positions, distances, and angles.
+
+Hole and component placement gradually moved to calculated coordinates.
+
+**Outcome:** a foundation for a parametric gear mechanism. Physical testing of the mechanism is not documented.
+
+### March 22–25, 2026 — Model organization and fit preparation
+
+Separated models and library components. Added a grid of LEGO pin holes to the side frame and refined hole dimensions for axles and gears.
+
+Created a fit sample and prepared dimensions for printing.
+
+**Outcome:** reusable components and a dedicated fit-testing sample. Physical results for the sample are not documented.
+
+### March 29, 2026 — Connector frame
+
+Added a connector frame to join Funny ATV components.
+
+**Outcome:** progress from an individual side frame toward a three-dimensional assembly.
+
+### April 12, 2026 — Bathroom holder and continued frame development
+
+Created a circular bathroom holder with mounting cutouts. Separately continued work on a cutout in the motor holder.
+
+**Evidence:** source files and change history. Printing and physical testing are not documented.
+
+### April 19, 2026 — Holder mounting reinforcement
+
+Added a screw hole and reinforced the area around a perpendicular peg.
+
+**Outcome:** refined mounting geometry and reinforcement of a loaded area.
+
+### July 2, 2026 — Threaded connections and export tools
+
+Added a lid, internal ribs, a threaded hole, and an M10 screw to the phone holder model.
+
+Explored different thread profiles, then adopted Dan Kirshner's `threads.scad` library. Added a thread-pair sample, part toggles, simplified preview geometry, and an STL export tool.
+
+Started tuning clearances for printed threaded connections.
+
+**Outcome:** a shared process for modeling and exporting printable threads.
+
+### July 3, 2026 — Tested M10 threads and a hollow phone base
+
+Refined thread fits and recorded the parameters of a physically tested printed pair:
+
+- Pitch: 1.5 mm.
+- Internal thread diameter: 10.4 mm.
+- External thread diameter: 9.8 mm.
+
+Created a hollow base based on iPhone 15 Pro Max dimensions and added two upper brackets.
+
+**Evidence:** notes documenting physically tested threads, source files, and historical exports.
+
+### July 5, 2026 — First phone stand print and test
+
+Recorded printing a stand with a hollow base, brackets, and bolts.
+
+Testing revealed base leaks, failure of one bolt and the brackets, and insufficient base weight even when filled with water.
+
+**Outcome:** practical findings for the next iteration. The recorded explanations for leaks and failures are hypotheses, rather than established causes.
+
+### July 5, 2026 — Larger ballast base
+
+Developed a 140 × 80 × 50 mm base with a separate bracket, thicker lid, internal ribs and supports, and M20 threaded filling ports.
+
+Calculated usable volume increased from approximately 87 to 311 cm³. Refined the internal supports for printing while preserving fill volume.
+
+Organized STL artifacts by date.
+
+**Evidence:** source files, calculations, and historical exports. Physical testing of this version is not documented.
+
+### July 11, 2026 — Modular link and triangular MagSafe frame
+
+Developed and repaired a modular-link coupling. Prepared a functional export and geometry checks for the connection.
+
+Built two parallel triangular frames from repeated links, with transverse axes and a spacer.
+
+Also preserved a print project for the earlier stand and PETG printing notes.
+
+**Outcome:** a modular connection applied to a complete stand design. Physical assembly is not documented.
+
+### July 11–12, 2026 — Ballast cassette and MagSafe mount
+
+Developed an internal cassette with approximately 136.8 cm³ of usable volume, reinforced sleeves, a sliding lid, and a locking pin.
+
+Refined wall thickness around the lid. Added a MagSafe bridge, keys connecting it to the frames, and fit gauges for different puck variants.
+
+**Evidence:** source files and historical checks of volume, clearances, contacts, and geometry validity.
+
+### July 12, 2026 — Triangular stand print set
+
+Prepared individual printable parts, assembly views, and exploded views. Documented the bill of materials, assembly order, print settings, and ballast requirements.
+
+The history records successful model and exported-mesh checks.
+
+**Outcome:** a design prepared as a complete print set. Physical testing of the full stand is not documented.
+
+### July 12, 2026 — Mechanical block exploration
+
+Created an interactive concept board for a household mechanical construction system, with four main directions and ten lock options.
+
+Developed ten connection types: dovetail, bayonet, snap hook, wedge key, T-track, split pins, printed thread, detent slider, cam clamp, and rack pawl.
+
+Exported 22 prototype parts.
+
+**Evidence:** the concept board, source files, and historical geometry checks. Physical comparison of the prototypes is not documented.
+
+### July 12, 2026 — Printed fasteners and indexed links
+
+Developed printed bolts, hex nuts, and wing nuts for the modular connection.
+
+Created a link with 7.5° angular indexing and an enlarged version for M8 hardware. Developed separate printed bolt and nut parts for the M8 version.
+
+**Evidence:** source files, historical STLs, and recorded checks of supported angles and mesh validity. Physical testing is not documented.
+
+### August 7, 2026 — Artifact cleanup
+
+Removed previously stored STLs, print projects, and images from the current tree. These materials remain available in Git history.
+
+**Historical context:** an artifact's absence from the current directory does not mean it was never created.
+
+### August 10, 2026 — Super Cubes begins
+
+Developed a 20 mm chamfered cube with six M8 × 1.25 threaded sockets and a separate threaded cylinder.
+
+Added individual part selection, simplified preview geometry, and export to an external directory.
+
+**Evidence:** source files and a recorded successful part export.
+
+### August 11, 2026 — More Super Cubes parts and Bambu Studio projects
+
+Added short and long sleeves, plus threaded cylinders of different lengths.
+
+Developed a workflow for assembling several parts into one Bambu Studio project and copying printer and filament settings from a reference project.
+
+**Evidence:** historical checks of exported parts and the generated 3MF project structure.
+
+### August 13–15, 2026 — Super Cubes connector variants
+
+Surviving local exports show development of double-ended sockets, short axes, plugs, and print sets.
+
+**Evidence:** current source files, an image, and local STL and 3MF files. File dates identify exports; the extent of physical testing needs clarification.
+
+### August 19, 2026 — MagSafe ring holder
+
+Started a new holder design with a split clamp ring. The history notes that the ring was printed.
+
+Subsequently added a vertical support and platform. Moved earlier holder designs into a historical folder.
+
+**Evidence:** development history and local print projects.
+
+### August 20, 2026 — Holder 0.1 assembly
+
+Added a retaining border to the ring and a hex-key recess to the threaded connector. Recorded the version 0.1 holder assembly with its ring, support, base, and M12 fasteners.
+
+**Outcome:** individual components combined into a new modular design.
+
+### August 21, 2026 — Preserving tested 0.1 fits
+
+Development notes record that version 0.1 thread fits were physically tested by printing.
+
+Defined requirements for a future thread-library replacement: preserve parameters, test the main mating pairs, and check compatibility with already printed parts.
+
+**Outcome:** tested geometry preserved as a foundation for further development.
+
+### August 25, 2026 — Full-height and compact holder configurations
+
+Local exports survive for both full-height and compact configurations, including bases, supports, sleeves, connectors, and fasteners.
+
+**Evidence:** local artifacts. Export dates do not establish exact development or physical testing dates.
+
+### September 30, 2026 — Current MagSafe holder source preserved
+
+Added the complete current source to the repository, including full-height and compact configurations, assembly modes, individual parts, M12 fasteners, and indexed joints.
+
+The history records a successful final render of the overall scene.
+
+**Outcome:** the current design preserved in the workshop with its dependencies.
+
+### September 30, 2026 — Separate toothed insert experiment
+
+Created an experiment with cylindrical recesses in the clamp ring and a toothed insert modeled as an independent part.
+
+Successful renders of the overall scene and individual parts are recorded for the committed version. Subsequent local changes enlarge the insert and position inserts in the assembly.
+
+**Status:** ongoing experiment. Checks of the committed version do not validate subsequent changes.
+
+## Areas of Work
+
+- **[Funny ATV](models/funnyAtv.scad):** gears, frames, and LEGO-compatible connections.
+- **[Bathroom holder](models/bathroomHolderCircle.scad):** household mounting and structural reinforcement.
+- **[Phone / MagSafe holder](models/iphone_holder/):** bases, supports, clamps, and indexed connections, including [historical designs](models/iphone_holder/old/) and the [insert experiment](models/iphone-holder-ring/).
+- **[Super Cubes](models/super_cubes/):** a threaded modular construction system.
+- **[Mechanical blocks](models/mechanical_blocks/):** exploration of locks and household construction interfaces, with an [interactive concept board](concepts/smart-mechanical-blocks/).
+- **[Shared libraries](lib/) and tools:** reusable geometry and print preparation.
+
+## Recording New Achievements
+
+Add an entry after a meaningful result, including:
+
+- A date or period.
+- What was achieved.
+- Links to source files and available evidence.
+- How it was checked: geometry, printing, assembly, or use.
+- Lessons learned and known limitations.
+
+Group small changes from one iteration into a single entry. Distinguish creation, testing, and repository-recording dates when they matter to the history.
+
+## Working with the Project
+
+Models are developed in OpenSCAD. Shared libraries support several areas of work.
+
+Export STLs with [`export_stl`](export_stl). Select an individual part when exporting an assembly model. Supply an explicit output directory following `<STL_BASE_PATH>/<YYYY>/<YYYY.MM>/<YYYY.MM.DD>/`; the base path must be provided for the current export. Exported filenames include the export date.
+
+For example, after resolving the destination directory:
 
 ```bash
-./export_stl bolt --source models/2026-07-02_sample_screw_and_hole.scad -- -D show_plate=false
-./export_stl plate --source models/2026-07-02_sample_screw_and_hole.scad -- -D show_bolt=false
+./export_stl super_cube --source models/super_cubes/cube1.scad \
+  --output-dir "$destination_dir" -- -D 'part="cube"'
 ```
 
-Все аргументы после `--` передаются напрямую в `openscad`.
+[`export_bambu_project`](export_bambu_project) prepares Bambu Studio projects. See the [thread fit reference](docs/printing/thread-fit.md), [PETG printing notes](BAMBU_LAB.md), and [holder development notes](models/iphone_holder/DEVELOPMENT_NOTES.md) for recorded parameters and context.
 
-## Как задавать пару резьб
-
-В модели `models/2026-07-02_sample_screw_and_hole.scad` пара резьб задается так:
-
-```scad
-bolt_d     = 10;   // номинальный наружный диаметр, например M10
-bolt_pitch = 1.5;  // шаг резьбы
-bolt_h     = 10;   // длина резьбы
-
-thread_fit_clearance = 0.4; // добавка к диаметру внутренней резьбы
-bolt_fit_clearance   = 0.2; // вычитание из диаметра внешней резьбы
-thread_leadin        = 2;   // фаска на обоих концах резьбы
-```
-
-Главное правило:
-
-```scad
-// Наружная резьба, болт
-metric_thread(
-    diameter = bolt_d - bolt_fit_clearance,
-    pitch = bolt_pitch,
-    length = bolt_h,
-    internal = false
-);
-
-// Внутренняя резьба, отверстие
-metric_thread(
-    diameter = bolt_d + thread_fit_clearance,
-    pitch = bolt_pitch,
-    length = bolt_h,
-    internal = true
-);
-```
-
-То есть у болта и отверстия должен быть один и тот же `pitch`. Внутренняя
-резьба для печати делается немного больше, а внешняя резьба болта немного
-меньше.
-
-## Что означает `thread_fit_clearance`
-
-`thread_fit_clearance` - это добавка к диаметру внутренней резьбы, не к радиусу.
-`bolt_fit_clearance` - это уменьшение диаметра внешней резьбы, тоже не радиуса.
-
-Например:
-
-```scad
-bolt_d = 10;
-thread_fit_clearance = 0.4;
-bolt_fit_clearance = 0.2;
-```
-
-Внутренний резьбовой вырез строится как `10.4 мм`, а болт печатается как
-`9.8 мм`. Разница между внутренней и внешней резьбой получается `0.6 мм` по
-диаметру, то есть примерно `0.3 мм` на сторону.
-
-Для Bambu Lab A1 mini, PETG и сопла 0.4 мм разумная стартовая зона:
-
-```scad
-thread_fit_clearance = 0.3; // плотнее
-thread_fit_clearance = 0.4; // текущий внутренний зазор
-thread_fit_clearance = 0.5; // свободнее
-
-bolt_fit_clearance = 0.0; // внешний болт номинального диаметра
-bolt_fit_clearance = 0.2; // текущий тестовый болт, легче вкручивается
-bolt_fit_clearance = 0.3; // еще свободнее
-```
-
-Если резьба не начинает вкручиваться или идет только с большим усилием,
-сначала увеличивай `bolt_fit_clearance` на `0.1`, если перепечатываешь только
-болт. Если печатаешь обе детали заново, можно подбирать и `thread_fit_clearance`.
-Если болтается, уменьшай соответствующий зазор на `0.1`.
-
-## Заход резьбы
-
-Для печатных деталей полезно включать заходную фаску:
-
-```scad
-thread_leadin = 2;
-```
-
-И передавать ее в обе резьбы:
-
-```scad
-leadin = thread_leadin
-```
-
-В библиотеке `threads.scad` значение `2` означает фаску с двух сторон. Это
-помогает резьбе начать входить без закусывания на самом краю.
-
-## Что менять для другого размера
-
-Для M8x1.25:
-
-```scad
-bolt_d = 8;
-bolt_pitch = 1.25;
-thread_fit_clearance = 0.4;
-bolt_fit_clearance = 0.2;
-```
-
-Для M12x1.75:
-
-```scad
-bolt_d = 12;
-bolt_pitch = 1.75;
-thread_fit_clearance = 0.4;
-bolt_fit_clearance = 0.2;
-```
-
-Когда блок уже напечатан, удобнее подбирать только `bolt_fit_clearance` и
-перепечатывать болт. Шаг `bolt_pitch` должен совпадать у внешней и внутренней
-резьбы.
-
-## Preview и финальный рендер
-
-В модели используется:
-
-```scad
-preview_fast = $preview;
-```
-
-В preview OpenSCAD (`F5`) резьба заменяется цилиндрами, чтобы модель быстро
-крутилась. При финальном render/export (`F6` или `./export_stl`) строится
-настоящая резьба.
+Historical models are preserved with their development context. Successful check records apply to the stated milestone: rerunning older checks may require restoring source paths and historical artifacts. Local exports under `stl_exports/` are ignored by Git.

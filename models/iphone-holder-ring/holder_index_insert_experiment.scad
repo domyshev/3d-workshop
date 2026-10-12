@@ -56,8 +56,8 @@ insert_color = "#D88932";
 index_recess_diameter = 21;
 index_recess_depth = 0.8;
 
-// The loose insert is exactly 4 mm smaller than the recess diameter.
-index_insert_diameter = index_recess_diameter - 4; // 17 mm.
+// The loose insert is exactly 1 mm smaller than the recess diameter.
+index_insert_diameter = index_recess_diameter - 1; // 20 mm.
 index_insert_hole_diameter = block_hole_diameter; // 13 mm.
 index_insert_body_thickness = index_recess_depth; // 0.8 mm.
 
@@ -69,11 +69,9 @@ index_tooth_edge_inset = 0.05;
 index_tooth_angular_fill = 0.9;
 index_tooth_step_angle = 360 / index_tooth_count;
 
-insert_layout_x = ring_outer_diameter / 2 + 18;
-
 assert(
-    index_insert_diameter == index_recess_diameter - 4,
-    "The toothed insert must be 4 mm smaller than the cylindrical recess"
+    index_insert_diameter == index_recess_diameter - 1,
+    "The toothed insert must be 1 mm smaller than the cylindrical recess"
 );
 assert(
     index_insert_diameter > index_insert_hole_diameter,
@@ -197,12 +195,38 @@ module index_insert() {
             }
 }
 
+module positive_y_positioned_index_insert() {
+    outer_face_y = block_gap / 2
+        + block_thickness
+        + block_join_overlap;
+    recess_floor_y = outer_face_y - index_recess_depth;
+
+    translate([
+        block_hole_center_x,
+        recess_floor_y,
+        block_hole_center_z
+    ])
+        rotate([-90, 0, 0])
+            index_insert();
+}
+
+module positioned_index_inserts() {
+    positive_y_positioned_index_insert();
+    mirror([0, 1, 0])
+        positive_y_positioned_index_insert();
+}
+
+module holder_with_index_inserts() {
+    union() {
+        holder_with_plain_recesses();
+        positioned_index_inserts();
+    }
+}
+
 if (part == "all") {
-    holder_with_plain_recesses();
-    translate([insert_layout_x, 0, 0])
-        index_insert();
+    holder_with_index_inserts();
 } else if (part == "holder") {
-    holder_with_plain_recesses();
+    holder_with_index_inserts();
 } else if (part == "index_insert") {
     index_insert();
 } else {
