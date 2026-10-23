@@ -1,13 +1,10 @@
 # Sarepta STL development history
 
-Seven surviving 80 mm exports, preserved byte-for-byte on 2026-10-23. Original
-exports were made with the repository exporter. Copying them here does not
-regenerate or repair them. Each view imports its own archived STL with common
-orthographic camera settings.
-
-**The latest archived stage still has the known excessive hull height.** It is
-the current visual reconstruction, not the dimension-corrected final model. See
-[pending corrections](../PENDING_CORRECTIONS.md) and [the dimensional audit](../DIMENSION_RESEARCH.md).
+Eight 80 mm milestones and the latest 170 mm model are preserved byte-for-byte.
+The first seven form the archive checkpoint pushed as `cc04d8c`; the eighth
+applies the dimensional and framing revision. Historical metadata describes
+its capture checkpoint; `manifest.json` identifies the current stage.
+Pictures import actual archived STL meshes. No milestone has a verified physical print.
 
 ![Milestone comparison](comparison.jpg)
 
@@ -19,15 +16,12 @@ the current visual reconstruction, not the dimension-corrected final model. See
 | [Fair guides and continuous foredeck](2026-10-22_fair-flat-deck/README.md) | Adopted three convex quintic Bezier guide profiles, smooth flat aft joins and a continuous foredeck. | 80.000 x 27.826 x 13.043 | Plan-view bow was too blunt, around 154 degrees; reconstruction remains approximate. |
 | [Sharper photographic bow plan](2026-10-22_photo-bow/README.md) | Matched an apparent near-top photo angle of about 132 degrees; model angle 132.501 degrees. | 80.000 x 27.826 x 13.043 | Photographic angle is not a factory dimension; hatch, side-curve and rim work followed. |
 | [Hatch, fair side arcs and continuous rim](2026-10-22_hatch-fair-rim/README.md) | Added the hatch opening, removed the S-shaped shoulder and continued the protective rim around the bow and sides. | 80.000 x 27.826 x 13.043 | Flat upper deck omitted the reverse-flared upper belt; 50 mm prototype rim and hatch sizes were estimates. |
-| [Upper belt and shallow foredeck relief](2026-10-22_upper-belt-relief/README.md) | Added inward-sloping upper sides, a pointed raised pad around the hatch and two shallow rounded ribs. | 80.000 x 27.826 x 16.522 | CURRENT GEOMETRY, AWAITING DIMENSION CORRECTION: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm. |
+| [Upper belt and shallow foredeck relief](2026-10-22_upper-belt-relief/README.md) | Added inward-sloping upper sides, a pointed raised pad around the hatch and two shallow rounded ribs. | 80.000 x 27.826 x 16.522 | Historical pre-correction geometry: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm. |
+| [Corrected height, factory-style transom and internal framing](2026-10-23_dimensions-framing/README.md) | Mapped the upper belt inside 750 mm side height; set 375 mm centre motor seat with estimated notch, published cockpit envelope, separate bow locker, raised motor well, transverse/longitudinal framing, side corrugations and 30 mm chine flanges. | 80.000 x 27.826 x 13.299 | Early 4600 x 1600 envelope; profile/spacing, well floor/rake, upper setbacks, notch, hatch and relief remain reconstructions. Print allowances enlarge thin details. Not physically printed. |
 
-## Reproduce the inspection and pictures
-
-Use `../skills/boat-hull-reconstruction/scripts/inspect_stl.py <file.stl>` for
-mesh metrics, and `../tools/render_release_previews.py` for the common views.
-On the recorded Mac, pass `--openscad /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD --x86`.
-The first three stages retain exact exported meshes but no independently verified
-parametric snapshots. The four later stages include source snapshots and 80 mm entry points.
-
-No stage is documented as a successful physical print. Historical Bambu slicing
-estimates in the development log apply only to their named versions and settings.
+Use `../tools/render_release_previews.py --release <id>` to render a selected milestone.
+On this Mac add `--openscad /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD --x86`.
+Use `../skills/boat-hull-reconstruction/scripts/inspect_stl.py <file> --check` for
+current mesh inspection. Earlier archived reports retain their original checker scope.
+The first three stages have no independently verified source snapshots; later
+stages include parametric snapshots. See the dimensional audit before reusing geometry.

@@ -8,8 +8,9 @@ and exploded-section drawings, the 1980 factory modification article, handbook
 material, repair/model references, and an original 1978 comparative cockpit table.
 A complete dimensioned production drawing set or table of hull offsets was not
 located. This is a bounded search result, not proof that such drawings do not exist.
-The current model remains a reconstruction; no geometry was changed in this
-research pass.
+The research checkpoint preceded geometry changes. The later 2026-10-23
+revision applies selected dimensions; see TRANSOM_AND_FRAMING.md and
+PENDING_CORRECTIONS.md for current implementation and remaining estimates.
 
 ## Primary-source register
 
@@ -82,14 +83,14 @@ late construction details should not be mixed into a claimed single exact varian
 Scaling a drawing or a model-kit photo can improve visual agreement but is not
 equivalent to a published dimension, a factory offset table or a physical survey.
 
-## Audit implications for the current model
+## Audit implications at the pre-correction archive checkpoint
 
 - The 4600 mm reference length and 1600 mm beam follow the 1974 article, not the
   newly recovered passport variant. Do not claim these reconcile all sources.
-- The current motor transom represents 400 mm; passport p. 2 gives 375 mm.
+- The pre-correction motor transom represented 400 mm; passport p. 2 gives 375 mm.
 - The 50 mm rim, 500 x 450 mm hatch, 80..200 mm upper-belt heights, 70..100 mm
   upper setbacks and 12.5/15 mm embossed heights remain reconstruction choices.
-- The current source treats Z=750 as the lower seam and adds the upper belt.
+- The pre-correction source treated Z=750 as the lower seam and adds the upper belt.
   This must be audited against the published 750 mm *side height* and its datum;
   it is not evidence for a 950 mm factory bare hull. The maximum model heights
   reported in earlier verification are mesh bounds, not verified prototype sizes.

@@ -1,32 +1,25 @@
-# Pending dimensional corrections — archive checkpoint 2026-10-23
+# Correction status — 2026-10-23
 
-This records the next modelling work; it does not assert these changes are
-already present in the current source or in the seven historical STL releases.
+The evidence/archive checkpoint was committed and pushed as `cc04d8c` before
+geometry revision. The new [dimension/framing release](releases/2026-10-23_dimensions-framing/README.md)
+implements the following changes. All dimensions are prototype mm unless stated.
 
-| Priority | Item | Evidence and action |
+| Item | Status | Remaining qualification |
 | --- | --- | --- |
-| 1 | Bare-hull height and reverse upper belt | Published side height is 750 mm. Correct the vertical datum mapping; do not add an 80..200 mm belt above an already complete 750 mm side. Keep keel/tunnel shapes and fair side arcs. The current maximum reaches 950 mm. |
-| 1 | Motor transom | Passport gives 375 mm, handbook 400 mm. Prefer the passport for a passport-based variant and record the selected source. Preserve the outboard well. |
-| 1 | Cockpit | Check the 2600 x 1280 mm published envelope against actual opening and partition locations. These two dimensions alone do not locate the cockpit longitudinally. |
-| 1 | Aft bottom | Verify 1300 mm chine beam and 8.5-degree deadrise at their stated locations. The passport describes the transom; the 1974 article also describes a section one-third length forward of it. |
-| 1 | Nose compartment | Model the original separated bow locker and its bulkhead when the internal arrangement is revised. Current cavity connection is a modelling simplification. |
-| 2 | Protective rim | Present 50 mm nominal overhang is a user estimate by analogy with Progress. Published 2 x 20 x 25 mm gunwale profile does not directly specify installed overhang. |
-| 2 | Transom centre notch | User identified a small central recess for a single outboard; estimated depth about 50 mm. Preserve the supplied transom image and keep notch width/depth explicitly estimated until measured. |
-| 2 | Side stiffening grooves | Published longitudinal corrugations provide rigidity; reproduce the two visible longitudinal features using photos and appropriate sections, not merely a paint stripe. Width, depth and start/end coordinates remain unmeasured. |
-| 2 | Chine spray flange | The 1974 article gives a 30 mm flange at the bottom/side joint. Distinguish it from the upper protective rim. Do not add a flange to every crease or welded seam without visual evidence. |
-| 3 | Hatch, raised pad and paired ribs | Current 500 x 450 mm opening and 12.5/15 mm relief heights are reconstructions. Preserve their appearance while marking dimensions as estimates. |
-| 3 | Overall length/beam variant | Article: 4600 x 1600 mm. Handbook: 4650 x 1600 mm. Passport length appears 4640; beam print is degraded. Do not arbitrarily widen the hull to compensate for excessive height. |
+| Side height | Applied: upper deck datum 750; belt included below it | Seam heights 670..550 and upper setbacks 40..50 are estimated |
+| Motor transom | Applied: centre seat 375, shoulders 425 | Notch depth 50, width 360 and vertical panel rake are reconstructed |
+| Cockpit | Applied: opening envelope 2600 x 1280 | Placement X=1400..4000 remains estimated |
+| Aft bottom | Retained: guide beam 1300, approx. 8.5 degrees | Guide width excludes added 30 mm chine flanges; factory measurement endpoints need confirmation |
+| Bow locker | Applied: separated by full bulkhead | Bulkhead placement and locker volume not factory-certified |
+| Internal framing | Applied: transverse floors/side frames, longitudinal members, transom knees | Frame positions and profiles simplified and thickened for printing; no kit X lattice copied |
+| Side corrugations | Applied: two ridges on each side | Width, depth and endpoints estimated |
+| Chine spray flange | Applied: nominal 30 wide | Thickness enlarged to >=0.35 model mm; forward taper estimated |
+| Protective rim | Preserved: normal 50 overhang | User estimate; published 2 x 20 x 25 profile does not establish installed overhang |
+| Motor well | Applied: raised floor, estimated fall to stern | Exact floor height/slope, panel rake and scupper layout unresolved; scuppers not modelled |
+| Hatch/pad/paired ribs | Preserved | 500 x 450 opening, pad/rib dimensions and positions remain visual estimates |
+| Production variant | Coherent early 4600 x 1600 envelope retained | Passport length/beam ambiguity and later production construction are not merged into an exact variant |
 
-## User intent retained
-
-Final target length is 170 mm; 80 mm is the trial scale. Lower triple-bow
-curves and the continuous protective rim were visually accepted. Preserve
-factory-style outboard mounting. Cabin and motors will be separate parts.
-Accuracy of bottom and sides matters more than decorative detail. User asked
-to commit/push the archive checkpoint first, then revise the dimensions and details.
-
-## Source precedence
-
-Use [the dimensional audit](DIMENSION_RESEARCH.md) for sources and conflicts.
-Do not infer prototype accuracy from a valid STL or from a model-kit rendering.
-Nominal printable wall thickness is not original metal plate thickness.
+Cabin, hatch lid and outboard motors are future separate parts. No physical
+print has been verified. The 80 and 170 mm binary STLs pass current paired-edge,
+vertex-link, positive-volume and single-component checks. Published sources
+and their conflicts remain in [the dimensional audit](DIMENSION_RESEARCH.md).

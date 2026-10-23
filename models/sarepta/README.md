@@ -12,10 +12,18 @@ relief. It is **a reconstruction, not a dimension-certified factory replica**.
 The cabin and motors remain separate future work. The 80 mm trial retains
 printable wall thickness rather than scaling the metal plate thickness literally.
 
-The current height is known to be excessive: the source placed the seam at
-750 mm and then added the upper belt. Published 750 mm is the side height.
-Dimension corrections have been researched but are not yet applied in this archive
-checkpoint. See [pending corrections](PENDING_CORRECTIONS.md) before editing.
+The side/deck datum is now 750 mm including the reverse upper belt. The model
+uses the coherent early 4600 x 1600 envelope, the passport's 375 mm motor seat
+and the published 2600 x 1280 cockpit envelope; longitudinal positions remain
+reconstructed. Internal floor/side frames, longitudinal stiffeners, separate
+bow locker, a raised motor well, side corrugations and chine flanges are included.
+See [transom and framing decisions](TRANSOM_AND_FRAMING.md) and
+[pending corrections](PENDING_CORRECTIONS.md) for remaining estimates.
+
+The [latest release](releases/2026-10-23_dimensions-framing/README.md) includes
+both exact binary STL sizes: 80 x 27.826 x 13.299 and
+170 x 59.130 x 28.261 mm. Both pass edge/vertex topology checks; physical
+printing is untested. Heights include the small embossed deck details.
 
 ## Evidence and decisions
 
@@ -25,7 +33,7 @@ checkpoint. See [pending corrections](PENDING_CORRECTIONS.md) before editing.
 - [Source catalogue and attribution](reference/SOURCES.md): where every group
   of documents, images and tutorials came from, and how it was used.
 - [Reference image index](reference/README.md): the most useful views and documents.
-- [Pending corrections and assumptions](PENDING_CORRECTIONS.md): next modelling
+- [Pending corrections and assumptions](PENDING_CORRECTIONS.md): remaining modelling
   work; a proposed value is not silently promoted to a factory measurement.
 - [Development log](DEVELOPMENT_LOG.md): the complete earlier chronological account,
   including historical checks and slicing estimates. Earlier claims are historical;
@@ -36,14 +44,14 @@ checkpoint. See [pending corrections](PENDING_CORRECTIONS.md) before editing.
 - [Main OpenSCAD source](sarepta_hull.scad): default overall length 170 mm.
 - [80 mm entry point](sarepta_hull_80mm.scad).
 - [Bow and plan regression checks](verify_bow.scad).
-- [STL release history with pictures](releases/README.md): seven surviving 80 mm
-  milestones, preserved byte-for-byte, with renders made from their actual meshes.
-- [Latest archived STL stage](releases/2026-10-22_upper-belt-relief/README.md):
-  current geometry before dimensional correction; do not confuse latest with exact.
+- [STL release history with pictures](releases/README.md): eight 80 mm
+  milestones and the latest 170 mm export, preserved byte-for-byte, with renders made from their actual meshes.
+- [Latest archived STL stage](releases/2026-10-23_dimensions-framing/README.md):
+  corrected datums and internal framing; remaining estimates are explicit.
 - `history/`: accepted parametric snapshots before subsequent revisions.
 - `previews/`: working renders; release-specific mesh renders are under `releases/`.
 
-![Current archived mesh](releases/2026-10-22_upper-belt-relief/above.png)
+![Current archived mesh](releases/2026-10-23_dimensions-framing/above.png)
 
 ## Agent workflow
 

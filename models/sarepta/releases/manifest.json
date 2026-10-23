@@ -139,9 +139,9 @@
     "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
     "sha256": "0470b6636889fa0e28f5bfdc98ea807427b0a4b1aa5223f9be57372195e5634f",
     "changes": "Added inward-sloping upper sides, a pointed raised pad around the hatch and two shallow rounded ribs.",
-    "limitations": "CURRENT GEOMETRY, AWAITING DIMENSION CORRECTION: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm.",
-    "is_current": true,
-    "source_snapshot": "sarepta_hull.scad",
+    "limitations": "Historical pre-correction geometry: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm.",
+    "is_current": false,
+    "source_snapshot": "releases/2026-10-22_upper-belt-relief/source.scad",
     "preserved_on": "2026-10-23",
     "previews_generated_from": "archived STL, not live parametric source",
     "mesh_report": "mesh-report.json",
@@ -152,5 +152,40 @@
     ],
     "triangles": 52056,
     "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-23_dimensions-framing",
+    "title": "Corrected height, factory-style transom and internal framing",
+    "stl": "2026-10-23_sarepta_hull_80mm_dimensions_framing.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.23/2026-10-23_sarepta_hull_80mm_dimensions_framing.stl",
+    "sha256": "e7766695156b3c47276e9743587588515e68b52aa66bd6220876a1a071ee1978",
+    "changes": "Mapped the upper belt inside 750 mm side height; set 375 mm centre motor seat with estimated notch, published cockpit envelope, separate bow locker, raised motor well, transverse/longitudinal framing, side corrugations and 30 mm chine flanges.",
+    "limitations": "Early 4600 x 1600 envelope; profile/spacing, well floor/rake, upper setbacks, notch, hatch and relief remain reconstructions. Print allowances enlarge thin details. Not physically printed.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-23_dimensions-framing/source.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived binary STL, not live source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086044311523,
+      13.299335479736328
+    ],
+    "triangles": 65306,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-23_sarepta_hull_170mm_dimensions_framing.stl",
+      "model_length_mm": 170,
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        28.26108741760254
+      ],
+      "mesh_report": "mesh-report-170mm.json",
+      "sha256": "06694a34bf0a310cef89b31f115a9186557c0eacb8d7ef4ff1c847e78a12359b"
+    },
+    "export_format": "binary STL (32-bit coordinates)",
+    "physical_print_tested": false
   }
 ]

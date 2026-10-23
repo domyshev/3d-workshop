@@ -7,8 +7,8 @@ deck_mm = 1.2;
 rim_fullsize_mm = 50;
 upper_bow_height_fullsize_mm = 80;
 upper_aft_height_fullsize_mm = 200;
-upper_bow_inset_fullsize_mm = 70;
-upper_aft_inset_fullsize_mm = 100;
+upper_bow_inset_fullsize_mm = 40;
+upper_aft_inset_fullsize_mm = 50;
 foredeck_relief_fullsize_mm = 12.5;
 foredeck_rib_fullsize_mm = 15;
 hatch_length_fullsize_mm = 500;
@@ -17,13 +17,30 @@ hatch_center_fullsize_mm = 950;
 hatch_radius_fullsize_mm = 55;
 part = "hull"; // [hull, outer, inner, sections]
 station_steps = 12;
+// Published dimensions use distinct sources; see DIMENSION_RESEARCH.md.
+side_height_fullsize_mm = 750;
+transom_seat_fullsize_mm = 375;
+transom_notch_depth_fullsize_mm = 50; // Photo estimate, not a factory callout.
+transom_notch_width_fullsize_mm = 360; // Photo estimate.
+cockpit_start_fullsize_mm = 1400; // Reconstructed placement.
+cockpit_length_fullsize_mm = 2600;
+cockpit_width_fullsize_mm = 1280;
+well_start_fullsize_mm = cockpit_start_fullsize_mm+cockpit_length_fullsize_mm;
+well_half_width_fullsize_mm = 560; // Reconstructed.
+framing = true;
+side_corrugations = true;
+chine_flange = true;
+function seam_z(x) = side_height_fullsize_mm-upper_height(x);
+function well_floor_z(x) = 230-15*(x-well_start_fullsize_mm)/(4600-well_start_fullsize_mm);
+
 
 scale_factor = length_mm / 4600;
 // x runs from bow to stern; y is transverse; z is above the keel baseline.
 // Rows: x, then [y,z] for keel, three bottom samples, tunnel crown,
 // outer chine, sheer, and deck centre. Stations 1..5 follow the 1974 body plan.
 // Longitudinal positions, stem closure and sheer fairing are reconstructed.
-// The flat protective seam supports an inward-sloping upper hull and foredeck.
+// Legacy section samples are retained as research context, not final offsets.
+// The final guide grid below uses an inclined seam and a Z=750 upper deck.
 stations = [
  [0, [[0,750],[96,750],[192,750],[288,750],[384,750],[625,750],[702,750],[0,750]]],
  [460, [[0,220],[96,325],[192,433],[288,560],[384,687],[625,506],[702,735],[0,790]]],
@@ -75,11 +92,11 @@ function shifted_controls(p,start) = [for(q=p)
 // A 50 mm perpendicular setback also continues along the two straight bow edges.
 bow_inset_x=rim_fullsize_mm*sqrt(1+0.44*0.44);
 guide_controls = [
-    shifted_controls([[0,750],[0,498.735739],[298.958581,241.850206],
+    shifted_controls([[0,seam_z(bow_inset_x)],[0,445],[298.958581,241.850206],
         [818.67287,0],[930.073765,0],[1380,0]],bow_inset_x),
-    [[464.0,750.0],[464.0,744.834548],[1073.113065,200.924939],
+    [[464.0,seam_z(464)],[464.0,seam_z(464)-5.165452],[1073.113065,200.924939],
         [1373.660044,65.5],[2754.543723,65.5],[3067.0,65.5]],
-    shifted_controls([[295,750],[295,638.784365],[886.016721,290.176633],
+    shifted_controls([[295,seam_z(0.44*625+bow_inset_x)],[295,550],[886.016721,290.176633],
         [1217.401932,97.2],[1485.812619,97.2],[2300,97.2]],0.44*625+bow_inset_x)
 ];
 function bezier5(p,t) = pow(1-t,5)*p[0]+5*pow(1-t,4)*t*p[1]+
@@ -107,7 +124,7 @@ function shoulder_inner(t) = let(p=cubic(shoulder_controls,t),
     p+rim_fullsize_mm*[v[1],-v[0]]/norm(v);
 function sheer_point(r) = let(p=r<1380 ? shoulder_inner(r/1380) :
     [r, r<4200 ? 800-rim_fullsize_mm :
-    800-rim_fullsize_mm-10*smooth5((r-4200)/400)]) [p[0],p[1],750];
+    800-rim_fullsize_mm-10*smooth5((r-4200)/400)]) [p[0],p[1],seam_z(p[0])];
 function half_surface(r,k,g) = let(c=g[0],t=g[1],b=g[2],s=g[3])
     k<=16 ? let(u=k/16,v=u*(1-0.14*(1-smooth5(r/2300))*(1-u)),p=c+(t-c)*v)
         [p[0],c[1]+(t[1]-c[1])*u,p[2]] :
@@ -157,7 +174,7 @@ module loft(inner=false) {
         m=len(outer_rows);
         bottom=fair_points;
         top=[for(i=[1:m-1],j=[1:n-2]) let(p=bottom[i*n+j])
-            [p[0],p[1],750*scale_factor]];
+            [p[0],p[1],seam_z(p[0]/scale_factor)*scale_factor]];
         ff=concat(
             [for(i=[0:m-2],j=[0:n-2]) each
                 [[i*n+j,i*n+j+1,(i+1)*n+j+1],
@@ -182,9 +199,14 @@ function deck_outline() = let(half=concat(
     [for(i=[1:20]) [4200+400*i/20,800-10*smooth5(i/20)]]))
     concat([for(p=half) p*scale_factor],
         [for(i=[len(half)-1:-1:1]) [half[i][0]*scale_factor,-half[i][1]*scale_factor]]);
+// The seam is an inclined plane; the upper deck datum remains Z=750 full-size.
+module on_seam(dz=0) {
+    slope=-(upper_aft_height_fullsize_mm-upper_bow_height_fullsize_mm)/4600;
+    multmatrix([[1,0,0,0],[0,1,0,0],
+        [slope,0,1,seam_z(0)*scale_factor+dz],[0,0,0,1]]) children();
+}
 module foredeck_sheet() {
-    translate([0,0,750*scale_factor-deck_mm])
-        linear_extrude(height=deck_mm) polygon(deck_outline());
+    on_seam(-deck_mm) linear_extrude(height=deck_mm) polygon(deck_outline());
 }
 // Clockwise plan polygon: a negative left-normal offset moves inwards.
 function plan_inset(p,j,w) = let(q=concat([p[len(p)-1]],p,[p[0]]))
@@ -197,21 +219,19 @@ function upper_setback(x) = upper_bow_inset_fullsize_mm+
 function upper_plan(inner=false) = let(p=deck_outline()) [for(j=[0:len(p)-1])
     let(w=rim_fullsize_mm*scale_factor+upper_setback(p[j][0]/scale_factor)*scale_factor+
         (inner?wall_mm:0)) plan_inset(p,j,w)];
-function upper_roof_z(x) = (750+upper_height(x/scale_factor))*scale_factor;
+function upper_roof_z(x) = side_height_fullsize_mm*scale_factor;
 
-// Convex envelope between the seam and the inset inclined gunwale. Native
+// Convex envelope between the inclined seam and the level inset gunwale. Native
 // planar sections avoid nearly coincident triangulation along the curved seam.
 module upper_volume(inner=false) {
     p=deck_outline();n=len(p);
     base=[for(j=[0:n-1]) plan_inset(p,j,rim_fullsize_mm*scale_factor+(inner?wall_mm:-0.08))];
     top=upper_plan(inner);
-    slope=(upper_aft_height_fullsize_mm-upper_bow_height_fullsize_mm)/4600;
     hull() {
-        translate([0,0,750*scale_factor-(inner?deck_mm+0.1:deck_mm/2)])
+        on_seam(-(inner?deck_mm+0.1:deck_mm/2))
             linear_extrude(height=0.02) polygon(base);
-        multmatrix([[1,0,0,0],[0,1,0,0],[slope,0,1,
-            (750+upper_bow_height_fullsize_mm)*scale_factor-(inner?deck_mm:0)-0.02],
-            [0,0,0,1]]) linear_extrude(height=0.02) polygon(top);
+        translate([0,0,upper_roof_z(0)-(inner?deck_mm:0)-0.02])
+            linear_extrude(height=0.02) polygon(top);
     }
 }
 module upper_inner() {
@@ -222,12 +242,9 @@ module upper_inner() {
 }
 module upper_shell() { difference() { upper_volume(); upper_inner(); } }
 
-// Embossed foredeck details follow the same gently inclined plane as the roof.
+// Embossed foredeck details follow the level roof plane.
 module on_foredeck() {
-    slope=(upper_aft_height_fullsize_mm-upper_bow_height_fullsize_mm)/4600;
-    multmatrix([[scale_factor,0,0,0],[0,scale_factor,0,0],
-        [slope*scale_factor,0,scale_factor,(750+upper_bow_height_fullsize_mm)*scale_factor],
-        [0,0,0,1]]) children();
+    translate([0,0,upper_roof_z(0)]) scale(scale_factor) children();
 }
 module foredeck_details() {
     on_foredeck() {
@@ -244,11 +261,11 @@ module foredeck_details() {
 module lower_exterior() { union() { loft(); foredeck_sheet(); } }
 module exterior() { union() { lower_exterior(); upper_shell(); foredeck_details(); } }
 
-// Rounded rectangular opening through the raised detail and inclined upper deck.
+// Rounded rectangular opening through the raised detail and upper deck.
 module hatch_opening() {
     r=hatch_radius_fullsize_mm*scale_factor;
     translate([hatch_center_fullsize_mm*scale_factor,0,
-               750*scale_factor+0.01])
+               upper_roof_z(0)-deck_mm-0.2])
         linear_extrude(height=60)
             offset(r=r,$fn=48)
                 square([(hatch_length_fullsize_mm-2*hatch_radius_fullsize_mm)*scale_factor,
@@ -258,59 +275,125 @@ module hatch_opening() {
 // The cavity follows the same guide grid as the exterior after each plan edit.
 module safe_inner() { loft(true); }
 
-module lower_hull() {
+// Cavities are bounded independently of the upper sides. A complete forward
+// partition isolates the hatch-accessed bow locker from the cockpit.
+module interior_space() {
     difference() {
-        lower_exterior();
-        // Retain side decks, the hatch-bearing foredeck, and an aft well bulkhead.
         intersection() {
-            safe_inner();
             union() {
-                intersection() {
-                    translate([0,0,-deck_mm]) lower_exterior();
-                    translate([length_mm*0.15,-40,-1])
-                        cube([length_mm*0.71,80,62]);
-                }
-                translate([length_mm*0.305,-length_mm*0.137,-1])
-                    cube([length_mm*0.555,length_mm*0.274,62]);
+                intersection() { safe_inner(); translate([0,0,-deck_mm+0.05]) lower_exterior(); }
+                upper_inner();
             }
+            translate([690*scale_factor,-40,-1])
+                cube([(well_start_fullsize_mm-690)*scale_factor,80,62]);
         }
-        // Original-style motor well: low central transom, high aft quarters.
-        // The well floor is sealed, with a full-height forward bulkhead.
-        translate([length_mm*0.86+wall_mm,-length_mm*0.122,8.0*length_mm/170])
-            cube([length_mm*0.14-transom_mm-wall_mm,length_mm*0.244,55]);
-        translate([length_mm-transom_mm-0.01,-length_mm*0.122,400*scale_factor])
-            cube([transom_mm+0.1,length_mm*0.244,55]);
+        translate([cockpit_start_fullsize_mm*scale_factor-wall_mm,-40,-1])
+            cube([wall_mm,80,62]);
     }
 }
-
+module motorwell_cut() {
+    // Raised, gently draining floor: height and slope are explicitly estimated.
+    slope=-15/(4600-well_start_fullsize_mm);
+    multmatrix([[1,0,0,0],[0,1,0,0],
+        [slope,0,1,(230-slope*well_start_fullsize_mm)*scale_factor],[0,0,0,1]])
+        translate([well_start_fullsize_mm*scale_factor+wall_mm,
+            -well_half_width_fullsize_mm*scale_factor,0])
+            cube([length_mm-well_start_fullsize_mm*scale_factor-wall_mm-transom_mm,
+                2*well_half_width_fullsize_mm*scale_factor,60]);
+}
+module transom_top_cut() {
+    // 375 mm is the central motor seat, not the higher notch shoulders.
+    for(v=[[well_half_width_fullsize_mm,transom_seat_fullsize_mm+transom_notch_depth_fullsize_mm],
+           [transom_notch_width_fullsize_mm/2,transom_seat_fullsize_mm]])
+        translate([length_mm-transom_mm-0.01,-v[0]*scale_factor,v[1]*scale_factor])
+            cube([transom_mm+0.1,2*v[0]*scale_factor,60]);
+}
+module body_blank() { union() { lower_exterior(); upper_volume(); foredeck_details(); } }
+module framing_members() {
+    // Early T-profile interpretation. Frame locations are reconstructed, not
+    // inferred from the later production variant's raised Pi-section floors.
+    floor_top=220*scale_factor;
+    web=max(0.65,2*scale_factor);
+    depth=max(0.65,28*scale_factor);
+    intersection() {
+        // Clip slightly into the plating for a positive-volume joint.
+        translate([0.07,0,0.035]) body_blank();
+        union() {
+            // Five transverse floors with open centres above the floor webs;
+            // side webs continue up the inside of the lower sides.
+            for(x=[1700,2200,2700,3200,3700])
+                translate([x*scale_factor-web/2,0,0]) difference() {
+                    translate([0,-800*scale_factor,0])
+                        cube([web,1600*scale_factor,seam_z(x)*scale_factor]);
+                    translate([-0.1,-620*scale_factor,floor_top])
+                        cube([web+0.2,1240*scale_factor,60]);
+                }
+            // Longitudinal bottom stiffeners, connected through the floors.
+            for(y=[-350,0,350])
+                translate([1450*scale_factor,y*scale_factor-web/2,0])
+                    cube([(well_start_fullsize_mm-1450)*scale_factor,web,
+                        wall_mm+depth+abs(y)*tan(8.5)*scale_factor]);
+            // Three transom knees connect the rear panel to the well structure.
+            for(y=[-350,0,350])
+                translate([length_mm-transom_mm-200*scale_factor,y*scale_factor-web/2,0])
+                    rotate([90,0,0]) linear_extrude(height=web)
+                        polygon([[0,0],[200*scale_factor,0],
+                            [200*scale_factor,375*scale_factor],[0,215*scale_factor]]);
+        }
+    }
+}
+module chine_spray_flange() {
+    // One continuous swept strip avoids overlapping coplanar segment caps.
+    thick=max(0.35,2*scale_factor);
+    rr=[for(i=[6:len(fair_rows)-1]) fair_rows[i]];
+    m=len(rr);
+    for(side=[-1,1]) let(pp=[for(r=rr) let(
+        p=guide_point(2,r)*scale_factor,w=30*scale_factor*smooth5(r/700))
+        each [[p[0],side*(p[1]-0.10),p[2]-thick/2],
+              [p[0],side*(p[1]+w),p[2]-thick/2],
+              [p[0],side*(p[1]+w),p[2]+thick/2],
+              [p[0],side*(p[1]-0.10),p[2]+thick/2]]],
+        ff=concat([[3,2,1,0]],
+            [for(i=[0:m-2],j=[0:3]) each
+                [[i*4+j,i*4+(j+1)%4,(i+1)*4+(j+1)%4],
+                 [i*4+j,(i+1)*4+(j+1)%4,(i+1)*4+j]]],
+            [[for(j=[0:3]) (m-1)*4+j]]))
+        polyhedron(points=pp,
+            faces=side==1 ? [for(f=ff) [for(j=[len(f)-1:-1:0]) f[j]]] : ff,
+            convexity=12);
+}
+module pressed_side_ridges() {
+    // Two rounded stiffening corrugations on each side, placed on the actual
+    // ruled side surface. Width/depth are reconstructed with print allowances.
+    for(side=[-1,1],u=[0.40,0.72],i=[12:84]) hull() for(r=[4600*i/86,4600*(i+1)/86])
+        let(b=guide_point(2,r),s=sheer_point(r),q=b+(s-b)*u)
+            translate([q[0]*scale_factor,side*q[1]*scale_factor,q[2]*scale_factor])
+                scale([0.025,max(0.16,10*scale_factor),max(0.3,16*scale_factor)])
+                    sphere(r=1,$fn=12);
+}
 module boat_hull() {
-    cockpit_half=min(length_mm*0.137,650*scale_factor-wall_mm);
     difference() {
         union() {
-            lower_hull(); upper_shell(); foredeck_details();
-            // Continue the well bulkhead into the new deck with a small overlap.
-            intersection() {
-                translate([0,0,-0.05]) upper_volume();
-                translate([length_mm*0.86,-40,750*scale_factor-deck_mm-0.1])
-                    cube([wall_mm,80,60]);
+            difference() {
+                body_blank();
+                interior_space();
+                // Open cockpit of published size; longitudinal placement is estimated.
+                on_seam(-deck_mm-0.2)
+                    translate([cockpit_start_fullsize_mm*scale_factor,
+                        -cockpit_width_fullsize_mm*scale_factor/2,0])
+                        cube([cockpit_length_fullsize_mm*scale_factor,
+                            cockpit_width_fullsize_mm*scale_factor,60]);
+            }
+            if(framing) framing_members();
+            if(side_corrugations) pressed_side_ridges();
+            if(chine_flange) intersection() {
+                chine_spray_flange();
+                translate([0,-40,0]) cube([length_mm,80,60]);
             }
         }
         hatch_opening();
-        // Remove the old flat foredeck inside the new shell so both cavities
-        // connect directly; retain the seam ledge under the upper side walls.
-        intersection() {
-            upper_inner();
-            safe_inner();
-            translate([0,-40,750*scale_factor-deck_mm-0.1])
-                cube([length_mm*0.86,80,deck_mm+0.2]);
-        }
-        translate([length_mm*0.305,-cockpit_half,750*scale_factor-deck_mm-0.2])
-            cube([length_mm*0.555,2*cockpit_half,60]);
-        // Keep the original recessed outboard well open above the seam.
-        translate([length_mm*0.86+wall_mm,-length_mm*0.122,8.0*length_mm/170])
-            cube([length_mm*0.14-transom_mm-wall_mm,length_mm*0.244,55]);
-        translate([length_mm-transom_mm-0.01,-length_mm*0.122,400*scale_factor])
-            cube([transom_mm+0.1,length_mm*0.244,55]);
+        motorwell_cut();
+        transom_top_cut();
     }
 }
 
@@ -320,8 +403,11 @@ if(part=="hull") color([0.72,0.77,0.79]) boat_hull();
 else if(part=="outer") exterior();
 else if(part=="inner") safe_inner();
 else if(part=="sections")
-    for(i=[1:len(stations)-1])
-        translate([stations[i][0]*scale_factor,0,0])
-            rotate([90,0,90]) linear_extrude(height=0.25)
-                polygon(outer_ring([for(p=stations[i][1]) p*scale_factor]));
+    // Intersect the current final solid; the old station table is not an
+    // independently dimensioned factory offset table.
+    for(x=[900,1400,2300,3067,4200,4595])
+        intersection() {
+            boat_hull();
+            translate([x*scale_factor,-40,-1]) cube([0.2,80,62]);
+        }
 else assert(false,"Unknown part selector.");

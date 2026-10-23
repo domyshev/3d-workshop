@@ -39,15 +39,29 @@ def inspect(path):
             edges[x,y]+=1;parents[find(x)]=find(y)
     undirected={tuple(sorted(e)) for e in edges}
     edge_errors=sum(1 for a,b in undirected if a==b or edges[a,b]!=1 or edges[b,a]!=1)
+    # Paired edges alone miss two sheets touching at a single vertex.
+    links=collections.defaultdict(list)
+    for a,b,c in faces:
+        links[a].append((b,c));links[b].append((c,a));links[c].append((a,b))
+    vertex_errors=0
+    for pairs in links.values():
+        adj=collections.defaultdict(set)
+        for a,b in pairs:adj[a].add(b);adj[b].add(a)
+        start=next(iter(adj));seen=set();stack=[start]
+        while stack:
+            node=stack.pop()
+            if node in seen:continue
+            seen.add(node);stack.extend(adj[node]-seen)
+        if len(seen)!=len(adj) or any(len(v)!=2 for v in adj.values()):vertex_errors+=1
     bounds=[[min(q[i] for q in vertices) for i in range(3)],[max(q[i] for q in vertices) for i in range(3)]]
     result={'file':Path(path).name,'vertices':len(vertices),'triangles':len(faces),
             'bounds_mm':bounds,'size_mm':[bounds[1][i]-bounds[0][i] for i in range(3)],
             'components':len({find(i) for i in range(len(vertices))}),
             'euler_characteristic':len(vertices)-len(undirected)+len(faces),
-            'edge_pairing_errors':edge_errors,'zero_area_triangles':zero,
+            'edge_pairing_errors':edge_errors,'vertex_link_errors':vertex_errors,'zero_area_triangles':zero,
             'minimum_double_triangle_area_mm2':minimum,'signed_volume_mm3':volume,
             'limits':'No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.'}
-    result['basic_mesh_checks_pass']=edge_errors==0 and zero==0 and volume>0 and result['components']==1
+    result['basic_mesh_checks_pass']=edge_errors==0 and vertex_errors==0 and zero==0 and volume>0 and result['components']==1
     return result
 
 def main():

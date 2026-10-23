@@ -232,6 +232,15 @@ with source URLs. Checked curve convexity, flat aft joins, closed meshes at 170
 and 80 mm, and prepared a new sliced A1 mini trial. The geometry remains a
 reconstruction; physical printing is untested. See the [model notes](models/sarepta/README.md).
 
+### October 23, 2026 — Sarepta dimensions and internal framing
+
+Corrected the bare-hull height and motor-transom datum, added the published
+cockpit envelope, separate bow locker, raised motor well, interior framing,
+side corrugations and chine flanges. [The new milestone](models/sarepta/releases/2026-10-23_dimensions-framing/README.md)
+contains 80 and 170 mm binary STLs and pictures of their actual meshes. Both
+sizes pass edge/vertex topology and guide-curve checks; physical printing
+and unmeasured factory details remain unverified.
+
 ### October 23, 2026 — Sarepta evidence and mesh archive
 
 Preserved the full recovered factory passport, original reference images, offline

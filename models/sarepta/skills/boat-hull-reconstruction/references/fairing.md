@@ -61,3 +61,17 @@ is diagnostic, not a stand-alone pass criterion. Inspect lower and upper
 views with lighting that exposes dents, then compare orthographic silhouettes.
 Mesh checks, slicer completion and successful physical printing are separate
 evidence levels. None certifies hydrodynamics or factory fidelity.
+
+## Dimension/framing revision findings
+
+Paired edges can still miss two surface sheets touching at one point. The
+checker now also requires each vertex link to be one closed cycle. Inspect
+the exported binary STL as well: ASCII precision can hide faces which collapse
+at the 32-bit precision used by binary STL and many slicers.
+
+Small internal overlaps and a slight offset of the rib-clipping solid eliminated
+coincident facets. A continuous swept chine strip replaced hundreds of
+overlapping segment caps, removing tiny Boolean slivers in binary export.
+The new two-scale release is single-component with Euler characteristic 2;
+this is consistent with its separate hatch-accessed locker and open cockpit,
+not a universal genus requirement for every hull.

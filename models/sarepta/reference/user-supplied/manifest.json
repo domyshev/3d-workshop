@@ -103,5 +103,29 @@
     "kind": "real-boat-photo",
     "origin": "Supplied by the user in this conversation; original author is not inferred from upload.",
     "status": "preserved"
+  },
+  {
+    "attachment_id": "1690e15b-e9d6-4cb2-8a67-92b1c57a25e9",
+    "filename": "kit-interior-aft-framing.png",
+    "kind": "secondary-kit-photo",
+    "origin": "Supplied by the user; creator not inferred from upload.",
+    "status": "preserved",
+    "note": "Kit framing is secondary evidence. Progress-4 is not Sarepta hull geometry."
+  },
+  {
+    "attachment_id": "8b9942d5-2860-42d6-a590-bd1d2b5e0e01",
+    "filename": "kit-interior-side-framing.png",
+    "kind": "secondary-kit-photo",
+    "origin": "Supplied by the user; creator not inferred from upload.",
+    "status": "preserved",
+    "note": "Kit framing is secondary evidence. Progress-4 is not Sarepta hull geometry."
+  },
+  {
+    "attachment_id": "7338cb4e-e0e2-4f09-8882-87bf4d5cea9a",
+    "filename": "progress-4-kit-product-card.png",
+    "kind": "other-boat-product-image",
+    "origin": "Supplied by the user; creator not inferred from upload.",
+    "status": "preserved",
+    "note": "Kit framing is secondary evidence. Progress-4 is not Sarepta hull geometry."
   }
 ]

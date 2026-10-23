@@ -351,3 +351,22 @@ Verification:
 - Updated upper, lower, plan and stern preview renders; exported the 80 mm
   `upper_belt_relief` STL through the repository exporter and opened its exact
   mesh in OpenSCAD. No Bambu export was made. Physical printing remains untested.
+
+## 2026-10-23 — Evidence archived, dimensions and framing revised
+
+Archive checkpoint `cc04d8c` was pushed first. The subsequent revision maps the
+reverse belt inside the 750 mm side height, uses a 375 mm centre engine seat,
+and sets a 2600 x 1280 cockpit envelope. Added a separate bow locker, raised
+motor-well floor, estimated central transom notch, transverse/longitudinal
+framing, side corrugations and 30 mm chine spray flanges. See
+[decisions and limitations](TRANSOM_AND_FRAMING.md).
+
+Both actual binary STL sizes pass edge pairing, vertex links, nonzero faces,
+positive volume and single-component checks; Euler characteristic 2. Bow
+curvature, aft joins, accepted plan angle and normal rim offsets pass regression
+checks. A continuous flange sweep and small internal Boolean overlaps avoid
+point pinches and low-precision STL slivers. No physical print yet.
+
+New images from the user and the first-hand Progress-4 kit review are archived.
+The review identifies PRG-4-43 as 17 physical photopolymer-printed parts, not
+STL files. Sarepta has a separate 19-part physical kit review.

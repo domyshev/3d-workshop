@@ -54,7 +54,7 @@ bridges. Use source-backed bulkheads and leave only intended compartment opening
 Evaluate the supported sizes, inspect front/side/top/bottom/stern views and
 critical cross-sections, and check the exact exported mesh. The bundled
 [scripts/inspect_stl.py](scripts/inspect_stl.py) reports bounds, degenerate triangles,
-edge incidence, components, Euler characteristic and volume using the standard
+edge incidence, vertex links, components, Euler characteristic and volume using the standard
 library. Interpret topology against intended openings: a hatch connected to
 an open cockpit can legitimately give genus one. Validate visual fairness
 separately; higher tessellation alone does not remove a geometric dent.

@@ -19,7 +19,7 @@ for(k=[0:2]) {
 for(i=[0:100],j=[0:48]) let(r=3067*i/100,
     g=[guide_point(0,r),guide_point(1,r),guide_point(2,r),sheer_point(r)],
     p=fair_bottom(r,j,g))
-    assert(p[2]<=750*scale_factor+1e-7,"Hull protrudes through flat deck");
+    assert(p[2]<=seam_z(p[0]/scale_factor)*scale_factor+1e-7,"Hull protrudes through the seam plane");
 
 // Near-orthographic photo estimate is approximately 132 degrees, not a factory dimension.
 outline=deck_outline();
@@ -52,3 +52,10 @@ assert(foredeck_relief_fullsize_mm>=10 && foredeck_relief_fullsize_mm<=15,
 echo(upper_belt_fullsize_mm=[upper_height(0),upper_height(4600)],
     foredeck_relief_model_mm=foredeck_relief_fullsize_mm*scale_factor,
     rib_model_mm=foredeck_rib_fullsize_mm*scale_factor);
+
+assert(abs(seam_z(0)+upper_height(0)-750)<1e-8);
+assert(abs(seam_z(4600)+upper_height(4600)-750)<1e-8);
+assert(transom_seat_fullsize_mm==375);
+assert(cockpit_length_fullsize_mm==2600 && cockpit_width_fullsize_mm==1280);
+assert(abs(atan(97.2/650)-8.5)<0.01);
+assert(well_floor_z(4600)>100 && well_floor_z(4000)>well_floor_z(4600));
