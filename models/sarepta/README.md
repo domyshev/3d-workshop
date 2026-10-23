@@ -20,10 +20,14 @@ bow locker, a raised motor well, side corrugations and chine flanges are include
 See [transom and framing decisions](TRANSOM_AND_FRAMING.md) and
 [pending corrections](PENDING_CORRECTIONS.md) for remaining estimates.
 
-The [latest release](releases/2026-10-23_dimensions-framing/README.md) includes
+The [latest release](releases/2026-10-23_straight-side-ridges/README.md) includes
 both exact binary STL sizes: 80 x 27.826 x 13.299 and
 170 x 59.130 x 28.261 mm. Both pass edge/vertex topology checks; physical
 printing is untested. Heights include the small embossed deck details.
+
+The two side corrugations now remain horizontal and run from an estimated
+X=1600 to the transom at X=4600, with flat forward ends, following the user
+photographs. Their heights of 280 and 425 remain visual estimates.
 
 ## Evidence and decisions
 
@@ -44,14 +48,14 @@ printing is untested. Heights include the small embossed deck details.
 - [Main OpenSCAD source](sarepta_hull.scad): default overall length 170 mm.
 - [80 mm entry point](sarepta_hull_80mm.scad).
 - [Bow and plan regression checks](verify_bow.scad).
-- [STL release history with pictures](releases/README.md): eight 80 mm
+- [STL release history with pictures](releases/README.md): nine 80 mm
   milestones and the latest 170 mm export, preserved byte-for-byte, with renders made from their actual meshes.
-- [Latest archived STL stage](releases/2026-10-23_dimensions-framing/README.md):
-  corrected datums and internal framing; remaining estimates are explicit.
+- [Latest archived STL stage](releases/2026-10-23_straight-side-ridges/README.md):
+  horizontal side ridges with corrected forward and aft ends; remaining estimates are explicit.
 - `history/`: accepted parametric snapshots before subsequent revisions.
 - `previews/`: working renders; release-specific mesh renders are under `releases/`.
 
-![Current archived mesh](releases/2026-10-23_dimensions-framing/above.png)
+![Current archived mesh](releases/2026-10-23_straight-side-ridges/above.png)
 
 ## Agent workflow
 

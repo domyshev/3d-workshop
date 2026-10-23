@@ -59,3 +59,16 @@ assert(transom_seat_fullsize_mm==375);
 assert(cockpit_length_fullsize_mm==2600 && cockpit_width_fullsize_mm==1280);
 assert(abs(atan(97.2/650)-8.5)<0.01);
 assert(well_floor_z(4600)>100 && well_floor_z(4000)>well_floor_z(4600));
+
+// Side corrugations follow horizontal planes, not bow guide fractions.
+for(z=side_ridge_heights_fullsize_mm,i=[0:40]) let(
+    x=side_ridge_start_fullsize_mm+(4600-side_ridge_start_fullsize_mm)*i/40,
+    r=side_height_parameter(x,z),p=side_at_height(r,z),
+    b=guide_point(2,r),s=sheer_point(r),q=side_ridge_center(x,z)) {
+    assert(abs(p[0]-x)<1e-5,"Side ridge is misplaced longitudinally");
+    assert(abs(q[2]-z)<1e-9,"Side ridge bends vertically");
+    assert(z>b[2] && z<s[2],"Side ridge leaves the lower side panel");
+}
+assert(side_ridge_start_fullsize_mm>1380,"Side ridges extend into the bow tip");
+echo(side_ridges_x_fullsize_mm=[side_ridge_start_fullsize_mm,4600],
+    side_ridges_z_fullsize_mm=side_ridge_heights_fullsize_mm);

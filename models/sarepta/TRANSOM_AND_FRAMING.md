@@ -56,3 +56,11 @@ claiming a complete late-production interior.
 Scuppers, oak-board texture, individual rivets and accurate profile sections
 are not included. Further photos or survey data are needed for those details.
 The cabin, hatch lid and outboard motors remain separate future parts.
+
+## Subsequent side-photo correction
+
+The user's real-boat side photographs show horizontal corrugations ending
+before the upturned bow and continuing to the transom. Fixed side-surface
+fractions were replaced with constant-height intersections at Z=280 and 425,
+X=1600..4600, with flat forward and flush aft ends. These coordinates remain
+photo-derived estimates. The separate chine flange retains its curved bow path.

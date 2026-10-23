@@ -127,5 +127,29 @@
     "origin": "Supplied by the user; creator not inferred from upload.",
     "status": "preserved",
     "note": "Kit framing is secondary evidence. Progress-4 is not Sarepta hull geometry."
+  },
+  {
+    "attachment_id": "54370844-aa6f-4fc9-a14a-be466467f461",
+    "filename": "real-boat-horizontal-ridges-front.png",
+    "kind": "real-boat-photo",
+    "origin": "Supplied by the user; original creator not inferred from upload.",
+    "status": "preserved",
+    "use": "Side ridge straightness and forward/aft termination."
+  },
+  {
+    "attachment_id": "bfbfb1e5-73de-47de-9086-2fd6459f4b12",
+    "filename": "feedback-curved-side-ridges.png",
+    "kind": "model-feedback",
+    "origin": "Supplied by the user; original creator not inferred from upload.",
+    "status": "preserved",
+    "use": "Side ridge straightness and forward/aft termination."
+  },
+  {
+    "attachment_id": "add7ad5a-de3f-45ce-bd2c-478b4663a4e9",
+    "filename": "real-boat-horizontal-ridges-stern.png",
+    "kind": "real-boat-photo",
+    "origin": "Supplied by the user; original creator not inferred from upload.",
+    "status": "preserved",
+    "use": "Side ridge straightness and forward/aft termination."
   }
 ]

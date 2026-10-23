@@ -370,3 +370,13 @@ point pinches and low-precision STL slivers. No physical print yet.
 New images from the user and the first-hand Progress-4 kit review are archived.
 The review identifies PRG-4-43 as 17 physical photopolymer-printed parts, not
 STL files. Sarepta has a separate 19-part physical kit review.
+
+## 2026-10-23 — Straight side corrugations
+
+User photos showed that the previous side ridges curved upward and extended
+too far into the bow. Replaced fixed chine-to-seam fractions with horizontal
+side-surface intersections at estimated Z=280/425, X=1600..4600. Both strips
+have flat forward ends and terminate flush at the transom. Other geometry is
+unchanged. Archived both binary STL sizes and three supplied images.
+Edge/vertex checks and new ridge-level/placement assertions pass; physical
+printing remains untested. See the straight-side-ridges release.

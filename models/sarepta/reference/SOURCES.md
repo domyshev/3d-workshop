@@ -44,3 +44,10 @@ only. Original creators are not inferred from uploads. The first-hand
 is retained under `reference/sources/progress-4-kit-review/`; its text and
 photos retain their respective authors' rights. See `TRANSOM_AND_FRAMING.md`
 for separation of factory evidence and reconstruction decisions.
+
+## Straight side-corrugation feedback
+
+User attachments `54370844`, `bfbfb1e5` and `add7ad5a` are preserved in
+`user-supplied/` with full IDs and provenance in its manifest. Real side views
+support horizontal strips with forward termination before the upturned bow
+and aft termination at the transom. Placement coordinates remain estimates.

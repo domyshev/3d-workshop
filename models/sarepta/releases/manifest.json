@@ -162,7 +162,7 @@
     "sha256": "e7766695156b3c47276e9743587588515e68b52aa66bd6220876a1a071ee1978",
     "changes": "Mapped the upper belt inside 750 mm side height; set 375 mm centre motor seat with estimated notch, published cockpit envelope, separate bow locker, raised motor well, transverse/longitudinal framing, side corrugations and 30 mm chine flanges.",
     "limitations": "Early 4600 x 1600 envelope; profile/spacing, well floor/rake, upper setbacks, notch, hatch and relief remain reconstructions. Print allowances enlarge thin details. Not physically printed.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-23_dimensions-framing/source.scad",
     "preserved_on": "2026-10-23",
     "previews_generated_from": "archived binary STL, not live source",
@@ -186,6 +186,40 @@
       "sha256": "06694a34bf0a310cef89b31f115a9186557c0eacb8d7ef4ff1c847e78a12359b"
     },
     "export_format": "binary STL (32-bit coordinates)",
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-23_straight-side-ridges",
+    "title": "Straight horizontal side corrugations",
+    "stl": "2026-10-23_sarepta_hull_80mm_straight_ridges.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.23/2026-10-23_sarepta_hull_80mm_straight_ridges.stl",
+    "sha256": "8cc0b7614bbd89b7c2c226cf38a49fbe7eff9c466801e7f23df0b279f537d726",
+    "changes": "Replaced bow-following side ridges with constant-height strips, flat forward ends at X=1600 and flush transom ends at X=4600.",
+    "limitations": "Front station 1600 and heights 280/425 are photo-based estimates. Previous dimension/framing reconstruction limits still apply; physical printing untested.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-23_straight-side-ridges/source.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "actual archived binary STL",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086044311523,
+      13.299335479736328
+    ],
+    "triangles": 60414,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-23_sarepta_hull_170mm_straight_ridges.stl",
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        28.26108741760254
+      ],
+      "sha256": "da6ccdd0458ac9455fff720dd416bd6b2eb8c7ace30f79dc38a43c8fa71a138e",
+      "mesh_report": "mesh-report-170mm.json"
+    },
+    "export_format": "binary STL",
     "physical_print_tested": false
   }
 ]

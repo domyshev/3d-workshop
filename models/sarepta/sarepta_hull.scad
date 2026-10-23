@@ -29,6 +29,9 @@ well_start_fullsize_mm = cockpit_start_fullsize_mm+cockpit_length_fullsize_mm;
 well_half_width_fullsize_mm = 560; // Reconstructed.
 framing = true;
 side_corrugations = true;
+// Photo-derived placement, not published factory dimensions.
+side_ridge_start_fullsize_mm = 1600;
+side_ridge_heights_fullsize_mm = [280,425];
 chine_flange = true;
 function seam_z(x) = side_height_fullsize_mm-upper_height(x);
 function well_floor_z(x) = 230-15*(x-well_start_fullsize_mm)/(4600-well_start_fullsize_mm);
@@ -362,14 +365,37 @@ module chine_spray_flange() {
             faces=side==1 ? [for(f=ff) [for(j=[len(f)-1:-1:0]) f[j]]] : ff,
             convexity=12);
 }
+// Intersect the ruled side surface with a horizontal plane. Using a fixed
+// fraction between chine and seam incorrectly bent the ridges up at the bow.
+function side_at_height(r,z) = let(b=guide_point(2,r),s=sheer_point(r),
+    u=(z-b[2])/(s[2]-b[2])) b+(s-b)*u;
+function side_height_parameter(x,z,lo=800,hi=4600,n=0) =
+    n==34 ? (lo+hi)/2 : let(r=(lo+hi)/2)
+    side_at_height(r,z)[0]<x ? side_height_parameter(x,z,r,hi,n+1) :
+        side_height_parameter(x,z,lo,r,n+1);
+function side_ridge_center(x,z) = let(r=side_height_parameter(x,z),
+    p=side_at_height(r,z)) [x,p[1],z];
 module pressed_side_ridges() {
-    // Two rounded stiffening corrugations on each side, placed on the actual
-    // ruled side surface. Width/depth are reconstructed with print allowances.
-    for(side=[-1,1],u=[0.40,0.72],i=[12:84]) hull() for(r=[4600*i/86,4600*(i+1)/86])
-        let(b=guide_point(2,r),s=sheer_point(r),q=b+(s-b)*u)
-            translate([q[0]*scale_factor,side*q[1]*scale_factor,q[2]*scale_factor])
-                scale([0.025,max(0.16,10*scale_factor),max(0.3,16*scale_factor)])
-                    sphere(r=1,$fn=12);
+    // Horizontal centrelines with flat forward ends and flush transom ends.
+    // Only Y follows the side plating; Z is constant over the entire length.
+    m=65;n=12;
+    depth=max(0.16,10*scale_factor);
+    half_height=max(0.3,16*scale_factor);
+    for(side=[-1,1],z=side_ridge_heights_fullsize_mm) let(
+        pp=[for(i=[0:m-1]) let(
+            x=side_ridge_start_fullsize_mm+
+                (4600-side_ridge_start_fullsize_mm)*i/(m-1),
+            p=side_ridge_center(x,z)*scale_factor)
+            for(j=[0:n-1]) [p[0],side*(p[1]+depth*cos(360*j/n)),
+                p[2]+half_height*sin(360*j/n)]],
+        ff=concat([[for(j=[n-1:-1:0]) j]],
+            [for(i=[0:m-2],j=[0:n-1]) each
+                [[i*n+j,i*n+(j+1)%n,(i+1)*n+(j+1)%n],
+                 [i*n+j,(i+1)*n+(j+1)%n,(i+1)*n+j]]],
+            [[for(j=[0:n-1]) (m-1)*n+j]]))
+        polyhedron(points=pp,
+            faces=side==1 ? [for(f=ff) [for(j=[len(f)-1:-1:0]) f[j]]] : ff,
+            convexity=12);
 }
 module boat_hull() {
     difference() {

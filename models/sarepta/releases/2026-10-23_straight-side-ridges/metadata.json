@@ -1,0 +1,34 @@
+{
+  "id": "2026-10-23_straight-side-ridges",
+  "title": "Straight horizontal side corrugations",
+  "stl": "2026-10-23_sarepta_hull_80mm_straight_ridges.stl",
+  "model_length_mm": 80,
+  "original_export_path": "stl_exports/2026/2026.10/2026.10.23/2026-10-23_sarepta_hull_80mm_straight_ridges.stl",
+  "sha256": "8cc0b7614bbd89b7c2c226cf38a49fbe7eff9c466801e7f23df0b279f537d726",
+  "changes": "Replaced bow-following side ridges with constant-height strips, flat forward ends at X=1600 and flush transom ends at X=4600.",
+  "limitations": "Front station 1600 and heights 280/425 are photo-based estimates. Previous dimension/framing reconstruction limits still apply; physical printing untested.",
+  "is_current": true,
+  "source_snapshot": "releases/2026-10-23_straight-side-ridges/source.scad",
+  "preserved_on": "2026-10-23",
+  "previews_generated_from": "actual archived binary STL",
+  "mesh_report": "mesh-report.json",
+  "size_mm": [
+    80.0,
+    27.826086044311523,
+    13.299335479736328
+  ],
+  "triangles": 60414,
+  "basic_mesh_checks_pass": true,
+  "additional_model": {
+    "stl": "2026-10-23_sarepta_hull_170mm_straight_ridges.stl",
+    "size_mm": [
+      170.0,
+      59.130435943603516,
+      28.26108741760254
+    ],
+    "sha256": "da6ccdd0458ac9455fff720dd416bd6b2eb8c7ace30f79dc38a43c8fa71a138e",
+    "mesh_report": "mesh-report-170mm.json"
+  },
+  "export_format": "binary STL",
+  "physical_print_tested": false
+}

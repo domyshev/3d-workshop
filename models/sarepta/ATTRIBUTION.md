@@ -21,3 +21,8 @@ only. Original creators are not inferred from uploads. The first-hand
 is retained under `reference/sources/progress-4-kit-review/`; its text and
 photos retain their respective authors' rights. See `TRANSOM_AND_FRAMING.md`
 for separation of factory evidence and reconstruction decisions.
+
+Three additional user attachments (two real-boat side photos and one model
+feedback image) are preserved in `reference/user-supplied/manifest.json`.
+They establish side-corrugation direction and limits; original creators and
+redistribution rights are not inferred from upload.

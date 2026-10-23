@@ -239,7 +239,10 @@ cockpit envelope, separate bow locker, raised motor well, interior framing,
 side corrugations and chine flanges. [The new milestone](models/sarepta/releases/2026-10-23_dimensions-framing/README.md)
 contains 80 and 170 mm binary STLs and pictures of their actual meshes. Both
 sizes pass edge/vertex topology and guide-curve checks; physical printing
-and unmeasured factory details remain unverified.
+and unmeasured factory details remain unverified. A subsequent
+[photo correction](models/sarepta/releases/2026-10-23_straight-side-ridges/README.md)
+keeps the side corrugations horizontal, ends them before the bow and extends
+them flush to the transom.
 
 ### October 23, 2026 — Sarepta evidence and mesh archive
 

@@ -75,3 +75,9 @@ overlapping segment caps, removing tiny Boolean slivers in binary export.
 The new two-scale release is single-component with Euler characteristic 2;
 this is consistent with its separate hatch-accessed locker and open cockpit,
 not a universal genus requirement for every hull.
+
+A constant fraction between a rising chine and a sloping seam does not produce
+a horizontal side corrugation. For the Sarepta photo correction, intersect the
+side panel with a constant-Z plane, solve the longitudinal parameter for X,
+and follow only the transverse Y variation. Flat end caps and a flush transom
+termination are independent of the rounded ridge cross section.

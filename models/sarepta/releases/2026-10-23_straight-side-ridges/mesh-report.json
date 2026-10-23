@@ -1,0 +1,31 @@
+{
+  "file": "2026-10-23_sarepta_hull_80mm_straight_ridges.stl",
+  "vertices": 30209,
+  "triangles": 60414,
+  "bounds_mm": [
+    [
+      0.0,
+      -13.913043022155762,
+      0.0
+    ],
+    [
+      80.0,
+      13.913043022155762,
+      13.299335479736328
+    ]
+  ],
+  "size_mm": [
+    80.0,
+    27.826086044311523,
+    13.299335479736328
+  ],
+  "components": 1,
+  "euler_characteristic": 2,
+  "edge_pairing_errors": 0,
+  "vertex_link_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 5.3835265134694055e-09,
+  "signed_volume_mm3": 6739.860553231258,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}
