@@ -1,0 +1,4 @@
+# Preserve original third-party snapshot bytes and historical mesh exports.
+reference/**/original.* -text -whitespace
+reference/**/offline.html -text -whitespace
+releases/**/*.stl -text

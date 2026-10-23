@@ -1,0 +1,29 @@
+{
+  "retrieved": "2026-10-23",
+  "landing_page": "https://motorka.org/m_lodki/sarepta/2182-doc-sarepta.html",
+  "original_url": "http://files.motorka.org/boats/doc_sarepta.rar",
+  "retrieval_url": "https://web.archive.org/web/20130809013240id_/http://files.motorka.org/boats/doc_sarepta.rar",
+  "archive_timestamp": "20130809013240",
+  "sha256": "925577d52be3caf6aa222eb38d2dada4d017ae14e8fe6e3689ff5759ddbdfa4f",
+  "file_mapping": {
+    "appendix-01.jpg": "Прилож_1.jpg",
+    "appendix-02.jpg": "Прилож_2.jpg",
+    "appendix-03.jpg": "Прилож_3.jpg",
+    "cover.jpg": "Тит_стр.jpg",
+    "appendix-04.jpg": "Прилож_4.jpg",
+    "appendix-05.jpg": "Прилож_5.jpg",
+    "page-12.jpg": "Стр_12.jpg",
+    "page-11.jpg": "Стр_11.jpg",
+    "page-08.jpg": "Стр_8.jpg",
+    "page-09.jpg": "Стр_9.jpg",
+    "page-10.jpg": "Стр_10.jpg",
+    "page-02.jpg": "Стр_2.jpg",
+    "page-03.jpg": "Стр_3.jpg",
+    "page-01.jpg": "Стр_1.jpg",
+    "page-04.jpg": "Стр_4.jpg",
+    "page-05.jpg": "Стр_5.jpg",
+    "page-07.jpg": "Стр_7.jpg",
+    "page-06.jpg": "Стр_6.jpg"
+  },
+  "notes": "Public archival reference scan, not repository-authored material. The original file host did not resolve; the archived RAR was successfully retrieved and inspected. Twelve numbered pages, five appendices and a cover. Printed date/variant not established. Owner handwriting is present on page 1."
+}

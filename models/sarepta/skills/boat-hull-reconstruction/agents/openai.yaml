@@ -1,0 +1,4 @@
+interface:
+  display_name: "Boat Hull Reconstruction"
+  short_description: "Reconstruct and fair printable boat hulls"
+  default_prompt: "Use $boat-hull-reconstruction to refine the Sarepta hull from documented dimensions and reference images."

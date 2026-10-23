@@ -1,0 +1,30 @@
+{
+  "file": "2026-10-22_sarepta_hull_80mm_photo_bow.stl",
+  "vertices": 20860,
+  "triangles": 41716,
+  "bounds_mm": [
+    [
+      0.0,
+      -13.91304347826087,
+      0.0
+    ],
+    [
+      80.0,
+      13.91304347826087,
+      13.043478260869565
+    ]
+  ],
+  "size_mm": [
+    80.0,
+    27.82608695652174,
+    13.043478260869565
+  ],
+  "components": 1,
+  "euler_characteristic": 2,
+  "edge_pairing_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 6.858600320508775e-07,
+  "signed_volume_mm3": 6568.5856149789615,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

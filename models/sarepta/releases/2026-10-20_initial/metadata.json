@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-20_initial",
+  "title": "Initial printable hull",
+  "stl": "2026-10-20_sarepta_hull_80mm.stl",
+  "model_length_mm": 80,
+  "original_export_path": "stl_exports/2026/2026.10/2026.10.20/2026-10-20_sarepta_hull_80mm.stl",
+  "sha256": "32ea793307cfb167d59bf51d184048fe09ffc8212e520a9de99f6cb9a7af63f9",
+  "changes": "Initial station-table reconstruction and 80 mm trial.",
+  "limitations": "Bow contours collapsed near the deck; stem shape and longitudinal station positions were provisional.",
+  "is_current": false,
+  "source_snapshot": null,
+  "preserved_on": "2026-10-23",
+  "previews_generated_from": "archived STL, not live parametric source",
+  "mesh_report": "mesh-report.json",
+  "size_mm": [
+    80.0,
+    27.82608695652174,
+    13.947826086956521
+  ],
+  "triangles": 5780,
+  "basic_mesh_checks_pass": true
+}

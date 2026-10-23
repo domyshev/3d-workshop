@@ -1,0 +1,30 @@
+{
+  "file": "2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
+  "vertices": 26028,
+  "triangles": 52056,
+  "bounds_mm": [
+    [
+      0.0,
+      -13.913043476641178,
+      0.0
+    ],
+    [
+      80.0,
+      13.913043476641178,
+      16.52173913043478
+    ]
+  ],
+  "size_mm": [
+    80.0,
+    27.826086953282356,
+    16.52173913043478
+  ],
+  "components": 1,
+  "euler_characteristic": 0,
+  "edge_pairing_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 2.2206561323611258e-08,
+  "signed_volume_mm3": 7025.426993169636,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

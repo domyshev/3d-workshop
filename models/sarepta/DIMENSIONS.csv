@@ -1,0 +1,23 @@
+property,published_value,unit_convention,source_and_qualification,evidence_class
+Overall length,4600 / 4650; passport appears 4640,full-size mm unless stated,1974 article / handbook / degraded passport page 2; resolve variant before changing the model,conflicting-or-uncertain
+Overall beam,1600 in article and handbook,full-size mm unless stated,Passport beam digits are degraded; an apparent 1650 reading needs another clean copy; do not silently replace with either 1650 or 1850,conflicting-or-uncertain
+Chine beam at transom,1300,full-size mm unless stated,Passport p. 2,explicit-published
+Side height,750,full-size mm unless stated,Passport p. 2 and 1974 article; vertical datum/upper edge must be mapped correctly to the model,explicit-published
+Overall height,1450,full-size mm unless stated,"Passport p. 2; equipped overall height, not bare-hull height",explicit-published
+Motor transom height,375,full-size mm unless stated,Passport p. 2; handbook excerpt instead says 400,conflicting-or-uncertain
+Transom deadrise,8.5 degrees,full-size mm unless stated,Passport p. 2; handbook excerpt says 8 degrees,conflicting-or-uncertain
+Chine beam at one-third length forward of transom,1300,full-size mm unless stated,1974 article; distinct location from passport transom beam entry,explicit-published
+Deadrise at that one-third-length section,8.5 degrees,full-size mm unless stated,1974 article,explicit-published
+Lower-side flare,About 10 degrees,full-size mm unless stated,"Approximate wording in 1974 article, not the reverse upper-belt angle",conflicting-or-uncertain
+Chine spray flange,30 wide,full-size mm unless stated,"1974 article; this is the bottom/side flange, not the upper protective rim",explicit-published
+Cockpit,2600 x 1280; area 3.33 square metres,full-size mm unless stated,Comparative table in the 1978 Krym-3 article; does not specify complete boundary coordinates,explicit-published
+Closed locker volume,0.47 cubic metres,full-size mm unless stated,Same comparative table; not enough to determine locker shape,explicit-published
+Protective gunwale profile,2 x 20 x 25,full-size mm unless stated,"1974 construction-node caption, bulb-angle profile; profile leg sizes do not directly establish visible rim overhang",explicit-published
+Keel T-section,2 x 70.5 x 28,full-size mm unless stated,Same construction-node caption,explicit-published
+Stiffening T-section,2 x 50 x 20,full-size mm unless stated,Same construction-node caption,explicit-published
+Local floor cut-outs,R30,full-size mm unless stated,Nodes 2 and 3 in construction drawing; not a bow/tunnel radius,explicit-published
+Bottom plate,2 thick,full-size mm unless stated,Passport p. 3,explicit-published
+Side and deck plate,1.5 thick,full-size mm unless stated,Passport p. 3,explicit-published
+Cabin plate,1 thick,full-size mm unless stated,"Passport p. 3; later changed, see below",explicit-published
+Internal framing plate,2 thick,full-size mm unless stated,Passport p. 3,explicit-published
+Glazing,5 thick,full-size mm unless stated,1974 article,explicit-published

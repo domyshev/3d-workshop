@@ -1,0 +1,30 @@
+{
+  "file": "2026-10-21_sarepta_hull_80mm_continuous_bow.stl",
+  "vertices": 4406,
+  "triangles": 8808,
+  "bounds_mm": [
+    [
+      0.0,
+      -13.91304347826087,
+      0.0
+    ],
+    [
+      80.0,
+      13.91304347826087,
+      13.947826086956521
+    ]
+  ],
+  "size_mm": [
+    80.0,
+    27.82608695652174,
+    13.947826086956521
+  ],
+  "components": 1,
+  "euler_characteristic": 2,
+  "edge_pairing_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 0.0001553841469023442,
+  "signed_volume_mm3": 6141.46947877848,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

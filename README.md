@@ -212,9 +212,40 @@ Successful renders of the overall scene and individual parts are recorded for th
 
 **Status:** ongoing experiment. Checks of the committed version do not validate subsequent changes.
 
+### October 19, 2026 — Sarepta hull reconstruction
+
+Created a [170 mm Sarepta hull study](models/sarepta/README.md) from the published
+1974 body plan and arrangement illustrations, with explicit bow tunnels, a
+shallow-V aft bottom, hollow foredeck, open cockpit, and recessed outboard transom.
+The cabin and motors are deferred.
+
+**Evidence:** OpenSCAD manifold evaluation, a connected closed inspection mesh,
+dimension checks, and inspected top and bottom renders. Longitudinal section
+positions and several details are reconstructed; this is not a verified factory
+replica. Printing, slicing, flotation, and motor fit have not been tested.
+
+### October 22, 2026 — Sarepta guide surfaces and flat foredeck
+
+Rebuilt the bow with convex Bezier guide curves and added a continuous planar
+foredeck after photographic review. Saved 92 user-requested gallery references
+with source URLs. Checked curve convexity, flat aft joins, closed meshes at 170
+and 80 mm, and prepared a new sliced A1 mini trial. The geometry remains a
+reconstruction; physical printing is untested. See the [model notes](models/sarepta/README.md).
+
+### October 23, 2026 — Sarepta evidence and mesh archive
+
+Preserved the full recovered factory passport, original reference images, offline
+source/tutorial snapshots, dimensional conflicts and pending corrections in the
+[Sarepta project](models/sarepta/README.md). Added a local hull-reconstruction
+skill and seven surviving STL milestones, each with views rendered from its
+actual mesh. Source attribution and checksum verification accompany the archive.
+The archive checkpoint records the known excessive hull height; dimensional
+corrections are subsequent work, not claimed by the archived versions.
+
 ## Areas of Work
 
 - **[Funny ATV](models/funnyAtv.scad):** gears, frames, and LEGO-compatible connections.
+- **[Sarepta](models/sarepta/README.md):** a 170 mm reconstruction of the motorboat hull.
 - **[Bathroom holder](models/bathroomHolderCircle.scad):** household mounting and structural reinforcement.
 - **[Phone / MagSafe holder](models/iphone_holder/):** bases, supports, clamps, and indexed connections, including [historical designs](models/iphone_holder/old/) and the [insert experiment](models/iphone-holder-ring/).
 - **[Super Cubes](models/super_cubes/):** a threaded modular construction system.

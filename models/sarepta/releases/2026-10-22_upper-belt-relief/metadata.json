@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-22_upper-belt-relief",
+  "title": "Upper belt and shallow foredeck relief",
+  "stl": "2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
+  "model_length_mm": 80,
+  "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
+  "sha256": "0470b6636889fa0e28f5bfdc98ea807427b0a4b1aa5223f9be57372195e5634f",
+  "changes": "Added inward-sloping upper sides, a pointed raised pad around the hatch and two shallow rounded ribs.",
+  "limitations": "CURRENT GEOMETRY, AWAITING DIMENSION CORRECTION: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm.",
+  "is_current": true,
+  "source_snapshot": "sarepta_hull.scad",
+  "preserved_on": "2026-10-23",
+  "previews_generated_from": "archived STL, not live parametric source",
+  "mesh_report": "mesh-report.json",
+  "size_mm": [
+    80.0,
+    27.826086953282356,
+    16.52173913043478
+  ],
+  "triangles": 52056,
+  "basic_mesh_checks_pass": true
+}

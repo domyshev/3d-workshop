@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="index.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Boat Hull - Loft and Sweep</title>
+        <meta name="google-site-verification" content="hBQZtaAlrcVqpP4r3mYEWJ_1f9hXp4ReDaqjiivV0kk" />
+        <script>/* <![CDATA[ */
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-512742-8', 'auto');
+			ga('send', 'pageview');
+
+		/* ]]> */</script>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../rhinousersguide.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1 class="AutoNumber" data-mc-autonum="16 - "><span class="autonumber"><span>16 - </span></span>Tutorial: Loft and Sweep - Boat</h1>
+        <p>This tutorial demonstrates classic boat hull lofting techniques using typical plan and profile curves. The classic hull shape is based on a design from an old <i>Boat Builder’s Handbook</i> magazine. Many designs similar to this are available over the Internet.</p>
+        <p>
+            <img src="../images/topic_illustrations/victory-030.png" />
+        </p>
+        <p>You will learn how to:</p>
+        <ul>
+            <li value="1">Simplify the curves.</li>
+            <li value="2">Use curvature graph to improve fairness.</li>
+            <li value="3">Create 3&#8209;D curves from 2-D curves.</li>
+            <li value="4">Create surfaces from 3&#8209;D curves. <br /></li>
+        </ul>
+        <h4>Marine terms used in this tutorial</h4>
+        <h5>Sheer</h5>
+        <p>The fore-and-aft curvature from the bow to the stern of a ship’s deck as shown in side elevation.</p>
+        <h5>Chine</h5>
+        <p>The intersection of the bottom and the sides of a flat or v-bottomed boat.</p>
+        <h5>Transom</h5>
+        <p>The planking forming the stern of a square-ended boat.</p>
+        <h5>Fair</h5>
+        <p>The meaning of <i>fair</i> is much debated in the marine industry and not easily defined. Although fairing or smoothing is traditionally associated with hull surfaces, all visible surfaces on any object can benefit from this process. In Rhino, the first cue for fairness in a surface is the spacing of the surface isocurves.</p>
+        <p>There are other characteristics of fair that curves and surfaces tend to have, although a curve or surface may be fair without exhibiting all of the characteristics. If you keep these characteristics in mind while modeling, you will end up with a better final product.</p>
+        <p>The guidelines for creating a fair surface include:</p>
+        <ul>
+            <li value="1">Use the fewest possible control points to get the curve shape.</li>
+            <li value="2">Use the fewest possible curves to get the surface shape.</li>
+        </ul>
+        <h2>Lay out the hull curves</h2>
+        <p>The hull curves were created by tracing the original plans using a background bitmap. The first step is to check the curves for fairness before creating surfaces from them.</p>
+        <p>
+            <img src="../images/topic_illustrations/victory_2_320x138.png" style="width: 320;height: 138;" />
+        </p>
+        <p>The designer’s curves are illustrated. The sheer and chine are extended at the forward and aft ends to accommodate the lofting process.</p>
+        <p>
+            <img src="../images/topic_illustrations/victory-001d.png" />
+        </p>
+        <div class="tutorialblock">
+            <h4>To download the tutorial model</h4>
+            <ol>
+                <li value="1">
+                    <p data-mc-conditions="Primary.WindowsOnly">On the Rhino <b>Help</b> menu, click <b>Learn Rhino</b>, and then click <b>Tutorials and Samples</b>.</p>
+                </li>
+                <li value="2">
+                    <p>In the <b>Tutorials</b> panel, under <b>User's Guide</b>, double-click the tutorial model file <span style="font-weight: bold;">Victory.3dm</span>.</p>
+                    <p>The curves are laid out on the <span style="font-weight: bold;">Plan</span> and <span style="font-weight: bold;">Profile</span> layers.</p>
+                </li>
+            </ol>
+        </div>
+        <h3>Check the curves for fairness</h3>
+        <p>Select each of the designer’s curve pairs in plan and profile and use the <span style="font-weight: bold;">CurvatureGraph</span> command to determine if the curves are fair. In this case, the file has the original curves that were traced from the background bitmap. They are not fair. In other words, the curves do not smoothly transition from one end of the sheer to the other. Adjust points on any curve that is not fair. Start with the sheer (the curve at the top of the hull shape). It has the biggest impact on the appearance of the vessel.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/curvaturegraph.png" />Check curvature</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the sheer curve.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Analyze</span> menu, click <span class="bold">Curve &gt; Curvature Graph On</span> to start the <span style="font-weight: bold;">CurvatureGraph</span> command.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span class="bold">Curvature Graph</span> dialog, increase <span class="bold">Display scale</span> to exaggerate the curvature variation.</p>
+                    <p>We can tell that this curve has a poor curvature quality from its curvature graph.</p>
+                </li>
+                <li value="4">
+                    <p>Change the <span class="bold">Curvature hair</span> color as needed to make the curvature graph stand out from the background.</p>
+                </li>
+                <p>The illustration shows the curvature graph applied to the 2-D sheer in profile.</p>
+                <p>
+                    <img src="../images/topic_illustrations/victory-002.png" />
+                </p>
+            </ol>
+        </div>
+        <h4>Note</h4>
+        <p>The curvature graph should be continuous and exhibit the desired characteristics for the curve.</p>
+        <ul>
+            <li value="1">
+                <p>When the curve is bending downward, the curvature graph will be above the curve. (1)</p>
+            </li>
+            <li value="2">
+                <p>Conversely, when the curve is bending upward, the curvature graph will be below the curve. (2)</p>
+            </li>
+            <li value="3">
+                <p>The point of inflection (where the bending is reversing from one side to the other) is where the curvature graph crosses the curve. (3)</p>
+                <p data-mc-conditions="Primary.WebOnly">
+                    <video muted="" loop="" autoplay="" class="object_4">
+                        <source src="../images/topic_illustrations/victory-002a.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                    </video>
+                </p>
+            </li>
+        </ul>
+        <h3>Fix the curvature</h3>
+        <p>Before doing any point editing to make a curve fair, you will rebuild the curve to remove excess control points. In general, rebuilding a curve involves using the Rebuild command along with examination with the CurvatureGraph command.</p>
+        <ul>
+            <li value="1">When using the <span style="font-weight: bold;">Rebuild</span>  command,  do not use more points than you absolutely need.</li>
+            <li value="2">Use the <span style="font-weight: bold;">CurvatureGraph</span> command to check the curve for fairness after each change. If the curvature graph is still not satisfactory, move the control points until you have a smooth graph. </li>
+            <li value="3">Fair all of the curves in the model as needed before creating surfaces from bad curves.</li>
+        </ul>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/rebuild.png" />Rebuild the sheer curve</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the sheer curve.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Rebuild</span> to start the <span style="font-weight: bold;">Rebuild</span> command.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span style="font-weight: bold;">Rebuild</span> dialog box, change  <span style="font-weight: bold;">Point count</span> to <span style="font-weight: bold;">6</span> and  <span style="font-weight: bold;">Degree</span>&#160;to&#160;<span style="font-weight: bold;">5</span>.</p>
+                </li>
+                <li value="4">
+                    <p data-mc-conditions="Primary.WindowsOnly">Enable <span class="bold">Delete input</span>, and click <span class="bold">OK</span>.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-003.png" /> <img src="../images/topic_illustrations/victory-0031.png" /></p>
+                    <p>The curvature is improved, but it is not good enough. From the curvature graph, we can tell that the black curve in the right illustration is the real shape of the current sheer curve if we overstate it. It bends three times. We will improve the curve further by editing its control points to make it bend only once.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-0032.png" /> <img src="../images/topic_illustrations/victory-0032a.png" /></p>
+                </li>
+            </ol>
+        </div>
+        <h3>Improve the curve further</h3>
+        <p data-mc-conditions="Primary.WindowsOnly">The fine-tuning curvature of a curve requires moving control points a very short distance. It is not easy to do this with the normal mouse movement, so we can use <a href="http://docs.mcneel.com/rhino/6/help/en-us/index.htm#options/modeling_aids_nudge.htm">Nudge Keys</a>, the <a href="http://docs.mcneel.com/rhino/6/help/en-us/index.htm#commands/moveuvn.htm">MoveUVN</a>, or <a href="http://docs.mcneel.com/rhino/6/help/en-us/index.htm#commands/dragstrength.htm">DragStrength</a> commands to reduce moving strength. We will use the DragStrength command in this tutorial.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/dragstrength.png" />Drag, move, and nudge control points</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the sheer curve and press <span class="bold">F10</span> to turn on its control points.</p>
+                </li>
+                <li value="2">
+                    <p>Start the <span class="bold">DragStrength</span> command.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span class="bold">Drag Strength</span> dialog, set the strength value to <span class="bold">5</span>.</p>
+                    <p data-mc-conditions="Primary.WindowsOnly">
+                        <img src="../images/topic_illustrations/dragstrength_250x126.png" style="width: 250;height: 126;" />
+                    </p>
+                    <p>Moving the mouse cursor in a distance on the screen will only move an object 5% of the distance.</p>
+                </li>
+                <li value="4">
+                    <p>In the <span class="bold">Front</span> viewport, select the four control points in the middle.</p>
+                </li>
+                <li value="5">
+                    <p>Use <span class="bold">Gumball</span> to move the control points in the y&#8209;axis.</p>
+                    <p>Make the whole curvature graph below the sheer curve. It can be above the sheer curve if it is the design.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-0034.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="6">
+                    <p>Close the <span class="bold">Drag Strength</span> dialog. </p>
+                    <p>Drag strength returns to 100% when the dialog is closed.</p>
+                </li>
+                <li value="7">
+                    <p data-mc-conditions="Primary.WindowsOnly">Press <span class="bold">F11</span> or <span class="bold">ESC</span> to turn off the curve control points.</p>
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h5>See also</h5>
+            <p>For more information about using Rhino's gumball feature, review the Help topic for the <b>Gumball</b> command. </p>
+            <p>Two video tutorials also help with learning to use the gumball</p>
+            <p class="SeeAlsoListVimeo"><a href="https://vimeo.com/84954262" target="_blank">Hello Gumball! </a>(https://vimeo.com/84954262)</p>
+            <p class="SeeAlsoListVimeo"><a href="https://vimeo.com/260472052" target="_blank">Gumball Advanced</a> (https://vimeo.com/260472052)
+        </p>
+        </div>
+        <h2>Create the 3&#8209;D curves</h2>
+        <p>So far, you have been working with 2-D curves. To loft the surfaces, you will use these planar curves to create 3&#8209;D curves. The planar curves can then be discarded.</p>
+        <p>With the <span style="font-weight: bold;">3D Curves</span> layer current, you will select the profile and plan view representations of each curve. You will use the <span style="font-weight: bold;">Crv2View</span> command to create the 3&#8209;D curve that combines the x&#8209;, y&#8209;, and z&#8209;coordinates of the 2-D curves. The 2-D curves must be planar for this command to work.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/crv2view.png" />Create the 3&#8209;D curves</h4>
+            <ol>
+                <li value="1">
+                    <p>Set the <span style="font-weight: bold;">3D Curves</span> layer current.</p>
+                </li>
+                <li value="2">
+                    <p>Select the plan and profile representations of the sheer curve.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-003a.png" />
+                    </p>
+                </li>
+                <li value="3">
+                    <p>On the <span class="bold">Curve</span> menu, click <span class="bold">Curve from 2 Views</span> to start the <span style="font-weight: bold;">Crv2View</span> command.</p>
+                    <p>A 3&#8209;D  curve is created. It is the intersection of the two surfaces extruded from the two input curves.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-004.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="4">
+                    <p>Repeat the <span style="font-weight: bold;">Crv2View</span> command for the chine curve.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-101.png" alt="Illustration." /> <img src="../images/topic_illustrations/victory-005.png" /></p>
+                </li>
+                <li value="5">
+                    <p>When you are satisfied that the proper curves were created, delete or hide the four input curves of the <span class="bold">Crv2View</span> command.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-005a.png" /> <img src="../images/topic_illustrations/victory-005b.png" /> </p>
+                </li>
+            </ol>
+        </div>
+        <h2>Revise the curves</h2>
+        <p>For the lofting process to work on the bottom panel, it cannot come to a point. The lofted shape must be rectangular. This is why the curves are extended beyond the centerline. The curves can be lofted into a rectangular surface that can then be trimmed back. Except for the bottom curve, the sheer and chine curves are already extended.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/trim.png" />Trim the centerline</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the centerline and the bow curve.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Trim</span> to start the <span class="bold">Trim</span> command.</p>
+                </li>
+                <li value="3">
+                    <p>Click the centerline near the forward end, and press <span class="bold">Enter</span>.</p>
+                    <p>The centerline is trimmed to the end of the bow curve.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-102b.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/extend.png" />Extend the centerline</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Curve</span> menu, click <span class="bold">Extend Curve &gt; Extend Curve</span>.</p>
+                </li>
+                <li value="2">
+                    <p>At the <b>Select boundary objects... Press Enter for dynamic extend</b> prompt, press <b>Enter</b>.</p>
+                </li>
+                <li value="3">
+                    <p>At the <b>Select curve to extend...</b> prompt, set the command option <b>Type=<i>Smooth</i></b>, and click the centerline near the forward end in the <span class="bold">Top</span> viewport.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-102d.png" />
+                    </p>
+                </li>
+                <li value="4">
+                    <p>At the <span class="bold">End of extension...</span> prompt, click the command option <span class="bold">ToPoint</span>.</p>
+                </li>
+                <li value="5">
+                    <p>Move the cursor close to the ends of the shear and chine curves, but do not snap to them, click and press <span class="bold">Enter</span>. <br />The bottom curve for lofting is created.</p>
+                    <table style="border: none;margin-left: 0;margin-right: auto;width: 660px;" data-mc-conditions="Primary.WebOnly">
+                        <col style="width: 50%;" />
+                        <col style="width: 50%;" />
+                        <tbody>
+                            <tr>
+                                <td style="border:none;">
+                                    <p>
+                                        <video style="width: 320px;height: 240px;vertical-align: bottom;" muted="" loop="" autoplay="" class="object_5">
+                                            <source src="../images/topic_illustrations/victory-102d.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                                        </video>
+                                    </p>
+                                </td>
+                                <td style="border:none;">
+                                    <p>
+                                        <img src="../images/topic_illustrations/victory-102f.png" style="vertical-align: bottom;" />
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li value="6">
+                    <p data-mc-conditions="Primary.WindowsOnly">Press <span class="bold">F11</span> or <span class="bold">ESC</span> to turn off the curve control points.</p>
+                </li>
+            </ol>
+        </div>
+        <h2>Loft the hull surfaces</h2>
+        <p>We have created three  edge curves for one side of the hull. A lofted surface will be created from these curves.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/loft.png" />Loft sheer, chine, and bottom curves</h4>
+            <ol>
+                <li value="1">
+                    <p>Make the <span class="bold">Hull</span> layer current.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Surface</span> menu, click <span class="bold">Loft</span>.</p>
+                </li>
+                <li value="3">
+                    <p>At the <span class="bold">Select curves to loft...</span> prompt, select the <span class="bold">sheer</span>, <span class="bold">chine</span>, and <span class="bold">bottom</span> curves in order and near the same ends, and press <span class="bold">Enter</span>.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-102g.png" />
+                    </p>
+                </li>
+                <li value="4">
+                    <p>In the <span style="font-weight: bold;">Loft Options</span> dialog box, in the <span class="bold">Style</span> drop-down menu, click <span class="bold">Straight sections</span>.</p>
+                </li>
+                <li value="5">
+                    <p data-mc-conditions="Primary.WindowsOnly">Under <span style="font-weight: bold;">Cross-section curve options</span>, select <span style="font-weight: bold;">Rebuild with</span>, set the control point count to <span style="font-weight: bold;">10</span>, and click <span style="font-weight: bold;">OK</span>.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-102h.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="6"><b>Hide</b> the sheer, chine, and bottom curves.</li>
+            </ol>
+        </div>
+        <h2>Create the other side of the hull</h2>
+        <p>We have created one side of the hull. We will mirror the hull to the other side. Use both sides to trim each other. To make the both sides fully intersect, we will extend the bottom surface before mirroring.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/extendsrf.png" />Extend the bottom surface</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Surface</span> menu, click <span class="bold">Extend Surface</span>.</p>
+                </li>
+                <li value="2">
+                    <p>At the <span class="bold">Select an edge to extend...</span> prompt, set <span class="bold">Type=<i>Smooth</i></span>.</p>
+                </li>
+                <li value="3">
+                    <p>Click the bottom edge, move the edge a short distance outward and click.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-103a.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/mirror.png" />Mirror the hull surfaces</h4>
+            <ol>
+                <li value="1">
+                    <p>In the <span class="bold">Top</span> viewport, select the hull.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Transform</span> menu, click <span class="bold">Mirror</span>.</p>
+                </li>
+                <li value="3">
+                    <p>At the <span class="bold">Start of mirror plane...</span> prompt, click <span class="bold">XAxis</span>.</p>
+                    <p>The hull is mirrored to the opposite side across the CPlane x&#8209;axis.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-103c.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/trim.png" />Trim the hull surfaces</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the hull surfaces on both sides.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Trim</span>.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span class="bold">Front</span> viewport, crossing-select the hulls as illustrated, and press <span class="bold">Enter</span>.</p>
+                    <p>Drag the selection rectangle from right to left. Do not cross the blue bow curve.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-104a.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <h2>Build the transom</h2>
+        <p>The transom will be a surface created from a closed planar boundary.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/trim.png" />Trim  the hull surfaces</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the transom centerline.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Trim</span>.</p>
+                </li>
+                <li value="3">
+                    <p data-mc-conditions="Primary.WindowsOnly">At the <span class="bold">Select object to trim...</span> prompt, set <span class="bold">ExtendCuttingLines=<i>Yes</i></span>.</p>
+                    <p>The line will work as an infinite line to trim the hull surfaces.</p>
+                </li>
+                <li value="4">
+                    <p>In the <span class="bold">Front</span> viewport, crossing select the hull behind the transom centerline.</p>
+                    <p>The hull surfaces are trimmed to the line.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video controls="" muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-106b.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <p>The transom edges do not form a closed boundary. We will add a line to fill the gap for creating the transom surface.</p>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/line.png" />Add a line to close the transom area</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Curve</span> menu, click <span class="bold">Line &gt; Single Line</span>.</p>
+                </li>
+                <li value="2">
+                    <p>Pick the two corners with the <span class="bold">End</span> object snap to create a line.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-106d.png" />
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/planarsrf.png" />Create the transom surface</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Surface</span> menu, click <span class="bold">Planar Curves</span> to start the <span class="bold">PlanarSrf</span> command.</p>
+                </li>
+                <li value="2">
+                    <p>At the <span class="bold">Select planar curves...</span> prompt, select the line and the transom edges, and press <b>Enter</b>.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-106e.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="3">
+                    <p>Select the hull and the transom surfaces.</p>
+                </li>
+                <li value="4">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Join</span>.</p>
+                    <p>The surfaces are joined into a polysurface.</p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/showedges.png" />Check for errors</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the hull.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Analyze</span> menu, click <span class="bold">Edge Tools</span> &gt; <span class="bold">Show Edges</span>.</p>
+                    <p>The command should report "<span class="italic">Found 11 edges total; 3 naked edges, no non-manifold edges.</span>"</p>
+                    <p>If your hull has more edges or naked edges, the hull was not built correctly. You should start over and follow the steps carefully.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span class="bold">Edge Analysis</span> dialog, select <span class="bold">Naked Edges</span>.</p>
+                    <p>The naked edges display as magenta. You should not see any naked edges other than the upper edges of the hull.</p>
+                    <p>
+                        <img src="../images/topic_illustrations/victory-106f.png" />
+                    </p>
+                </li>
+                <li value="4">Close the <span class="bold">Edge Analysis</span> dialog.</li>
+            </ol>
+        </div>
+        <h2>Add the deck</h2>
+        <p>The last step is to create the deck surface.  Two curves describe the silhouette of the deck. They will be used as references to create the cross-section curve of the deck. In the end, the deck surface will be created from a curve network.</p>
+        <p>
+            <img src="../images/topic_illustrations/victory-013.png" />
+        </p>
+        <h3>Compromise between concept and reality</h3>
+        <p style="page-break-after: avoid;">When building a 3&#8209;D model from a 2-D concept plan, it is usually the case that the 3&#8209;D model cannot exactly match the 2-D plan. How to compromise between a 2-D concept and a 3&#8209;D model is one of the modeling skills you will develop. In this case, the deck profile curve does not end at the hull corner. We will move the curve end to the hull corner.</p>
+        <div class="tutorialblock">
+            <h4>Adjust the control points</h4>
+            <ol>
+                <li value="1">
+                    <p>Select the deck profile curve, press <span class="bold">F10</span> to turn on its control points.</p>
+                </li>
+                <li value="2">
+                    <p>Drag the first control point, using the <span class="bold">End</span> object snap to move the point to the corner of the hull, and click.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-013a.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="3">
+                    <p data-mc-conditions="Primary.WindowsOnly">Press <span class="bold">F11</span> or <span class="bold">ESC</span> to turn off the curve control points.</p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/project.png" />Project the vertical line on to the hull</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Curve</span> menu, click <span class="bold">Curve from objects &gt; Project</span>.</p>
+                </li>
+                <li value="2">
+                    <p>At the <span class="bold">Select curves and points to project...</span> prompt, in the <span class="bold">Front</span> viewport, select the vertical line, and press <span class="bold">Enter</span>.</p>
+                </li>
+                <li value="3">
+                    <p>At the <span class="bold">Select surfaces...</span> prompt, select the hull, and press <span class="bold">Enter</span>.</p>
+                    <p>The line is projected onto both sides of the hull.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-013e.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/curve.png" />Draw one half of the cross-section curve</h4>
+            <ol>
+                <li value="1">
+                    <p data-mc-conditions="Primary.WindowsOnly">On the status bar, click the <span style="font-weight: bold;">Planar</span> pane to turn on <span style="font-weight: bold;">Planar</span> mode.</p>
+                </li>
+                <li value="2">
+                    <p>On the <span class="bold">Curve</span> menu, click <span class="bold">Free-Form &gt; Control Points</span>.</p>
+                </li>
+                <li value="3">
+                    <p>In the <span style="font-weight: bold;">Right</span> viewport, use the <span class="bold">End</span> object snap to place the first point at the end of the deck profile curve (1).</p>
+                </li>
+                <li value="4">
+                    <p>Hold down <span class="bold">Shift</span> to turn Ortho mode on, move the cursor to the right, and click to place the second point (2).</p>
+                </li>
+                <li value="5">
+                    <p>Release <span class="bold">Shift</span> and click to place the third point (3).</p>
+                </li>
+                <li value="6">
+                    <p>Snap to the upper end of the projected curve on the hull (4), click, and press <span class="bold">Enter</span> to finish the curve.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-013f.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/mirror.png" />Mirror the half of the cross-section curve</h4>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Transform</span> menu, click <span class="bold">Mirror</span>.</p>
+                </li>
+                <li value="2">
+                    <p>At the <span class="bold">Select objects to mirror</span> prompt, in the <span class="bold">Right</span> viewport, select the half  cross-section curve, and press <span class="bold">Enter</span>.</p>
+                </li>
+                <li value="3">
+                    <p>At the <span class="bold">Start of mirror plane...</span> prompt, click the <b>YAxis</b> option or type <b>Y</b>, and press <span class="bold">Enter</span>.</p>
+                    <p>The curve is mirrored to the other side across the viewport y&#8209;axis.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-013g.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+                <li value="4">
+                    <p>Select the two half cross-section curves.</p>
+                </li>
+                <li value="5">
+                    <p>On the <span class="bold">Edit</span> menu, click <span class="bold">Join</span>.</p>
+                    <p>The two half cross-section curves are joined into a polycurve.</p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/networksrf.png" />Create the deck surface from a curve network</h4>
+            <p>The deck cross-section curve (1), the deck profile curve (2),  and the upper edges of the hull (3) and (4) form a curve network that will be used to create the deck surface.</p>
+            <ol>
+                <li value="1">
+                    <p>On the <span class="bold">Surface</span> menu, click <span class="bold">Curve Network</span> to start the <span class="bold">NetworkSrf</span> command.</p>
+                </li>
+                <li value="2">At the <span class="bold">Select curves in network...</span> prompt, select the four curves, and press <span class="bold">Enter</span>.</li>
+                <li value="3">
+                    <p>In the <span class="bold">Surface From Curve Network</span> dialog box, under <span class="bold">Edge matching</span>, select <span class="bold">Position</span> for A, B, and C, and click <span class="bold">OK</span>.</p>
+                    <p>The deck surface is created.</p>
+                    <p data-mc-conditions="Primary.WebOnly">
+                        <video muted="" loop="" autoplay="" class="object_4">
+                            <source src="../images/topic_illustrations/victory-013h.mp4" type="video/mp4">Your browser does not support the video tag.</source>
+                        </video>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="tutorialblock">
+            <h4>
+                <img src="../images/command_icons/join.png" />Join the parts</h4>
+            <ol class="Bullet_OneStep">
+                <li value="1">Select all of the surfaces.</li>
+                <li value="2">On the <span class="bold">Edit</span> menu, click <span class="bold">Join</span> to create a polysurface. <br /><img src="../images/topic_illustrations/victory-030.png" /></li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <div>
+            <p class="NormalTiny" style="font-size: 80%;color: #696969;" data-mc-conditions="Primary.WindowsOnly">Rhino for Windows © 2010-2018 Robert McNeel &amp; Associates. <span class="RhinoVariablesCompileDate">24-Nov-2021</span></p>
+        </div>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkBottom"><a href="../index.htm#html/ch-16_boathull.htm">Open table of contents panel.</a>
+        </p>
+    </body>
+</html>

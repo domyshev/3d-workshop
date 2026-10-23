@@ -35,3 +35,12 @@ A future alternative license must not remove the existing GPL rights for these v
 ## Other repository content
 
 This notice does not assign a blanket license to unrelated models, tools, documents, or images. Their licensing should be specified separately if reuse permissions are intended. Third-party material retains its original terms.
+
+
+## Sarepta reference archive
+
+The scans, photographs, journal illustrations and tutorial snapshots under
+`models/sarepta/reference/` retain their original attribution and terms. See
+[the source register](models/sarepta/reference/SOURCES.md). No blanket repository
+license is assigned to them. The copied domain-experts role is accompanied by
+its upstream MIT notice and is stored as reference text, not an installed skill.

@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-22_hatch-fair-rim",
+  "title": "Hatch, fair side arcs and continuous rim",
+  "stl": "2026-10-22_sarepta_hull_80mm_hatch_fair_rim.stl",
+  "model_length_mm": 80,
+  "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_hatch_fair_rim.stl",
+  "sha256": "bd1fa5b0d3ed248a3c258d0fd36f3ec281c37ac39362c3c3b96d1ffa1c57c69e",
+  "changes": "Added the hatch opening, removed the S-shaped shoulder and continued the protective rim around the bow and sides.",
+  "limitations": "Flat upper deck omitted the reverse-flared upper belt; 50 mm prototype rim and hatch sizes were estimates.",
+  "is_current": false,
+  "source_snapshot": "history/2026-10-22_hatch_fair_rim.scad",
+  "preserved_on": "2026-10-23",
+  "previews_generated_from": "archived STL, not live parametric source",
+  "mesh_report": "mesh-report.json",
+  "size_mm": [
+    80.0,
+    27.826086953282356,
+    13.043478260869565
+  ],
+  "triangles": 61898,
+  "basic_mesh_checks_pass": true
+}

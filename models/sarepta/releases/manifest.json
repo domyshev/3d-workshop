@@ -1,0 +1,156 @@
+[
+  {
+    "id": "2026-10-20_initial",
+    "title": "Initial printable hull",
+    "stl": "2026-10-20_sarepta_hull_80mm.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.20/2026-10-20_sarepta_hull_80mm.stl",
+    "sha256": "32ea793307cfb167d59bf51d184048fe09ffc8212e520a9de99f6cb9a7af63f9",
+    "changes": "Initial station-table reconstruction and 80 mm trial.",
+    "limitations": "Bow contours collapsed near the deck; stem shape and longitudinal station positions were provisional.",
+    "is_current": false,
+    "source_snapshot": null,
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.82608695652174,
+      13.947826086956521
+    ],
+    "triangles": 5780,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-21_sharp-bow",
+    "title": "Separate sharp bow edges",
+    "stl": "2026-10-21_sarepta_hull_80mm_sharp_bow.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.21/2026-10-21_sarepta_hull_80mm_sharp_bow.stl",
+    "sha256": "4cb6acfe8d73eca7a670564ca48d77e645d9975cec976d278b277da515d4cd8a",
+    "changes": "Preserved individual centre/side stem endpoints and paired bow tunnels.",
+    "limitations": "Stem lines still kinked where endpoint offsets transitioned into the body.",
+    "is_current": false,
+    "source_snapshot": null,
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.82608695652174,
+      13.947826086956521
+    ],
+    "triangles": 7080,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-21_continuous-bow",
+    "title": "Continuous stem tangents",
+    "stl": "2026-10-21_sarepta_hull_80mm_continuous_bow.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.21/2026-10-21_sarepta_hull_80mm_continuous_bow.stl",
+    "sha256": "e0115410c18bb9e872ea5d980a0ba93ffcd5fe6af7ca0b1884440fe81ef4fb9f",
+    "changes": "Replaced short endpoint offsets with independent Hermite profiles and smoother joins.",
+    "limitations": "Remaining curvature dents and scalloped foredeck perimeter; superseded.",
+    "is_current": false,
+    "source_snapshot": null,
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.82608695652174,
+      13.947826086956521
+    ],
+    "triangles": 8808,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-22_fair-flat-deck",
+    "title": "Fair guides and continuous foredeck",
+    "stl": "2026-10-22_sarepta_hull_80mm_fair_flat_deck.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_fair_flat_deck.stl",
+    "sha256": "5b06f3e39dfe3fcdc8a0979e49613bad030028cdc5c8770cf6429e901db08a4a",
+    "changes": "Adopted three convex quintic Bezier guide profiles, smooth flat aft joins and a continuous foredeck.",
+    "limitations": "Plan-view bow was too blunt, around 154 degrees; reconstruction remains approximate.",
+    "is_current": false,
+    "source_snapshot": "history/2026-10-22_fair_flat_deck.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.82608695652174,
+      13.043478260869565
+    ],
+    "triangles": 27722,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-22_photo-bow",
+    "title": "Sharper photographic bow plan",
+    "stl": "2026-10-22_sarepta_hull_80mm_photo_bow.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_photo_bow.stl",
+    "sha256": "686cdea9c4a65bccb8be2f0265971cc8f471762f24f9ff84779b25590ae2e240",
+    "changes": "Matched an apparent near-top photo angle of about 132 degrees; model angle 132.501 degrees.",
+    "limitations": "Photographic angle is not a factory dimension; hatch, side-curve and rim work followed.",
+    "is_current": false,
+    "source_snapshot": "history/2026-10-22_photo_bow.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.82608695652174,
+      13.043478260869565
+    ],
+    "triangles": 41716,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-22_hatch-fair-rim",
+    "title": "Hatch, fair side arcs and continuous rim",
+    "stl": "2026-10-22_sarepta_hull_80mm_hatch_fair_rim.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_hatch_fair_rim.stl",
+    "sha256": "bd1fa5b0d3ed248a3c258d0fd36f3ec281c37ac39362c3c3b96d1ffa1c57c69e",
+    "changes": "Added the hatch opening, removed the S-shaped shoulder and continued the protective rim around the bow and sides.",
+    "limitations": "Flat upper deck omitted the reverse-flared upper belt; 50 mm prototype rim and hatch sizes were estimates.",
+    "is_current": false,
+    "source_snapshot": "history/2026-10-22_hatch_fair_rim.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086953282356,
+      13.043478260869565
+    ],
+    "triangles": 61898,
+    "basic_mesh_checks_pass": true
+  },
+  {
+    "id": "2026-10-22_upper-belt-relief",
+    "title": "Upper belt and shallow foredeck relief",
+    "stl": "2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.22/2026-10-22_sarepta_hull_80mm_upper_belt_relief.stl",
+    "sha256": "0470b6636889fa0e28f5bfdc98ea807427b0a4b1aa5223f9be57372195e5634f",
+    "changes": "Added inward-sloping upper sides, a pointed raised pad around the hatch and two shallow rounded ribs.",
+    "limitations": "CURRENT GEOMETRY, AWAITING DIMENSION CORRECTION: seam was incorrectly placed at 750 mm before adding the upper belt, giving up to 950 mm prototype height. Transom remains 400 rather than passport 375 mm.",
+    "is_current": true,
+    "source_snapshot": "sarepta_hull.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "archived STL, not live parametric source",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086953282356,
+      16.52173913043478
+    ],
+    "triangles": 52056,
+    "basic_mesh_checks_pass": true
+  }
+]

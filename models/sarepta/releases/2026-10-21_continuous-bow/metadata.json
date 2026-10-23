@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-21_continuous-bow",
+  "title": "Continuous stem tangents",
+  "stl": "2026-10-21_sarepta_hull_80mm_continuous_bow.stl",
+  "model_length_mm": 80,
+  "original_export_path": "stl_exports/2026/2026.10/2026.10.21/2026-10-21_sarepta_hull_80mm_continuous_bow.stl",
+  "sha256": "e0115410c18bb9e872ea5d980a0ba93ffcd5fe6af7ca0b1884440fe81ef4fb9f",
+  "changes": "Replaced short endpoint offsets with independent Hermite profiles and smoother joins.",
+  "limitations": "Remaining curvature dents and scalloped foredeck perimeter; superseded.",
+  "is_current": false,
+  "source_snapshot": null,
+  "preserved_on": "2026-10-23",
+  "previews_generated_from": "archived STL, not live parametric source",
+  "mesh_report": "mesh-report.json",
+  "size_mm": [
+    80.0,
+    27.82608695652174,
+    13.947826086956521
+  ],
+  "triangles": 8808,
+  "basic_mesh_checks_pass": true
+}
