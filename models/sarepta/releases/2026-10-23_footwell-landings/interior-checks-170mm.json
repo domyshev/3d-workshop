@@ -1,0 +1,94 @@
+{
+  "model_length_mm": 170,
+  "method": "Independent material sampling against exact binary STL with vertical ray intersections; not full connectivity or minimum-wall certification.",
+  "checks": [
+    {
+      "feature": "open footwell",
+      "point_fullsize_mm": [
+        1250,
+        0,
+        350
+      ],
+      "expected_material": false,
+      "actual_material": false,
+      "pass_check": true
+    },
+    {
+      "feature": "lower forward partition",
+      "point_fullsize_mm": [
+        1083.764705882353,
+        0,
+        400
+      ],
+      "expected_material": true,
+      "actual_material": true,
+      "pass_check": true
+    },
+    {
+      "feature": "upper dashboard face",
+      "point_fullsize_mm": [
+        1372.9411764705883,
+        0,
+        650
+      ],
+      "expected_material": true,
+      "actual_material": true,
+      "pass_check": true
+    },
+    {
+      "feature": "footwell ceiling",
+      "point_fullsize_mm": [
+        1250,
+        0,
+        566.2352941176471
+      ],
+      "expected_material": true,
+      "actual_material": true,
+      "pass_check": true
+    },
+    {
+      "feature": "upper locker hatch access",
+      "point_fullsize_mm": [
+        950,
+        0,
+        620
+      ],
+      "expected_material": false,
+      "actual_material": false,
+      "pass_check": true
+    },
+    {
+      "feature": "lower locker hatch access",
+      "point_fullsize_mm": [
+        950,
+        0,
+        330
+      ],
+      "expected_material": false,
+      "actual_material": false,
+      "pass_check": true
+    },
+    {
+      "feature": "open cockpit",
+      "point_fullsize_mm": [
+        2500,
+        0,
+        400
+      ],
+      "expected_material": false,
+      "actual_material": false,
+      "pass_check": true
+    },
+    {
+      "feature": "ledge covering frame tips",
+      "point_fullsize_mm": [
+        2200,
+        600,
+        733.7647058823529
+      ],
+      "expected_material": true,
+      "actual_material": true,
+      "pass_check": true
+    }
+  ]
+}

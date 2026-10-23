@@ -197,7 +197,7 @@
     "sha256": "8cc0b7614bbd89b7c2c226cf38a49fbe7eff9c466801e7f23df0b279f537d726",
     "changes": "Replaced bow-following side ridges with constant-height strips, flat forward ends at X=1600 and flush transom ends at X=4600.",
     "limitations": "Front station 1600 and heights 280/425 are photo-based estimates. Previous dimension/framing reconstruction limits still apply; physical printing untested.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-23_straight-side-ridges/source.scad",
     "preserved_on": "2026-10-23",
     "previews_generated_from": "actual archived binary STL",
@@ -219,6 +219,41 @@
       "sha256": "da6ccdd0458ac9455fff720dd416bd6b2eb8c7ace30f79dc38a43c8fa71a138e",
       "mesh_report": "mesh-report-170mm.json"
     },
+    "export_format": "binary STL",
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-23_footwell-landings",
+    "title": "Stepped footwell, wider cabin landings and interior details",
+    "stl": "2026-10-23_sarepta_hull_80mm_interior_detail.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.23/2026-10-23_sarepta_hull_80mm_interior_detail.stl",
+    "sha256": "99d835fa38945a7ebdcc7c8f6684911ac173a2ed64b3c21c49cc47b2cebfbffe",
+    "changes": "Stepped sealed front partition and forward leg space, wider cabin landing strips with unchanged frame definition, four backed pockets, two motor-well scuppers, shorter straight shallow foredeck beads and neutral-grey views.",
+    "limitations": "Stepped section, niches, upper opening and drain positions are reconstructions; complete interior factory drawings were not found. Fixed model wall thickness changes small internal openings between sizes; no physical print or minimum-wall/self-intersection certification.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-23_footwell-landings/source.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "actual archived binary STL",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086044311523,
+      13.260869979858398
+    ],
+    "triangles": 60276,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-23_sarepta_hull_170mm_interior_detail.stl",
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        28.17934799194336
+      ],
+      "sha256": "4501e4539889a5494eb471f66e207fb8485416f0444675a5e9d1432fbed1e7bb",
+      "mesh_report": "mesh-report-170mm.json"
+    },
+    "framing_definition_unchanged": true,
     "export_format": "binary STL",
     "physical_print_tested": false
   }

@@ -151,5 +151,19 @@
     "origin": "Supplied by the user; original creator not inferred from upload.",
     "status": "preserved",
     "use": "Side ridge straightness and forward/aft termination."
+  },
+  {
+    "attachment_id": "183c8d49-d2b5-4288-97d0-7f1254e68f6a",
+    "filename": "feedback-vertical-dashboard-and-frame-tips.png",
+    "kind": "model-feedback",
+    "origin": "User screenshot supplied in this conversation.",
+    "status": "preserved"
+  },
+  {
+    "attachment_id": "d8f10b03-f40c-42b7-b851-08b802365c13",
+    "filename": "feedback-long-curved-deck-ribs.png",
+    "kind": "model-feedback",
+    "origin": "User screenshot supplied in this conversation.",
+    "status": "preserved"
   }
 ]

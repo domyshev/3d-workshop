@@ -380,3 +380,23 @@ have flat forward ends and terminate flush at the transom. Other geometry is
 unchanged. Archived both binary STL sizes and three supplied images.
 Edge/vertex checks and new ridge-level/placement assertions pass; physical
 printing remains untested. See the straight-side-ridges release.
+
+## 2026-10-23 — Forward leg space and detailed interior audit
+
+Reviewed the factory passport/arrangement, primary article, handbook, actual
+helm and open-locker owner photographs, and a first-hand 1976-hull restoration
+account. Findings, attribution and unresolved details are in `INTERIOR_RESEARCH.md`.
+
+Added a reconstructed stepped watertight boundary with a nominal 200-high
+upper instrument face and 300 forward reach below it; kept the locker separate
+and accessible through its hatch. Widened upper side landings inward by 80
+per side without editing the frame definition; added backed recesses and two
+estimated well scuppers. Deck beads are now straight, 560 long and 10 high.
+Grey model and rendered mesh views replace yellow presentation.
+
+Both binary STL sizes pass current topology checks and eight independent
+material samples for spaces/partitions/ledges. Guide and dimensional regressions
+pass at both sizes. A true centre-section image is made from the actual STL.
+No physical print or full minimum-wall/self-intersection check. Fixed print
+thickness causes different small internal openings at the two sizes, recorded
+in the new release instead of claiming identical scaled topology.

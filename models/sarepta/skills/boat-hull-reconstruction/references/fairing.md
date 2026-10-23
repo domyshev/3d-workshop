@@ -81,3 +81,19 @@ a horizontal side corrugation. For the Sarepta photo correction, intersect the
 side panel with a constant-Z plane, solve the longitudinal parameter for X,
 and follow only the transverse Y variation. Flat end caps and a flush transom
 termination are independent of the rounded ridge cross section.
+
+## Interior boundaries and inspection
+
+Do not conflate a short instrument panel with the watertight bow-locker
+boundary. A footwell may use a stepped boundary: a horizontal ceiling and a
+forward lower wall preserve separation. Its dimensions require source evidence
+or an explicit reconstruction label. Check actual exported material at leg
+space, partition, ceiling and hatch-access points, and inspect a central slice.
+A full half-cut can hide voids behind the far sidewall; a thin centre section
+shows material versus air more clearly. Frame tips can be covered by wider
+landing strips without changing the frames.
+
+Keep blind pocket cuts clear of roof/bulkhead Boolean junctions. Tangent
+drain bores need a small positive overlap with the floor. Fixed printable wall
+thickness can change small openings/topology between scales; report exact
+mesh metrics and avoid treating genus as universally fixed across revisions.

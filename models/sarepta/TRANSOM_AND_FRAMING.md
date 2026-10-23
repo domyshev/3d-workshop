@@ -64,3 +64,11 @@ before the upturned bow and continuing to the transom. Fixed side-surface
 fractions were replaced with constant-height intersections at Z=280 and 425,
 X=1600..4600, with flat forward and flush aft ends. These coordinates remain
 photo-derived estimates. The separate chine flange retains its curved bow path.
+
+## Subsequent interior revision
+
+The stepped bow boundary, four backed pockets and widened cabin landings
+are documented in `INTERIOR_RESEARCH.md`. The original frame definition is
+unchanged. The landings now cover the frame tips. Two estimated scuppers are
+present; earlier statements that scuppers were omitted describe the previous
+milestone. This does not establish their exact factory layout.

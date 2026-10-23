@@ -72,3 +72,13 @@ for(z=side_ridge_heights_fullsize_mm,i=[0:40]) let(
 assert(side_ridge_start_fullsize_mm>1380,"Side ridges extend into the bow tip");
 echo(side_ridges_x_fullsize_mm=[side_ridge_start_fullsize_mm,4600],
     side_ridges_z_fullsize_mm=side_ridge_heights_fullsize_mm);
+
+assert(dash_height_fullsize_mm==200);
+assert(footwell_ceiling_fullsize_mm==550 && footwell_front_fullsize_mm==1100);
+assert(footwell_front_fullsize_mm<cockpit_start_fullsize_mm);
+assert(cockpit_deck_width_fullsize_mm/2<620,"Side decks fail to cover frame tips");
+assert(foredeck_rib_length_fullsize_mm>hatch_length_fullsize_mm &&
+       foredeck_rib_length_fullsize_mm<1.2*hatch_length_fullsize_mm);
+assert(foredeck_rib_fullsize_mm<15,"Deck ribs should be shallower");
+echo(interior="stepped sealed bow boundary; wider cabin landings",
+    dash_height=dash_height_fullsize_mm,footwell_depth=footwell_forward_fullsize_mm);

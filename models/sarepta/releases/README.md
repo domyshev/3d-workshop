@@ -1,9 +1,10 @@
 # Sarepta STL development history
 
-Nine 80 mm milestones and the latest 170 mm model are preserved byte-for-byte.
+Ten 80 mm milestones and the latest 170 mm model are preserved byte-for-byte.
 The first seven form the archive checkpoint pushed as `cc04d8c`; the eighth
 applies the dimensional and framing revision; the ninth straightens the side
-corrugations using the user photographs. Historical metadata describes
+corrugations using the user photographs; the tenth refines leg space, landings
+and interior details. Historical metadata describes
 its capture checkpoint; `manifest.json` identifies the current stage.
 Pictures import actual archived STL meshes. No milestone has a verified physical print.
 
@@ -21,6 +22,8 @@ Pictures import actual archived STL meshes. No milestone has a verified physical
 | [Corrected height, factory-style transom and internal framing](2026-10-23_dimensions-framing/README.md) | Mapped the upper belt inside 750 mm side height; set 375 mm centre motor seat with estimated notch, published cockpit envelope, separate bow locker, raised motor well, transverse/longitudinal framing, side corrugations and 30 mm chine flanges. | 80.000 x 27.826 x 13.299 | Early 4600 x 1600 envelope; profile/spacing, well floor/rake, upper setbacks, notch, hatch and relief remain reconstructions. Print allowances enlarge thin details. Not physically printed. |
 
 | [Straight horizontal side corrugations](2026-10-23_straight-side-ridges/README.md) | Replaced bow-following side ridges with constant-height strips, flat forward ends at X=1600 and flush transom ends at X=4600. | 80.000 x 27.826 x 13.299 | Front station 1600 and heights 280/425 are photo-based estimates. Previous dimension/framing reconstruction limits still apply; physical printing untested. |
+
+| [Stepped footwell, wider cabin landings and interior details](2026-10-23_footwell-landings/README.md) | Stepped sealed front partition and forward leg space, wider cabin landing strips with unchanged frame definition, four backed pockets, two motor-well scuppers, shorter straight shallow foredeck beads and neutral-grey views. | 80.000 x 27.826 x 13.261 | Stepped section, niches, upper opening and drain positions are reconstructions; complete interior factory drawings were not found. Fixed model wall thickness changes small internal openings between sizes; no physical print or minimum-wall/self-intersection certification. |
 
 Use `../tools/render_release_previews.py --release <id>` to render a selected milestone.
 On this Mac add `--openscad /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD --x86`.

@@ -26,3 +26,14 @@ Three additional user attachments (two real-boat side photos and one model
 feedback image) are preserved in `reference/user-supplied/manifest.json`.
 They establish side-corrugation direction and limits; original creators and
 redistribution rights are not inferred from upload.
+
+## Interior revision evidence
+
+The latest two user feedback screenshots are preserved with IDs in
+`reference/user-supplied/manifest.json`. The first-hand restoration text and
+selected original photographs are archived under `reference/sources/interior-restoration/`;
+its initial-condition photo is credited in the original to Vadim and Oleg.
+A first-hand 1976-hull restoration account by PetroviCh / Sergey is catalogued
+under `reference/sources/sarepta-691-owner/`. Source contributors retain their
+rights; no redistribution licence is inferred. See `INTERIOR_RESEARCH.md`
+for what each source supports and what remains a reconstruction.

@@ -10,12 +10,12 @@ upper_aft_height_fullsize_mm = 200;
 upper_bow_inset_fullsize_mm = 40;
 upper_aft_inset_fullsize_mm = 50;
 foredeck_relief_fullsize_mm = 12.5;
-foredeck_rib_fullsize_mm = 15;
+foredeck_rib_fullsize_mm = 10;
 hatch_length_fullsize_mm = 500;
 hatch_width_fullsize_mm = 450;
 hatch_center_fullsize_mm = 950;
 hatch_radius_fullsize_mm = 55;
-part = "hull"; // [hull, outer, inner, sections]
+part = "hull"; // [hull, outer, inner, sections, cutaway]
 station_steps = 12;
 // Published dimensions use distinct sources; see DIMENSION_RESEARCH.md.
 side_height_fullsize_mm = 750;
@@ -25,6 +25,18 @@ transom_notch_width_fullsize_mm = 360; // Photo estimate.
 cockpit_start_fullsize_mm = 1400; // Reconstructed placement.
 cockpit_length_fullsize_mm = 2600;
 cockpit_width_fullsize_mm = 1280;
+// Interior details below are reconstructed from photos, not factory callouts.
+side_deck_extension_fullsize_mm = 80;
+cockpit_deck_width_fullsize_mm = cockpit_width_fullsize_mm-2*side_deck_extension_fullsize_mm;
+dash_height_fullsize_mm = 200;
+footwell_forward_fullsize_mm = 300;
+footwell_ceiling_fullsize_mm = side_height_fullsize_mm-dash_height_fullsize_mm;
+footwell_front_fullsize_mm = cockpit_start_fullsize_mm-footwell_forward_fullsize_mm;
+foredeck_rib_length_fullsize_mm = 560;
+foredeck_rib_y_fullsize_mm = 475;
+foredeck_rib_half_width_fullsize_mm = 12;
+interior_pockets = true;
+well_scuppers = true;
 well_start_fullsize_mm = cockpit_start_fullsize_mm+cockpit_length_fullsize_mm;
 well_half_width_fullsize_mm = 560; // Reconstructed.
 framing = true;
@@ -254,11 +266,15 @@ module foredeck_details() {
         translate([0,0,-0.5]) linear_extrude(height=foredeck_relief_fullsize_mm+0.5)
             offset(r=18,$fn=32) offset(delta=-18)
                 polygon([[420,0],[565,285],[1370,285],[1370,-285],[565,-285]]);
-        for(side=[-1,1],i=[0:23]) let(
-            path=[[620,465],[810,505],[1080,525],[1320,525]],
-            a=cubic(path,i/24),b=cubic(path,(i+1)/24))
-            hull() for(q=[a,b]) translate([q[0],side*q[1],0])
-                scale([19,19,foredeck_rib_fullsize_mm]) sphere(r=1,$fn=16);
+        for(side=[-1,1]) hull()
+            for(x=[hatch_center_fullsize_mm-foredeck_rib_length_fullsize_mm/2+
+                        foredeck_rib_half_width_fullsize_mm,
+                   hatch_center_fullsize_mm+foredeck_rib_length_fullsize_mm/2-
+                        foredeck_rib_half_width_fullsize_mm])
+                translate([x,side*foredeck_rib_y_fullsize_mm,0])
+                    scale([foredeck_rib_half_width_fullsize_mm,
+                        foredeck_rib_half_width_fullsize_mm,foredeck_rib_fullsize_mm])
+                        sphere(r=1,$fn=24);
     }
 }
 module lower_exterior() { union() { loft(); foredeck_sheet(); } }
@@ -286,12 +302,26 @@ module interior_space() {
             union() {
                 intersection() { safe_inner(); translate([0,0,-deck_mm+0.05]) lower_exterior(); }
                 upper_inner();
+                // Clear the residual internal ledge beneath the hatch. This
+                // central passage stays above the rising bow bottom and ahead
+                // of the stepped wall; it does not open into the footwell.
+                translate([850*scale_factor,-120*scale_factor,300*scale_factor])
+                    cube([170*scale_factor,240*scale_factor,
+                        upper_roof_z(0)-deck_mm-0.03-300*scale_factor]);
             }
             translate([690*scale_factor,-40,-1])
                 cube([(well_start_fullsize_mm-690)*scale_factor,80,62]);
         }
-        translate([cockpit_start_fullsize_mm*scale_factor-wall_mm,-40,-1])
-            cube([wall_mm,80,62]);
+        // Dashboard face, horizontal footwell ceiling and forward lower wall
+        // form a sealed stepped boundary, rather than one full-height panel.
+        translate([cockpit_start_fullsize_mm*scale_factor-wall_mm,-40,
+                   footwell_ceiling_fullsize_mm*scale_factor])
+            cube([wall_mm,80,60]);
+        translate([footwell_front_fullsize_mm*scale_factor-wall_mm,-40,
+                   footwell_ceiling_fullsize_mm*scale_factor])
+            cube([footwell_forward_fullsize_mm*scale_factor+wall_mm,80,wall_mm]);
+        translate([footwell_front_fullsize_mm*scale_factor-wall_mm,-40,-1])
+            cube([wall_mm,80,footwell_ceiling_fullsize_mm*scale_factor+wall_mm+1]);
     }
 }
 module motorwell_cut() {
@@ -397,6 +427,42 @@ module pressed_side_ridges() {
             faces=side==1 ? [for(f=ff) [for(j=[len(f)-1:-1:0]) f[j]]] : ff,
             convexity=12);
 }
+// Boxed inner returns support the wider horizontal cabin landing strips.
+// Existing frame geometry is deliberately retained under these added surfaces.
+module side_deck_returns() {
+    inner_y=cockpit_deck_width_fullsize_mm*scale_factor/2;
+    for(side=[-1,1])
+        translate([cockpit_start_fullsize_mm*scale_factor+0.035,
+            side==1?inner_y+0.025:-inner_y-wall_mm-0.025,550*scale_factor+0.035])
+            cube([cockpit_length_fullsize_mm*scale_factor-0.07,wall_mm,
+                200*scale_factor-0.07]);
+}
+module rounded_pocket_2d(w,h,r) {
+    offset(r=r,$fn=24) square([w-2*r,h-2*r],center=true);
+}
+module storage_pocket_cuts() {
+    // Two backed recesses in the dashboard, two in the inner side returns.
+    // Keep at least 0.55 model mm of backing; these are not hull openings.
+    cut_depth=min(0.65,wall_mm-0.55);
+    for(y=[-300,300])
+        translate([cockpit_start_fullsize_mm*scale_factor-cut_depth,
+            y*scale_factor,620*scale_factor])
+            rotate([90,0,90]) linear_extrude(height=cut_depth+0.1)
+                rounded_pocket_2d(320*scale_factor,70*scale_factor,18*scale_factor);
+    inner_y=cockpit_deck_width_fullsize_mm*scale_factor/2;
+    for(side=[-1,1])
+        translate([3530*scale_factor,side*(inner_y-0.1),635*scale_factor])
+            rotate([side==1?-90:90,0,0]) linear_extrude(height=cut_depth+0.1)
+                rounded_pocket_2d(420*scale_factor,60*scale_factor,18*scale_factor);
+}
+module motorwell_scuppers() {
+    // Documented scuppers; count, placement and diameter are reconstructed.
+    radius=max(0.4,15*scale_factor);
+    for(y=[-430,430])
+        translate([length_mm-transom_mm-0.1,y*scale_factor,
+            well_floor_z(4600-transom_mm/scale_factor)*scale_factor+radius-0.15])
+            rotate([0,90,0]) cylinder(h=transom_mm+0.2,r=radius,$fn=32);
+}
 module boat_hull() {
     difference() {
         union() {
@@ -406,10 +472,11 @@ module boat_hull() {
                 // Open cockpit of published size; longitudinal placement is estimated.
                 on_seam(-deck_mm-0.2)
                     translate([cockpit_start_fullsize_mm*scale_factor,
-                        -cockpit_width_fullsize_mm*scale_factor/2,0])
+                        -cockpit_deck_width_fullsize_mm*scale_factor/2,0])
                         cube([cockpit_length_fullsize_mm*scale_factor,
-                            cockpit_width_fullsize_mm*scale_factor,60]);
+                            cockpit_deck_width_fullsize_mm*scale_factor,60]);
             }
+            side_deck_returns();
             if(framing) framing_members();
             if(side_corrugations) pressed_side_ridges();
             if(chine_flange) intersection() {
@@ -420,12 +487,19 @@ module boat_hull() {
         hatch_opening();
         motorwell_cut();
         transom_top_cut();
+        if(interior_pockets) storage_pocket_cuts();
+        if(well_scuppers) motorwell_scuppers();
     }
 }
 
 assert(length_mm>=80 && length_mm<=180,"Expected an 80..180 mm model.");
 assert(wall_mm>=0.8 && wall_mm<=2,"Wall thickness outside the studied range.");
-if(part=="hull") color([0.72,0.77,0.79]) boat_hull();
+if(part=="hull") color([0.68,0.68,0.68]) boat_hull();
+else if(part=="cutaway") color([0.68,0.68,0.68])
+    difference() {
+        boat_hull();
+        translate([-1,-40,-1]) cube([length_mm+2,40,62]);
+    }
 else if(part=="outer") exterior();
 else if(part=="inner") safe_inner();
 else if(part=="sections")

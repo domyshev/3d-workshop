@@ -51,3 +51,14 @@ User attachments `54370844`, `bfbfb1e5` and `add7ad5a` are preserved in
 `user-supplied/` with full IDs and provenance in its manifest. Real side views
 support horizontal strips with forward termination before the upturned bow
 and aft termination at the transom. Placement coordinates remain estimates.
+
+## Interior revision evidence
+
+The latest two user feedback screenshots are preserved with IDs in
+`reference/user-supplied/manifest.json`. The first-hand restoration text and
+selected original photographs are archived under `reference/sources/interior-restoration/`;
+its initial-condition photo is credited in the original to Vadim and Oleg.
+A first-hand 1976-hull restoration account by PetroviCh / Sergey is catalogued
+under `reference/sources/sarepta-691-owner/`. Source contributors retain their
+rights; no redistribution licence is inferred. See `INTERIOR_RESEARCH.md`
+for what each source supports and what remains a reconstruction.

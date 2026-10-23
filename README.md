@@ -242,7 +242,9 @@ sizes pass edge/vertex topology and guide-curve checks; physical printing
 and unmeasured factory details remain unverified. A subsequent
 [photo correction](models/sarepta/releases/2026-10-23_straight-side-ridges/README.md)
 keeps the side corrugations horizontal, ends them before the bow and extends
-them flush to the transom.
+them flush to the transom. The next [interior milestone](models/sarepta/releases/2026-10-23_footwell-landings/README.md)
+adds forward leg space, wider cabin landings, backed pockets and shorter straight
+deck beads, with an explicit source/estimate audit and neutral-grey mesh views.
 
 ### October 23, 2026 — Sarepta evidence and mesh archive
 
