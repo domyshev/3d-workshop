@@ -62,3 +62,11 @@ A first-hand 1976-hull restoration account by PetroviCh / Sergey is catalogued
 under `reference/sources/sarepta-691-owner/`. Source contributors retain their
 rights; no redistribution licence is inferred. See `INTERIOR_RESEARCH.md`
 for what each source supports and what remains a reconstruction.
+
+## Bow-plan proportional review
+
+The user's new plan-feedback screenshot and kit photograph are preserved in
+`reference/user-supplied/manifest.json`. Original image authors are not inferred
+from uploads. The project-authored analysis and vector construction comparison
+are under `BOW_PLAN_REVIEW.md` and `plan-review/`; manual image estimates
+are explicitly separated from published measurements.

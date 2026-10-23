@@ -1,0 +1,79 @@
+{
+  "method": "Manual visual landmarks; approximate beam-normalised image ratios. No projective calibration, scan rectification or recovered factory offsets.",
+  "factory_plan": {
+    "file": "../reference/factory-passport/appendix-02.jpg",
+    "bow_tip_px": [
+      1047,
+      452
+    ],
+    "aft_datum_px": [
+      140,
+      452
+    ],
+    "beam_top_bottom_px": [
+      285,
+      615
+    ],
+    "ambiguous_front_dashboard_x_px_range": [
+      740,
+      790
+    ],
+    "hatch_center_x_px_range": [
+      905,
+      925
+    ],
+    "caveat": "Diagram is schematic/degraded. Dashboard, windscreen and upper-opening front boundaries are not interchangeable. Pixel estimates are not dimensions."
+  },
+  "kit_photo": {
+    "file": "../reference/user-supplied/kit-bow-plan-proportion-reference.png",
+    "bow_tip_px": [
+      337,
+      660
+    ],
+    "dashboard_front_y_px_range": [
+      170,
+      190
+    ],
+    "hatch_center_y_px_range": [
+      295,
+      310
+    ],
+    "beam_x_px_range": [
+      80,
+      590
+    ],
+    "caveat": "Perspective photo of a secondary model kit; beam-normalised estimates are not a true orthographic survey."
+  },
+  "chosen_reconstruction": {
+    "closed_foredeck_mm": 1600,
+    "hatch_center_from_tip_mm": 1200,
+    "shoulder_end_from_tip_mm": 1550,
+    "well_front_mm": 4000,
+    "upper_opening_length_mm": 2400,
+    "interior_with_footwell_reference_length_mm": 2600,
+    "footwell_reach_mm": 200,
+    "hatch_center_fraction_of_closed_foredeck": 0.75
+  },
+  "parametric_width_comparison": [
+    {
+      "distance_from_bow_mm": 500,
+      "old_beam_mm": 1536.989932302553,
+      "revised_beam_mm": 1436.4018675306759
+    },
+    {
+      "distance_from_bow_mm": 800,
+      "old_beam_mm": 1589.2094273286475,
+      "revised_beam_mm": 1509.3836676391707
+    },
+    {
+      "distance_from_bow_mm": 1100,
+      "old_beam_mm": 1599.1324140048328,
+      "revised_beam_mm": 1564.0394585752788
+    },
+    {
+      "distance_from_bow_mm": 1400,
+      "old_beam_mm": 1600,
+      "revised_beam_mm": 1595.505963336319
+    }
+  ]
+}

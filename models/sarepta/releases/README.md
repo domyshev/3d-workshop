@@ -1,10 +1,11 @@
 # Sarepta STL development history
 
-Ten 80 mm milestones and the latest 170 mm model are preserved byte-for-byte.
+Eleven 80 mm milestones and the latest 170 mm model are preserved byte-for-byte.
 The first seven form the archive checkpoint pushed as `cc04d8c`; the eighth
 applies the dimensional and framing revision; the ninth straightens the side
 corrugations using the user photographs; the tenth refines leg space, landings
-and interior details. Historical metadata describes
+and interior details; the eleventh reviews bow/deck proportions and their
+conflicting source evidence. Historical metadata describes
 its capture checkpoint; `manifest.json` identifies the current stage.
 Pictures import actual archived STL meshes. No milestone has a verified physical print.
 
@@ -24,6 +25,8 @@ Pictures import actual archived STL meshes. No milestone has a verified physical
 | [Straight horizontal side corrugations](2026-10-23_straight-side-ridges/README.md) | Replaced bow-following side ridges with constant-height strips, flat forward ends at X=1600 and flush transom ends at X=4600. | 80.000 x 27.826 x 13.299 | Front station 1600 and heights 280/425 are photo-based estimates. Previous dimension/framing reconstruction limits still apply; physical printing untested. |
 
 | [Stepped footwell, wider cabin landings and interior details](2026-10-23_footwell-landings/README.md) | Stepped sealed front partition and forward leg space, wider cabin landing strips with unchanged frame definition, four backed pockets, two motor-well scuppers, shorter straight shallow foredeck beads and neutral-grey views. | 80.000 x 27.826 x 13.261 | Stepped section, niches, upper opening and drain positions are reconstructions; complete interior factory drawings were not found. Fixed model wall thickness changes small internal openings between sizes; no physical print or minimum-wall/self-intersection certification. |
+
+| [Long shallow bow shoulders and coordinated foredeck proportions](2026-10-23_bow-plan-proportions/README.md) | Redistributed plan narrowing into a long shallow shoulder before the steep V; lengthened the closed foredeck to 1600, moved hatch centre to 1200 and coordinated pad/dashboard/footwell while keeping the well at 4000. | 80.000 x 27.826 x 13.261 | Hatch placement in the passport schematic conflicts with the kit photo. New deck/hatch positions follow the selected visual reconstruction, not factory measurements. Interior datum interpretation, print allowances and physical-print limits remain. |
 
 Use `../tools/render_release_previews.py --release <id>` to render a selected milestone.
 On this Mac add `--openscad /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD --x86`.

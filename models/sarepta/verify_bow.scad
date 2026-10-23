@@ -30,7 +30,7 @@ echo(plan_included_angle_degrees=plan_angle);
 // The visible shoulder must be convex in plan, without the previous S-shaped dent.
 for(i=[1:999]) let(t=i/1000,h=0.001,
     a=shoulder_inner(t-h),b=shoulder_inner(t),c=shoulder_inner(t+h),
-    outer=cubic(shoulder_controls,t)) {
+    outer=cubic(shoulder_controls,shoulder_parameter(t))) {
     assert(cross2(b-a,c-b)<=1e-6,"Inward shoulder curvature in plan");
     assert(abs(norm(outer-b)-rim_fullsize_mm)<1e-7,"Uneven shoulder rim");
 }
@@ -74,7 +74,7 @@ echo(side_ridges_x_fullsize_mm=[side_ridge_start_fullsize_mm,4600],
     side_ridges_z_fullsize_mm=side_ridge_heights_fullsize_mm);
 
 assert(dash_height_fullsize_mm==200);
-assert(footwell_ceiling_fullsize_mm==550 && footwell_front_fullsize_mm==1100);
+assert(footwell_ceiling_fullsize_mm==550 && footwell_front_fullsize_mm==1400);
 assert(footwell_front_fullsize_mm<cockpit_start_fullsize_mm);
 assert(cockpit_deck_width_fullsize_mm/2<620,"Side decks fail to cover frame tips");
 assert(foredeck_rib_length_fullsize_mm>hatch_length_fullsize_mm &&
@@ -82,3 +82,18 @@ assert(foredeck_rib_length_fullsize_mm>hatch_length_fullsize_mm &&
 assert(foredeck_rib_fullsize_mm<15,"Deck ribs should be shallower");
 echo(interior="stepped sealed bow boundary; wider cabin landings",
     dash_height=dash_height_fullsize_mm,footwell_depth=footwell_forward_fullsize_mm);
+
+// Plan/arrangement checks use the new shoulder and independently retained well.
+assert(cockpit_start_fullsize_mm==1600 && well_start_fullsize_mm==4000);
+assert(cockpit_deck_length_fullsize_mm==2400);
+assert(well_start_fullsize_mm-footwell_front_fullsize_mm==cockpit_length_fullsize_mm);
+assert(shoulder_end_fullsize_mm<cockpit_start_fullsize_mm);
+assert(hatch_center_fullsize_mm-hatch_length_fullsize_mm/2>800);
+assert(hatch_center_fullsize_mm+hatch_length_fullsize_mm/2<cockpit_start_fullsize_mm);
+assert(abs(shoulder_front_gap(shoulder_start_parameter))<1e-5,
+    "Shoulder inset fails to meet the forward V inset");
+for(i=[0:1000]) let(r=4600*i/1000)
+    assert(sheer_point(r)[1]>guide_point(2,r)[1],"Sheer crosses the side chine");
+echo(closed_deck_fullsize_mm=cockpit_start_fullsize_mm,
+    hatch_center_from_tip_fullsize_mm=hatch_center_fullsize_mm,
+    shoulder_begin_from_tip_fullsize_mm=shoulder_end_fullsize_mm);

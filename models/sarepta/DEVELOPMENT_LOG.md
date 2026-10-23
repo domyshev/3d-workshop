@@ -400,3 +400,25 @@ pass at both sizes. A true centre-section image is made from the actual STL.
 No physical print or full minimum-wall/self-intersection check. Fixed print
 thickness causes different small internal openings at the two sizes, recorded
 in the new release instead of claiming identical scaled topology.
+
+## 2026-10-23 — Bow plan and foredeck proportional review
+
+User feedback identified a rectangular-looking plan before the V and a
+short closed deck. Reviewed the passport plan, body plan, general arrangement
+and new kit photo together. Recorded manual landmarks and their uncertainty.
+The factory diagram and kit do not agree on hatch position; no precise
+factory deck coordinates were claimed.
+
+Redistributed shoulder narrowing, lengthened the closed deck 1400 to 1600,
+moved hatch centre 950 to 1200 (75 percent of deck length), extended the raised
+pad and moved the straight beads/dashboard coherently. Kept the well at
+4000; upper opening is 2400, with a 200-forward footwell and 2600 interior
+reference. Lower guides and frame definitions are unchanged. Used trimmed
+normal offsets at the intentional shoulder/V junction and 50 mm deck corner
+rounding; kept the sharp tip and a small positive cap overlap.
+
+Both exact binary STLs pass topology checks and independent material samples.
+Guide/plan/rim/clear-chine/layout checks pass. Preserved the prior milestone
+and added an eleventh release, actual STL views and a separate reproducible
+construction diagram. Physical print and full minimum-wall/self-intersection
+certification remain unverified.

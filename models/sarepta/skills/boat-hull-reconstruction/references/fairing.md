@@ -97,3 +97,21 @@ Keep blind pocket cuts clear of roof/bulkhead Boolean junctions. Tangent
 drain bores need a small positive overlap with the floor. Fixed printable wall
 thickness can change small openings/topology between scales; report exact
 mesh metrics and avoid treating genus as universally fixed across revisions.
+
+## Bow plan narrowing and proportions
+
+Convexity alone does not constrain where a plan begins to narrow. Three
+control points at full half-beam can concentrate the taper near the bow and
+still pass a curvature-sign check. Inspect width at fixed X stations and
+the visible shoulder relative to the cockpit front, hatch and closed deck.
+
+At a deliberate V/shoulder junction, trim the shoulder's normal offset where
+it intersects the forward-edge inset; an untrimmed endpoint normal can
+protrude ahead of the V or cross the side chine. Local corner rounding must
+retain the intended sharp foremost tip. Give cap skins a positive overlap
+when coplanar loft/sheet faces produce collapsed binary-STL triangles.
+
+General-arrangement diagrams, photos and kit reconstructions may disagree.
+Record approximate pixel landmarks and uncertainty; do not promote an
+image-normalised ratio to a factory dimension. Coordinate deck/hatch/pad
+changes with the cockpit/footwell while preserving accepted stern datums.

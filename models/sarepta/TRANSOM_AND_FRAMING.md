@@ -72,3 +72,11 @@ are documented in `INTERIOR_RESEARCH.md`. The original frame definition is
 unchanged. The landings now cover the frame tips. Two estimated scuppers are
 present; earlier statements that scuppers were omitted describe the previous
 milestone. This does not establish their exact factory layout.
+
+## Subsequent bow plan revision
+
+The well wall remains at X=4000 while the upper cockpit front moves to
+X=1600. A 200-forward footwell now places its lower wall at X=1400. This
+keeps a 2600 interior reference including the leg area, with a 2400 upper
+opening. The datum interpretation is reconstructed; see `BOW_PLAN_REVIEW.md`.
+Lower guide and framing definitions are retained.

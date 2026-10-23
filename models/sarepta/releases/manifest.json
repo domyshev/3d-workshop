@@ -231,7 +231,7 @@
     "sha256": "99d835fa38945a7ebdcc7c8f6684911ac173a2ed64b3c21c49cc47b2cebfbffe",
     "changes": "Stepped sealed front partition and forward leg space, wider cabin landing strips with unchanged frame definition, four backed pockets, two motor-well scuppers, shorter straight shallow foredeck beads and neutral-grey views.",
     "limitations": "Stepped section, niches, upper opening and drain positions are reconstructions; complete interior factory drawings were not found. Fixed model wall thickness changes small internal openings between sizes; no physical print or minimum-wall/self-intersection certification.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-23_footwell-landings/source.scad",
     "preserved_on": "2026-10-23",
     "previews_generated_from": "actual archived binary STL",
@@ -254,6 +254,41 @@
       "mesh_report": "mesh-report-170mm.json"
     },
     "framing_definition_unchanged": true,
+    "export_format": "binary STL",
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-23_bow-plan-proportions",
+    "title": "Long shallow bow shoulders and coordinated foredeck proportions",
+    "stl": "2026-10-23_sarepta_hull_80mm_bow_proportions.stl",
+    "model_length_mm": 80,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.23/2026-10-23_sarepta_hull_80mm_bow_proportions.stl",
+    "sha256": "96aceb3697993d6ff7f2652d28fb649eeb173dcde2031d81b72edefd75282f8d",
+    "changes": "Redistributed plan narrowing into a long shallow shoulder before the steep V; lengthened the closed foredeck to 1600, moved hatch centre to 1200 and coordinated pad/dashboard/footwell while keeping the well at 4000.",
+    "limitations": "Hatch placement in the passport schematic conflicts with the kit photo. New deck/hatch positions follow the selected visual reconstruction, not factory measurements. Interior datum interpretation, print allowances and physical-print limits remain.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-23_bow-plan-proportions/source.scad",
+    "preserved_on": "2026-10-23",
+    "previews_generated_from": "actual archived binary STL",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      80.0,
+      27.826086044311523,
+      13.260869979858398
+    ],
+    "triangles": 60530,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-23_sarepta_hull_170mm_bow_proportions.stl",
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        28.17934799194336
+      ],
+      "mesh_report": "mesh-report-170mm.json",
+      "sha256": "2158fa4b86034e368d53d908bcdc13c1898ad33b9e0027f6e34036d85ca8d832"
+    },
+    "guide_and_frame_definitions_unchanged": true,
     "export_format": "binary STL",
     "physical_print_tested": false
   }

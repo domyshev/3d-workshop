@@ -165,5 +165,27 @@
     "kind": "model-feedback",
     "origin": "User screenshot supplied in this conversation.",
     "status": "preserved"
+  },
+  {
+    "attachment_id": "59d42db7-a7ed-47ad-8ee3-c8aadcf98346",
+    "filename": "feedback-rectangular-plan-short-foredeck.png",
+    "kind": "model-feedback",
+    "origin": "Supplied by the user; original creator not inferred from upload.",
+    "status": "preserved",
+    "image_size_px": [
+      928,
+      1108
+    ]
+  },
+  {
+    "attachment_id": "fb6b0c8c-8bd0-4212-9192-1af3e11d242f",
+    "filename": "kit-bow-plan-proportion-reference.png",
+    "kind": "secondary-kit-photo",
+    "origin": "Supplied by the user; original creator not inferred from upload.",
+    "status": "preserved",
+    "image_size_px": [
+      692,
+      706
+    ]
   }
 ]

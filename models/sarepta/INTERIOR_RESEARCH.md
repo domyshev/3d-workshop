@@ -1,5 +1,11 @@
 # Interior, foredeck and small features — 2026-10-23
 
+This records the interior-stage audit. Its X=1400 dashboard / X=1100 lower
+wall / 300-reach layout has subsequently been revised: see
+[BOW_PLAN_REVIEW.md](BOW_PLAN_REVIEW.md) for the longer deck and coordinated
+X=1600 dashboard / X=1400 lower wall / 200-reach arrangement. The evidence
+distinctions and unresolved interior details below remain applicable.
+
 ## Evidence examined
 
 - Complete locally preserved factory passport, especially appendix 1 assembly

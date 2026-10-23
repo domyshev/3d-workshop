@@ -245,6 +245,10 @@ keeps the side corrugations horizontal, ends them before the bow and extends
 them flush to the transom. The next [interior milestone](models/sarepta/releases/2026-10-23_footwell-landings/README.md)
 adds forward leg space, wider cabin landings, backed pockets and shorter straight
 deck beads, with an explicit source/estimate audit and neutral-grey mesh views.
+A [bow-plan follow-up](models/sarepta/releases/2026-10-23_bow-plan-proportions/README.md)
+redistributes the taper and coordinates the longer foredeck, hatch and leg space,
+recording the conflicting diagram/kit proportions rather than claiming exact
+factory deck dimensions.
 
 ### October 23, 2026 — Sarepta evidence and mesh archive
 

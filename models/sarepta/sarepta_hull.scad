@@ -13,7 +13,7 @@ foredeck_relief_fullsize_mm = 12.5;
 foredeck_rib_fullsize_mm = 10;
 hatch_length_fullsize_mm = 500;
 hatch_width_fullsize_mm = 450;
-hatch_center_fullsize_mm = 950;
+hatch_center_fullsize_mm = 1200;
 hatch_radius_fullsize_mm = 55;
 part = "hull"; // [hull, outer, inner, sections, cutaway]
 station_steps = 12;
@@ -22,14 +22,14 @@ side_height_fullsize_mm = 750;
 transom_seat_fullsize_mm = 375;
 transom_notch_depth_fullsize_mm = 50; // Photo estimate, not a factory callout.
 transom_notch_width_fullsize_mm = 360; // Photo estimate.
-cockpit_start_fullsize_mm = 1400; // Reconstructed placement.
+cockpit_start_fullsize_mm = 1600; // Reconstructed upper opening / dashboard position.
 cockpit_length_fullsize_mm = 2600;
 cockpit_width_fullsize_mm = 1280;
 // Interior details below are reconstructed from photos, not factory callouts.
 side_deck_extension_fullsize_mm = 80;
 cockpit_deck_width_fullsize_mm = cockpit_width_fullsize_mm-2*side_deck_extension_fullsize_mm;
 dash_height_fullsize_mm = 200;
-footwell_forward_fullsize_mm = 300;
+footwell_forward_fullsize_mm = 200;
 footwell_ceiling_fullsize_mm = side_height_fullsize_mm-dash_height_fullsize_mm;
 footwell_front_fullsize_mm = cockpit_start_fullsize_mm-footwell_forward_fullsize_mm;
 foredeck_rib_length_fullsize_mm = 560;
@@ -37,7 +37,13 @@ foredeck_rib_y_fullsize_mm = 475;
 foredeck_rib_half_width_fullsize_mm = 12;
 interior_pockets = true;
 well_scuppers = true;
-well_start_fullsize_mm = cockpit_start_fullsize_mm+cockpit_length_fullsize_mm;
+// Keep the accepted well and 2600-long interior reference. The forward 200
+// lies beneath the longer foredeck, rather than being part of its upper opening.
+well_start_fullsize_mm = 4000;
+cockpit_deck_length_fullsize_mm = well_start_fullsize_mm-cockpit_start_fullsize_mm;
+shoulder_end_fullsize_mm = 1550;
+deck_knuckle_radius_fullsize_mm = 50; // Reconstructed local corner rounding.
+foredeck_pad_back_fullsize_mm = cockpit_start_fullsize_mm-50;
 well_half_width_fullsize_mm = 560; // Reconstructed.
 framing = true;
 side_corrugations = true;
@@ -129,15 +135,26 @@ function guide_point(k,r) = let(p=guide_controls[k],start=p[0][0],end=p[5][0],
     [x,y,z];
 // One convex cubic shoulder replaces the S-shaped plan-view sheer.
 // The deck edge is the master curve; the hull sheer is its normal inward offset.
-shoulder_controls=[[286,650],[352,800],[670,800],[1380,800]];
+// Long shallow shoulders precede the steeper 132.5-degree forward V.
+// The knuckle is intentional; offsets are trimmed at the adjacent V edge.
+shoulder_controls=[[303.6,690],[600,735],[1100,800],[1550,800]];
 function cubic(p,t) = pow(1-t,3)*p[0]+3*pow(1-t,2)*t*p[1]+
     3*(1-t)*t*t*p[2]+pow(t,3)*p[3];
 function cubic_tangent(p,t) = 3*(pow(1-t,2)*(p[1]-p[0])+
     2*(1-t)*t*(p[2]-p[1])+t*t*(p[3]-p[2]));
-function shoulder_inner(t) = let(p=cubic(shoulder_controls,t),
+function shoulder_raw_inner(t) = let(p=cubic(shoulder_controls,t),
     v=cubic_tangent(shoulder_controls,t))
     p+rim_fullsize_mm*[v[1],-v[0]]/norm(v);
-function sheer_point(r) = let(p=r<1380 ? shoulder_inner(r/1380) :
+function shoulder_front_gap(t) = let(p=shoulder_raw_inner(t))
+    p[0]-0.44*p[1]-bow_inset_x;
+function shoulder_trim_parameter(lo=0,hi=1,n=0) = n==34 ? (lo+hi)/2 :
+    let(t=(lo+hi)/2) shoulder_front_gap(t)<0 ?
+        shoulder_trim_parameter(t,hi,n+1) : shoulder_trim_parameter(lo,t,n+1);
+shoulder_start_parameter=shoulder_trim_parameter();
+function shoulder_parameter(t) = shoulder_start_parameter+(1-shoulder_start_parameter)*t;
+function shoulder_inner(t) = shoulder_raw_inner(shoulder_parameter(t));
+function sheer_point(r) = let(p=r<shoulder_end_fullsize_mm ?
+    shoulder_inner(r/shoulder_end_fullsize_mm) :
     [r, r<4200 ? 800-rim_fullsize_mm :
     800-rim_fullsize_mm-10*smooth5((r-4200)/400)]) [p[0],p[1],seam_z(p[0])];
 function half_surface(r,k,g) = let(c=g[0],t=g[1],b=g[2],s=g[3])
@@ -208,7 +225,7 @@ module loft(inner=false) {
 // Photo-matched plan rake: approximately 24 degrees per front edge, giving
 // a 132-degree included angle. The tunnels remain below this planar sheet.
 function deck_outline() = let(half=concat(
-    [[0,0],[79.2,180],[162.8,370],[233.2,530],[286,650]],
+    [[0,0],[79.2,180],[162.8,370],[233.2,530],shoulder_controls[0]],
     [for(i=[1:80]) cubic(shoulder_controls,i/80)],
     [[4200,800]],
     [for(i=[1:20]) [4200+400*i/20,800-10*smooth5(i/20)]]))
@@ -220,8 +237,19 @@ module on_seam(dz=0) {
     multmatrix([[1,0,0,0],[0,1,0,0],
         [slope,0,1,seam_z(0)*scale_factor+dz],[0,0,0,1]]) children();
 }
+module deck_plan_shape() {
+    // Round the two-stage shoulder corners while preserving the sharp V tip.
+    union() {
+        offset(r=deck_knuckle_radius_fullsize_mm*scale_factor,$fn=64)
+            offset(delta=-deck_knuckle_radius_fullsize_mm*scale_factor)
+                polygon(deck_outline());
+        polygon([[0,0],[233.2*scale_factor,530*scale_factor],
+            [233.2*scale_factor,-530*scale_factor]]);
+    }
+}
 module foredeck_sheet() {
-    on_seam(-deck_mm) linear_extrude(height=deck_mm) polygon(deck_outline());
+    // Cover the loft cap with a positive overlap instead of a coplanar skin.
+    on_seam(-deck_mm) linear_extrude(height=deck_mm+0.03) deck_plan_shape();
 }
 // Clockwise plan polygon: a negative left-normal offset moves inwards.
 function plan_inset(p,j,w) = let(q=concat([p[len(p)-1]],p,[p[0]]))
@@ -265,7 +293,8 @@ module foredeck_details() {
     on_foredeck() {
         translate([0,0,-0.5]) linear_extrude(height=foredeck_relief_fullsize_mm+0.5)
             offset(r=18,$fn=32) offset(delta=-18)
-                polygon([[420,0],[565,285],[1370,285],[1370,-285],[565,-285]]);
+                polygon([[420,0],[565,285],[foredeck_pad_back_fullsize_mm,285],
+                    [foredeck_pad_back_fullsize_mm,-285],[565,-285]]);
         for(side=[-1,1]) hull()
             for(x=[hatch_center_fullsize_mm-foredeck_rib_length_fullsize_mm/2+
                         foredeck_rib_half_width_fullsize_mm,
@@ -434,7 +463,7 @@ module side_deck_returns() {
     for(side=[-1,1])
         translate([cockpit_start_fullsize_mm*scale_factor+0.035,
             side==1?inner_y+0.025:-inner_y-wall_mm-0.025,550*scale_factor+0.035])
-            cube([cockpit_length_fullsize_mm*scale_factor-0.07,wall_mm,
+            cube([cockpit_deck_length_fullsize_mm*scale_factor-0.07,wall_mm,
                 200*scale_factor-0.07]);
 }
 module rounded_pocket_2d(w,h,r) {
@@ -473,7 +502,7 @@ module boat_hull() {
                 on_seam(-deck_mm-0.2)
                     translate([cockpit_start_fullsize_mm*scale_factor,
                         -cockpit_deck_width_fullsize_mm*scale_factor/2,0])
-                        cube([cockpit_length_fullsize_mm*scale_factor,
+                        cube([cockpit_deck_length_fullsize_mm*scale_factor,
                             cockpit_deck_width_fullsize_mm*scale_factor,60]);
             }
             side_deck_returns();

@@ -20,7 +20,7 @@ bow locker, a raised motor well, side corrugations and chine flanges are include
 See [transom and framing decisions](TRANSOM_AND_FRAMING.md) and
 [pending corrections](PENDING_CORRECTIONS.md) for remaining estimates.
 
-The [latest release](releases/2026-10-23_footwell-landings/README.md) includes
+The [latest release](releases/2026-10-23_bow-plan-proportions/README.md) includes
 both exact binary STL sizes: 80 x 27.826 x 13.261 and
 170 x 59.130 x 28.179 mm. Both pass edge/vertex topology checks; physical
 printing is untested. Heights include the small embossed deck details.
@@ -34,6 +34,13 @@ wider cabin landing strips covering the unchanged frame tips, four backed
 storage pockets and motor-well scuppers. Deck beads are straight, shorter
 and shallower. Read the [interior evidence audit](INTERIOR_RESEARCH.md) for
 source-backed features and estimated dimensions. Views are neutral grey.
+
+The latest plan review redistributes the bow narrowing over a long shallow
+shoulder before the steeper forward V. The closed upper deck is 1600 and the
+hatch centre 1200 from the tip; the well remains at 4000. These are selected
+reconstruction values. The kit and passport schematic disagree on hatch
+placement; see [bow plan review](BOW_PLAN_REVIEW.md) for recorded image
+landmarks, uncertainty and a construction comparison.
 
 ## Evidence and decisions
 
@@ -54,14 +61,14 @@ source-backed features and estimated dimensions. Views are neutral grey.
 - [Main OpenSCAD source](sarepta_hull.scad): default overall length 170 mm.
 - [80 mm entry point](sarepta_hull_80mm.scad).
 - [Bow and plan regression checks](verify_bow.scad).
-- [STL release history with pictures](releases/README.md): ten 80 mm
+- [STL release history with pictures](releases/README.md): eleven 80 mm
   milestones and the latest 170 mm export, preserved byte-for-byte, with renders made from their actual meshes.
-- [Latest archived STL stage](releases/2026-10-23_footwell-landings/README.md):
-  stepped footwell, wider cabin landings and interior details; remaining estimates are explicit.
+- [Latest archived STL stage](releases/2026-10-23_bow-plan-proportions/README.md):
+  long shallow bow shoulders, a longer foredeck and coordinated hatch placement; remaining estimates are explicit.
 - `history/`: accepted parametric snapshots before subsequent revisions.
 - `previews/`: working renders; release-specific mesh renders are under `releases/`.
 
-![Current archived mesh](releases/2026-10-23_footwell-landings/above.png)
+![Current archived mesh](releases/2026-10-23_bow-plan-proportions/above.png)
 
 ## Agent workflow
 
