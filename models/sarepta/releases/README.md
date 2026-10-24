@@ -34,3 +34,10 @@ Use `../skills/boat-hull-reconstruction/scripts/inspect_stl.py <file> --check` f
 current mesh inspection. Earlier archived reports retain their original checker scope.
 The first three stages have no independently verified source snapshots; later
 stages include parametric snapshots. See the dimensional audit before reusing geometry.
+
+## Separate-part milestone
+
+[2026-10-24: split upper assembly](2026-10-24_split-upper/README.md) preserves
+the accepted 170 mm exterior as two complementary STL parts. The protective
+rim and inner landing returns belong to the upper piece. Both exact exports
+pass basic mesh checks; physical printing and adhesive fit are untested.

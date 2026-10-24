@@ -266,7 +266,7 @@
     "sha256": "96aceb3697993d6ff7f2652d28fb649eeb173dcde2031d81b72edefd75282f8d",
     "changes": "Redistributed plan narrowing into a long shallow shoulder before the steep V; lengthened the closed foredeck to 1600, moved hatch centre to 1200 and coordinated pad/dashboard/footwell while keeping the well at 4000.",
     "limitations": "Hatch placement in the passport schematic conflicts with the kit photo. New deck/hatch positions follow the selected visual reconstruction, not factory measurements. Interior datum interpretation, print allowances and physical-print limits remain.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-23_bow-plan-proportions/source.scad",
     "preserved_on": "2026-10-23",
     "previews_generated_from": "actual archived binary STL",
@@ -290,6 +290,40 @@
     },
     "guide_and_frame_definitions_unchanged": true,
     "export_format": "binary STL",
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-24_split-upper",
+    "title": "Separate lower hull and upper deck at the inclined rim seam",
+    "stl": "2026-10-24_sarepta_170mm_lower.stl",
+    "model_length_mm": 170,
+    "assembled_length_mm": 170,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.24/2026-10-24_sarepta_170mm_lower.stl",
+    "sha256": "b119fa5299dbee7a3bfc87ae02e97773b702179c41534b81d21f8dd0bfed7b09",
+    "changes": "Partitioned the exact accepted 170 mm mesh below the protective rim; whole inner cabin-landing returns belong to the upper assembly. Exterior remains unchanged.",
+    "limitations": "No glue clearance or locating features; physical fit, printing and watertightness untested. Parent reconstruction uncertainties apply.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-24_split-upper/source.scad",
+    "preserved_on": "2026-10-24",
+    "previews_generated_from": "actual exported split STL pair",
+    "mesh_report": "mesh-report-lower.json",
+    "size_mm": [
+      167.73202919960022,
+      54.94200134277344,
+      23.42170524597168
+    ],
+    "triangles": 53440,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-24_sarepta_170mm_upper.stl",
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        9.133260726928711
+      ],
+      "sha256": "16b259f4ef75e5060a5a6894c8400c2eb5db291218406391bf9428bd5330c6b8",
+      "mesh_report": "mesh-report-upper.json"
+    },
     "physical_print_tested": false
   }
 ]

@@ -4,7 +4,14 @@ Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
 
-## Current state — 2026-10-23
+## Current state — 2026-10-24
+
+The latest [two-part release](releases/2026-10-24_split-upper/README.md) splits
+the accepted 170 mm model at the inclined side seam for adhesive assembly.
+The upper part retains the protective rim and complete inner landing returns.
+Both parts pass the basic mesh checks; the original one-piece model is preserved.
+Open [the exploded STL pair](releases/2026-10-24_split-upper/exploded.scad)
+to inspect the separation.
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck
@@ -20,7 +27,7 @@ bow locker, a raised motor well, side corrugations and chine flanges are include
 See [transom and framing decisions](TRANSOM_AND_FRAMING.md) and
 [pending corrections](PENDING_CORRECTIONS.md) for remaining estimates.
 
-The [latest release](releases/2026-10-23_bow-plan-proportions/README.md) includes
+The [accepted one-piece parent](releases/2026-10-23_bow-plan-proportions/README.md) includes
 both exact binary STL sizes: 80 x 27.826 x 13.261 and
 170 x 59.130 x 28.179 mm. Both pass edge/vertex topology checks; physical
 printing is untested. Heights include the small embossed deck details.
@@ -61,7 +68,7 @@ landmarks, uncertainty and a construction comparison.
 - [Main OpenSCAD source](sarepta_hull.scad): default overall length 170 mm.
 - [80 mm entry point](sarepta_hull_80mm.scad).
 - [Bow and plan regression checks](verify_bow.scad).
-- [STL release history with pictures](releases/README.md): eleven 80 mm
+- [STL release history with pictures](releases/README.md): the earlier 80 mm
   milestones and the latest 170 mm export, preserved byte-for-byte, with renders made from their actual meshes.
 - [Latest archived STL stage](releases/2026-10-23_bow-plan-proportions/README.md):
   long shallow bow shoulders, a longer foredeck and coordinated hatch placement; remaining estimates are explicit.

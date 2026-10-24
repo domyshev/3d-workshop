@@ -1,0 +1,9 @@
+{
+  "parent_sha256": "2158fa4b86034e368d53d908bcdc13c1898ad33b9e0027f6e34036d85ca8d832",
+  "parent_volume_mm3": 47960.63268859992,
+  "parts_volume_mm3": 47960.633329085875,
+  "volume_error_mm3": 0.000640485952317249,
+  "parts_single_component_and_manifold": true,
+  "backend": "CGAL",
+  "limits": "Volume conservation and topology do not certify physical fit or watertightness."
+}

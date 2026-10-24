@@ -422,3 +422,13 @@ Guide/plan/rim/clear-chine/layout checks pass. Preserved the prior milestone
 and added an eleventh release, actual STL views and a separate reproducible
 construction diagram. Physical print and full minimum-wall/self-intersection
 certification remain unverified.
+
+## 2026-10-24 — split upper assembly for adhesive joining
+
+Partitioned the immutable accepted 170 mm mesh along the inclined side seam,
+0.08 mm below the rim underside, retaining the full rim and inner landing
+returns with the upper piece. No exterior remodelling or glue clearance.
+CGAL exports pass paired-edge, vertex-link, positive-volume and one-component
+checks for each part. Volume conservation error is 0.000641 cubic mm.
+See `releases/2026-10-24_split-upper/` for actual meshes, reports and views.
+No Bambu project was requested for this partition; physical fit is untested.
