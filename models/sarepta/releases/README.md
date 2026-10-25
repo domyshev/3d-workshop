@@ -41,3 +41,8 @@ stages include parametric snapshots. See the dimensional audit before reusing ge
 the accepted 170 mm exterior as two complementary STL parts. The protective
 rim and inner landing returns belong to the upper piece. Both exact exports
 pass basic mesh checks; physical printing and adhesive fit are untested.
+
+[2026-10-25: four locating pins](2026-10-25_locating-pins/README.md) adds internal
+pads and four matched blind socket pairs to the 170 mm split model. Separate
+4 x 8 mm pins are provided. Both hull parts and the pin pass basic mesh checks;
+24 bore/cap/wall probes pass. Physical fit remains untested.

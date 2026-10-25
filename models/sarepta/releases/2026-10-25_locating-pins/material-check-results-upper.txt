@@ -1,0 +1,12 @@
+PASS Socket 1: bore
+PASS Socket 1: blind-end cap
+PASS Socket 1: radial socket wall
+PASS Socket 2: bore
+PASS Socket 2: blind-end cap
+PASS Socket 2: radial socket wall
+PASS Socket 3: bore
+PASS Socket 3: blind-end cap
+PASS Socket 3: radial socket wall
+PASS Socket 4: bore
+PASS Socket 4: blind-end cap
+PASS Socket 4: radial socket wall

@@ -302,7 +302,7 @@
     "sha256": "b119fa5299dbee7a3bfc87ae02e97773b702179c41534b81d21f8dd0bfed7b09",
     "changes": "Partitioned the exact accepted 170 mm mesh below the protective rim; whole inner cabin-landing returns belong to the upper assembly. Exterior remains unchanged.",
     "limitations": "No glue clearance or locating features; physical fit, printing and watertightness untested. Parent reconstruction uncertainties apply.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-24_split-upper/source.scad",
     "preserved_on": "2026-10-24",
     "previews_generated_from": "actual exported split STL pair",
@@ -324,6 +324,52 @@
       "sha256": "16b259f4ef75e5060a5a6894c8400c2eb5db291218406391bf9428bd5330c6b8",
       "mesh_report": "mesh-report-upper.json"
     },
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-25_locating-pins",
+    "title": "Four blind locating-pin pairs for adhesive assembly",
+    "stl": "2026-10-25_sarepta_170mm_lower_locating.stl",
+    "model_length_mm": 170,
+    "assembled_length_mm": 170,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.25/2026-10-25_sarepta_170mm_lower_locating.stl",
+    "sha256": "0501053bcb23c8e51af7ad551dc8916bd6c58df7c81bba8df46ed95ce86bc7b9",
+    "changes": "Four internal pad/socket pairs for 4 x 8 mm pins; 4.25 diameter, 4.2 depth bores, seam-normal axes, forward pair moved aft for skin clearance. Exterior and accepted split ownership retained.",
+    "limitations": "Clearances and pad design are modelling choices; physical fit, minimum-wall certification and watertightness untested.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-25_locating-pins/source.scad",
+    "preserved_on": "2026-10-25",
+    "previews_generated_from": "actual archived split STL pair; upper inverted only for display",
+    "mesh_report": "mesh-report-lower.json",
+    "size_mm": [
+      167.73202919960022,
+      54.94200134277344,
+      23.42170524597168
+    ],
+    "triangles": 55972,
+    "basic_mesh_checks_pass": true,
+    "additional_models": [
+      {
+        "stl": "2026-10-25_sarepta_170mm_upper_locating.stl",
+        "size_mm": [
+          170.0,
+          59.130435943603516,
+          9.133260726928711
+        ],
+        "sha256": "d973c66a9f2ef9eb79cae8a83475e9e7ac2c0986966b2d454fe5e5bfa792e3ea",
+        "mesh_report": "mesh-report-upper.json"
+      },
+      {
+        "stl": "2026-10-25_sarepta_locating_pin_4x8.stl",
+        "size_mm": [
+          4.0,
+          4.0,
+          8.0
+        ],
+        "sha256": "406a1be28e5e3a393f7769947ce41d0febbab2cef39bedee3a07525d97f38977",
+        "mesh_report": "mesh-report-pin.json"
+      }
+    ],
     "physical_print_tested": false
   }
 ]

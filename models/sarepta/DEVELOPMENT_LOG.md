@@ -432,3 +432,16 @@ CGAL exports pass paired-edge, vertex-link, positive-volume and one-component
 checks for each part. Volume conservation error is 0.000641 cubic mm.
 See `releases/2026-10-24_split-upper/` for actual meshes, reports and views.
 No Bambu project was requested for this partition; physical fit is untested.
+
+## 2026-10-25 — four locating pins
+
+Added four blind socket pairs normal to the inclined seam at model XY
+(33, ±17), (160, ±22). User marked approximate bow/aft locations; forward
+sockets were moved aft to preserve the outer bottom skin. Internal pads
+are 6.4 diameter by 5.0 deep per half. Bores are 4.25 diameter by 4.2 deep
+for 4 x 8 pins, with 0.8 end caps and 0.125 radial clearance. A pin STL
+includes two 0.35 insertion chamfers. Geometry is generated before splitting
+to avoid coplanar Boolean artefacts at the rounded original split mesh.
+Both parts and the pin pass topology checks; 24 actual-mesh material probes
+pass. A sampled exterior pad-clearance report is archived. Physical fit is
+untested. The inspection view turns the upper piece over to expose its bores.

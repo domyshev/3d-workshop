@@ -4,14 +4,15 @@ Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
 
-## Current state — 2026-10-24
+## Current state — 2026-10-25
 
-The latest [two-part release](releases/2026-10-24_split-upper/README.md) splits
-the accepted 170 mm model at the inclined side seam for adhesive assembly.
-The upper part retains the protective rim and complete inner landing returns.
-Both parts pass the basic mesh checks; the original one-piece model is preserved.
-Open [the exploded STL pair](releases/2026-10-24_split-upper/exploded.scad)
-to inspect the separation.
+The latest [locating-pin release](releases/2026-10-25_locating-pins/README.md)
+adds four pairs of blind sockets to the accepted 170 mm split assembly.
+Nominal 4 x 8 mm pins enter 4.25 mm bores, 4.2 mm deep per half; internal
+pads retain 0.8 mm end caps. The original exterior and earlier split release
+are preserved. Both parts and the pin pass basic mesh checks; all 24 saved
+bore/cap/wall material probes pass. Physical fit remains untested.
+Open [the side-by-side inspection](inspect_split.scad) to see both mating faces.
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck

@@ -1,0 +1,42 @@
+{
+  "samples_per_pad": 128,
+  "results": [
+    {
+      "centre_xy_mm": [
+        33,
+        -17
+      ],
+      "minimum_sampled_lower_pad_bottom_margin_above_exterior_mm": 1.987501666146997,
+      "highest_upper_pad_z_mm": 27.701749415264448,
+      "deck_top_z_mm": 27.717391304347824
+    },
+    {
+      "centre_xy_mm": [
+        33,
+        17
+      ],
+      "minimum_sampled_lower_pad_bottom_margin_above_exterior_mm": 1.9877569836825462,
+      "highest_upper_pad_z_mm": 27.701749415264448,
+      "deck_top_z_mm": 27.717391304347824
+    },
+    {
+      "centre_xy_mm": [
+        160,
+        -22
+      ],
+      "minimum_sampled_lower_pad_bottom_margin_above_exterior_mm": 5.200943842126568,
+      "highest_upper_pad_z_mm": 24.38870593700358,
+      "deck_top_z_mm": 27.717391304347824
+    },
+    {
+      "centre_xy_mm": [
+        160,
+        22
+      ],
+      "minimum_sampled_lower_pad_bottom_margin_above_exterior_mm": 5.185303079824866,
+      "highest_upper_pad_z_mm": 24.38870593700358,
+      "deck_top_z_mm": 27.717391304347824
+    }
+  ],
+  "limits": "Sampled vertical clearance at lower pad perimeter, and analytic upper pad height bound. Not a global surface-distance or self-intersection certification."
+}

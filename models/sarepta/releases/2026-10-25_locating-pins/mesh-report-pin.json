@@ -1,0 +1,31 @@
+{
+  "file": "2026-10-25_sarepta_locating_pin_4x8.stl",
+  "vertices": 256,
+  "triangles": 508,
+  "bounds_mm": [
+    [
+      -2.0,
+      -2.0,
+      0.0
+    ],
+    [
+      2.0,
+      2.0,
+      8.0
+    ]
+  ],
+  "size_mm": [
+    4.0,
+    4.0,
+    8.0
+  ],
+  "components": 1,
+  "euler_characteristic": 2,
+  "edge_pairing_errors": 0,
+  "vertex_link_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 0.002569876058259979,
+  "signed_volume_mm3": 98.92223980965116,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

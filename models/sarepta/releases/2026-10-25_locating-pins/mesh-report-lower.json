@@ -1,0 +1,31 @@
+{
+  "file": "2026-10-25_sarepta_170mm_lower_locating.stl",
+  "vertices": 27982,
+  "triangles": 55972,
+  "bounds_mm": [
+    [
+      2.2679708003997803,
+      -27.47100067138672,
+      0.0
+    ],
+    [
+      170.0,
+      27.47100067138672,
+      23.42170524597168
+    ]
+  ],
+  "size_mm": [
+    167.73202919960022,
+    54.94200134277344,
+    23.42170524597168
+  ],
+  "components": 1,
+  "euler_characteristic": -4,
+  "edge_pairing_errors": 0,
+  "vertex_link_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 4.511093720793724e-10,
+  "signed_volume_mm3": 33779.367037231736,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

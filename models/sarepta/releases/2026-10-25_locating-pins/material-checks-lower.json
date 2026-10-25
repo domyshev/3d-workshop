@@ -1,0 +1,113 @@
+{
+  "model_length_mm": 170,
+  "checks": [
+    {
+      "feature": "Socket 1: bore",
+      "point_fullsize_mm": [
+        891.5298918932874,
+        -460.0,
+        557.9713461054337
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 1: blind-end cap",
+      "point_fullsize_mm": [
+        889.6952219427965,
+        -460.0,
+        487.64233133661514
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 1: radial socket wall",
+      "point_fullsize_mm": [
+        891.5298918932874,
+        -386.94117647058823,
+        557.9713461054337
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: bore",
+      "point_fullsize_mm": [
+        891.5298918932874,
+        460.0,
+        557.9713461054337
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 2: blind-end cap",
+      "point_fullsize_mm": [
+        889.6952219427965,
+        460.0,
+        487.64233133661514
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: radial socket wall",
+      "point_fullsize_mm": [
+        891.5298918932874,
+        533.0588235294117,
+        557.9713461054337
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: bore",
+      "point_fullsize_mm": [
+        4328.000480128581,
+        -595.2941176470588,
+        468.3242872819043
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 3: blind-end cap",
+      "point_fullsize_mm": [
+        4326.16581017809,
+        -595.2941176470588,
+        397.99527251308575
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: radial socket wall",
+      "point_fullsize_mm": [
+        4328.000480128581,
+        -522.2352941176471,
+        468.3242872819043
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: bore",
+      "point_fullsize_mm": [
+        4328.000480128581,
+        595.2941176470588,
+        468.3242872819043
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 4: blind-end cap",
+      "point_fullsize_mm": [
+        4326.16581017809,
+        595.2941176470588,
+        397.99527251308575
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: radial socket wall",
+      "point_fullsize_mm": [
+        4328.000480128581,
+        668.3529411764705,
+        468.3242872819043
+      ],
+      "expected_material": true
+    }
+  ]
+}
