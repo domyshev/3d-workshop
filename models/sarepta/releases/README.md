@@ -57,3 +57,8 @@ vertical. Prior parts are preserved but are not interchangeable.
 is a comparison-only candidate. Identical Bambu profiles give 16.44 g / 47:00
 for the accepted upper and 15.96 g / 49:39 for the pockets. The accepted
 horizontal assembly remains current and recommended.
+
+[2026-10-27: open lower hull with a 4 mm rim](2026-10-27_open-4mm-rim/README.md)
+corrects the rejected full forward landing. Raised nose edge, horizontal
+4 mm glue land and local pin seats remain; the interior is open before
+fitting the unchanged non-pocketed cover. This is the current assembly.

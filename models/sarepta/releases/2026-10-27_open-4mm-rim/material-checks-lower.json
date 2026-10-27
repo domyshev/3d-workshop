@@ -1,0 +1,230 @@
+{
+  "model_length_mm": 170,
+  "checks": [
+    {
+      "feature": "Socket 1: bore",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -460.0,
+        622.3529411764706
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 1: blind cap",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -460.0,
+        551.9999999999999
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 1: radial wall",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -386.94117647058823,
+        622.3529411764706
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: bore",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        460.0,
+        622.3529411764706
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 2: blind cap",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        460.0,
+        551.9999999999999
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: radial wall",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        533.0588235294117,
+        622.3529411764706
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: bore",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -595.2941176470588,
+        622.3529411764706
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 3: blind cap",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -595.2941176470588,
+        551.9999999999999
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: radial wall",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -522.2352941176471,
+        622.3529411764706
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: bore",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        595.2941176470588,
+        622.3529411764706
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 4: blind cap",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        595.2941176470588,
+        551.9999999999999
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: radial wall",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        668.3529411764705,
+        622.3529411764706
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "front strengthening land",
+      "point_fullsize_mm": [
+        108.23529411764706,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "side 4 mm glue rim",
+      "point_fullsize_mm": [
+        2435.2941176470586,
+        662.9411764705882,
+        662.9411764705882
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "forward socket connecting web",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        595.2941176470588,
+        662.9411764705882
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "open forward centre",
+      "point_fullsize_mm": [
+        351.7647058823529,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open forward bay",
+      "point_fullsize_mm": [
+        541.1764705882352,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open nose centre",
+      "point_fullsize_mm": [
+        811.7647058823529,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open nose side",
+      "point_fullsize_mm": [
+        811.7647058823529,
+        270.5882352941176,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open former hatch surround",
+      "point_fullsize_mm": [
+        1190.5882352941176,
+        324.70588235294116,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open rear of bow bay",
+      "point_fullsize_mm": [
+        1488.235294117647,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open cockpit",
+      "point_fullsize_mm": [
+        2435.2941176470586,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open motor well",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        0.0,
+        662.9411764705882
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "retained footwell shelf",
+      "point_fullsize_mm": [
+        1488.235294117647,
+        0.0,
+        562.8235294117648
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "retained transverse frame",
+      "point_fullsize_mm": [
+        1700.0,
+        0.0,
+        135.2941176470588
+      ],
+      "expected_material": true
+    }
+  ]
+}

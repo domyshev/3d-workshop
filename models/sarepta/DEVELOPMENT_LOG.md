@@ -473,3 +473,18 @@ reduction yields only 2.92% printed-material saving because perimeters and
 supports increase. Candidate topology and all 26 material probes pass;
 strength/printing are untested. Do not promote this study over the accepted
 horizontal reinforced assembly.
+
+## 2026-10-27 — restore open access with a 4 mm glue rim
+
+User clarified that the removable cover must leave the lower interior open.
+The full forward landing was therefore a functional regression. New lower
+retains the raised edge and a nominal 4 mm inward horizontal perimeter rim at
+Z=25, small blind socket seats and two 2.4 mm connecting webs. Removed central
+sheets, legacy forward infill and obsolete suspended inner returns. An upward
+sweep protects the original lowest skin; it stops ahead of the sealed lower
+locker wall and footwell shelf. Accepted non-pocketed upper and pins unchanged.
+Final lower is one closed component. 25 material probes, 642 sampled exterior
+floor checks and all 5032 lower-land contact samples pass. Exact-zero-area
+float32 export cleanup removes 60 collapsed facets without moving vertices,
+removing nonzero faces/components or patching holes. Reproduction is scripted.
+Actual STL images, reports and sources are archived; new physical fit untested.

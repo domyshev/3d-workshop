@@ -65,8 +65,10 @@ Distinguish a visible prototype seam from a functional glue plane. If the user
 needs a horizontal printable mating face, use one global Z plane and ensure
 neither part crosses it; do not keep hanging returns on the upper via ownership
 exceptions that introduce steps. Transfer returns to the lower and connect
-them with a continuous landing. Keep shallow bow tips attached to a stiff
-sheet where practical. Declare any added height separately from prototype
+them with a narrow continuous perimeter landing. Preserve open access to the
+lower interior when the cover is removed; never replace that access with a
+full nose sheet unless explicitly requested. Strengthen shallow bow tips with
+a raised edge/rim and small local socket webs rather than closing the bay. Declare any added height separately from prototype
 measurements and preserve openings when adding reinforcement. Generate pin
 bores on shared axes normal to the new plane, retaining blind end walls.
 Check the actual meshes for planar bounds and sampled contact support. A

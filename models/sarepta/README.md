@@ -6,16 +6,16 @@ All dimensions in research notes are prototype millimetres unless stated otherwi
 
 ## Current state — 2026-10-27
 
-The latest [horizontal reinforced release](releases/2026-10-27_horizontal-reinforced/README.md)
-responds to a reported thin-bow print deformation and poor fit of the former
-inclined/stepped joint. Both mating faces are now horizontal at Z=25 mm. A
-continuous 1.6 mm nose/side landing and the original protective rim stay with
-the lower hull; the upper is raised 2.4 mm to retain blind 4 x 8 pin sockets.
-Overall length stays 170 mm; assembled height is 30.579 mm. This added height
-is a user-authorized print allowance, not a corrected prototype measurement.
-Both meshes, 36 material probes and 4963 upper mating-face support samples pass.
-The revised parts are not yet physically printed. Open the
-[side-by-side inspection](inspect_split.scad) to see both mating faces.
+The latest [open 4 mm rim release](releases/2026-10-27_open-4mm-rim/README.md)
+restores access to the bow compartment while retaining the horizontal Z=25 mm
+joint, raised nose edge and a nominal 4 mm inward glue land. Only small local
+socket seats and connecting webs extend beyond the rim. The preceding full
+nose landing was rejected because it blocked access before fitting the cover.
+The accepted non-pocketed upper and 4 x 8 pins are unchanged. No further height
+increase is introduced: the 170 mm assembly remains 30.579 mm high. Both parts
+pass basic mesh checks; 25 material probes, 642 sampled exterior floor checks
+and 5032 glue-contact samples pass. Physical printing of this revision is
+untested. Open the [side-by-side inspection](inspect_split.scad) to inspect it.
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck

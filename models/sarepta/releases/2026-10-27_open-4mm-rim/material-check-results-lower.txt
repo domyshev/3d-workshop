@@ -1,0 +1,25 @@
+PASS Socket 1: bore
+PASS Socket 1: blind cap
+PASS Socket 1: radial wall
+PASS Socket 2: bore
+PASS Socket 2: blind cap
+PASS Socket 2: radial wall
+PASS Socket 3: bore
+PASS Socket 3: blind cap
+PASS Socket 3: radial wall
+PASS Socket 4: bore
+PASS Socket 4: blind cap
+PASS Socket 4: radial wall
+PASS front strengthening land
+PASS side 4 mm glue rim
+PASS forward socket connecting web
+PASS open forward centre
+PASS open forward bay
+PASS open nose centre
+PASS open nose side
+PASS open former hatch surround
+PASS open rear of bow bay
+PASS open cockpit
+PASS open motor well
+PASS retained footwell shelf
+PASS retained transverse frame

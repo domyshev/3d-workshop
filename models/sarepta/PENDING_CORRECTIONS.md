@@ -48,3 +48,13 @@ the internal mating steps, sets the functional join to Z=25 mm, and raises
 the upper by 2.4 mm for vertical blind sockets. New parts must be used as a
 matched pair. Prior source-backed dimensions still refer to the unraised
 prototype reconstruction. The earlier print failed; the new print is untested.
+
+## Access correction — 2026-10-27
+
+The user rejected the full forward landing because it defeated the removable
+cover's purpose. Replace it with a nominal 4 mm horizontal perimeter glue land,
+retaining a locally reinforced raised nose edge and small pin-seat webs.
+The latest open-rim release implements this and reuses the accepted non-pocketed
+upper unchanged. The bow is accessible before fitting the cover; the lower
+locker wall, footwell shelf and main aft framing remain. No additional height
+change. The previous closed-top horizontal lower is superseded, not erased.
