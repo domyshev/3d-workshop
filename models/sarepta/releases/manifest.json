@@ -407,5 +407,29 @@
     "assembled_height_mm": 30.579347610473633,
     "horizontal_join_z_mm": 25,
     "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-27_upper-pocket-comparison",
+    "title": "Comparison-only underside pockets: small print-material saving",
+    "stl": "2026-10-27_sarepta_170mm_upper_pockets_study.stl",
+    "model_length_mm": 170,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.27/2026-10-27_sarepta_170mm_upper_pockets_study.stl",
+    "sha256": "d70b075133a01bddb84fc8ffb29823cb6a9615df7ab07ddb60cea8252d78538a",
+    "changes": "Rounded underside pockets, protected socket zones, retained perimeter/hatch lands and roof-connected webs. Current accepted assembly is unchanged.",
+    "limitations": "Only 0.48 g (2.92%) saving and 159 seconds longer under equal Bambu profiles; strength and physical printing untested. Comparison not adopted.",
+    "is_current": false,
+    "comparison_only": true,
+    "source_snapshot": "releases/2026-10-27_upper-pocket-comparison/source.scad",
+    "preserved_on": "2026-10-27",
+    "previews_generated_from": "actual candidate and immutable parent STL meshes",
+    "mesh_report": "mesh-report.json",
+    "size_mm": [
+      167.65592288970947,
+      54.05428695678711,
+      5.579347610473633
+    ],
+    "triangles": 9634,
+    "basic_mesh_checks_pass": true,
+    "physical_print_tested": false
   }
 ]

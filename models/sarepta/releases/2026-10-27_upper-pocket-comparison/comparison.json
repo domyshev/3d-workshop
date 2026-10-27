@@ -1,0 +1,29 @@
+{
+  "printer": "Bambu Lab A1 mini, 0.4 mm nozzle",
+  "material": "Generic PLA",
+  "profile": "0.2 mm, 2 walls, 15% Grid, automatic tree supports; same settings and 45-degree plate rotation",
+  "model_scope": "One upper part only. No lower hull or pins.",
+  "variants": {
+    "baseline": {
+      "total_print_seconds": 2820,
+      "total_filament_g": 16.44,
+      "mesh_volume_mm3": 16186.117859450445,
+      "stl_sha256": "bd1810b8cca412cd12a612e538cb90e8dd2faef51aebb770baa4e15174715526",
+      "slicer_project_sha256": "bddf5a504ad4eefa0d6ae471bd86a92ff34ed19afc7b485cd976c3c9172d5ccd"
+    },
+    "pockets": {
+      "total_print_seconds": 2979,
+      "total_filament_g": 15.96,
+      "mesh_volume_mm3": 11873.281336687354,
+      "stl_sha256": "d70b075133a01bddb84fc8ffb29823cb6a9615df7ab07ddb60cea8252d78538a",
+      "slicer_project_sha256": "629b49be01949a98e37939a616c02fb12eb40194d78b76b624d562d25dd17966"
+    }
+  },
+  "bambu_studio_version": "02.07.01.62",
+  "saved_g": 0.4800000000000004,
+  "saved_percent": 2.9197080291970825,
+  "extra_seconds": 159,
+  "cad_volume_reduction_percent": 26.645280605349065,
+  "physical_strength_tested": false,
+  "recommendation": "Retain accepted unpocketed upper: about 3% material saving does not justify extra print time and untested strength tradeoffs."
+}

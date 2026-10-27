@@ -1,0 +1,37 @@
+{
+  "method": "Positive E on XY moves by G-code feature, converted with 1.75 mm PLA at 1.24 g/cm3; approximate, not the slicer total.",
+  "grams": {
+    "baseline": {
+      "Custom": 0.035,
+      "Support": 0.614,
+      "Brim": 0.208,
+      "Inner wall": 2.132,
+      "Outer wall": 2.454,
+      "Bottom surface": 0.734,
+      "Internal solid infill": 5.811,
+      "Sparse infill": 1.087,
+      "Floating vertical shell": 0.096,
+      "Bridge": 1.616,
+      "Top surface": 1.248,
+      "Gap infill": 0.011,
+      "Support interface": 0.349,
+      "Overhang wall": 0.013
+    },
+    "pockets": {
+      "Custom": 0.035,
+      "Support": 1.859,
+      "Brim": 0.208,
+      "Inner wall": 2.714,
+      "Outer wall": 3.193,
+      "Bottom surface": 0.28,
+      "Internal solid infill": 3.728,
+      "Sparse infill": 0.491,
+      "Floating vertical shell": 0.77,
+      "Bridge": 1.106,
+      "Top surface": 0.991,
+      "Gap infill": 0.012,
+      "Support interface": 0.517,
+      "Overhang wall": 0.021
+    }
+  }
+}

@@ -52,3 +52,8 @@ replaces the previous inclined/stepped assembly after user-reported print
 deformation. The lower hull gains the rim and a reinforced nose landing;
 both mating faces lie on Z=25 mm. Height increases 2.4 mm and sockets are
 vertical. Prior parts are preserved but are not interchangeable.
+
+[2026-10-27: upper-deck pocket study](2026-10-27_upper-pocket-comparison/README.md)
+is a comparison-only candidate. Identical Bambu profiles give 16.44 g / 47:00
+for the accepted upper and 15.96 g / 49:39 for the pockets. The accepted
+horizontal assembly remains current and recommended.

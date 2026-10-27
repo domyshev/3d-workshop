@@ -102,3 +102,11 @@ Run `python3 tools/verify_archive.py` after copying or restoring the archive.
 Source URLs, capture dates and hashes are preserved locally. Third-party
 attribution is recorded in [ATTRIBUTION.md](ATTRIBUTION.md); no blanket license
 is assigned to reference scans or photos.
+
+## Upper-deck lightening comparison
+
+The [pocket study](releases/2026-10-27_upper-pocket-comparison/README.md) is
+archived as a comparison, not the current model. With identical slicing
+settings, pockets save only 0.48 g (2.92%) and add 2 min 39 s. The accepted
+unpocketed horizontal upper remains recommended; physical strength of the
+pocket candidate has not been tested.

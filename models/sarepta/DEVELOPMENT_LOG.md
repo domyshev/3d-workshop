@@ -461,3 +461,15 @@ Updated the material checker to handle rays through completely empty openings.
 The old failed print does not validate the new revision; physical fit and
 warping resistance remain untested. See the archived source, meshes, reports
 and grey views in releases/2026-10-27_horizontal-reinforced/.
+
+## 2026-10-27 — measured upper-deck pocket study
+
+Created a separate underside-pocket candidate with protected pin zones,
+2.4 mm outer/hatch glue lands, 1.2 mm roof-connected webs and retained roof
+skin. Both sliced configurations were checked equal (A1 mini, PLA, 0.2 mm,
+two walls, 15% Grid, automatic supports and the same orientation). Accepted
+upper: 16.44 g / 47:00; candidate: 15.96 g / 49:39. The 26.65% CAD-volume
+reduction yields only 2.92% printed-material saving because perimeters and
+supports increase. Candidate topology and all 26 material probes pass;
+strength/printing are untested. Do not promote this study over the accepted
+horizontal reinforced assembly.
