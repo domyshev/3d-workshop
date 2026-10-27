@@ -61,3 +61,5 @@ the exporter again to publish the checked mesh. The archived result removed
 60 such facets: no vertices moved, no nonzero facets/components removed and
 no holes patched. The script refuses to publish a result failing mesh checks.
 The intermediate `_construction.stl` file is not a print artifact.
+
+Archive checksum registers exclude mutable macOS Finder metadata (`.DS_Store`).
