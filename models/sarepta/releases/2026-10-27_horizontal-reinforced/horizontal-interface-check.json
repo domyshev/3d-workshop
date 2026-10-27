@@ -1,0 +1,16 @@
+{
+  "join_z_mm": 25,
+  "lower_mating_area_mm2": 3717.501525382195,
+  "upper_mating_area_mm2": 3702.3904730488284,
+  "area_difference_mm2": 15.111052333366388,
+  "maximum_sampled_boundary_disagreement_mm": 0.05558492817272527,
+  "lower_mating_triangles": 869,
+  "upper_mating_triangles": 709,
+  "upper_face_samples": 4963,
+  "unsupported_upper_face_samples": 0,
+  "nominal_upper_band_inset_mm": 0.04,
+  "all_lower_vertices_at_or_below_plane": true,
+  "all_upper_vertices_at_or_above_plane": true,
+  "horizontal_interface_checks_pass": true,
+  "limits": "Sampled upper-face support, boundary clearance and plane bounds; not a physical flatness or printer calibration test."
+}

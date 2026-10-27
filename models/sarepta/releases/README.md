@@ -46,3 +46,9 @@ pass basic mesh checks; physical printing and adhesive fit are untested.
 pads and four matched blind socket pairs to the 170 mm split model. Separate
 4 x 8 mm pins are provided. Both hull parts and the pin pass basic mesh checks;
 24 bore/cap/wall probes pass. Physical fit remains untested.
+
+[2026-10-27: horizontal reinforced split](2026-10-27_horizontal-reinforced/README.md)
+replaces the previous inclined/stepped assembly after user-reported print
+deformation. The lower hull gains the rim and a reinforced nose landing;
+both mating faces lie on Z=25 mm. Height increases 2.4 mm and sockets are
+vertical. Prior parts are preserved but are not interchangeable.

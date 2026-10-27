@@ -59,6 +59,19 @@ library. Interpret topology against intended openings: a hatch connected to
 an open cockpit can legitimately give genus one. Validate visual fairness
 separately; higher tessellation alone does not remove a geometric dent.
 
+## Split parts after physical-print feedback
+
+Distinguish a visible prototype seam from a functional glue plane. If the user
+needs a horizontal printable mating face, use one global Z plane and ensure
+neither part crosses it; do not keep hanging returns on the upper via ownership
+exceptions that introduce steps. Transfer returns to the lower and connect
+them with a continuous landing. Keep shallow bow tips attached to a stiff
+sheet where practical. Declare any added height separately from prototype
+measurements and preserve openings when adding reinforcement. Generate pin
+bores on shared axes normal to the new plane, retaining blind end walls.
+Check the actual meshes for planar bounds and sampled contact support. A
+reported warped print is feedback, not proof of temperature as its cause.
+
 ## Preserve a reviewable milestone
 
 Keep the prior accepted source and exported STL. Record dimensions, evidence,

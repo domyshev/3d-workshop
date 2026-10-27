@@ -1,0 +1,18 @@
+PASS Socket 1: bore
+PASS Socket 1: blind cap
+PASS Socket 1: radial wall
+PASS Socket 2: bore
+PASS Socket 2: blind cap
+PASS Socket 2: radial wall
+PASS Socket 3: bore
+PASS Socket 3: blind cap
+PASS Socket 3: radial wall
+PASS Socket 4: bore
+PASS Socket 4: blind cap
+PASS Socket 4: radial wall
+PASS forward nose landing
+PASS nose side landing
+PASS side landing
+PASS open hatch
+PASS open cockpit
+PASS open motor well

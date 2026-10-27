@@ -336,7 +336,7 @@
     "sha256": "0501053bcb23c8e51af7ad551dc8916bd6c58df7c81bba8df46ed95ce86bc7b9",
     "changes": "Four internal pad/socket pairs for 4 x 8 mm pins; 4.25 diameter, 4.2 depth bores, seam-normal axes, forward pair moved aft for skin clearance. Exterior and accepted split ownership retained.",
     "limitations": "Clearances and pad design are modelling choices; physical fit, minimum-wall certification and watertightness untested.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-25_locating-pins/source.scad",
     "preserved_on": "2026-10-25",
     "previews_generated_from": "actual archived split STL pair; upper inverted only for display",
@@ -370,6 +370,42 @@
         "mesh_report": "mesh-report-pin.json"
       }
     ],
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-27_horizontal-reinforced",
+    "title": "Horizontal mating plane and reinforced lower bow after print feedback",
+    "stl": "2026-10-27_sarepta_170mm_horizontal_lower.stl",
+    "model_length_mm": 170,
+    "assembled_length_mm": 170,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.27/2026-10-27_sarepta_170mm_horizontal_lower.stl",
+    "sha256": "f9272c4bb4f66e0ae33e8762fe08abb8495019cacfc82c230558756e1e476837",
+    "changes": "Horizontal Z=25 join, continuous 1.6 mm nose/side landing and rim retained below; upper raised 2.4 mm with a matching band and vertical blind 4.25 x 4.2 sockets for unchanged 4 x 8 pins.",
+    "limitations": "Responds to user-reported previous print deformation; new physical fit and print resistance untested. Extra height is a print allowance, not factory evidence.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-27_horizontal-reinforced/source.scad",
+    "preserved_on": "2026-10-27",
+    "previews_generated_from": "actual archived exported STL pair",
+    "mesh_report": "mesh-report-lower.json",
+    "size_mm": [
+      170.0,
+      59.130435943603516,
+      25.0
+    ],
+    "triangles": 58784,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-27_sarepta_170mm_horizontal_upper.stl",
+      "size_mm": [
+        167.6559226512909,
+        54.05428695678711,
+        5.579347610473633
+      ],
+      "sha256": "bd1810b8cca412cd12a612e538cb90e8dd2faef51aebb770baa4e15174715526",
+      "mesh_report": "mesh-report-upper.json"
+    },
+    "assembled_height_mm": 30.579347610473633,
+    "horizontal_join_z_mm": 25,
     "physical_print_tested": false
   }
 ]

@@ -445,3 +445,19 @@ to avoid coplanar Boolean artefacts at the rounded original split mesh.
 Both parts and the pin pass topology checks; 24 actual-mesh material probes
 pass. A sampled exterior pad-clearance report is archived. Physical fit is
 untested. The inspection view turns the upper piece over to expose its bores.
+
+## 2026-10-27 — horizontal reinforced assembly after print feedback
+
+User reported thin-bow deformation and poor mating of the earlier inclined
+part set. Replaced that functional split with a horizontal Z=25 mm plane,
+transferred the rim/low belt to the lower part, and added a continuous nominal
+1.6 mm nose/side landing. Original geometry above 25 is raised 2.4 mm with
+a matching band, within the user's 4 mm allowance. Vertical 4.25 x 4.2 blind
+sockets retain XY (33, +/-17), (160, +/-22) and unchanged 4 x 8 pins.
+Native section inset 0.04 mm avoids coplanar overlaps with the immutable STL.
+Both exact STL meshes pass topology checks; 36 material probes pass and all
+4963 sampled upper-face points are supported on the lower horizontal plane.
+Updated the material checker to handle rays through completely empty openings.
+The old failed print does not validate the new revision; physical fit and
+warping resistance remain untested. See the archived source, meshes, reports
+and grey views in releases/2026-10-27_horizontal-reinforced/.

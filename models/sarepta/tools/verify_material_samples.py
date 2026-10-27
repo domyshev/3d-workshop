@@ -26,7 +26,7 @@ def main():
         v=np.divide(b[:,0]*dy-b[:,1]*dx,den,out=np.zeros(len(den)),where=valid)
         mask=valid&(u>=0)&(v>=0)&(u+v<=1)
         zs=np.sort((a[:,2]+u*b[:,2]+v*c[:,2])[mask])
-        zs=zs[np.r_[True,np.diff(zs)>1e-5]]
+        if len(zs):zs=zs[np.r_[True,np.diff(zs)>1e-5]]
         material=int(np.count_nonzero(zs<z))%2==1
         passed=material==check['expected_material'];failures+=not passed
         print(('PASS ' if passed else 'FAIL ')+check['feature'])

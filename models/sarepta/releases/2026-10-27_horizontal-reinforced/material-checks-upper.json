@@ -1,0 +1,167 @@
+{
+  "model_length_mm": 170,
+  "checks": [
+    {
+      "feature": "Socket 1: bore",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -460.0,
+        730.5882352941176
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 1: blind cap",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -460.0,
+        800.9411764705883
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 1: radial wall",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        -386.94117647058823,
+        730.5882352941176
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: bore",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        460.0,
+        730.5882352941176
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 2: blind cap",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        460.0,
+        800.9411764705883
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 2: radial wall",
+      "point_fullsize_mm": [
+        892.9411764705882,
+        533.0588235294117,
+        730.5882352941176
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: bore",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -595.2941176470588,
+        730.5882352941176
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 3: blind cap",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -595.2941176470588,
+        800.9411764705883
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 3: radial wall",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        -522.2352941176471,
+        730.5882352941176
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: bore",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        595.2941176470588,
+        730.5882352941176
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "Socket 4: blind cap",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        595.2941176470588,
+        800.9411764705883
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "Socket 4: radial wall",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        668.3529411764705,
+        730.5882352941176
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "forward nose landing",
+      "point_fullsize_mm": [
+        541.1764705882352,
+        0.0,
+        684.5882352941177
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "nose side landing",
+      "point_fullsize_mm": [
+        811.7647058823529,
+        405.88235294117646,
+        684.5882352941177
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "side landing",
+      "point_fullsize_mm": [
+        2435.2941176470586,
+        622.3529411764706,
+        684.5882352941177
+      ],
+      "expected_material": true
+    },
+    {
+      "feature": "open hatch",
+      "point_fullsize_mm": [
+        1200.0,
+        0.0,
+        684.5882352941177
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open cockpit",
+      "point_fullsize_mm": [
+        2435.2941176470586,
+        0.0,
+        684.5882352941177
+      ],
+      "expected_material": false
+    },
+    {
+      "feature": "open motor well",
+      "point_fullsize_mm": [
+        4329.411764705882,
+        0.0,
+        684.5882352941177
+      ],
+      "expected_material": false
+    }
+  ]
+}

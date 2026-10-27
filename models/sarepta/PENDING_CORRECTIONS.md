@@ -37,3 +37,14 @@ The upper opening is now 2400 long; the forward footwell starts at 1400 and
 the well at 4000, giving a 2600 interior reference. This interpretation of
 the published cockpit datum is provisional. See `BOW_PLAN_REVIEW.md`.
 The gradual shoulder starts at 1550, before the upper opening at 1600.
+
+## Print feedback and assembly revision — 2026-10-27
+
+The user reports that the 2026-10-25 lower bow deformed during printing and
+that the inclined/stepped split mated poorly. Heat was suspected, not measured.
+The latest horizontal reinforced release supersedes that assembly design.
+It transfers the rim and reinforced nose landing to the lower half, removes
+the internal mating steps, sets the functional join to Z=25 mm, and raises
+the upper by 2.4 mm for vertical blind sockets. New parts must be used as a
+matched pair. Prior source-backed dimensions still refer to the unraised
+prototype reconstruction. The earlier print failed; the new print is untested.

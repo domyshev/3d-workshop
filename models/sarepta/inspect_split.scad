@@ -1,2 +1,2 @@
-// Inspect the latest pinned split assembly with both mating faces visible.
-include <releases/2026-10-25_locating-pins/view.scad>
+// Inspect the current horizontal split; upper mating face is turned upward.
+include <releases/2026-10-27_horizontal-reinforced/view.scad>

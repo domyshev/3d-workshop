@@ -4,15 +4,18 @@ Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
 
-## Current state — 2026-10-25
+## Current state — 2026-10-27
 
-The latest [locating-pin release](releases/2026-10-25_locating-pins/README.md)
-adds four pairs of blind sockets to the accepted 170 mm split assembly.
-Nominal 4 x 8 mm pins enter 4.25 mm bores, 4.2 mm deep per half; internal
-pads retain 0.8 mm end caps. The original exterior and earlier split release
-are preserved. Both parts and the pin pass basic mesh checks; all 24 saved
-bore/cap/wall material probes pass. Physical fit remains untested.
-Open [the side-by-side inspection](inspect_split.scad) to see both mating faces.
+The latest [horizontal reinforced release](releases/2026-10-27_horizontal-reinforced/README.md)
+responds to a reported thin-bow print deformation and poor fit of the former
+inclined/stepped joint. Both mating faces are now horizontal at Z=25 mm. A
+continuous 1.6 mm nose/side landing and the original protective rim stay with
+the lower hull; the upper is raised 2.4 mm to retain blind 4 x 8 pin sockets.
+Overall length stays 170 mm; assembled height is 30.579 mm. This added height
+is a user-authorized print allowance, not a corrected prototype measurement.
+Both meshes, 36 material probes and 4963 upper mating-face support samples pass.
+The revised parts are not yet physically printed. Open the
+[side-by-side inspection](inspect_split.scad) to see both mating faces.
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck
