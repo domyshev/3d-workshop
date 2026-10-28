@@ -1,0 +1,31 @@
+{
+  "file": "2026-10-28_sarepta_170mm_service_upper.stl",
+  "vertices": 3305,
+  "triangles": 6634,
+  "bounds_mm": [
+    [
+      2.3440771102905273,
+      -27.027143478393555,
+      25.0
+    ],
+    [
+      170.0,
+      27.027143478393555,
+      30.579347610473633
+    ]
+  ],
+  "size_mm": [
+    167.65592288970947,
+    54.05428695678711,
+    5.579347610473633
+  ],
+  "components": 1,
+  "euler_characteristic": -12,
+  "edge_pairing_errors": 0,
+  "vertex_link_errors": 0,
+  "zero_area_triangles": 0,
+  "minimum_double_triangle_area_mm2": 1.741500454954803e-07,
+  "signed_volume_mm3": 15966.985747670944,
+  "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+  "basic_mesh_checks_pass": true
+}

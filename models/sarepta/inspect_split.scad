@@ -1,2 +1,2 @@
-// Horizontal rim and compartment partitions meet the unchanged cover at Z=25.
-include <releases/2026-10-28_partition-joint/view.scad>
+// Serviceable dashboard, strengthened sockets and no projecting chine strip.
+include <releases/2026-10-28_serviceable-dashboard/view.scad>

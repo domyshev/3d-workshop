@@ -1,0 +1,17 @@
+{
+  "excluded_negligible_mating_face_areas_mm2": [
+    1.3042154023423791e-08
+  ],
+  "exterior_sample_y_limit_mm": 22,
+  "horizontal_join_z_mm": 25,
+  "lower_glue_area_mm2": 1606.255922087361,
+  "upper_underside_area_mm2": 3642.505600192686,
+  "lower_glue_samples": 5196,
+  "unsupported_lower_glue_samples": 0,
+  "contact_boundary_tolerance_mm": 0.06,
+  "floor_xy_samples": 594,
+  "maximum_sampled_lowest_surface_change_mm": 0.0,
+  "floor_failures": [],
+  "checks_pass": true,
+  "limits": "Sampled skin and rim-contact checks; not a global minimum-wall, self-intersection or physical-print certification."
+}

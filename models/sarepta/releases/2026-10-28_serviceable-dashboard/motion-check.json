@@ -1,0 +1,20 @@
+{
+  "dashboard_interior_points": 883,
+  "dashboard_translation_steps_mm": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "dashboard_collision_samples": 7947,
+  "dashboard_collisions": [],
+  "retainer_collision_samples": 592,
+  "retainer_collisions": [],
+  "checks_pass": true,
+  "limits": "Sampled interior points on actual exported meshes, not a continuous collision proof or physical fit certification."
+}

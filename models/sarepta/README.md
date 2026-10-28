@@ -6,15 +6,14 @@ All dimensions in research notes are prototype millimetres unless stated otherwi
 
 ## Current state — 2026-10-28
 
-The latest [partition-joint correction](releases/2026-10-28_partition-joint/README.md)
-closes the 1.65 mm slits above the dashboard and motor-well partition introduced
-by the preceding open-rim cutter. Their tops now meet the unchanged cover at
-Z=25, verified at 164 cross-panel samples. The nominal 4 mm rim, open bow
-access, pin sockets, framing and exterior are retained. Mesh checks, 25 material
-probes, 642 sampled exterior checks and 5128 contact samples pass. The accepted
-non-pocketed upper and 4 x 8 pins are unchanged. The 170 mm assembly remains
-30.579 mm high. Physical printing is untested. Open the
-[side-by-side inspection](inspect_split.scad) to inspect both actual meshes.
+The latest [serviceable dashboard release](releases/2026-10-28_serviceable-dashboard/README.md)
+contains four STL parts: reinforced lower hull, internally revised upper cover,
+removable dashboard with footwell shelf, and lift-out stop bar. The projecting
+lower chine strip is removed; upper protective rim and side corrugations remain.
+Front locating sockets have full-height webs and sloped roots. The dashboard
+slides aft after removing the stop bar, even with the upper cover glued.
+All four meshes, 33 material probes and sampled movement/contact checks pass.
+Physical print and fit are untested. Open [the separated view](inspect_split.scad).
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck

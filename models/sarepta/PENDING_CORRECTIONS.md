@@ -68,3 +68,14 @@ access cutter now protects these narrow wall tops. Both meet the unchanged
 cover at Z=25; 164 wall-contact samples, 5128 rim/contact samples, 642 exterior
 samples and all 25 material probes pass. No new deck sheet closes the open bow.
 See `releases/2026-10-28_partition-joint/README.md`; physical fit is untested.
+
+## Serviceable dashboard and socket reinforcement — 2026-10-28
+
+Implemented full-height front socket webs with sloped roots, a separate panel
+and footwell shelf on open-ended guides, and a lift-out two-peg stop bar.
+The fixed forward compartment wall remains; the upper cover loses its internal
+dashboard continuation while keeping the exterior. The lower projecting chine
+strip is removed with a 0.015 mm skin allowance. All four STL meshes and sampled
+material, movement and contact checks pass; physical fit is untested. See
+`releases/2026-10-28_serviceable-dashboard/README.md` for dimensions, limits,
+print orientation and removal sequence. Use the updated upper for this version.
