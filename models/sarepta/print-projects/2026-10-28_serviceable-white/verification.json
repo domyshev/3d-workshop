@@ -1,0 +1,59 @@
+{
+  "sha256": "05e2cc9886bc1173633b056fb7f1ad27aca5cf406c3629445caf986bc8ab0394",
+  "profile": [
+    "PolyTerra PLA @BBL A1M"
+  ],
+  "vendor": [
+    "Polymaker"
+  ],
+  "colour": [
+    "#FFFFFF"
+  ],
+  "nozzle_temperature": [
+    "220"
+  ],
+  "textured_plate_temp": [
+    "65"
+  ],
+  "filament_density": [
+    "1.31"
+  ],
+  "filament_max_volumetric_speed": [
+    "22"
+  ],
+  "filament_flow_ratio": [
+    "0.98"
+  ],
+  "layer_height": "0.16",
+  "wall_loops": "3",
+  "sparse_infill_density": "15%",
+  "source_mesh_bytes_unchanged": true,
+  "build_transforms_unchanged": true,
+  "plates": [
+    {
+      "plate": 1,
+      "estimated_seconds": 13985,
+      "filament_g": 53.77,
+      "objects": [
+        "Sarepta lower"
+      ]
+    },
+    {
+      "plate": 2,
+      "estimated_seconds": 3184,
+      "filament_g": 19.93,
+      "objects": [
+        "Sarepta dashboard",
+        "Sarepta upper",
+        "Sarepta retainer",
+        "Sarepta pin_1",
+        "Sarepta pin_2",
+        "Sarepta pin_3",
+        "Sarepta pin_4"
+      ]
+    }
+  ],
+  "total_seconds": 17169,
+  "total_filament_g": 73.7,
+  "checks_pass": true
+}

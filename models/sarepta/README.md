@@ -111,7 +111,7 @@ pocket candidate has not been tested.
 
 ## Prepared printing project — 2026-10-28
 
-[The sliced serviceable-dashboard project](print-projects/2026-10-28_serviceable/README.md)
+[The corrected white-filament printing project](print-projects/2026-10-28_serviceable-white/README.md)
 contains two A1 mini plates with all four parts and four locating pins: 0.16 mm,
-three walls and ordinary 15% Grid. Estimated total 4 h 54 min and 69.76 g,
+three walls and ordinary 15% Grid. White Polymaker PolyTerra PLA is embedded. Estimated total 4 h 46 min and 73.70 g,
 including supports and adhesion material. Physical printing remains untested.

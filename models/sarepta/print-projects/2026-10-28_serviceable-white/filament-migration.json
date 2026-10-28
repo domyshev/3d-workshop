@@ -1,0 +1,18 @@
+{
+  "reference_project": "stl_exports/2026-08-10_super_cube_good.3mf",
+  "reference_index": 0,
+  "profile": "PolyTerra PLA @BBL A1M",
+  "colour": "#FFFFFF",
+  "changed_project_keys": [
+    "filament_cost",
+    "filament_density",
+    "filament_max_volumetric_speed",
+    "filament_settings_id",
+    "filament_vendor",
+    "textured_plate_temp",
+    "textured_plate_temp_initial_layer",
+    "filament_start_gcode",
+    "filament_colour"
+  ],
+  "process_preserved": true
+}
