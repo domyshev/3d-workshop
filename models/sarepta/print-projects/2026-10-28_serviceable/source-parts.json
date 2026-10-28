@@ -1,0 +1,27 @@
+[
+  {
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_retainer.stl",
+    "sha256": "403df6c02991fb2252e26334c87c00543da69a976fac9f646617ab2cb149d913",
+    "copies": 1
+  },
+  {
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_upper.stl",
+    "sha256": "4b66fdfb6adf0439e2f054cb3132e40c808d245e053f9e7b0b4d8300bf4d3870",
+    "copies": 1
+  },
+  {
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_dashboard.stl",
+    "sha256": "79fd171bf08cc9a14b5ccd2113f562bcf61a233e1ce1ed11d6df6e837660ad0c",
+    "copies": 1
+  },
+  {
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_lower.stl",
+    "sha256": "40604a330d62ca0d37fd87793b6fc0fec7c9d174306018a465607c400ef17a7d",
+    "copies": 1
+  },
+  {
+    "source": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+    "sha256": "406a1be28e5e3a393f7769947ce41d0febbab2cef39bedee3a07525d97f38977",
+    "copies": 4
+  }
+]

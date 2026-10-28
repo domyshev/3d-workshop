@@ -1,0 +1,56 @@
+{
+  "project": "stl_exports/2026/2026.10/2026.10.28/2026-10-28_sarepta_170mm_serviceable_print.3mf",
+  "sha256": "83a6c969ddb44e62a1deca66f918c5a98518138f679a828809c92355bd543efc",
+  "printer": "Bambu Lab A1 mini",
+  "nozzle_mm": 0.4,
+  "material": "Generic PLA",
+  "colour": [
+    "#A6A6A6"
+  ],
+  "layer_height_mm": 0.16,
+  "wall_loops": 3,
+  "sparse_infill": "15% Grid",
+  "plates": [
+    {
+      "plate": 1,
+      "objects": [
+        "Sarepta lower"
+      ],
+      "estimated_seconds": 14269,
+      "filament_g": 50.9,
+      "bbox_with_brim_mm": [
+        18.98177,
+        18.975620000000003,
+        175.70901,
+        175.04236
+      ]
+    },
+    {
+      "plate": 2,
+      "objects": [
+        "Sarepta dashboard",
+        "Sarepta upper",
+        "Sarepta retainer",
+        "Sarepta pin_1",
+        "Sarepta pin_2",
+        "Sarepta pin_3",
+        "Sarepta pin_4"
+      ],
+      "estimated_seconds": 3359,
+      "filament_g": 18.86,
+      "bbox_with_brim_mm": [
+        15.41065,
+        6.75757,
+        170.55209000000002,
+        170.54596
+      ]
+    }
+  ],
+  "total_estimated_seconds": 17628,
+  "total_filament_g": 69.75999999999999,
+  "all_eight_objects_included": true,
+  "all_plate_bounds_inside_180mm_bed": true,
+  "no_mesh_repairs": true,
+  "checks_pass": true,
+  "limits": "Slicer estimates include supports and adhesion; printer calibration, material condition and physical strength remain untested."
+}

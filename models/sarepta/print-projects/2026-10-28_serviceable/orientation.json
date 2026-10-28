@@ -1,0 +1,138 @@
+[
+  {
+    "name": "lower",
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_lower.stl",
+    "invert_x_180": true,
+    "source_bounds_mm": [
+      [
+        0.0,
+        -29.565217971801758,
+        0.0
+      ],
+      [
+        170.0,
+        29.565217971801758,
+        25.0
+      ]
+    ]
+  },
+  {
+    "name": "upper",
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_upper.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        2.3440771102905273,
+        -27.027143478393555,
+        25.0
+      ],
+      [
+        170.0,
+        27.027143478393555,
+        30.579347610473633
+      ]
+    ]
+  },
+  {
+    "name": "dashboard",
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_dashboard.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        51.98912811279297,
+        -20.399999618530273,
+        20.326086044311523
+      ],
+      [
+        59.13043212890625,
+        20.399999618530273,
+        28.717391967773438
+      ]
+    ]
+  },
+  {
+    "name": "retainer",
+    "source": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_retainer.stl",
+    "invert_x_180": true,
+    "source_bounds_mm": [
+      [
+        59.38043212890625,
+        -20.399999618530273,
+        17.92608642578125
+      ],
+      [
+        61.619998931884766,
+        20.399999618530273,
+        21.92608642578125
+      ]
+    ]
+  },
+  {
+    "name": "pin_1",
+    "source": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        -2.0,
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        2.0,
+        8.0
+      ]
+    ]
+  },
+  {
+    "name": "pin_2",
+    "source": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        -2.0,
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        2.0,
+        8.0
+      ]
+    ]
+  },
+  {
+    "name": "pin_3",
+    "source": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        -2.0,
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        2.0,
+        8.0
+      ]
+    ]
+  },
+  {
+    "name": "pin_4",
+    "source": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+    "invert_x_180": false,
+    "source_bounds_mm": [
+      [
+        -2.0,
+        -2.0,
+        0.0
+      ],
+      [
+        2.0,
+        2.0,
+        8.0
+      ]
+    ]
+  }
+]

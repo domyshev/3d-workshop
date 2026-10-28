@@ -108,3 +108,10 @@ archived as a comparison, not the current model. With identical slicing
 settings, pockets save only 0.48 g (2.92%) and add 2 min 39 s. The accepted
 unpocketed horizontal upper remains recommended; physical strength of the
 pocket candidate has not been tested.
+
+## Prepared printing project — 2026-10-28
+
+[The sliced serviceable-dashboard project](print-projects/2026-10-28_serviceable/README.md)
+contains two A1 mini plates with all four parts and four locating pins: 0.16 mm,
+three walls and ordinary 15% Grid. Estimated total 4 h 54 min and 69.76 g,
+including supports and adhesion material. Physical printing remains untested.
