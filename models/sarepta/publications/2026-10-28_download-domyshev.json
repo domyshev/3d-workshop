@@ -1,0 +1,45 @@
+{
+  "published_at": "2026-10-28T14:08:17.598164+01:00",
+  "site": "https://download.domyshev.com",
+  "canonical_site": "https://app-download.iliago.com",
+  "access": "Existing download-site login retained; unauthenticated file requests redirect to login.",
+  "files": [
+    {
+      "id": "15f1b50245bd4bedb4ef851516c40257",
+      "name": "Sarepta_170mm_Bambu_A1mini_016mm_3walls_15percent.3mf",
+      "size": 8699566,
+      "sha256": "83a6c969ddb44e62a1deca66f918c5a98518138f679a828809c92355bd543efc",
+      "url": "https://download.domyshev.com/file/15f1b50245bd4bedb4ef851516c40257"
+    },
+    {
+      "id": "bf80baae79554028a3916f7fcefd52a5",
+      "name": "Sarepta_170mm_all_parts.png",
+      "size": 69882,
+      "sha256": "eeaead0be893cecec6b51c82520149574a68a615f5842f3807d102c5fc754316",
+      "url": "https://download.domyshev.com/file/bf80baae79554028a3916f7fcefd52a5"
+    },
+    {
+      "id": "6c7134ab58804be18f512a9b363ec2d0",
+      "name": "Sarepta_170mm_dashboard_and_retainer.png",
+      "size": 29591,
+      "sha256": "3083b834d0f33893844af45ba5bef7110380479ceecdea3702b35dd6b8585f9b",
+      "url": "https://download.domyshev.com/file/6c7134ab58804be18f512a9b363ec2d0"
+    },
+    {
+      "id": "87dc8e7e6d0945cea56ced1c4464cd32",
+      "name": "Sarepta_Bambu_plate_1_hull.png",
+      "size": 8131,
+      "sha256": "214ba016a3e459294fa5ac2f7f5108bcd24385a7082c383b4b991879ce94a4cc",
+      "url": "https://download.domyshev.com/file/87dc8e7e6d0945cea56ced1c4464cd32"
+    },
+    {
+      "id": "69673f0670f74618bb0e721e924dcf25",
+      "name": "Sarepta_Bambu_plate_2_cover_and_pins.png",
+      "size": 5413,
+      "sha256": "f4e1c9cef006ea49a20a97e7e4e39f04b1b0582f2e2a8fccb6639fbd73b7c53a",
+      "url": "https://download.domyshev.com/file/69673f0670f74618bb0e721e924dcf25"
+    }
+  ],
+  "verified": "All five server-side hashes match the originals; the application container sees the new catalog/project. Public HTTPS redirect and login response verified. Existing eleven catalog entries preserved.",
+  "infrastructure_changes": false
+}
