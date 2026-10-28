@@ -1,0 +1,8 @@
+{
+  "exact_zero_area_facets_removed": 60,
+  "nonzero_area_facets_removed": 0,
+  "vertices_moved": 0,
+  "holes_patched": 0,
+  "components_removed": 0,
+  "result_basic_mesh_checks_pass": true
+}

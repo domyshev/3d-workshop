@@ -1,0 +1,1811 @@
+{
+  "samples": 164,
+  "all_partition_samples_meet_at_z_25": true,
+  "checks": [
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -19.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -18.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -17.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -16.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -15.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -14.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -13.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -12.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -11.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -10.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -9.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -8.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -7.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -6.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -5.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -4.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -3.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -2.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -1.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        -0.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        0.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        1.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        2.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        3.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        4.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        5.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        6.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        7.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        8.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        9.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        10.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        11.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        12.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        13.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        14.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        15.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        16.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        17.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        18.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        19.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.1,
+        20.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -19.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -18.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -17.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -16.9987
+      ],
+      "before_gap_mm": 2.7250919676460725,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -15.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -14.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -13.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -12.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -11.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -10.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -9.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -8.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -7.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -6.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -5.9987
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -4.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -3.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -2.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -1.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        -0.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        0.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        1.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        2.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        3.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        4.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        5.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        6.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        7.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        8.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        9.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        10.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        11.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        12.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        13.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        14.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        15.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        16.0013
+      ],
+      "before_gap_mm": 3.380434036254883,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        17.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        18.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        19.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "dashboard",
+      "xy_mm": [
+        58.7,
+        20.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -19.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -18.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -17.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -16.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -15.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -14.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -13.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -12.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -11.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -10.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -9.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -8.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -7.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -6.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -5.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -4.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -3.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -2.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -1.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        -0.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        0.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        1.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        2.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        3.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        4.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        5.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        6.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        7.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        8.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        9.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        10.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        11.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        12.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        13.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        14.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        15.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        16.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        17.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        18.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        19.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.1,
+        20.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -19.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -18.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -17.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -16.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -15.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -14.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -13.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -12.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -11.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -10.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -9.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -8.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -7.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -6.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -5.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -4.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -3.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -2.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -1.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        -0.9987
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        0.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        1.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        2.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        3.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        4.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        5.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        6.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        7.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        8.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        9.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        10.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        11.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        12.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        13.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        14.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        15.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        16.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        17.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        18.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        19.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    },
+    {
+      "partition": "motor-well front",
+      "xy_mm": [
+        148.7,
+        20.0013
+      ],
+      "before_gap_mm": 1.6499996185302734,
+      "after_gap_mm": 0.0,
+      "lower_top_mm": 25.0,
+      "upper_bottom_mm": 25.0
+    }
+  ],
+  "limits": "Sampled vertical mesh intersections, not physical print flatness or a global wall-thickness certification."
+}

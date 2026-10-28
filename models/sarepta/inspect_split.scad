@@ -1,2 +1,2 @@
-// Open lower hull, 4 mm horizontal glue rim and unchanged full cover.
-include <releases/2026-10-27_open-4mm-rim/view.scad>
+// Horizontal rim and compartment partitions meet the unchanged cover at Z=25.
+include <releases/2026-10-28_partition-joint/view.scad>

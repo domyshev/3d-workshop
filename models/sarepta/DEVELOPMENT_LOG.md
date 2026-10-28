@@ -488,3 +488,13 @@ floor checks and all 5032 lower-land contact samples pass. Exact-zero-area
 float32 export cleanup removes 60 collapsed facets without moving vertices,
 removing nonzero faces/components or patching holes. Reproduction is scripted.
 Actual STL images, reports and sources are archived; new physical fit untested.
+
+## Partition contact correction — 2026-10-28
+
+The user identified a vertical gap above the dashboard in the open-rim lower.
+Actual mesh rays confirmed the partition stopped at 23.35 while the upper starts
+at 25 mm. The same 1.65 mm slit existed above the motor-well partition. The
+access cutter now protects these narrow wall tops. Both meet the unchanged
+cover at Z=25; 164 wall-contact samples, 5128 rim/contact samples, 642 exterior
+samples and all 25 material probes pass. No new deck sheet closes the open bow.
+See `releases/2026-10-28_partition-joint/README.md`; physical fit is untested.

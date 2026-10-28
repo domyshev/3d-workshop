@@ -58,3 +58,13 @@ The latest open-rim release implements this and reuses the accepted non-pocketed
 upper unchanged. The bow is accessible before fitting the cover; the lower
 locker wall, footwell shelf and main aft framing remain. No additional height
 change. The previous closed-top horizontal lower is superseded, not erased.
+
+## Partition contact correction — 2026-10-28
+
+The user identified a vertical gap above the dashboard in the open-rim lower.
+Actual mesh rays confirmed the partition stopped at 23.35 while the upper starts
+at 25 mm. The same 1.65 mm slit existed above the motor-well partition. The
+access cutter now protects these narrow wall tops. Both meet the unchanged
+cover at Z=25; 164 wall-contact samples, 5128 rim/contact samples, 642 exterior
+samples and all 25 material probes pass. No new deck sheet closes the open bow.
+See `releases/2026-10-28_partition-joint/README.md`; physical fit is untested.

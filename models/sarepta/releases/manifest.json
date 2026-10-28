@@ -441,7 +441,7 @@
     "sha256": "d4c3867642532822648314235489d48eafeb8f782b58e262efc281fe676ee307",
     "changes": "Restore bow access; retain nominal 4 mm horizontal perimeter rim, raised nose edge, local socket seats and connecting webs. Non-pocketed upper and pins unchanged.",
     "limitations": "Sampled exterior/contact/material checks and topology pass; new physical printing and fit untested. Internal clearance and glue geometry are model allowances, not factory measurements.",
-    "is_current": true,
+    "is_current": false,
     "source_snapshot": "releases/2026-10-27_open-4mm-rim/source.scad",
     "preserved_on": "2026-10-27",
     "previews_generated_from": "actual final connected lower and unchanged accepted upper STL",
@@ -465,6 +465,40 @@
     },
     "horizontal_join_z_mm": 25,
     "nominal_glue_rim_width_mm": 4,
+    "physical_print_tested": false
+  },
+  {
+    "id": "2026-10-28_partition-joint",
+    "title": "Compartment partitions meet the horizontal cover",
+    "stl": "2026-10-28_sarepta_170mm_partition_joint_lower.stl",
+    "model_length_mm": 170,
+    "original_export_path": "stl_exports/2026/2026.10/2026.10.28/2026-10-28_sarepta_170mm_partition_joint_lower.stl",
+    "sha256": "1091cb06f8ea4503e8d117aa0afb95981fa96a9a32801395a06fd8aa63953f46",
+    "changes": "Protect dashboard and motor-well partition tops from the access cutter, closing the 1.65 mm slits at Z=25. Open interior, exterior, 4 mm rim and accepted cover retained.",
+    "limitations": "Sampled digital contact and topology checks pass; physical fit and printing untested. Parent prototype uncertainties apply.",
+    "is_current": true,
+    "source_snapshot": "releases/2026-10-28_partition-joint/source.scad",
+    "preserved_on": "2026-10-28",
+    "previews_generated_from": "actual exported STL",
+    "mesh_report": "mesh-report-lower.json",
+    "size_mm": [
+      170.0,
+      59.130435943603516,
+      25.0
+    ],
+    "triangles": 65554,
+    "basic_mesh_checks_pass": true,
+    "additional_model": {
+      "stl": "2026-10-27_sarepta_170mm_horizontal_upper.stl",
+      "size_mm": [
+        167.6559226512909,
+        54.05428695678711,
+        5.579347610473633
+      ],
+      "sha256": "bd1810b8cca412cd12a612e538cb90e8dd2faef51aebb770baa4e15174715526",
+      "mesh_report": "mesh-report-upper.json"
+    },
+    "horizontal_join_z_mm": 25,
     "physical_print_tested": false
   }
 ]

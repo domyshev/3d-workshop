@@ -73,6 +73,10 @@ measurements and preserve openings when adding reinforcement. Generate pin
 bores on shared axes normal to the new plane, retaining blind end walls.
 Check the actual meshes for planar bounds and sampled contact support. A
 reported warped print is feedback, not proof of temperature as its cause.
+Check compartment partition tops separately from perimeter lands: a rim-only
+contact test can pass while a dashboard or motor-well wall stops below the
+cover. Sample both sides of backed recesses and verify the actual assembled
+mesh has continuous intended closure, without extending ordinary floor frames.
 
 ## Preserve a reviewable milestone
 

@@ -4,18 +4,17 @@ Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
 
-## Current state — 2026-10-27
+## Current state — 2026-10-28
 
-The latest [open 4 mm rim release](releases/2026-10-27_open-4mm-rim/README.md)
-restores access to the bow compartment while retaining the horizontal Z=25 mm
-joint, raised nose edge and a nominal 4 mm inward glue land. Only small local
-socket seats and connecting webs extend beyond the rim. The preceding full
-nose landing was rejected because it blocked access before fitting the cover.
-The accepted non-pocketed upper and 4 x 8 pins are unchanged. No further height
-increase is introduced: the 170 mm assembly remains 30.579 mm high. Both parts
-pass basic mesh checks; 25 material probes, 642 sampled exterior floor checks
-and 5032 glue-contact samples pass. Physical printing of this revision is
-untested. Open the [side-by-side inspection](inspect_split.scad) to inspect it.
+The latest [partition-joint correction](releases/2026-10-28_partition-joint/README.md)
+closes the 1.65 mm slits above the dashboard and motor-well partition introduced
+by the preceding open-rim cutter. Their tops now meet the unchanged cover at
+Z=25, verified at 164 cross-panel samples. The nominal 4 mm rim, open bow
+access, pin sockets, framing and exterior are retained. Mesh checks, 25 material
+probes, 642 sampled exterior checks and 5128 contact samples pass. The accepted
+non-pocketed upper and 4 x 8 pins are unchanged. The 170 mm assembly remains
+30.579 mm high. Physical printing is untested. Open the
+[side-by-side inspection](inspect_split.scad) to inspect both actual meshes.
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck
