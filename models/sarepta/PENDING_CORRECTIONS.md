@@ -79,3 +79,19 @@ strip is removed with a 0.015 mm skin allowance. All four STL meshes and sampled
 material, movement and contact checks pass; physical fit is untested. See
 `releases/2026-10-28_serviceable-dashboard/README.md` for dimensions, limits,
 print orientation and removal sequence. Use the updated upper for this version.
+
+## Release candidate 0.1 and successful print — 2026-10-30
+
+The owner reports an excellent print of the latest variant and nominates it
+as the candidate for release 0.1. Crucially, the model was manually rotated
+lengthwise along the bed, parallel to an edge, **not diagonally**. Use this as
+the successful print baseline. X-versus-Y alignment and exact printed-part
+coverage were not specified. The last prepared job was the original second
+plate, extracted to a single-plate file.
+
+The archived white 3MFs still contain the earlier 45-degree preparation and
+must not be mistaken for the saved successful placement. No geometry, process
+settings or archived binary was changed by this documentation update. Reset
+the in-plane angle, check bed clearance and re-slice when reproducing the
+baseline. See `release-candidates/0.1/README.md` and its artifact hash manifest.
+Assembly fit and watertightness remain unconfirmed; no final release tag made.

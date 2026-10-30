@@ -1,0 +1,70 @@
+{
+  "candidate_version": "0.1",
+  "status": "release_candidate",
+  "formal_release": false,
+  "report_date": "2026-10-30",
+  "evidence": "Owner report in the project conversation: this print turned out excellent; nominate this exact variant for release 0.1.",
+  "geometry_release": "2026-10-28_serviceable-dashboard",
+  "print_profile": "2026-10-28_serviceable-white",
+  "nominal_model_length_mm": 170,
+  "baseline_print_settings": {
+    "printer": "Bambu Lab A1 mini",
+    "nozzle_mm": 0.4,
+    "material": "Polymaker PolyTerra PLA",
+    "colour": "#FFFFFF",
+    "layer_height_mm": 0.16,
+    "wall_loops": 3,
+    "infill": "15% Grid"
+  },
+  "successful_print_orientation": {
+    "longitudinal_axis_parallel_to_bed_edge": true,
+    "diagonal": false,
+    "angle_to_nearest_bed_edge_degrees": 0,
+    "bed_x_or_y_axis": "not specified by owner",
+    "changed_by": "owner in Bambu Studio before printing"
+  },
+  "archive_caveat": "Full white 3MF and extracted original plate-2 copy retain the prepared 45-degree in-plane orientation. They are immutable preparation references, not a saved copy of the owner-adjusted successful layout. Reset to lengthwise placement and re-slice to reproduce the reported orientation.",
+  "validation_limits": [
+    "Exact part coverage of the successful print was not specified; the preceding prepared job contained the original second plate.",
+    "No saved owner-adjusted 3MF, photos or dimensional measurements supplied.",
+    "Assembly fit, long-term strength, motor mounting and watertightness are not established by this report.",
+    "No final release tag created."
+  ],
+  "artifacts": [
+    {
+      "path": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_retainer.stl",
+      "sha256": "403df6c02991fb2252e26334c87c00543da69a976fac9f646617ab2cb149d913",
+      "size_bytes": 16684
+    },
+    {
+      "path": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_upper.stl",
+      "sha256": "4b66fdfb6adf0439e2f054cb3132e40c808d245e053f9e7b0b4d8300bf4d3870",
+      "size_bytes": 331784
+    },
+    {
+      "path": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_dashboard.stl",
+      "sha256": "79fd171bf08cc9a14b5ccd2113f562bcf61a233e1ce1ed11d6df6e837660ad0c",
+      "size_bytes": 12284
+    },
+    {
+      "path": "models/sarepta/releases/2026-10-28_serviceable-dashboard/2026-10-28_sarepta_170mm_service_lower.stl",
+      "sha256": "40604a330d62ca0d37fd87793b6fc0fec7c9d174306018a465607c400ef17a7d",
+      "size_bytes": 3579284
+    },
+    {
+      "path": "models/sarepta/releases/2026-10-25_locating-pins/2026-10-25_sarepta_locating_pin_4x8.stl",
+      "sha256": "406a1be28e5e3a393f7769947ce41d0febbab2cef39bedee3a07525d97f38977",
+      "size_bytes": 25484
+    },
+    {
+      "path": "models/sarepta/print-projects/2026-10-28_serviceable-white/2026-10-28_sarepta_170mm_serviceable_WHITE_PolyTerra.3mf",
+      "sha256": "05e2cc9886bc1173633b056fb7f1ad27aca5cf406c3629445caf986bc8ab0394",
+      "size_bytes": 8467993
+    },
+    {
+      "path": "stl_exports/2026/2026.10/2026.10.28/2026-10-28_sarepta_WHITE_plate2_only.3mf",
+      "sha256": "07630272943e7211fbf4fedbc64a2262851e0878b7087bb23692c53c5aecc159",
+      "size_bytes": 859613
+    }
+  ]
+}

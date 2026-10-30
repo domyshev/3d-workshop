@@ -4,7 +4,7 @@ Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
 
-## Current state — 2026-10-28
+## Current state — 2026-10-30
 
 The latest [serviceable dashboard release](releases/2026-10-28_serviceable-dashboard/README.md)
 contains four STL parts: reinforced lower hull, internally revised upper cover,
@@ -13,7 +13,12 @@ lower chine strip is removed; upper protective rim and side corrugations remain.
 Front locating sockets have full-height webs and sloped roots. The dashboard
 slides aft after removing the stop bar, even with the upper cover glued.
 All four meshes, 33 material probes and sampled movement/contact checks pass.
-Physical print and fit are untested. Open [the separated view](inspect_split.scad).
+The owner reported an excellent print on 2026-10-30 and nominated this variant
+as [release candidate 0.1](release-candidates/0.1/README.md). **The successful
+print was rotated lengthwise along the bed, not diagonally.** Archived 3MFs still
+store the earlier 45-degree preparation; reorient and re-slice to reproduce the
+successful placement. Exact part coverage and assembled fit are not confirmed.
+Open [the separated view](inspect_split.scad).
 
 The current editable model includes three bow stems, paired tunnels, a foredeck
 hatch, continuous protective rim, inward-sloping upper belt and shallow foredeck
@@ -114,4 +119,6 @@ pocket candidate has not been tested.
 [The corrected white-filament printing project](print-projects/2026-10-28_serviceable-white/README.md)
 contains two A1 mini plates with all four parts and four locating pins: 0.16 mm,
 three walls and ordinary 15% Grid. White Polymaker PolyTerra PLA is embedded. Estimated total 4 h 46 min and 73.70 g,
-including supports and adhesion material. Physical printing remains untested.
+including supports and adhesion material. A successful lengthwise print was
+reported on 2026-10-30; see [candidate 0.1](release-candidates/0.1/README.md) for
+the crucial difference from the archived diagonal layout.
