@@ -1,0 +1,121 @@
+{
+  "exposed_stringer_height_differences_mm": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "buried_stringer_samples_excluded_from_top_comparison": 6,
+  "stern_rib_top_mm": 8.130434782608695,
+  "stern_rib_start_mm": 162.3,
+  "measured_rib_tops_mm": [
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292,
+    8.1304349899292
+  ],
+  "measured_drain_bottoms_mm": [
+    8.930435198997053,
+    8.930435198997055
+  ],
+  "drain_lower_clearance_mm": [
+    0.8000004163883574,
+    0.8000004163883592
+  ],
+  "drain_axes_y_mm": [
+    -12.934782608695652,
+    12.934782608695652
+  ],
+  "mesh": {
+    "lower": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_lower.stl",
+      "vertices": 73426,
+      "triangles": 146856,
+      "bounds_mm": [
+        [
+          1.8197427988052368,
+          -27.947391510009766,
+          0.0
+        ],
+        [
+          170.0,
+          27.947391510009766,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        168.18025720119476,
+        55.89478302001953,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.300859821966427e-11,
+      "signed_volume_mm3": 23247.757329923465,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_upper.stl",
+      "vertices": 20356,
+      "triangles": 40716,
+      "bounds_mm": [
+        [
+          2.1465330123901367,
+          -27.10268211364746,
+          25.0
+        ],
+        [
+          170.0,
+          27.10268211364746,
+          30.579347610473633
+        ]
+      ],
+      "size_mm": [
+        167.85346698760986,
+        54.20536422729492,
+        5.579347610473633
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.999253496542306e-07,
+      "signed_volume_mm3": 5782.340609169451,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "external_bow_samples": 256,
+  "max_external_bow_change_mm": 0.0,
+  "material_checks": 564,
+  "failures": [],
+  "side_wall_probes": 476,
+  "minimum_sampled_horizontal_wall_mm": 1.0473857867171787,
+  "join_samples": 119,
+  "max_join_difference_over_0_002mm_height_mm": 0.0010994053703718976,
+  "max_tangent_angle_difference_deg": 0.08140681183016837,
+  "max_longitudinal_second_difference_over_0_25mm_mm": 0.0006693924109022475,
+  "bottom_samples": 308,
+  "max_bottom_change_mm": 0.0,
+  "bow_plane_error_mm": 3.1086244689504383e-15,
+  "limits": "Finite sampled geometry checks and rendered critical views. Physical print and fit are untested. The protective skirt is intentionally removed; comparisons exclude its seam band.",
+  "checks_pass": true
+}

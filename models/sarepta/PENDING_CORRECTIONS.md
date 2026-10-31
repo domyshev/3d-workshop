@@ -137,3 +137,11 @@ See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The
 ## Closed bow cap and hidden skirt studs — 2026-11-01
 
 The [new correction](releases/2026-10-31_blind-rim-closed-bow/README.md) removes the bow cutter that opened two triangular passages, restores the original cap and blends the board root. Separate 0.8 x 1.5 mm headless studs now enter blind pockets in both hull and skirt; neither component is pierced. Actual archived meshes, 564 inherited material checks and 458 additional probes pass, including 24 checks in the former bow openings. Physical printing and assembled fit remain untested.
+
+## Fair inner bow-board root — 2026-11-01
+
+The [fair-root revision](releases/2026-11-01_fair-bow-root/README.md) replaces the projecting rectangular root/end with one swept inner transition to the horizontal landing, fading into the original sidewall. The accepted bow cap and all hidden stud/skirt components are preserved. The exact exported meshes, closure probes, legacy regression and targeted end-face checks pass; physical print and fit remain untested.
+
+## Forward hatch-hinge mounting sockets — 2026-11-01
+
+The [hinge-socket revision](releases/2026-11-01_hatch-hinge-sockets/README.md) adds two 2 mm top-entry blind bores ahead of the hatch, at X=32.2 and Y=±5 mm. Solid 4.4 mm underside bosses support the 2.8 mm deep holes with 0.4 mm closed bottoms. The upper export and sampled geometry checks pass; all other component meshes are byte-identical. Physical hinge/print fit remains untested.

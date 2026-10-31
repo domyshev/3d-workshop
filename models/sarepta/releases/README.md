@@ -85,3 +85,11 @@ See [detachable-rim revision](2026-10-31_detachable-rim/README.md). The inward b
 ## 2026-10-31 export, completed 2026-11-01: closed bow and blind skirt studs
 
 [Milestone](2026-10-31_blind-rim-closed-bow/README.md): restores the forward cap and replaces exposed headed pins with separate headless studs in blind sockets on both components. Archived raw/final meshes and finite geometry checks pass; print fit remains untested.
+
+## 2026-11-01: fair bow-board root
+
+[Milestone](2026-11-01_fair-bow-root/README.md): continuous inner transition replaces the separate ledge and abrupt end. Closure, exterior/bottom, joint and hidden-pin checks pass. Other component meshes remain byte-identical.
+
+## 2026-11-01: hatch-hinge mounting sockets
+
+[Milestone](2026-11-01_hatch-hinge-sockets/README.md): two 2 mm blind top-entry sockets with solid underside reinforcements ahead of the hatch. Upper topology and finite material checks pass; physical fit is untested.

@@ -1,0 +1,14 @@
+{
+  "old_end_face_comparison": {
+    "before": {
+      "exposed_x58_faces": 12,
+      "area_mm2": 4.700219706995995
+    },
+    "after": {
+      "exposed_x58_faces": 0,
+      "area_mm2": 0
+    }
+  },
+  "checks_pass": true,
+  "limits": "Targeted end-face check on actual exported meshes; global surface fairness is assessed by rendered views and guide construction."
+}
