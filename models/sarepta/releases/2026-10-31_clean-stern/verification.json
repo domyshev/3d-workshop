@@ -1,0 +1,81 @@
+{
+  "mesh": {
+    "lower": {
+      "file": "2026-10-31_sarepta_170mm_stern_lower.stl",
+      "vertices": 38431,
+      "triangles": 76866,
+      "bounds_mm": [
+        [
+          0.0,
+          -29.565217971801758,
+          0.0
+        ],
+        [
+          170.0,
+          29.565217971801758,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 5.002220859751105e-12,
+      "signed_volume_mm3": 29284.54290011694,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper": {
+      "file": "2026-10-31_sarepta_170mm_stern_upper.stl",
+      "vertices": 10255,
+      "triangles": 20514,
+      "bounds_mm": [
+        [
+          2.344099998474121,
+          -27.027143478393555,
+          25.0
+        ],
+        [
+          170.0,
+          27.027143478393555,
+          30.579347610473633
+        ]
+      ],
+      "size_mm": [
+        167.65590000152588,
+        54.05428695678711,
+        5.579347610473633
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.4232871486137285e-10,
+      "signed_volume_mm3": 5500.8211213013765,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "material_checks": 939,
+  "failures": [],
+  "bore_diameter_mm": 2.0,
+  "pin_diameter_mm": 1.6,
+  "rim_normal_width_mm": 4,
+  "new_transom_centre_mm": 17.923369565217392,
+  "new_transom_shoulder_mm": 19.309239130434783,
+  "drain_diameter_mm": 2.217391304347826,
+  "join_samples": 119,
+  "max_joint_error_mm": 2.8660378482925027e-06,
+  "max_joint_angle_error_deg": 0.04996463246967594,
+  "exterior_samples": 1394,
+  "max_exterior_side_change_mm": 9.660418953671979e-08,
+  "limits": "Sampled digital checks. Physical print, fit and drainage are untested. New rim and stern are intentional owner-directed changes.",
+  "checks_pass": true
+}

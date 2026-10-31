@@ -1,0 +1,76 @@
+{
+  "mesh": {
+    "lower": {
+      "file": "2026-10-31_sarepta_170mm_fair_lower.stl",
+      "vertices": 34988,
+      "triangles": 69980,
+      "bounds_mm": [
+        [
+          0.0,
+          -29.565217971801758,
+          0.0
+        ],
+        [
+          170.0,
+          29.565217971801758,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 1.0913936421275139e-10,
+      "signed_volume_mm3": 31963.5793582295,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper": {
+      "file": "2026-10-31_sarepta_170mm_fair_upper.stl",
+      "vertices": 9805,
+      "triangles": 19614,
+      "bounds_mm": [
+        [
+          2.344099998474121,
+          -27.027143478393555,
+          25.0
+        ],
+        [
+          170.0,
+          27.027143478393555,
+          30.579347610473633
+        ]
+      ],
+      "size_mm": [
+        167.65590000152588,
+        54.05428695678711,
+        5.579347610473633
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.4232871486137285e-10,
+      "signed_volume_mm3": 5503.120260166039,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "join_samples": 119,
+  "max_join_offset_mm": 2.8660378497136207e-06,
+  "max_transverse_tangent_error_deg": 0.04996463246967594,
+  "side_wall_samples": 476,
+  "minimum_sampled_horizontal_wall_mm": 1.1701630197641641,
+  "lower_exterior_comparisons": 1156,
+  "max_lower_exterior_change_mm": 0.0,
+  "failures": [],
+  "limits": "Sampled geometry checks, not a global minimum-wall or physical-fit certification. Previous intentional protective rim remains on the lower hull.",
+  "checks_pass": true
+}

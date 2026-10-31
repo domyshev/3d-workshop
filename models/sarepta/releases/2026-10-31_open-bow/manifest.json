@@ -1,0 +1,109 @@
+{
+  "revision": "2026-10-31_open-bow",
+  "source_available": true,
+  "dashboard_visible_by_default": false,
+  "physical_print_verified": false,
+  "raw_export_directory": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31",
+  "files": {
+    "2026-10-31_sarepta_170mm_open_bow_dashboard.stl": {
+      "sha256": "a444f15090879a9a0ff9f326fe8b6e7a2d5fd790ad6dc9f3ff1bc5762ffbcd81",
+      "bytes": 1484
+    },
+    "2026-10-31_sarepta_170mm_open_bow_lower.stl": {
+      "sha256": "04d2fb7d15f20f8d8285f0b86f4a1f3c244dde92c0e903147770fb19e1514bd0",
+      "bytes": 5252384
+    },
+    "2026-10-31_sarepta_170mm_open_bow_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-10-31_sarepta_170mm_open_bow_upper.stl": {
+      "sha256": "ae15fee2fbc0fc9e61173367a398d38ac86bd0ba54cdd552a33c3cd810182e6d",
+      "bytes": 2035884
+    },
+    "README.md": {
+      "sha256": "0a03823fd4d4bf62633090ebfe486b9a113adba5ea0186e4a3a7ce772c01402a",
+      "bytes": 2879
+    },
+    "assembly-view.scad": {
+      "sha256": "fab099bbdc5979013380050c294366737d7c60a76b25dd2cf547bae159873a22",
+      "bytes": 82
+    },
+    "belt-guides.json": {
+      "sha256": "7886a530907acf7313e3962f424f5816a496102d9024f1ccc2e5b9eaa35d1ab3",
+      "bytes": 1117689
+    },
+    "belt.scad": {
+      "sha256": "ca8f33fea969434066fd3abebfd4cad093ea07b99f54a3b2b8620919d6b98f0e",
+      "bytes": 2050161
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "994a852f809b381042434c465c5656021de56e34ab50e692512cd101c824d5a2",
+      "bytes": 230
+    },
+    "cleanup-upper.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.sh": {
+      "sha256": "60ad8b07d014ca83b92382109cff2e84a0606c4040b951ee735c0d16a2e4b29c",
+      "bytes": 650
+    },
+    "feedback/owner-feedback-01.png": {
+      "sha256": "bda14c587565240bc9e46232586767d056e28f698d980d0250213d43d56bea44",
+      "bytes": 107261
+    },
+    "feedback/owner-feedback-02.png": {
+      "sha256": "adec61c4fa561f9549a1d0046e27f0663b1e015dee3d5c8c8405dc72707f595b",
+      "bytes": 78041
+    },
+    "feedback/owner-feedback-03.png": {
+      "sha256": "e85289862ecf22d5c17a97cddc001f5df7741975862e70a3d4b4250dbe42863b",
+      "bytes": 92022
+    },
+    "generate_belt.py": {
+      "sha256": "831a7f4b75192cf901988788f4a7a9ed0baa314955e73d0f705aa33cba390ddc",
+      "bytes": 3154
+    },
+    "inspection-view.scad": {
+      "sha256": "80a4e08534b8fb8b96a1541fc5e63c8969d2962e43354fdc93dce2679d29187e",
+      "bytes": 1298
+    },
+    "inspection.png": {
+      "sha256": "2e062f26e38d90c642a39d556621fe26c023ee85e4be2b4b5cb57c12657a1466",
+      "bytes": 97784
+    },
+    "interior-after.png": {
+      "sha256": "f1f8bf50e89361aa077c48c996b12685ffc0bcd93d336df6c72fb215ca6c5389",
+      "bytes": 132441
+    },
+    "interior-before.png": {
+      "sha256": "36c95d3215704d2ef7ffa1bebfb141b1f4d4096e8ebf302aac81beacbeeb115c",
+      "bytes": 122481
+    },
+    "raw/2026-10-31_sarepta_170mm_open_bow_lower.stl": {
+      "sha256": "694936615ddccf85b481d49e6213b65cd596453e936447a131b12aa605edea10",
+      "bytes": 5280984
+    },
+    "raw/2026-10-31_sarepta_170mm_open_bow_upper.stl": {
+      "sha256": "c1015929be8a330cfd732e5988791ee867738cda01857cb69301639f5c866761",
+      "bytes": 2035884
+    },
+    "source.scad": {
+      "sha256": "e9a032ef54f8b7f964ccb223473cef9315102fe09f787ab2aa4459dcb044bf1b",
+      "bytes": 9943
+    },
+    "verification.json": {
+      "sha256": "6e9fb6a9918774aa84713b3f38635a52f76316634aaded8801d5233a150de7cb",
+      "bytes": 2463
+    },
+    "verify.py": {
+      "sha256": "e8f5342b75e018cd57ffa07b7363ef900c03a2c05abf6c645a2e0e10d2186216",
+      "bytes": 6848
+    }
+  }
+}

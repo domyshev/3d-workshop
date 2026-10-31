@@ -1,0 +1,78 @@
+{
+  "2026-10-31_sarepta_170mm_stern_dashboard.stl": {
+    "sha256": "a444f15090879a9a0ff9f326fe8b6e7a2d5fd790ad6dc9f3ff1bc5762ffbcd81",
+    "bytes": 1484
+  },
+  "2026-10-31_sarepta_170mm_stern_lower.stl": {
+    "sha256": "628bf89f68d167b68ef63e0da5fabf97fceb0f589f702438de969eaa553933d7",
+    "bytes": 3843384
+  },
+  "2026-10-31_sarepta_170mm_stern_pin.stl": {
+    "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+    "bytes": 15884
+  },
+  "2026-10-31_sarepta_170mm_stern_upper.stl": {
+    "sha256": "81b111350c38d8b22929f48ecf8eae9836647be7fc4e4a527ce78f13293298fb",
+    "bytes": 1025784
+  },
+  "README.md": {
+    "sha256": "ac1c16c0f9e2452137c0a8b970383f0473b0cd3d2d686dfc73def587be648bc9",
+    "bytes": 3497
+  },
+  "clean_export.py": {
+    "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+    "bytes": 2234
+  },
+  "cleanup-lower.json": {
+    "sha256": "f532999ca1ca67c07aced2b1ac14905d4fd9b24c94a9b3dfbd9fbf431aee2cff",
+    "bytes": 230
+  },
+  "cleanup-upper.json": {
+    "sha256": "d2d33915f3339daa17a4cb96795b32dd7ea6d5e765d2b4d349ab1928d275fb0d",
+    "bytes": 209
+  },
+  "continuation.scad": {
+    "sha256": "294c5164ee2298596f487e79faa9ab41f4f7ee5c8444376eadd5f912add327a8",
+    "bytes": 318993
+  },
+  "export.sh": {
+    "sha256": "13cbd0ccefd7c766e1cd5962d8b10b412505d866534667758d272f77e8e2bec1",
+    "bytes": 659
+  },
+  "inspection-view.scad": {
+    "sha256": "0b57f4aa228bf5ded215ab3d259c7aa987d12ec23bb8626fd0f0aa70e67af9f0",
+    "bytes": 1226
+  },
+  "inspection.png": {
+    "sha256": "939e634df299ce2cf392de8e6bb6b11ecab69fddd5430aa6ca8c32af40842914",
+    "bytes": 95563
+  },
+  "raw/2026-10-31_sarepta_170mm_stern_lower.stl": {
+    "sha256": "42544d4c97ca8723ec67d18569e8a7e942a3dfc735b4efd8c558c29bb1c32c1b",
+    "bytes": 3874284
+  },
+  "raw/2026-10-31_sarepta_170mm_stern_upper.stl": {
+    "sha256": "6184fb9cc74f1e312f34bab64573cef240d1f2fac94809d223f9a4fff7fc7af8",
+    "bytes": 1025884
+  },
+  "source.scad": {
+    "sha256": "5a775b0aeeb378b3c67b437e6afad06ab94f3d8068f343f8578174ce9d9cb25c",
+    "bytes": 10602
+  },
+  "stern-view.scad": {
+    "sha256": "6dba4c5bf65878b23b2591ec11facef97116c81b5d0c9be3ad3caa39b92ff21f",
+    "bytes": 89
+  },
+  "stern.png": {
+    "sha256": "77567b4b4e157e9253d6dfe99a8376bdab19ef260df9c401c5975c7a4f9ce9aa",
+    "bytes": 82311
+  },
+  "verification.json": {
+    "sha256": "054b2c814b8f486d3fedf22042969481bc33ef6275cb7d590a121f771571760d",
+    "bytes": 2360
+  },
+  "verify.py": {
+    "sha256": "7eef3ee8d37e5569468f73562027c9502a1997a8970e46d1be887fd92271f3c0",
+    "bytes": 5476
+  }
+}

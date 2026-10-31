@@ -538,3 +538,23 @@ transom halfway toward the gunwale. The upper's STL solid volume falls 57.4%.
 All exact-mesh and sampled fit/bottom checks pass; no physical print or water test
 has been done. The previous 0.1 candidate remains immutable. A separate rim,
 transverse assembly joints and a working hatch remain pending.
+
+## 2026-10-31 — Fair cover continuation
+
+Corrected the cover joint from the archived lower exterior, preserving its local transverse tangent without lifting the cover sideways. Rebuilt the cavity and moved guide bores inward as a matched pair. See [revision and verification](releases/2026-10-31_fair-cover-joint/README.md). Physical fit remains untested.
+
+## 2026-10-31 — Clean stern and continuous mating rim
+
+Implemented the owner's screenshot corrections: a continuous 4 mm rim, 2 mm guided blind bores, removal of inner stern box walls with discrete side ribs, a one-piece transom with half the previous added rise, and doubled drains. The default view combines detached components and assembly in pastel colours. See [revision](releases/2026-10-31_clean-stern/README.md) for mesh checks and physical-fit limits.
+
+## 2026-10-31 — Replace triangle-normal continuation with a coherent belt
+
+Owner feedback exposed longitudinal wrinkles, bow folds and misaligned divider parts in the preceding digitally checked models. Rebuilt both upper belt halves from one trimmed master-plan loft, with planar V faces. Removed the raised stern floor, closed the rear support corners, aligned and deepened the divider continuation, and lowered the doubled drains to the original bottom. See [new milestone](releases/2026-10-31_continuous-belt/README.md). Combined pastel inspection remains the default.
+
+## 2026-10-31 — Hide panel and remove legacy bow internals
+
+Temporarily hid the dashboard in both detached and assembled views, removed its upper-cover lap and insertion recess, and cleared the remaining side shelf/partition material and old forward inner webs. Supplementary cuts stay inside a conservative erosion of the original filled hull and below the current pin seats. All 482 material probes, 396 unchanged bow-exterior comparisons and 318 unchanged bottom comparisons pass, together with mesh topology and existing joint tests. See [revision](releases/2026-10-31_open-bow/README.md).
+
+## 2026-10-31 — Level stern ribs, aligned outlets and bow-floor follow-up
+
+Replaced triangular transom knees with three horizontal ribs at the common Z=8.130435 mm floor crest; the visible ribs begin at the last transverse floor's aft face. Two outlets align over the outer ribs with a measured lower gap of 0.8000004 mm. A subsequent full-width inner bow cleanup removes remaining wall-foot remnants while preserving original exposed stringer tops. The new pair passes 564 material probes, 396 bow-exterior comparisons, 318 unchanged bottom samples and topology checks. See the [current milestone](releases/2026-10-31_clean-bow-floor/README.md).

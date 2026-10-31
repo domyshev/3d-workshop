@@ -126,3 +126,13 @@ the crucial difference from the archived diagonal layout.
 Latest design study: [2026-10-31 lightweight open deck](releases/2026-10-31_lightweight-open-deck/README.md)
 — one roof skin, open ribs, small glue locators, single panel and higher rear
 transom. Digitally checked, physically untested; candidate 0.1 remains archived.
+
+Latest cover correction: [fair cover joint](releases/2026-10-31_fair-cover-joint/README.md). Open `sarepta_fair_joint.scad` for editable construction or the release's `assembly-view.scad` for exact exported meshes.
+
+Latest revision: [clean stern and continuous rim](releases/2026-10-31_clean-stern/README.md). Open `sarepta_inspection.scad` for the default combined pastel inspection scene.
+
+Current geometry: [continuous belt and open stern](releases/2026-10-31_continuous-belt/README.md). Use `sarepta_current.scad` for construction and `sarepta_inspection.scad` for the combined pastel scene.
+
+Current view: [open bow with panel hidden](releases/2026-10-31_open-bow/README.md). The default combined inspection omits the dashboard and the obsolete internal mounting remnants are removed.
+
+Current inspection: [level stern ribs and clear bow floor](releases/2026-10-31_clean-bow-floor/README.md). Level stern-rib tops, aligned outlets with 0.8 mm lower clearance, and additional bow-floor cleanup are included.

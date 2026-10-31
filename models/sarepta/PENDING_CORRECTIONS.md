@@ -110,3 +110,23 @@ protective perimeter rim into one bow piece and two aft strips with small side
 locators; split lower and upper transversely with reinforced locating joints;
 add a separately printable opening hatch lid and hinge. The hinge direction is
 only photo-inferred at present, not established as a factory specification.
+
+## Fair cover joint — 2026-10-31
+
+Owner screenshots exposed bow-side thinning and cover-to-lower offset in the lightweight revision. The [fair-joint revision](releases/2026-10-31_fair-cover-joint/README.md) corrects the cover exterior and cavity and moves both halves' guide bores inward. Sampled join, tangent, wall and unchanged lower-exterior checks pass. Physical fit remains untested.
+
+## Stern and guide corrections — 2026-10-31
+
+The [clean-stern revision](releases/2026-10-31_clean-stern/README.md) replaces stepped mating-edge pockets, boxed stern sides and the inset transom cap. The added transom rise is halved; drain diameter is doubled; both halves' blind guide bores are enlarged to 2 mm with lead-ins for 1.6 mm pins. All sampled geometry checks pass. Physical printing, fit and drainage remain untested.
+
+## Continuous belt and open stern — 2026-10-31
+
+The [continuous-belt revision](releases/2026-10-31_continuous-belt/README.md) supersedes the triangle-normal fairing: straight planar V bow, trimmed shoulder offset, a shared surface across the horizontal join, closed rear corners, removed raised well floor and aligned full-height divider contact. The bottom remains unchanged in sampled comparisons. Physical print and fit remain untested.
+
+## Panel hidden and obsolete bow supports removed — 2026-10-31
+
+See [open-bow revision](releases/2026-10-31_open-bow/README.md). The dashboard is temporarily hidden, and its old shelf/lap and the excess internal bow webs are removed. External plating, bottom and current blind guide seats remain in place. Digital checks pass; print fit and strength remain untested.
+
+## Level stern ribs and additional bow cleanup — 2026-10-31
+
+The [current revision](releases/2026-10-31_clean-bow-floor/README.md) includes horizontal stern ribs stopped at the last transverse floor, two aligned outlets 0.8 mm above their crests, and removal of remaining inner bow-floor remnants. Original bottom/exterior and exposed stringer heights are unchanged in sampled comparisons. Physical print and fit remain untested.
