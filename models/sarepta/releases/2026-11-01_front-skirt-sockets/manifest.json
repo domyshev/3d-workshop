@@ -1,0 +1,150 @@
+{
+  "revision": "2026-11-01_front-skirt-sockets",
+  "export_date": "2026-11-01",
+  "source_available": true,
+  "physical_print_verified": false,
+  "parent": "2026-11-01_hatch-hinge-sockets",
+  "raw_export_origin": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.11/2026.11.01",
+  "files": {
+    "2026-11-01_sarepta_170mm_front_skirt_lower.stl": {
+      "sha256": "d303453a543c36519fb6eb015685d7bd1aaa1c207f8ef83ca74a145b4e25dedd",
+      "bytes": 7400284
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_rim_bow.stl": {
+      "sha256": "bfb49c2956e12aa4dc128355776ef0ce1cddfe1aeb789aa78d5ce81e82969ddd",
+      "bytes": 703784
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_rim_pin.stl": {
+      "sha256": "f8563eea95d668a235c611b5e0b0b552b31000c1c711e541798e5ea8d912efde",
+      "bytes": 19084
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_rim_port.stl": {
+      "sha256": "dea7f988208003e96ccfeca498515c2b6a81448ba295ab37577e34427b2cdcb2",
+      "bytes": 203884
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_rim_starboard.stl": {
+      "sha256": "fe4d99e2cf486170a624f6ed833a1eabe7335acf9a8192e7cd0b5eefc22ccfc7",
+      "bytes": 205884
+    },
+    "2026-11-01_sarepta_170mm_front_skirt_upper.stl": {
+      "sha256": "58b17d433ef6abf99158fc8910869218c569de0423b5dff336eee98a852bf818",
+      "bytes": 2099884
+    },
+    "README.md": {
+      "sha256": "6a7b545b809eddcb30978d4d39145b73719b30fe75262bcf9ae62d7b339e479c",
+      "bytes": 2938
+    },
+    "assembly-view.scad": {
+      "sha256": "8265fd3d7bc9779a4ed79dab1bd7ae075990cdad1ab6ed12b6e3a4db67f85221",
+      "bytes": 77
+    },
+    "assembly.png": {
+      "sha256": "68b730eb4a8516c0b3f0d5415ee567faffd4eb857cd3842963020166e0b51892",
+      "bytes": 75164
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-rim_bow.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.sh": {
+      "sha256": "372184a7aa49a9a4ff519b67d8396c67e8b6e3156bec2d3fa004209753269725",
+      "bytes": 405
+    },
+    "fastener-section.scad": {
+      "sha256": "2905ddf53a22e2250b8c808df5ce6bc6d2189e3bb3d35d83fc8f3e809364eacb",
+      "bytes": 529
+    },
+    "feedback/missing-front-sockets.png": {
+      "sha256": "f2784d7684ac9dda054d2bb125fc01b483c7d544bb90e3ae90633f71baddb220",
+      "bytes": 119745
+    },
+    "front-axes.json": {
+      "sha256": "566761985c1e884125d76e9f8aabea106af95fcd9f762e64bd5d2c6748807fc5",
+      "bytes": 893
+    },
+    "front-axes.scad": {
+      "sha256": "385f5f91e93b3e7f2528994905dbfc6ae70e87211408f525bddfc4f8188f0987",
+      "bytes": 375
+    },
+    "front-body-view.scad": {
+      "sha256": "3804d74b8d86cabc31a235888ae7ea384649d782253a2085d5dc934d8de63e40",
+      "bytes": 91
+    },
+    "front-body.png": {
+      "sha256": "2e0b1a6f100bf7f217f05fb626f4c62c84f4e75f86ef8478efbf3f95d1b88d3c",
+      "bytes": 213425
+    },
+    "front-rim-export.log": {
+      "sha256": "2ada5aea2ea3eedb4ca4cc0d126e183cdd2f469a282e86ba1f822823e5994880",
+      "bytes": 818
+    },
+    "front-rim-inside.png": {
+      "sha256": "f700218b693f2c0eb621454beab069eb9a7cbd65ff5c55894656605a594baed4",
+      "bytes": 26649
+    },
+    "front-rim-view.scad": {
+      "sha256": "c6c3010e4cb20763bd39f652a0037adde9c6837ac388d170ee72223bc3363e70",
+      "bytes": 93
+    },
+    "front-skirt-export.log": {
+      "sha256": "8e96783029404357f76ae52a780595f50c97bf3f28c79dd628765bafe2040fdc",
+      "bytes": 1634
+    },
+    "inspection-view.scad": {
+      "sha256": "a01034119c4d91deb8173dadba4c29b69a929bbc6c03f2119375f69f2b2637d6",
+      "bytes": 1413
+    },
+    "inspection.png": {
+      "sha256": "af24f916ed100ea14a6ede49f8350ff1d57f119c9f7e686dd41907346ee5f36b",
+      "bytes": 91436
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "print-rim-bow.scad": {
+      "sha256": "ee201c96b0b266ae1b2e17f54ecae09d5869b0ede0a61a51be3cf18038474bba",
+      "bytes": 202
+    },
+    "print-rim-port.scad": {
+      "sha256": "5a15be56255c25d93f60fae0de0dbe26465e03d91419c66bf023836c99c5a999",
+      "bytes": 203
+    },
+    "print-rim-starboard.scad": {
+      "sha256": "10d62e3117010e0d38cedc9588ee7a6c7ba8f8502a9ce512d4585d9198d3cd40",
+      "bytes": 208
+    },
+    "raw/2026-11-01_sarepta_170mm_front_skirt_lower.stl": {
+      "sha256": "5c23abc213a5c5087d0d7c1244e230192e1e862a71117dc7aea2059ca91ec41c",
+      "bytes": 7400284
+    },
+    "raw/2026-11-01_sarepta_170mm_front_skirt_rim_bow.stl": {
+      "sha256": "282d28c0f748f17f27722ebe1a43e288ea32cf7d8254ed6b94df18e59155fb03",
+      "bytes": 703784
+    },
+    "source.scad": {
+      "sha256": "39e8204a36d3f49303e38c9462b52377e20d233db5a40527c83229b424dedfef",
+      "bytes": 1579
+    },
+    "verification.json": {
+      "sha256": "0b6a201000a65f68f88fd5ad95e4f95bdb1818ed6ba577e90a6b6978f53e843c",
+      "bytes": 3948
+    },
+    "verify.py": {
+      "sha256": "5babcab2613c702a5c93140e9c3148200468861539b5fcac4bbf2e6f7dde20f4",
+      "bytes": 4916
+    }
+  }
+}

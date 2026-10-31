@@ -1,0 +1,13 @@
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-11-01_front-skirt-sockets/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_front_skirt_rim_bow.stl
+Geometries in cache: 13
+Geometry cache size in bytes: 753160
+CGAL Polyhedrons in cache: 6
+CGAL cache size in bytes: 7295000
+Total rendering time: 0:00:00.025
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     7039
+   Facets:      14074
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_front_skirt_rim_bow.stl

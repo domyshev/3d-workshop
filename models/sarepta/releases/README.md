@@ -93,3 +93,7 @@ See [detachable-rim revision](2026-10-31_detachable-rim/README.md). The inward b
 ## 2026-11-01: hatch-hinge mounting sockets
 
 [Milestone](2026-11-01_hatch-hinge-sockets/README.md): two 2 mm blind top-entry sockets with solid underside reinforcements ahead of the hatch. Upper topology and finite material checks pass; physical fit is untested.
+
+## 2026-11-01: forward skirt sockets
+
+[Milestone](2026-11-01_front-skirt-sockets/README.md): four extra matching blind pocket pairs on the front V faces; eighteen hidden skirt studs total. Exported mesh, aperture, end-wall and bow-closure checks pass.
