@@ -62,3 +62,7 @@ horizontal assembly remains current and recommended.
 corrects the rejected full forward landing. Raised nose edge, horizontal
 4 mm glue land and local pin seats remain; the interior is open before
 fitting the unchanged non-pocketed cover. This is the current assembly.
+
+- [2026-10-31 — Lightweight open deck](2026-10-31_lightweight-open-deck/README.md):
+  single-skin upper, open ribs, 1.6 mm glue locators, single higher panel,
+  opened central bow partition and raised motor transom; no physical print yet.

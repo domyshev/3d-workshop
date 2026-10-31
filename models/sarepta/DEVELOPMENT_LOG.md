@@ -525,3 +525,16 @@ settings or archived binary was changed by this documentation update. Reset
 the in-plane angle, check bed clearance and re-slice when reproducing the
 baseline. See `release-candidates/0.1/README.md` and its artifact hash manifest.
 Assembly fit and watertightness remain unconfirmed; no final release tag made.
+
+## 2026-10-31 — Lightweight upper and glue locators
+
+Owner photographs IMG_2596..2599 revealed a visible cover slit, an excessive
+panel/cover gap and the prominent removable stop bar. The new
+[lightweight open-deck revision](releases/2026-10-31_lightweight-open-deck/README.md)
+replaces the double foredeck with one skin and open ribs, removes the central
+sealed bow partition/shelf and separate retaining bar, raises the single panel,
+uses 1.6 x 2.0 mm glue locators in side-strip blind bores and raises the motor
+transom halfway toward the gunwale. The upper's STL solid volume falls 57.4%.
+All exact-mesh and sampled fit/bottom checks pass; no physical print or water test
+has been done. The previous 0.1 candidate remains immutable. A separate rim,
+transverse assembly joints and a working hatch remain pending.

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-31",
+  "length_mm": 170,
+  "join_z_mm": 25,
+  "physical_print_verified": false,
+  "parts": [
+    {
+      "part": "lower",
+      "file": "2026-10-31_sarepta_170mm_light_lower.stl",
+      "export_path": "/Volumes/code/domyshev/3d-workshop/stl_exports/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_light_lower.stl",
+      "sha256": "085f8e204eee13a7cf34600bec038124d62bbefda1991ae10f83e9be588402a0",
+      "copies": 1
+    },
+    {
+      "part": "upper",
+      "file": "2026-10-31_sarepta_170mm_light_upper.stl",
+      "export_path": "/Volumes/code/domyshev/3d-workshop/stl_exports/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_light_upper.stl",
+      "sha256": "863371b9476cb73b131f95db9fe943446ae236543b8b68f8f52329f135124370",
+      "copies": 1
+    },
+    {
+      "part": "dashboard",
+      "file": "2026-10-31_sarepta_170mm_light_dashboard.stl",
+      "export_path": "/Volumes/code/domyshev/3d-workshop/stl_exports/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_light_dashboard.stl",
+      "sha256": "a444f15090879a9a0ff9f326fe8b6e7a2d5fd790ad6dc9f3ff1bc5762ffbcd81",
+      "copies": 1
+    },
+    {
+      "part": "pin",
+      "file": "2026-10-31_sarepta_170mm_light_pin.stl",
+      "export_path": "/Volumes/code/domyshev/3d-workshop/stl_exports/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_light_pin.stl",
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "copies": 4
+    }
+  ]
+}

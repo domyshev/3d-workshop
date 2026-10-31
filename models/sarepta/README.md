@@ -122,3 +122,7 @@ three walls and ordinary 15% Grid. White Polymaker PolyTerra PLA is embedded. Es
 including supports and adhesion material. A successful lengthwise print was
 reported on 2026-10-30; see [candidate 0.1](release-candidates/0.1/README.md) for
 the crucial difference from the archived diagonal layout.
+
+Latest design study: [2026-10-31 lightweight open deck](releases/2026-10-31_lightweight-open-deck/README.md)
+— one roof skin, open ribs, small glue locators, single panel and higher rear
+transom. Digitally checked, physically untested; candidate 0.1 remains archived.

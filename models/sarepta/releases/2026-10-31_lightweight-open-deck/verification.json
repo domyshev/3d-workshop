@@ -1,0 +1,134 @@
+{
+  "material_and_fit_checks": 554,
+  "failures": [],
+  "bottom_samples": 648,
+  "bottom_failures": [],
+  "mesh": {
+    "lower": {
+      "file": "2026-10-31_sarepta_170mm_light_lower.stl",
+      "vertices": 35029,
+      "triangles": 70062,
+      "bounds_mm": [
+        [
+          0.0,
+          -29.565217971801758,
+          0.0
+        ],
+        [
+          170.0,
+          29.565217971801758,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        170.0,
+        59.130435943603516,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 1.0913936421275139e-10,
+      "signed_volume_mm3": 31963.57935728154,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper": {
+      "file": "2026-10-31_sarepta_170mm_light_upper.stl",
+      "vertices": 3605,
+      "triangles": 7214,
+      "bounds_mm": [
+        [
+          1.9313853979110718,
+          -27.797391891479492,
+          25.0
+        ],
+        [
+          170.0,
+          27.797391891479492,
+          30.579347610473633
+        ]
+      ],
+      "size_mm": [
+        168.06861460208893,
+        55.594783782958984,
+        5.579347610473633
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 8.370989235118032e-08,
+      "signed_volume_mm3": 6803.385494770075,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "dashboard": {
+      "file": "2026-10-31_sarepta_170mm_light_dashboard.stl",
+      "vertices": 16,
+      "triangles": 28,
+      "bounds_mm": [
+        [
+          57.23043441772461,
+          -20.399999618530273,
+          22.717391967773438
+        ],
+        [
+          59.130435943603516,
+          20.399999618530273,
+          28.967391967773438
+        ]
+      ],
+      "size_mm": [
+        1.9000015258789062,
+        40.79999923706055,
+        6.25
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 0.1933457973646,
+      "signed_volume_mm3": 330.27622572709174,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "pin": {
+      "file": "2026-10-31_sarepta_170mm_light_pin.stl",
+      "vertices": 160,
+      "triangles": 316,
+      "bounds_mm": [
+        [
+          -0.800000011920929,
+          -0.800000011920929,
+          0.0
+        ],
+        [
+          0.800000011920929,
+          0.800000011920929,
+          2.0
+        ]
+      ],
+      "size_mm": [
+        1.600000023841858,
+        1.600000023841858,
+        2.0
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 0.0015046549724262448,
+      "signed_volume_mm3": 3.842291178053584,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "checks_pass": true,
+  "limits": "Sampled static geometry and original bottom checks. No physical assembly, minimum-wall, buoyancy or watertightness certification."
+}

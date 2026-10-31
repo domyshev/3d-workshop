@@ -95,3 +95,18 @@ settings or archived binary was changed by this documentation update. Reset
 the in-plane angle, check bed clearance and re-slice when reproducing the
 baseline. See `release-candidates/0.1/README.md` and its artifact hash manifest.
 Assembly fit and watertightness remain unconfirmed; no final release tag made.
+
+## Lightweight print-feedback revision — 2026-10-31
+
+See [lightweight open deck](releases/2026-10-31_lightweight-open-deck/README.md)
+for the new matched set. Single roof skin/open ribs, a single higher glue-in
+panel without retainer, an opened central bow partition, thin side-strip glue
+locators and a higher motor-transom top are implemented and digitally checked.
+Physical fit, strength and flotation are untested; this does not replace the
+reported successful-print baseline with a new physically verified release.
+
+The requested next construction changes are not yet exported: remove the
+protective perimeter rim into one bow piece and two aft strips with small side
+locators; split lower and upper transversely with reinforced locating joints;
+add a separately printable opening hatch lid and hinge. The hinge direction is
+only photo-inferred at present, not established as a factory specification.
