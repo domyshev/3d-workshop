@@ -105,10 +105,9 @@ locators and a higher motor-transom top are implemented and digitally checked.
 Physical fit, strength and flotation are untested; this does not replace the
 reported successful-print baseline with a new physically verified release.
 
-The requested next construction changes are not yet exported: remove the
-protective perimeter rim into one bow piece and two aft strips with small side
-locators; split lower and upper transversely with reinforced locating joints;
-add a separately printable opening hatch lid and hinge. The hinge direction is
+The protective perimeter rim is now separate in the detachable-rim milestone below.
+Remaining construction requests: split lower and upper transversely with reinforced
+locating joints; add a separately printable opening hatch lid and hinge. The hinge direction is
 only photo-inferred at present, not established as a factory specification.
 
 ## Fair cover joint — 2026-10-31
@@ -130,3 +129,7 @@ See [open-bow revision](releases/2026-10-31_open-bow/README.md). The dashboard i
 ## Level stern ribs and additional bow cleanup — 2026-10-31
 
 The [current revision](releases/2026-10-31_clean-bow-floor/README.md) includes horizontal stern ribs stopped at the last transverse floor, two aligned outlets 0.8 mm above their crests, and removal of remaining inner bow-floor remnants. Original bottom/exterior and exposed stringer heights are unchanged in sampled comparisons. Physical print and fit remain untested.
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).

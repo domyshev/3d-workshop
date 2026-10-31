@@ -1,1 +1,1 @@
-include <releases/2026-10-31_clean-bow-floor/inspection-view.scad>
+include <releases/2026-10-31_detachable-rim/inspection-view.scad>

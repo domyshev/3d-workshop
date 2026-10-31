@@ -1,1 +1,1 @@
-include <releases/2026-10-31_clean-bow-floor/source.scad>
+include <releases/2026-10-31_detachable-rim/source.scad>

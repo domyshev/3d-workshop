@@ -136,3 +136,7 @@ Current geometry: [continuous belt and open stern](releases/2026-10-31_continuou
 Current view: [open bow with panel hidden](releases/2026-10-31_open-bow/README.md). The default combined inspection omits the dashboard and the obsolete internal mounting remnants are removed.
 
 Current inspection: [level stern ribs and clear bow floor](releases/2026-10-31_clean-bow-floor/README.md). Level stern-rib tops, aligned outlets with 0.8 mm lower clearance, and additional bow-floor cleanup are included.
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).

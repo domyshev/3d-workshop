@@ -558,3 +558,7 @@ Temporarily hid the dashboard in both detached and assembled views, removed its 
 ## 2026-10-31 — Level stern ribs, aligned outlets and bow-floor follow-up
 
 Replaced triangular transom knees with three horizontal ribs at the common Z=8.130435 mm floor crest; the visible ribs begin at the last transverse floor's aft face. Two outlets align over the outer ribs with a measured lower gap of 0.8000004 mm. A subsequent full-width inner bow cleanup removes remaining wall-foot remnants while preserving original exposed stringer tops. The new pair passes 564 material probes, 396 bow-exterior comparisons, 318 unchanged bottom samples and topology checks. See the [current milestone](releases/2026-10-31_clean-bow-floor/README.md).
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).

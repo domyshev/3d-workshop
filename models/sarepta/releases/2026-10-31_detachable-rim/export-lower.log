@@ -1,0 +1,13 @@
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_detachable-rim/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_detachable_lower.stl
+Geometries in cache: 85
+Geometry cache size in bytes: 16531320
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 51596250
+Total rendering time: 0:00:00.285
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    63249
+   Facets:     126510
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_detachable_lower.stl

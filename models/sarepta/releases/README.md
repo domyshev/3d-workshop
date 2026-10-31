@@ -77,3 +77,7 @@ fitting the unchanged non-pocketed cover. This is the current assembly.
 
 - [2026-10-31 — Level stern ribs](2026-10-31_level-stern-ribs/README.md): horizontal shortened transom ribs and outlets aligned 0.8 mm above their crests.
 - [2026-10-31 — Clear bow floor](2026-10-31_clean-bow-floor/README.md): preserves the level-stern revision and removes remaining inner bow-floor remnants while retaining genuine stringers.
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).
