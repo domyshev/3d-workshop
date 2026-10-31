@@ -1,0 +1,65 @@
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_blind-rim-closed-bow/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_lower.stl
+Geometries in cache: 87
+Geometry cache size in bytes: 21252872
+CGAL Polyhedrons in cache: 11
+CGAL cache size in bytes: 69977750
+Total rendering time: 0:00:00.372
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      2
+   Vertices:    66352
+   Facets:     132708
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_lower.stl
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_blind-rim-closed-bow/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_bow.stl
+Geometries in cache: 29
+Geometry cache size in bytes: 15909464
+CGAL Polyhedrons in cache: 11
+CGAL cache size in bytes: 20072500
+Total rendering time: 0:00:00.200
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     6483
+   Facets:      12962
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_bow.stl
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_blind-rim-closed-bow/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_port.stl
+Geometries in cache: 29
+Geometry cache size in bytes: 15909464
+CGAL Polyhedrons in cache: 12
+CGAL cache size in bytes: 13918000
+Total rendering time: 0:00:00.206
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     2040
+   Facets:       4076
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_port.stl
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_blind-rim-closed-bow/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_starboard.stl
+Geometries in cache: 29
+Geometry cache size in bytes: 15909464
+CGAL Polyhedrons in cache: 13
+CGAL cache size in bytes: 14468000
+Total rendering time: 0:00:00.197
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     2060
+   Facets:       4116
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_starboard.stl
+Rendering /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/models/sarepta/releases/2026-10-31_blind-rim-closed-bow/source.scad
+Exporting /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_pin.stl
+Geometries in cache: 5
+Geometry cache size in bytes: 41240
+CGAL Polyhedrons in cache: 8
+CGAL cache size in bytes: 384000
+Total rendering time: 0:00:00.005
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:      192
+   Facets:        380
+Done: /Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31/2026-10-31_sarepta_170mm_blind_rim_rim_pin.stl

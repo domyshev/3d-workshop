@@ -81,3 +81,7 @@ fitting the unchanged non-pocketed cover. This is the current assembly.
 ## Detachable protective rim — 2026-10-31
 
 See [detachable-rim revision](2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).
+
+## 2026-10-31 export, completed 2026-11-01: closed bow and blind skirt studs
+
+[Milestone](2026-10-31_blind-rim-closed-bow/README.md): restores the forward cap and replaces exposed headed pins with separate headless studs in blind sockets on both components. Archived raw/final meshes and finite geometry checks pass; print fit remains untested.
