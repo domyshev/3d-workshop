@@ -1,0 +1,126 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_lower_bow.stl
+Geometries in cache: 43
+Geometry cache size in bytes: 28565128
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 90754500
+Total rendering time: 0:00:00.235
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      2
+   Vertices:    52375
+   Facets:     104754
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_lower_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_lower_stern.stl
+Geometries in cache: 43
+Geometry cache size in bytes: 28565128
+CGAL Polyhedrons in cache: 11
+CGAL cache size in bytes: 69265750
+Total rendering time: 0:00:00.209
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    24709
+   Facets:      49430
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_lower_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_upper_bow.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19285064
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 25471750
+Total rendering time: 0:00:00.131
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13218
+   Facets:      26436
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_upper_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_upper_stern.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19285064
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 21620500
+Total rendering time: 0:00:00.131
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9129
+   Facets:      18254
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_joint_upper_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_lower_bow.stl
+Geometries in cache: 43
+Geometry cache size in bytes: 28571992
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 91162500
+Total rendering time: 0:00:00.211
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      2
+   Vertices:    52592
+   Facets:     105188
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_lower_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_lower_stern.stl
+Geometries in cache: 43
+Geometry cache size in bytes: 28571992
+CGAL Polyhedrons in cache: 11
+CGAL cache size in bytes: 69675500
+Total rendering time: 0:00:00.210
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    24884
+   Facets:      49780
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_lower_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_upper_bow.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19294184
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 25324250
+Total rendering time: 0:00:00.126
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13171
+   Facets:      26342
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_upper_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_upper_stern.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19294184
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 21447250
+Total rendering time: 0:00:00.126
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9074
+   Facets:      18144
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_joint_upper_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_transverse-glue-joint/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_joint_pin_1_8mm.stl
+Geometries in cache: 5
+Geometry cache size in bytes: 41240
+CGAL Polyhedrons in cache: 7
+CGAL cache size in bytes: 336000
+Total rendering time: 0:00:00.005
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:      192
+   Facets:        380
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_joint_pin_1_8mm.stl

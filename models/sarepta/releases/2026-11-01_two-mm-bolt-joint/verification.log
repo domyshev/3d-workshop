@@ -1,0 +1,31 @@
+{
+  "checks_pass": true,
+  "material_probes": 7740,
+  "failures": [],
+  "contact_areas": {
+    "170": {
+      "lower": {
+        "bow_area_mm2": 729.492978912182,
+        "stern_area_mm2": 729.492978912182,
+        "difference_mm2": 0.0
+      },
+      "upper": {
+        "bow_area_mm2": 117.3195459249273,
+        "stern_area_mm2": 117.3195459249273,
+        "difference_mm2": 0.0
+      }
+    },
+    "340": {
+      "lower": {
+        "bow_area_mm2": 1587.986010118078,
+        "stern_area_mm2": 1587.9860101180773,
+        "difference_mm2": 6.821210263296962e-13
+      },
+      "upper": {
+        "bow_area_mm2": 304.1721244192522,
+        "stern_area_mm2": 304.1721244192522,
+        "difference_mm2": 0.0
+      }
+    }
+  }
+}

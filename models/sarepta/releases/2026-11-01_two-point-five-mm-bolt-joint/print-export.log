@@ -1,0 +1,88 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_two-point-five-mm-bolt-joint/print-340-lower_bow.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_lower_bow.stl
+Geometries in cache: 2
+Geometry cache size in bytes: 10271888
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.032
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles: 107010
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_lower_bow.stl
+{
+  "zero_area_facets_removed": 0,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_two-point-five-mm-bolt-joint/print-340-lower_stern.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_lower_stern.stl
+Geometries in cache: 2
+Geometry cache size in bytes: 4838288
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.015
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  50416
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_lower_stern.stl
+{
+  "zero_area_facets_removed": 0,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_two-point-five-mm-bolt-joint/print-340-upper_bow.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_upper_bow.stl
+Geometries in cache: 3
+Geometry cache size in bytes: 3772488
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.009
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  26194
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_upper_bow.stl
+{
+  "zero_area_facets_removed": 0,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_two-point-five-mm-bolt-joint/print-340-upper_stern.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_upper_stern.stl
+Geometries in cache: 3
+Geometry cache size in bytes: 2605080
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.007
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  18084
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_2_5_bolt_print_upper_stern.stl
+{
+  "zero_area_facets_removed": 0,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+

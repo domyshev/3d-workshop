@@ -1,0 +1,129 @@
+{
+  "checks_pass": true,
+  "mesh": {
+    "lower_bow": {
+      "file": "2026-11-01_sarepta_340mm_2_5_bolt_print_lower_bow.stl",
+      "vertices": 53495,
+      "triangles": 107010,
+      "bounds_mm": [
+        [
+          3.6394855976104736,
+          -55.89478302001953,
+          0.0
+        ],
+        [
+          170.0,
+          55.89478302001953,
+          50.0
+        ]
+      ],
+      "size_mm": [
+        166.36051440238953,
+        111.78956604003906,
+        50.0
+      ],
+      "components": 1,
+      "euler_characteristic": -10,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 9.203439287865708e-11,
+      "signed_volume_mm3": 71440.70182395572,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "lower_stern": {
+      "file": "2026-11-01_sarepta_340mm_2_5_bolt_print_lower_stern.stl",
+      "vertices": 25194,
+      "triangles": 50416,
+      "bounds_mm": [
+        [
+          0.0,
+          -55.89478302001953,
+          0.0
+        ],
+        [
+          170.0,
+          55.89478302001953,
+          50.0
+        ]
+      ],
+      "size_mm": [
+        170.0,
+        111.78956604003906,
+        50.0
+      ],
+      "components": 1,
+      "euler_characteristic": -14,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 5.2322179671014266e-09,
+      "signed_volume_mm3": 118595.06609348366,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper_bow": {
+      "file": "2026-11-01_sarepta_340mm_2_5_bolt_print_upper_bow.stl",
+      "vertices": 13097,
+      "triangles": 26194,
+      "bounds_mm": [
+        [
+          4.293066024780273,
+          -54.20536422729492,
+          5.2736481848114636e-11
+        ],
+        [
+          170.0,
+          54.20536422729492,
+          11.158695220947266
+        ]
+      ],
+      "size_mm": [
+        165.70693397521973,
+        108.41072845458984,
+        11.15869522089453
+      ],
+      "components": 1,
+      "euler_characteristic": 0,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 3.0850060284137726e-09,
+      "signed_volume_mm3": 31183.798187143613,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper_stern": {
+      "file": "2026-11-01_sarepta_340mm_2_5_bolt_print_upper_stern.stl",
+      "vertices": 9044,
+      "triangles": 18084,
+      "bounds_mm": [
+        [
+          0.0,
+          -53.760868072509766,
+          -5.640074505208759e-07
+        ],
+        [
+          170.0,
+          53.760868072509766,
+          10.234782218933105
+        ]
+      ],
+      "size_mm": [
+        170.0,
+        107.52173614501953,
+        10.234782782940556
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 3.7834979593753815e-10,
+      "signed_volume_mm3": 16486.149560765425,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  }
+}

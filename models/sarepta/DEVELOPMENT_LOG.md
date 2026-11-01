@@ -605,3 +605,27 @@ the universal build is never launched natively or probed. The current hull/rim
 scripts export successfully through the compatibility path. Repository guidance
 now records safe CLI and GUI invocation. System-wide crash reporting settings
 were not changed, and historical geometry was not regenerated in the archive.
+
+## Transverse glue joint — 2026-11-01
+
+The [new split construction](releases/2026-11-01_transverse-glue-joint/README.md) divides lower hull and cover into bow/stern pairs, with a 4 mm inward land and four paired blind 2 mm guide bores. Side axes are near the upper edge and bottom axes divide the inner span evenly. The source defaults to 340 mm overall; each nominal half is 170 mm. New joint hardware remains fixed millimetres. The original three skirt sections are reused without a new cut. Both 170/340 mm sets and bed-oriented 340 mm exports pass their recorded finite geometry and topology checks; physical print, pin fit and glue strength remain untested.
+
+
+## Wider glue joint and removed bow frame — 2026-11-01
+
+The [updated milestone](releases/2026-11-01_wide-joint-clear-frame/README.md) uses a fixed 6 mm inward land and four 4 mm guide pins. Matching bores are 4.3 mm wide and 3.2 mm deep per half; axial reinforcement is 4 mm. Side bores are lowered by one fifth of the lower hull height (10 mm at overall length 340 mm). The nearest bow transverse frame is removed around its perimeter, preserving the longitudinal stringers. Both 170/340 mm configurations pass 840 material probes and recorded mesh checks. Four posed 340 mm parts remain at most 170 mm long. Skirt sections receive no new cut. Physical fit and glue strength remain untested.
+
+
+## Through bolts and circular joint pads — 2026-11-01
+
+The [bolt-joint milestone](releases/2026-11-01_through-bolt-bosses/README.md) replaces blind guide sockets with four matched through holes, diameter 4.3 mm for M4 bolts. The 6 mm strip expands locally to 12 mm with circular pads; axes are 7 mm inward, 1 mm beyond the expanded strip midpoint. Existing lowered side stations, frame removal, skirt geometry and 170/340 mm configurations are retained. Simplified bolt/nut previews replace printed joint guides in the combined scene. Mesh and sampled hardware-clearance checks are recorded; physical fit and strength remain untested.
+
+
+## Two-millimetre joint thickness — 2026-11-01
+
+The [thinner joint milestone](releases/2026-11-01_two-mm-bolt-joint/README.md) reduces axial strip and circular-lug thickness to 2 mm per half, 4 mm combined. Cover reinforcement uses the same depth. The 6 mm strip, 12 mm local pads, 7 mm axis inset and 4.3 mm M4 through bores remain. Both 170/340 mm configurations and posed 340 mm exports have recorded geometry checks. The selected thickness and physical strength remain untested.
+
+
+## Two-and-a-half-millimetre joint thickness — 2026-11-01
+
+The [thinner joint milestone](releases/2026-11-01_two-point-five-mm-bolt-joint/README.md) adjusts axial strip and circular-lug thickness to 2.5 mm per half, 5 mm combined. Cover reinforcement uses the same depth. The 6 mm strip, 12 mm local pads, 7 mm axis inset and 4.3 mm M4 through bores remain. Both 170/340 mm configurations and posed 340 mm exports have recorded geometry checks. The selected thickness and physical strength remain untested.

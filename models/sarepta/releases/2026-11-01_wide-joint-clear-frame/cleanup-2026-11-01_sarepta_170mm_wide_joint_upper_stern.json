@@ -1,0 +1,9 @@
+{
+  "zero_area_facets_removed": 113,
+  "exact_collinear_triangle_splits": 3,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": -3.0468072509393096e-11,
+  "basic_mesh_checks_pass": true
+}

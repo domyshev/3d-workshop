@@ -1,0 +1,96 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_through-bolt-bosses/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_bolt_joint_lower_bow.stl
+Geometries in cache: 66
+Geometry cache size in bytes: 45408872
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 90987500
+Total rendering time: 0:00:01.027
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    52585
+   Facets:     105182
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_bolt_joint_lower_bow.stl
+{
+  "zero_area_facets_removed": 14,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_through-bolt-bosses/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_bolt_joint_lower_stern.stl
+Geometries in cache: 66
+Geometry cache size in bytes: 45408872
+CGAL Polyhedrons in cache: 12
+CGAL cache size in bytes: 88373250
+Total rendering time: 0:00:01.034
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      8
+   Vertices:    24915
+   Facets:      49858
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_bolt_joint_lower_stern.stl
+{
+  "zero_area_facets_removed": 12,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_through-bolt-bosses/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_bolt_joint_lower_bow.stl
+Geometries in cache: 66
+Geometry cache size in bytes: 45442280
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 92355500
+Total rendering time: 0:00:01.009
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      6
+   Vertices:    53421
+   Facets:     106862
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_bolt_joint_lower_bow.stl
+{
+  "zero_area_facets_removed": 15,
+  "exact_collinear_triangle_splits": 3,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_through-bolt-bosses/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_bolt_joint_lower_stern.stl
+Geometries in cache: 66
+Geometry cache size in bytes: 45442280
+CGAL Polyhedrons in cache: 12
+CGAL cache size in bytes: 89296000
+Total rendering time: 0:00:01.025
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      8
+   Vertices:    25206
+   Facets:      50440
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_bolt_joint_lower_stern.stl
+{
+  "zero_area_facets_removed": 14,
+  "exact_collinear_triangle_splits": 2,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 2.9103830456733704e-11,
+  "basic_mesh_checks_pass": true
+}
+
