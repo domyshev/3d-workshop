@@ -1,0 +1,140 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_upper_bow.stl
+Geometries in cache: 16
+Geometry cache size in bytes: 13178752
+CGAL Polyhedrons in cache: 14
+CGAL cache size in bytes: 31405500
+Total rendering time: 0:00:00.132
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13389
+   Facets:      26778
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_upper_bow.stl
+{
+  "zero_area_facets_removed": 110,
+  "exact_collinear_triangle_splits": 4,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 4.547473508864641e-13,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_upper_stern.stl
+Geometries in cache: 16
+Geometry cache size in bytes: 13178752
+CGAL Polyhedrons in cache: 15
+CGAL cache size in bytes: 27716000
+Total rendering time: 0:00:00.124
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9368
+   Facets:      18732
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_upper_stern.stl
+{
+  "zero_area_facets_removed": 73,
+  "exact_collinear_triangle_splits": 3,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 4.547473508864641e-13,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_pin.stl
+Geometries in cache: 11
+Geometry cache size in bytes: 278496
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.002
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:    576
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_full_lid_tab_pin.stl
+{
+  "zero_area_facets_removed": 192,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_upper_bow.stl
+Geometries in cache: 16
+Geometry cache size in bytes: 13178752
+CGAL Polyhedrons in cache: 14
+CGAL cache size in bytes: 31196000
+Total rendering time: 0:00:00.123
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13337
+   Facets:      26674
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_upper_bow.stl
+{
+  "zero_area_facets_removed": 28,
+  "exact_collinear_triangle_splits": 2,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": -7.275957614183426e-12,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_upper_stern.stl
+Geometries in cache: 16
+Geometry cache size in bytes: 13178752
+CGAL Polyhedrons in cache: 15
+CGAL cache size in bytes: 27409500
+Total rendering time: 0:00:00.118
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9268
+   Facets:      18532
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_upper_stern.stl
+{
+  "zero_area_facets_removed": 51,
+  "exact_collinear_triangle_splits": 3,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 7.275957614183426e-12,
+  "basic_mesh_checks_pass": true
+}
+
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_full-height-lid-tabs/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_pin.stl
+Geometries in cache: 11
+Geometry cache size in bytes: 278496
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.001
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:    576
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_full_lid_tab_pin.stl
+{
+  "zero_area_facets_removed": 192,
+  "exact_collinear_triangle_splits": 0,
+  "vertices_moved": 0,
+  "holes_filled": 0,
+  "components_removed": 0,
+  "volume_change_mm3": 0.0,
+  "basic_mesh_checks_pass": true
+}
+

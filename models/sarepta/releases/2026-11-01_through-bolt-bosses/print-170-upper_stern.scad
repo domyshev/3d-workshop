@@ -1,0 +1,2 @@
+// Preserve the reported lengthwise print orientation; no slicer profile is changed.
+translate([-85.0,0,30.1173913043])rotate([180,0,0])import("2026-11-01_sarepta_170mm_bolt_joint_upper_stern.stl",convexity=40);

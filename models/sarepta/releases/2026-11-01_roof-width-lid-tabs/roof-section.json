@@ -1,0 +1,12 @@
+{
+  "native_mesh": "/Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_front-skirt-sockets/2026-11-01_sarepta_170mm_front_skirt_upper.stl",
+  "section_x_mm": 85,
+  "roof_top_z_mm": 30.11739158630371,
+  "roof_inner_y_mm": 20.649999618530273,
+  "roof_outer_y_mm": 25.345217492259888,
+  "tab_height_base_mm": 2.5,
+  "axis_yz_base_mm": [
+    22.997608555395082,
+    28.86739158630371
+  ]
+}

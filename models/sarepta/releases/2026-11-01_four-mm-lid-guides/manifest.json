@@ -1,0 +1,297 @@
+{
+  "revision": "2026-11-01_four-mm-lid-guides",
+  "export_date": "2026-11-01",
+  "parent": "2026-11-01_full-height-lid-tabs",
+  "source_available": true,
+  "physical_print_verified": false,
+  "files": {
+    "2026-11-01_sarepta_170mm_four_mm_lid_lower_bow.stl": {
+      "sha256": "48d5cac62b71e3f8d7b564e75cf9a93ceb6484095cbc6238b224ebbe2a9b340e",
+      "bytes": 5326784
+    },
+    "2026-11-01_sarepta_170mm_four_mm_lid_lower_stern.stl": {
+      "sha256": "6ebebd89c0ee0b55a8fdd5d9dc855c7e20f600c7121fc17f95024c538533c1f4",
+      "bytes": 2496384
+    },
+    "2026-11-01_sarepta_170mm_four_mm_lid_pin.stl": {
+      "sha256": "a97c3087598d9e22144e827ea1fee3f0ace8ea41b9487c0b8329518b57a8cf70",
+      "bytes": 19284
+    },
+    "2026-11-01_sarepta_170mm_four_mm_lid_upper_bow.stl": {
+      "sha256": "1edcf64ebdc44ad2eb019613ac6da77c7ddd99f7c4d41be654783418b2a9e186",
+      "bytes": 1333784
+    },
+    "2026-11-01_sarepta_170mm_four_mm_lid_upper_stern.stl": {
+      "sha256": "485df9e246fcc8fb38b5d2324254d3e4623e965cc5b0d2c0f004de06c43bf81b",
+      "bytes": 933084
+    },
+    "2026-11-01_sarepta_170mm_lid_guide_pin_d1_9_l2.stl": {
+      "sha256": "a97c3087598d9e22144e827ea1fee3f0ace8ea41b9487c0b8329518b57a8cf70",
+      "bytes": 19284
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_lower_bow.stl": {
+      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490",
+      "bytes": 5350584
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_lower_stern.stl": {
+      "sha256": "d0d57edd78b1847b64303f3c04ec634b2fdf0a7ae93429f80d1c54be713bd566",
+      "bytes": 2520884
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_pin.stl": {
+      "sha256": "73a1d0ed63de449bd903994cee175340e1d0d12861ffd723a59c1ce5e4ef2550",
+      "bytes": 19284
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_print_lower_bow.stl": {
+      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490",
+      "bytes": 5350584
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_print_lower_stern.stl": {
+      "sha256": "79770a4c13e11d0a4a1827593540a8d0e1243b055ca34056740a875ee7cf309b",
+      "bytes": 2520884
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_print_upper_bow.stl": {
+      "sha256": "748942c8d3498f1b204d9f94da6a903b82bc86e8973fc6aef2c0229601391c0c",
+      "bytes": 1332584
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_print_upper_stern.stl": {
+      "sha256": "ecb7a418f22cb837cee0ad2f6ac36f1bbdc1d606cefe263e9b668e1c1eeb5ff8",
+      "bytes": 924284
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_upper_bow.stl": {
+      "sha256": "8da6a34f1e82baa01e58fdeda429ad18e8e8b5bd57848cddcee1c66f9ddb093d",
+      "bytes": 1332584
+    },
+    "2026-11-01_sarepta_340mm_four_mm_lid_upper_stern.stl": {
+      "sha256": "3a428f037dc46772c5ab18c0bbcdbe271811259817f9d1342d8b47740f9aac10",
+      "bytes": 924284
+    },
+    "2026-11-01_sarepta_340mm_lid_guide_pin_d3_8_l4.stl": {
+      "sha256": "73a1d0ed63de449bd903994cee175340e1d0d12861ffd723a59c1ce5e4ef2550",
+      "bytes": 19284
+    },
+    "FASTENERS.md": {
+      "sha256": "557015cc803e349d576f45e163edcd20796649f3449269ea128346e170be5aa7",
+      "bytes": 2573
+    },
+    "README.md": {
+      "sha256": "2f7f84b2a2252cc88574f52ad037545c9f02c2f68d984d994b09d6692b47390c",
+      "bytes": 3851
+    },
+    "assembly-view.scad": {
+      "sha256": "1589598e2902131deedbe49d4e612721db1511ccd89b6dc744cb40e47e35fc52",
+      "bytes": 118
+    },
+    "assembly.png": {
+      "sha256": "90fc6d6669722b80501cdaac43e585c1e6e981a60aa7a85e8e70173230fc6c1b",
+      "bytes": 76056
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-170-lid_joint_pin.json": {
+      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33",
+      "bytes": 211
+    },
+    "cleanup-170-upper_bow.json": {
+      "sha256": "6c41a7be132f3f86f30be9d462c667dcb952aecbf70823c4742a9e162a8e5c22",
+      "bytes": 229
+    },
+    "cleanup-170-upper_stern.json": {
+      "sha256": "38a3103ab4fe4a2aa408a1b142b7037b9417f13617d8991938a60d8e2322d5e8",
+      "bytes": 228
+    },
+    "cleanup-340-lid_joint_pin.json": {
+      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33",
+      "bytes": 211
+    },
+    "cleanup-340-upper_bow.json": {
+      "sha256": "724689c5616931598dea624b5ad804a123affeef3f3ca14e913d578f66d9c05b",
+      "bytes": 229
+    },
+    "cleanup-340-upper_stern.json": {
+      "sha256": "193136545742eea20093cb921807e0292da9194cc2e3311f523baa13d1bddb02",
+      "bytes": 228
+    },
+    "cleanup-print-upper_bow.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-print-upper_stern.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.log": {
+      "sha256": "a9ff86734b320c451f9c1c7fffb29c2f4034fea7898aaa0f79a7509e3a1e93f2",
+      "bytes": 5370
+    },
+    "export.sh": {
+      "sha256": "7ce72676c6aced7ac7e72b18dfb26ffa50680a2fe0e25476182935c0b5f2cfc5",
+      "bytes": 751
+    },
+    "front-axes.scad": {
+      "sha256": "385f5f91e93b3e7f2528994905dbfc6ae70e87211408f525bddfc4f8188f0987",
+      "bytes": 375
+    },
+    "generate_axes.py": {
+      "sha256": "7da714fbb38ae21734670409bc5d7d7299e634513d93a9781ae0d83eaea39bd7",
+      "bytes": 1352
+    },
+    "inspection-view.scad": {
+      "sha256": "64f7cc5565fd1720f2084c02947171f5c7a59b7d277a216c5b7327ed2eaa92c2",
+      "bytes": 3229
+    },
+    "inspection.png": {
+      "sha256": "ff4917d3ed9c00dde7ad0f0183108d2b89a559023e2cac60014f03fc6aab70f2",
+      "bytes": 93336
+    },
+    "joint-axes.json": {
+      "sha256": "43a1c316d051861a2e2ed0b453d8a1740224a88bd35efaeb66e9e52ddb54afc8",
+      "bytes": 727
+    },
+    "joint-face-view.scad": {
+      "sha256": "ef652ee405a5108df29ce0e0463a2b6afbd7aae9940e43f97d94f69ead32dfd7",
+      "bytes": 464
+    },
+    "joint-view.scad": {
+      "sha256": "a7aadf52136f46636df94f98624e4490e1a704a0eb810b0c9c3a5b4ef8e7876f",
+      "bytes": 295
+    },
+    "lid-face-view.scad": {
+      "sha256": "50521326afb85948a793c38448070d9cf570953676d7e3546510be531f71ee35",
+      "bytes": 342
+    },
+    "lid-face.png": {
+      "sha256": "5b661c0f9445f8b8dd27b77ece33a1f634318acdf4e8509d3b37306026e78c9f",
+      "bytes": 9196
+    },
+    "lid-verification.json": {
+      "sha256": "8ba9a643d1994fa9a69946a4237eea164bb2190767ba285b9c9d1deabe79e9bf",
+      "bytes": 7198
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "mesh_helpers.py": {
+      "sha256": "7ff0fc8a8488856df3530887570f807a6ed968f060934468d9f60556b1e44a15",
+      "bytes": 1874
+    },
+    "print-170-lower_bow.scad": {
+      "sha256": "b0e6d144e34425d13bcbf7188b1a35bff2086159501580e9ca4fe169021571e8",
+      "bytes": 178
+    },
+    "print-170-lower_stern.scad": {
+      "sha256": "124f34981c959896decc4919687b734aa00d2c7aa9a22c7d7e7ddbd4d1f65e09",
+      "bytes": 184
+    },
+    "print-170-upper_bow.scad": {
+      "sha256": "fd7b55010fe0dd5d32f1fece956a519bc7977557bc9f6fac2a6bfce94e3ab4b5",
+      "bytes": 207
+    },
+    "print-170-upper_stern.scad": {
+      "sha256": "a2adb052925a2dac838051b920cf39de20ed9f9afe241e1827bc176bdbfa85f4",
+      "bytes": 213
+    },
+    "print-340-lower_bow.scad": {
+      "sha256": "5bb6c03660521b9c4e73dae050b8a998c3b68f4819643e3dc6b2229987cc98b4",
+      "bytes": 178
+    },
+    "print-340-lower_stern.scad": {
+      "sha256": "08c7e97d7b3347a9e828cab7fae26169c7c2729ab3a4fa964badbd51771e84ef",
+      "bytes": 185
+    },
+    "print-340-upper_bow.scad": {
+      "sha256": "a8dc1b0a0fc136fe63dfc9440480f0b82de555f8a743c53cfa11a111b9450b77",
+      "bytes": 206
+    },
+    "print-340-upper_stern.scad": {
+      "sha256": "6ca381710aff5ade3f001ff747d76ea82fb3a3ac091dd21b0b6164e7bb745119",
+      "bytes": 214
+    },
+    "print-export.log": {
+      "sha256": "be6de06f92f37f6706c9c0d01023d603b2ff8454a7d4b29fd6415caad60d361c",
+      "bytes": 1748
+    },
+    "print-verification.json": {
+      "sha256": "33a6752e89cf3635536ad7db860129fcc668375727fc92be1724e29848764e15",
+      "bytes": 3574
+    },
+    "raw/2026-11-01_sarepta_170mm_four_mm_lid_pin.stl": {
+      "sha256": "961843af7389cfa0dc9087d08ba2e59244f93c4c259a76074ec78469ecdc9605",
+      "bytes": 28884
+    },
+    "raw/2026-11-01_sarepta_170mm_four_mm_lid_upper_bow.stl": {
+      "sha256": "87b69027c461dedad5fec1cfb72836e6eb046ee10613a128e8df5d96c35769a2",
+      "bytes": 1339084
+    },
+    "raw/2026-11-01_sarepta_170mm_four_mm_lid_upper_stern.stl": {
+      "sha256": "be97798287f5b0fbbd3aad770564b1081bea8086c4b97f98b7384d285c7c8188",
+      "bytes": 936584
+    },
+    "raw/2026-11-01_sarepta_340mm_four_mm_lid_pin.stl": {
+      "sha256": "3c51855d946703d7ffb922a74ae97cb7613320f777d0cf02186fb841def8682d",
+      "bytes": 28884
+    },
+    "raw/2026-11-01_sarepta_340mm_four_mm_lid_print_upper_bow.stl": {
+      "sha256": "36c72339463fe26ab5c854cb2f6906a6af78c819837c363635a6b587caeff754",
+      "bytes": 1332584
+    },
+    "raw/2026-11-01_sarepta_340mm_four_mm_lid_print_upper_stern.stl": {
+      "sha256": "171eac2a33f5a81ca6b90e854abee71e5d001221ef274da90825665f3899ed59",
+      "bytes": 924284
+    },
+    "raw/2026-11-01_sarepta_340mm_four_mm_lid_upper_bow.stl": {
+      "sha256": "dce7da8553b77db65c10e9789a72c0ce4aac5ec310c8e088fa62d3acc78919b2",
+      "bytes": 1333884
+    },
+    "raw/2026-11-01_sarepta_340mm_four_mm_lid_upper_stern.stl": {
+      "sha256": "86e9eb5530571160b987ca046839f354e2cdf737388f210cfac59f29086e004b",
+      "bytes": 926684
+    },
+    "roof-plan.json": {
+      "sha256": "49f20ee4d62b4bd9561c1824eb8fd9ba98fbc92b248ff17de99a74ce78c966f0",
+      "bytes": 38482
+    },
+    "roof-plan.scad": {
+      "sha256": "1974abe7d98d4dae295cf525616842756923765f300a5fb87a85ecd2ef42d9a3",
+      "bytes": 24345
+    },
+    "roof-section.json": {
+      "sha256": "112520407af13b4fe5d620ce349cce9b811e43e8f000527fd0e8d9467196a17b",
+      "bytes": 420
+    },
+    "roof-section.scad": {
+      "sha256": "f5f951a77b08e993e037c4a0cf271793d70e1796479325c3fbb66d03a7fe6f1a",
+      "bytes": 190
+    },
+    "section-profile.json": {
+      "sha256": "d17e7607457ea8d0ada644090fbc7dfecb4540d3d7fa0012cf54423e0baf0386",
+      "bytes": 9018
+    },
+    "section-profile.scad": {
+      "sha256": "ea58203ccc387dba35f52f82b716a00cd767c8dc05b1ab12abd4680024a8e5f6",
+      "bytes": 5761
+    },
+    "source.scad": {
+      "sha256": "f11a46850ee395fcb1c0a04d3fb55ebbd39e6d3ef80c11ad78f4f4ad17eee2fc",
+      "bytes": 7457
+    },
+    "stringer-guards.json": {
+      "sha256": "a9438b8e26f18520cbc5fb94ce6f3da012b680794a3b3b5daab79b52b57ff8dc",
+      "bytes": 401
+    },
+    "stringer-guards.scad": {
+      "sha256": "4adff7cbb6364bcc1a930998293186d3e7160e3da43e62247d2586a0a8c109f1",
+      "bytes": 205
+    },
+    "verification.log": {
+      "sha256": "52446bb39958b20967d1a8ec510ff6d828d8f0f1cb4664dbf0b5f450783940c5",
+      "bytes": 623
+    },
+    "verify_lid.py": {
+      "sha256": "aa9bd165499337e5de3f3c742b8b397f23e30ca6c08f1636e2e983a4603ab24c",
+      "bytes": 6003
+    }
+  }
+}

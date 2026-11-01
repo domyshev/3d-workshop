@@ -1,0 +1,126 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_lower_bow.stl
+Geometries in cache: 59
+Geometry cache size in bytes: 45311480
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 90532500
+Total rendering time: 0:00:01.081
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:    52325
+   Facets:     104646
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_lower_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_lower_stern.stl
+Geometries in cache: 59
+Geometry cache size in bytes: 45311480
+CGAL Polyhedrons in cache: 12
+CGAL cache size in bytes: 87788250
+Total rendering time: 0:00:00.996
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    24655
+   Facets:      49322
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_lower_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_upper_bow.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19246760
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 25613500
+Total rendering time: 0:00:00.130
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13274
+   Facets:      26548
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_upper_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_upper_stern.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19246760
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 21800750
+Total rendering time: 0:00:00.127
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9199
+   Facets:      18394
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_170mm_wide_joint_upper_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_lower_bow.stl
+Geometries in cache: 59
+Geometry cache size in bytes: 45322712
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 91774500
+Total rendering time: 0:00:00.998
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      2
+   Vertices:    53089
+   Facets:     106182
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_lower_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_lower_stern.stl
+Geometries in cache: 59
+Geometry cache size in bytes: 45322712
+CGAL Polyhedrons in cache: 12
+CGAL cache size in bytes: 88549000
+Total rendering time: 0:00:01.040
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      4
+   Vertices:    24874
+   Facets:      49760
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_lower_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_upper_bow.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19287496
+CGAL Polyhedrons in cache: 9
+CGAL cache size in bytes: 25342750
+Total rendering time: 0:00:00.126
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      1
+   Vertices:    13166
+   Facets:      26332
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_upper_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_upper_stern.stl
+Geometries in cache: 21
+Geometry cache size in bytes: 19287496
+CGAL Polyhedrons in cache: 10
+CGAL cache size in bytes: 21485500
+Total rendering time: 0:00:00.126
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:     9081
+   Facets:      18158
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_joint_upper_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/source.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_joint_pin_4mm.stl
+Geometries in cache: 5
+Geometry cache size in bytes: 41240
+CGAL Polyhedrons in cache: 7
+CGAL cache size in bytes: 336000
+Total rendering time: 0:00:00.006
+   Top level object is a 3D object (manifold):
+   Status:     NoError
+   Genus:      0
+   Vertices:      192
+   Facets:        380
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_joint_pin_4mm.stl

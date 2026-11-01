@@ -1,0 +1,48 @@
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/print-340-lower_bow.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_lower_bow.stl
+Geometries in cache: 2
+Geometry cache size in bytes: 10192400
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.217
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles: 106170
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_lower_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/print-340-lower_stern.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_lower_stern.stl
+Geometries in cache: 2
+Geometry cache size in bytes: 4775312
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.014
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  49748
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_lower_stern.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/print-340-upper_bow.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_upper_bow.stl
+Geometries in cache: 3
+Geometry cache size in bytes: 3782568
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.008
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  26264
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_upper_bow.stl
+Using OpenSCAD in x86_64 compatibility mode.
+Rendering /Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_wide-joint-clear-frame/print-340-upper_stern.scad
+Exporting /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_upper_stern.stl
+Geometries in cache: 3
+Geometry cache size in bytes: 2606232
+CGAL Polyhedrons in cache: 0
+CGAL cache size in bytes: 0
+Total rendering time: 0:00:00.006
+Top level object is a 3D object (PolySet):
+   Convex:       no
+   Triangles:  18092
+Done: /Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01/2026-11-01_sarepta_340mm_wide_print_upper_stern.stl

@@ -1,0 +1,19 @@
+{
+  "checks_pass": true,
+  "material_probes": 800,
+  "failures": [],
+  "sizes": {
+    "170": {
+      "lid_socket_diameter_mm": 1.0,
+      "lid_socket_depth_per_half_mm": 1.6,
+      "removed_volume_mm3": 5.018477215352505,
+      "expected_bore_volume_mm3": 5.018477584873503
+    },
+    "340": {
+      "lid_socket_diameter_mm": 2.0,
+      "lid_socket_depth_per_half_mm": 3.2,
+      "removed_volume_mm3": 40.14781772282004,
+      "expected_bore_volume_mm3": 40.147820678988026
+    }
+  }
+}

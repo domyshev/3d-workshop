@@ -1,0 +1,294 @@
+{
+  "revision": "2026-11-01_transverse-glue-joint",
+  "export_date": "2026-11-01",
+  "source_available": true,
+  "physical_print_verified": false,
+  "parent": "2026-11-01_front-skirt-sockets",
+  "raw_export_origin": "/Volumes/code/ilia-108/3d-workshop/stl/2026/2026.11/2026.11.01",
+  "files": {
+    "2026-11-01_sarepta_170mm_joint_lower_bow.stl": {
+      "sha256": "17f0b4240ca1df0f87c0c71e9efddbe0a1308d63d5c8bdba44b8bbcb43ca6b55",
+      "bytes": 5237284
+    },
+    "2026-11-01_sarepta_170mm_joint_lower_stern.stl": {
+      "sha256": "d41084396603f3b8d5e76dbef15c2efc294f0193e65dfd325c2c1213d17c3e2e",
+      "bytes": 2470884
+    },
+    "2026-11-01_sarepta_170mm_joint_upper_bow.stl": {
+      "sha256": "a7a8f2f60e161ed3b0d5e7b48ae07b09117d36f329bdbc3fbf143668664e892d",
+      "bytes": 1316684
+    },
+    "2026-11-01_sarepta_170mm_joint_upper_stern.stl": {
+      "sha256": "f9ff90dff10fc4ed6647cd0fa36b29344e0dddf91209f23f24bb96c57985675f",
+      "bytes": 909084
+    },
+    "2026-11-01_sarepta_340mm_joint_lower_bow.stl": {
+      "sha256": "2465587828e55e0af9baf483e836216b97321fecefa8d6e597cc5d5a1afa75bd",
+      "bytes": 5258784
+    },
+    "2026-11-01_sarepta_340mm_joint_lower_stern.stl": {
+      "sha256": "54c65d7a99d1a3e870ebd188b685bb1bf900efa96d5458858b2dd7c316ce553f",
+      "bytes": 2488584
+    },
+    "2026-11-01_sarepta_340mm_joint_upper_bow.stl": {
+      "sha256": "3718365b934e5c3ef5e5cc693fe37eec8dcddef4a4e99f619bda609ce424d135",
+      "bytes": 1315484
+    },
+    "2026-11-01_sarepta_340mm_joint_upper_stern.stl": {
+      "sha256": "654f9a75c487542b4c238cd2b18a4398ffa46f6776fc5fdc2a61baf1a7eff5a5",
+      "bytes": 904684
+    },
+    "2026-11-01_sarepta_340mm_print_lower_bow.stl": {
+      "sha256": "2465587828e55e0af9baf483e836216b97321fecefa8d6e597cc5d5a1afa75bd",
+      "bytes": 5258784
+    },
+    "2026-11-01_sarepta_340mm_print_lower_stern.stl": {
+      "sha256": "3cde3ac8a0ddb166ac633839eed0c803f3ae255019003174f01c240e6c024c3f",
+      "bytes": 2488584
+    },
+    "2026-11-01_sarepta_340mm_print_upper_bow.stl": {
+      "sha256": "ac4d484d624c05ac41d0485d1bd9bb8f0765bbf9f0f682228f12690babe04b6d",
+      "bytes": 1315484
+    },
+    "2026-11-01_sarepta_340mm_print_upper_stern.stl": {
+      "sha256": "6875d53fa79f39d07e1c3c2881bf9aa154f622455cab139c0b9ed8bff026c575",
+      "bytes": 904684
+    },
+    "2026-11-01_sarepta_joint_pin_1_8mm.stl": {
+      "sha256": "58140021e9291fe8002a9f60683f8c2f0d0428f42104fa20dc7ff832e585e387",
+      "bytes": 19084
+    },
+    "README.md": {
+      "sha256": "ca5397f5a5a9378eb644ad3583421a756c36be58075cb4d49b5eb4da2f0c69b7",
+      "bytes": 5203
+    },
+    "assembly-view.scad": {
+      "sha256": "1589598e2902131deedbe49d4e612721db1511ccd89b6dc744cb40e47e35fc52",
+      "bytes": 118
+    },
+    "assembly.png": {
+      "sha256": "9b85de4cffa5d670f75c8954707a02a3bbb73ac6f20cd2714c0abd391ab48ff0",
+      "bytes": 76056
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-2026-11-01_sarepta_170mm_joint_lower_bow.json": {
+      "sha256": "45abbe2a891a5faa08eef22fcfbe3b94ca6187642001e17afdac2aa001061178",
+      "bytes": 210
+    },
+    "cleanup-2026-11-01_sarepta_170mm_joint_lower_stern.json": {
+      "sha256": "a22c649d53f293356cde13834cf0bfef6a9f36896dc5ab38ea5f2810d27e5429",
+      "bytes": 210
+    },
+    "cleanup-2026-11-01_sarepta_170mm_joint_upper_bow.json": {
+      "sha256": "60837d5ff89dd95df140594c5f592865dc5de5d973352221dc813088a1dba2ce",
+      "bytes": 230
+    },
+    "cleanup-2026-11-01_sarepta_170mm_joint_upper_stern.json": {
+      "sha256": "668b12d5513fc22c66de0d50844c270b6f19b424c20838cfb976eda43ffcc4b0",
+      "bytes": 230
+    },
+    "cleanup-2026-11-01_sarepta_340mm_joint_lower_bow.json": {
+      "sha256": "a22c649d53f293356cde13834cf0bfef6a9f36896dc5ab38ea5f2810d27e5429",
+      "bytes": 210
+    },
+    "cleanup-2026-11-01_sarepta_340mm_joint_lower_stern.json": {
+      "sha256": "45abbe2a891a5faa08eef22fcfbe3b94ca6187642001e17afdac2aa001061178",
+      "bytes": 210
+    },
+    "cleanup-2026-11-01_sarepta_340mm_joint_upper_bow.json": {
+      "sha256": "fac3c4591930193e1ea00e6baa5a10a806cdfa6cae452bc27e23ce1bb19c4e03",
+      "bytes": 228
+    },
+    "cleanup-2026-11-01_sarepta_340mm_joint_upper_stern.json": {
+      "sha256": "6663b4045d82a75cfc6720b3a78640650fdef801f5bcb45af12fa5ead5e924b7",
+      "bytes": 229
+    },
+    "cleanup-2026-11-01_sarepta_joint_pin_1_8mm.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-print-lower_bow.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-print-lower_stern.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-print-upper_bow.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-print-upper_stern.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.sh": {
+      "sha256": "489d7fc337fae299c920751151baeae122aaecdb6a083987df11f673fab3420b",
+      "bytes": 662
+    },
+    "front-axes.scad": {
+      "sha256": "385f5f91e93b3e7f2528994905dbfc6ae70e87211408f525bddfc4f8188f0987",
+      "bytes": 375
+    },
+    "halves.png": {
+      "sha256": "6bf31ec8d33dbca51dd973ef593ef5bcd5bd1cff72388f7e15f12ff40762cd3b",
+      "bytes": 179478
+    },
+    "inspection-view.scad": {
+      "sha256": "856fb0c1a3a187a167071f09e66001e922848daad467ae298ea363145100dbd5",
+      "bytes": 2922
+    },
+    "inspection.png": {
+      "sha256": "39e41b9171143e4aae7085325ce7d8315591c1f08b8e1d5f4c2ed1530e2ca0ec",
+      "bytes": 86333
+    },
+    "joint-axes.json": {
+      "sha256": "70f2c63a7d38d9f42f3f9b6959415818ef65dc69cd22b088458693995f974952",
+      "bytes": 648
+    },
+    "joint-face-view.scad": {
+      "sha256": "e5c7656f7b8373216451189c27457e921aff4db3439fc6bee7351ee2bf17de95",
+      "bytes": 458
+    },
+    "joint-probe.log": {
+      "sha256": "6123c893e766e0e4bd9e5214a33f6a5b72e1e92e4bfab9d5901ea283b204e45a",
+      "bytes": 634
+    },
+    "joint-view.scad": {
+      "sha256": "641d6fcffa74b6ce6b85e6f00d06ade25796f115d663e295d18dc5d1fa09f36a",
+      "bytes": 283
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "mating-faces.png": {
+      "sha256": "53c3611e9407ad7f38ba7ee2ba2de16abc6ce6b908945556da1587ac1f8055ab",
+      "bytes": 27924
+    },
+    "print-170-lower_bow.scad": {
+      "sha256": "50007ad70ef0e7ff43d728ecf116399a84a6f0aab29558084b765f01b08bbb9b",
+      "bytes": 172
+    },
+    "print-170-lower_stern.scad": {
+      "sha256": "db61fc670812dfdb70fa481d903edf525cd21cd2120bb012a5389d5732947129",
+      "bytes": 178
+    },
+    "print-170-upper_bow.scad": {
+      "sha256": "0dafee1a6331e64562b8e3d2a7cead4512c8c039cb5c357820bac92d69eb74c6",
+      "bytes": 201
+    },
+    "print-170-upper_stern.scad": {
+      "sha256": "7414935a412fc6b3ab97c7ac84d909fa9f2a4dd0197ed1e86846e1e9772c63d3",
+      "bytes": 207
+    },
+    "print-340-lower_bow.scad": {
+      "sha256": "e7357b92903a312135094c772de7f0cfdbcdad64f928f81f3d2460fdc2865a92",
+      "bytes": 172
+    },
+    "print-340-lower_stern.scad": {
+      "sha256": "dc0df0345043606ec6ff2f4c4852c39533c20957a04d6765a2b1add50c5cb51e",
+      "bytes": 179
+    },
+    "print-340-upper_bow.scad": {
+      "sha256": "76d233471e9243433824729db53efd24d8d3b40ce8c000e3ccd09455ca28ca09",
+      "bytes": 200
+    },
+    "print-340-upper_stern.scad": {
+      "sha256": "f25a48d550eca8aa1d406b9625bda731854adf7459cadc64b672365e9c32b051",
+      "bytes": 208
+    },
+    "print-verification.json": {
+      "sha256": "a16d9f6047025c58257254a71d623b3f4e2cbb54126471a9b07ef656a6333d21",
+      "bytes": 3650
+    },
+    "raw/2026-11-01_sarepta_170mm_joint_cavity_probe.stl": {
+      "sha256": "6aced9ecc864abee25d7cc42fa98cdf4800f910365e39deaf84cc129d0d7290c",
+      "bytes": 27684
+    },
+    "raw/2026-11-01_sarepta_170mm_joint_lower_bow.stl": {
+      "sha256": "8e8b0603583bb104b9571bf1f4cda31bf97458df96cdf313ebed6d10989749fe",
+      "bytes": 5237784
+    },
+    "raw/2026-11-01_sarepta_170mm_joint_lower_stern.stl": {
+      "sha256": "513d1b4ddc0fa8df1be090dc9f56305482914275cc384322a17309e2b2897029",
+      "bytes": 2471584
+    },
+    "raw/2026-11-01_sarepta_170mm_joint_upper_bow.stl": {
+      "sha256": "18f03e18bd6cfff23f4b079aed50d780a1c8a9629324a866c13db2f1dae2f8da",
+      "bytes": 1321884
+    },
+    "raw/2026-11-01_sarepta_170mm_joint_upper_stern.stl": {
+      "sha256": "a5eee822a1d60d5e900ce4ec02b89f7f53da2bb4951ad421cb3d511e146580e4",
+      "bytes": 912784
+    },
+    "raw/2026-11-01_sarepta_340mm_joint_lower_bow.stl": {
+      "sha256": "5daed95206e6732d9423af8f504a9e393c8c5e36634a56fbf872bd2406be5c5c",
+      "bytes": 5259484
+    },
+    "raw/2026-11-01_sarepta_340mm_joint_lower_stern.stl": {
+      "sha256": "c82a23689fe131229247d4c72c28b3c191f0011c3c9338b6fbb543e9f3f78105",
+      "bytes": 2489084
+    },
+    "raw/2026-11-01_sarepta_340mm_joint_upper_bow.stl": {
+      "sha256": "42aaa329342df93e853ae6b75695ab4dbf2e0cbfff380f74db2ea8d8e16663e1",
+      "bytes": 1317184
+    },
+    "raw/2026-11-01_sarepta_340mm_joint_upper_stern.stl": {
+      "sha256": "0c45170a3791bd6594b5e6d3a26a856a986a5f0574e1d6b446233ce520bc5940",
+      "bytes": 907284
+    },
+    "raw/2026-11-01_sarepta_340mm_print_lower_bow.stl": {
+      "sha256": "eac8b1f020768732e762985093f93928fe892508084eaf0bb5e0d0bf147951f5",
+      "bytes": 5258784
+    },
+    "raw/2026-11-01_sarepta_340mm_print_lower_stern.stl": {
+      "sha256": "28fd385f96c82ef6bd78a9e5e14b1917adb49629f56a06af83f62061c7af045f",
+      "bytes": 2488584
+    },
+    "raw/2026-11-01_sarepta_340mm_print_upper_bow.stl": {
+      "sha256": "0b239b492e5c22eb33df8c526406bce07dcaa829d10f2929529b37a51c1951d8",
+      "bytes": 1315484
+    },
+    "raw/2026-11-01_sarepta_340mm_print_upper_stern.stl": {
+      "sha256": "f9517f3613d51fd9c0778d1409b81f9517e09118575a6aa0300c3545b7d92aa1",
+      "bytes": 904684
+    },
+    "raw/2026-11-01_sarepta_joint_pin_1_8mm.stl": {
+      "sha256": "ee9b4d2af23f9a3e02420bd4f2556ee72e87ca74dd225ac59e4180ff652e2a31",
+      "bytes": 19084
+    },
+    "section-profile.json": {
+      "sha256": "d17e7607457ea8d0ada644090fbc7dfecb4540d3d7fa0012cf54423e0baf0386",
+      "bytes": 9018
+    },
+    "section-profile.scad": {
+      "sha256": "ea58203ccc387dba35f52f82b716a00cd767c8dc05b1ab12abd4680024a8e5f6",
+      "bytes": 5761
+    },
+    "source.scad": {
+      "sha256": "af98657e339cc7ed40f61b5815c265c929cd299ccef821818599f88ea305d092",
+      "bytes": 4756
+    },
+    "transverse-export.log": {
+      "sha256": "3388343e3aaa6580d5dd321691b3aa8e51671a0bad7aeb99e496acde68141435",
+      "bytes": 6151
+    },
+    "transverse-print-export.log": {
+      "sha256": "0209daf5cab97f77ae53dee334be62611abe8b44a4abd1d71855470e24d6ba9b",
+      "bytes": 2573
+    },
+    "verification.json": {
+      "sha256": "ca44f171bfc564ca378fd1bc8afc780a907e91909ce26ae3533cacdea9eb0736",
+      "bytes": 14790
+    },
+    "verify.py": {
+      "sha256": "544503fd3a418a6db79792fa3bfaec45a923ee1395a27a22af5e35705648791a",
+      "bytes": 7354
+    }
+  }
+}

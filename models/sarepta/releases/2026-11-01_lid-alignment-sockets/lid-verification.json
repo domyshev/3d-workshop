@@ -1,0 +1,225 @@
+{
+  "checks_pass": true,
+  "material_probes": 800,
+  "failures": [],
+  "sizes": {
+    "170": {
+      "lid_socket_diameter_mm": 1.0,
+      "lid_socket_depth_per_half_mm": 1.6,
+      "lid_pin_diameter_mm": 0.9,
+      "lid_pin_length_mm": 3.0,
+      "mating_face_area_mm2": [
+        18.003904035083906,
+        18.003904035083906
+      ],
+      "removed_volume_mm3": 5.018477215352505,
+      "expected_bore_volume_mm3": 5.018477584873503,
+      "mesh": {
+        "upper_bow": {
+          "file": "2026-11-01_sarepta_170mm_lid_joint_upper_bow.stl",
+          "vertices": 13029,
+          "triangles": 26058,
+          "bounds_mm": [
+            [
+              2.1465330123901367,
+              -27.10268211364746,
+              25.0
+            ],
+            [
+              85.0,
+              27.10268211364746,
+              30.579347610473633
+            ]
+          ],
+          "size_mm": [
+            82.85346698760986,
+            54.20536422729492,
+            5.579347610473633
+          ],
+          "components": 1,
+          "euler_characteristic": 0,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.999253496542306e-07,
+          "signed_volume_mm3": 3824.8266232071005,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_stern": {
+          "file": "2026-11-01_sarepta_170mm_lid_joint_upper_stern.stl",
+          "vertices": 8936,
+          "triangles": 17868,
+          "bounds_mm": [
+            [
+              85.0,
+              -26.880434036254883,
+              25.0
+            ],
+            [
+              170.0,
+              26.880434036254883,
+              30.11739158630371
+            ]
+          ],
+          "size_mm": [
+            85.0,
+            53.760868072509766,
+            5.117391586303711
+          ],
+          "components": 1,
+          "euler_characteristic": 2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 7.169815873092856e-07,
+          "signed_volume_mm3": 1987.721306548562,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        }
+      },
+      "lower_byte_identical_to_parent": true,
+      "pin": {
+        "file": "2026-11-01_sarepta_170mm_lid_joint_pin.stl",
+        "vertices": 192,
+        "triangles": 380,
+        "bounds_mm": [
+          [
+            -0.44999998807907104,
+            -0.44999998807907104,
+            0.0
+          ],
+          [
+            0.44999998807907104,
+            0.44999998807907104,
+            3.0
+          ]
+        ],
+        "size_mm": [
+          0.8999999761581421,
+          0.8999999761581421,
+          3.0
+        ],
+        "components": 1,
+        "euler_characteristic": 2,
+        "edge_pairing_errors": 0,
+        "vertex_link_errors": 0,
+        "zero_area_triangles": 0,
+        "minimum_double_triangle_area_mm2": 0.000314064644924672,
+        "signed_volume_mm3": 1.873116123876874,
+        "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+        "basic_mesh_checks_pass": true
+      }
+    },
+    "340": {
+      "lid_socket_diameter_mm": 2.0,
+      "lid_socket_depth_per_half_mm": 3.2,
+      "lid_pin_diameter_mm": 1.8,
+      "lid_pin_length_mm": 6.0,
+      "mating_face_area_mm2": [
+        72.01561614033562,
+        72.01561614033562
+      ],
+      "removed_volume_mm3": 40.14781772282004,
+      "expected_bore_volume_mm3": 40.147820678988026,
+      "mesh": {
+        "upper_bow": {
+          "file": "2026-11-01_sarepta_340mm_lid_joint_upper_bow.stl",
+          "vertices": 13029,
+          "triangles": 26058,
+          "bounds_mm": [
+            [
+              4.293066024780273,
+              -54.20536422729492,
+              50.0
+            ],
+            [
+              170.0,
+              54.20536422729492,
+              61.158695220947266
+            ]
+          ],
+          "size_mm": [
+            165.70693397521973,
+            108.41072845458984,
+            11.158695220947266
+          ],
+          "components": 1,
+          "euler_characteristic": 0,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 1.1997013986169224e-06,
+          "signed_volume_mm3": 30598.612985656804,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_stern": {
+          "file": "2026-11-01_sarepta_340mm_lid_joint_upper_stern.stl",
+          "vertices": 8936,
+          "triangles": 17868,
+          "bounds_mm": [
+            [
+              170.0,
+              -53.760868072509766,
+              50.0
+            ],
+            [
+              340.0,
+              53.760868072509766,
+              60.23478317260742
+            ]
+          ],
+          "size_mm": [
+            170.0,
+            107.52173614501953,
+            10.234783172607422
+          ],
+          "components": 1,
+          "euler_characteristic": 2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.8679263492371424e-06,
+          "signed_volume_mm3": 15901.770452388497,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        }
+      },
+      "lower_byte_identical_to_parent": true,
+      "pin": {
+        "file": "2026-11-01_sarepta_340mm_lid_joint_pin.stl",
+        "vertices": 192,
+        "triangles": 380,
+        "bounds_mm": [
+          [
+            -0.8999999761581421,
+            -0.8999999761581421,
+            0.0
+          ],
+          [
+            0.8999999761581421,
+            0.8999999761581421,
+            6.0
+          ]
+        ],
+        "size_mm": [
+          1.7999999523162842,
+          1.7999999523162842,
+          6.0
+        ],
+        "components": 1,
+        "euler_characteristic": 2,
+        "edge_pairing_errors": 0,
+        "vertex_link_errors": 0,
+        "zero_area_triangles": 0,
+        "minimum_double_triangle_area_mm2": 0.001256258579698688,
+        "signed_volume_mm3": 14.984928991014993,
+        "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+        "basic_mesh_checks_pass": true
+      }
+    }
+  },
+  "unchanged_lower_checks": "/Volumes/code/ilia-108/3d-workshop/models/sarepta/releases/2026-11-01_two-point-five-mm-bolt-joint/verification.json",
+  "physical_fit_tested": false
+}

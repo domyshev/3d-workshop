@@ -1,0 +1,494 @@
+{
+  "checks_pass": true,
+  "material_probes": 808,
+  "failures": [],
+  "sizes": {
+    "170": {
+      "cut_x_mm": 85.0,
+      "glue_land_width_mm": 4,
+      "axial_land_depth_per_half_mm": 3,
+      "mating_faces": {
+        "lower": {
+          "bow_area_mm2": 413.7325718940263,
+          "stern_area_mm2": 413.7325718940263,
+          "difference_mm2": 0.0
+        },
+        "upper": {
+          "bow_area_mm2": 95.71440303386589,
+          "stern_area_mm2": 95.71440303386589,
+          "difference_mm2": 0.0
+        }
+      },
+      "bores": [
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            -24.448644920740225,
+            22.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 1.999999972221147
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            -24.448644920740225,
+            22.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 1.999999972221147
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            24.448644920740225,
+            22.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 1.999999972221147
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            24.448644920740225,
+            22.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 1.999999972221147
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            -7.6723887125651045,
+            4.688165775407462
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0000004659558526,
+          "diameter_z_mm": 1.999999984383177
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            -7.6723887125651045,
+            4.688165775407462
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0000004659558526,
+          "diameter_z_mm": 1.999999984383178
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            7.6723887125651045,
+            4.688165775407462
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0000004659558526,
+          "diameter_z_mm": 1.999999984383177
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            7.6723887125651045,
+            4.688165775407462
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0000004659558526,
+          "diameter_z_mm": 1.999999984383177
+        }
+      ],
+      "max_exterior_change_mm": 6.843773441289613e-07,
+      "max_bottom_change_mm": 4.725842162045524e-08,
+      "mesh": {
+        "lower_bow": {
+          "file": "2026-11-01_sarepta_170mm_joint_lower_bow.stl",
+          "vertices": 52370,
+          "triangles": 104744,
+          "bounds_mm": [
+            [
+              1.8197427988052368,
+              -27.947391510009766,
+              0.0
+            ],
+            [
+              85.0,
+              27.947391510009766,
+              25.0
+            ]
+          ],
+          "size_mm": [
+            83.18025720119476,
+            55.89478302001953,
+            25.0
+          ],
+          "components": 1,
+          "euler_characteristic": -2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.300859821966427e-11,
+          "signed_volume_mm3": 9661.862330501155,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "lower_stern": {
+          "file": "2026-11-01_sarepta_170mm_joint_lower_stern.stl",
+          "vertices": 24702,
+          "triangles": 49416,
+          "bounds_mm": [
+            [
+              85.0,
+              -27.947391510009766,
+              0.0
+            ],
+            [
+              170.0,
+              27.947391510009766,
+              25.0
+            ]
+          ],
+          "size_mm": [
+            85.0,
+            55.89478302001953,
+            25.0
+          ],
+          "components": 1,
+          "euler_characteristic": -6,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 1.3080544917753566e-09,
+          "signed_volume_mm3": 15381.179587444456,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_bow": {
+          "file": "2026-11-01_sarepta_170mm_joint_upper_bow.stl",
+          "vertices": 13166,
+          "triangles": 26332,
+          "bounds_mm": [
+            [
+              2.1465330123901367,
+              -27.10268211364746,
+              25.0
+            ],
+            [
+              85.0,
+              27.10268211364746,
+              30.579347610473633
+            ]
+          ],
+          "size_mm": [
+            82.85346698760986,
+            54.20536422729492,
+            5.579347610473633
+          ],
+          "components": 1,
+          "euler_characteristic": 0,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.4010660126805305e-10,
+          "signed_volume_mm3": 4056.0525415772195,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_stern": {
+          "file": "2026-11-01_sarepta_170mm_joint_upper_stern.stl",
+          "vertices": 9092,
+          "triangles": 18180,
+          "bounds_mm": [
+            [
+              85.0,
+              -26.880434036254883,
+              25.0
+            ],
+            [
+              170.0,
+              26.880434036254883,
+              30.11739158630371
+            ]
+          ],
+          "size_mm": [
+            85.0,
+            53.760868072509766,
+            5.117391586303711
+          ],
+          "components": 1,
+          "euler_characteristic": 2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.1827872842550278e-11,
+          "signed_volume_mm3": 2218.367209421721,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        }
+      }
+    },
+    "340": {
+      "cut_x_mm": 170.0,
+      "glue_land_width_mm": 4,
+      "axial_land_depth_per_half_mm": 3,
+      "mating_faces": {
+        "lower": {
+          "bow_area_mm2": 1109.3304161198375,
+          "stern_area_mm2": 1109.3304161198375,
+          "difference_mm2": 0.0
+        },
+        "upper": {
+          "bow_area_mm2": 227.18214248245204,
+          "stern_area_mm2": 227.18214248245204,
+          "difference_mm2": 0.0
+        }
+      },
+      "bores": [
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            -51.07915496826172,
+            47.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 2.0
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            -51.07915496826172,
+            47.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 2.0
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            51.07915496826172,
+            47.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 2.0
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            51.07915496826172,
+            47.5
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.0,
+          "diameter_z_mm": 2.0
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            -15.344777425130209,
+            7.338919246457947
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.000000945448397,
+          "diameter_z_mm": 2.000000445599799
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            -15.344777425130209,
+            7.338919246457947
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.000000945448397,
+          "diameter_z_mm": 2.000000445599797
+        },
+        {
+          "part": "lower_bow",
+          "axis_yz_mm": [
+            15.344777425130209,
+            7.338919246457947
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.000000945448397,
+          "diameter_z_mm": 2.000000445599799
+        },
+        {
+          "part": "lower_stern",
+          "axis_yz_mm": [
+            15.344777425130209,
+            7.338919246457947
+          ],
+          "blind_depth_mm": 2.1999969482421875,
+          "diameter_y_mm": 2.000000945448397,
+          "diameter_z_mm": 2.000000445599799
+        }
+      ],
+      "max_exterior_change_mm": 1.3687546882579227e-06,
+      "max_bottom_change_mm": 9.451684324091048e-08,
+      "mesh": {
+        "lower_bow": {
+          "file": "2026-11-01_sarepta_340mm_joint_lower_bow.stl",
+          "vertices": 52585,
+          "triangles": 105174,
+          "bounds_mm": [
+            [
+              3.6394855976104736,
+              -55.89478302001953,
+              0.0
+            ],
+            [
+              170.0,
+              55.89478302001953,
+              50.0
+            ]
+          ],
+          "size_mm": [
+            166.36051440238953,
+            111.78956604003906,
+            50.0
+          ],
+          "components": 1,
+          "euler_characteristic": -2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 9.203439287865708e-11,
+          "signed_volume_mm3": 72032.68874645692,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "lower_stern": {
+          "file": "2026-11-01_sarepta_340mm_joint_lower_stern.stl",
+          "vertices": 24879,
+          "triangles": 49770,
+          "bounds_mm": [
+            [
+              170.0,
+              -55.89478302001953,
+              0.0
+            ],
+            [
+              340.0,
+              55.89478302001953,
+              50.0
+            ]
+          ],
+          "size_mm": [
+            170.0,
+            111.78956604003906,
+            50.0
+          ],
+          "components": 1,
+          "euler_characteristic": -6,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 2.0954757928848267e-09,
+          "signed_volume_mm3": 117715.84035150707,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_bow": {
+          "file": "2026-11-01_sarepta_340mm_joint_upper_bow.stl",
+          "vertices": 13154,
+          "triangles": 26308,
+          "bounds_mm": [
+            [
+              4.293066024780273,
+              -54.20536422729492,
+              50.0
+            ],
+            [
+              170.0,
+              54.20536422729492,
+              61.158695220947266
+            ]
+          ],
+          "size_mm": [
+            165.70693397521973,
+            108.41072845458984,
+            11.158695220947266
+          ],
+          "components": 1,
+          "euler_characteristic": 0,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 4.220055416226387e-10,
+          "signed_volume_mm3": 31065.947169848027,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        },
+        "upper_stern": {
+          "file": "2026-11-01_sarepta_340mm_joint_upper_stern.stl",
+          "vertices": 9048,
+          "triangles": 18092,
+          "bounds_mm": [
+            [
+              170.0,
+              -53.760868072509766,
+              50.0
+            ],
+            [
+              340.0,
+              53.760868072509766,
+              60.23478317260742
+            ]
+          ],
+          "size_mm": [
+            170.0,
+            107.52173614501953,
+            10.234783172607422
+          ],
+          "components": 1,
+          "euler_characteristic": 2,
+          "edge_pairing_errors": 0,
+          "vertex_link_errors": 0,
+          "zero_area_triangles": 0,
+          "minimum_double_triangle_area_mm2": 3.055902197957039e-10,
+          "signed_volume_mm3": 16367.944658969485,
+          "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+          "basic_mesh_checks_pass": true
+        }
+      }
+    }
+  },
+  "joint_pin": {
+    "file": "2026-11-01_sarepta_joint_pin_1_8mm.stl",
+    "vertices": 192,
+    "triangles": 380,
+    "bounds_mm": [
+      [
+        -0.8999999761581421,
+        -0.8999999761581421,
+        0.0
+      ],
+      [
+        0.8999999761581421,
+        0.8999999761581421,
+        4.0
+      ]
+    ],
+    "size_mm": [
+      1.7999999523162842,
+      1.7999999523162842,
+      4.0
+    ],
+    "components": 1,
+    "euler_characteristic": 2,
+    "edge_pairing_errors": 0,
+    "vertex_link_errors": 0,
+    "zero_area_triangles": 0,
+    "minimum_double_triangle_area_mm2": 0.001094336402829299,
+    "signed_volume_mm3": 9.940874847279886,
+    "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+    "basic_mesh_checks_pass": true
+  },
+  "skirt_note": "All three original skirt meshes are reused with uniform model scaling and no new transverse cut. Existing matching skirt/cover pins scale together with the original geometry. Only the new joint hardware remains fixed millimetres.",
+  "limits": "Finite material, geometry and topology checks; physical printing, glue strength and pin fit are untested."
+}
