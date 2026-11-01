@@ -1,5 +1,7 @@
 # Sarepta — hull reconstruction and reference archive
 
+Current hardware: [fastener sizes and quantities](FASTENERS.md) for the 340 mm and 170 mm whole models.
+
 Start here. This project preserves the printable hull, the evidence used to
 reconstruct it, and the unsuccessful and successful intermediate versions.
 All dimensions in research notes are prototype millimetres unless stated otherwise.
@@ -180,3 +182,28 @@ The [thinner joint milestone](releases/2026-11-01_two-mm-bolt-joint/README.md) r
 ## Two-and-a-half-millimetre joint thickness — 2026-11-01
 
 The [thinner joint milestone](releases/2026-11-01_two-point-five-mm-bolt-joint/README.md) adjusts axial strip and circular-lug thickness to 2.5 mm per half, 5 mm combined. Cover reinforcement uses the same depth. The 6 mm strip, 12 mm local pads, 7 mm axis inset and 4.3 mm M4 through bores remain. Both 170/340 mm configurations and posed 340 mm exports have recorded geometry checks. The selected thickness and physical strength remain untested.
+
+
+## Native lid joint and glue-alignment sockets — 2026-11-01
+
+The [lid follow-up](releases/2026-11-01_lid-alignment-sockets/README.md) removes the inward upper reinforcement completely and puts two small paired blind sockets in the original roof-to-side corners. At overall length 340 mm they are 2 mm wide and 3.2 mm deep per half, with two 1.8 x 6 mm headless guide pins. These small lid features scale with the lid. Lower-hull meshes remain byte-identical to the 2.5 mm bolt-joint milestone. The exact native-lid volume difference matches only the intended socket pairs, and 800 material probes and mesh/print-pose checks pass. Physical fit remains untested.
+
+
+## Roof-width lid mating tabs — 2026-11-01
+
+The [corrected lid milestone](releases/2026-11-01_roof-width-lid-tabs/README.md) restores mating tabs under the original horizontal rail span, clipped to the exact native roof footprint. At whole length 340 mm each tab face is about 9.39 x 5 mm, with 2.5 mm axial depth per half. Two centred 2 mm blind sockets, 2.2 mm deep, match two 1.8 x 4 mm guide pins. There is no projection inward past the roof edge. Lower-hull meshes remain byte-identical to the verified 2.5 mm M4 joint. Geometry, topology and print-pose checks pass; physical fit remains untested.
+
+
+## Full-height lid mating tabs — 2026-11-01
+
+The [full-height lid milestone](releases/2026-11-01_full-height-lid-tabs/README.md) retains the accepted inward tab edge and extends each tab to the original lower lid plane. At overall length 340 mm the tab height is 10.23478 mm, axial thickness remains 2.5 mm per half and guide axes move to mid-height at Z=55.11739 mm. The 2 mm blind sockets and 1.8 x 4 mm guide pins remain. The outer wall is retained, the sloped-wall root is filled, and no tab extends below the lid. All 904 material probes, recorded topology/print-pose checks and sampled exterior comparisons pass. Physical fit remains untested.
+
+
+## Four-millimetre lid guides and fastener reference — 2026-11-01
+
+The [larger lid-guide milestone](releases/2026-11-01_four-mm-lid-guides/README.md) increases the sockets to 4 mm and smooth lid guides to 3.8 x 4 mm for the whole 340 mm boat. Two guides are needed; paired blind depths remain 2.2 mm per half. Full-height tabs and the lower hull remain unchanged. The body seam uses four M4 bolts with nuts through 4.3 mm holes, not smooth guide pins. [FASTENERS.md](FASTENERS.md) lists all current sizes and quantities for 340/170 mm whole models. Geometry and print-pose checks pass; physical fit remains untested.
+
+
+## Lid through bolts
+
+The current lid uses two through holes for bolts, 4.3 mm diameter at overall length 340 mm. See [FASTENERS.md](FASTENERS.md).

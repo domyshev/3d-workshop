@@ -1,0 +1,27 @@
+{
+  "checks_pass": true,
+  "material_probes": 904,
+  "failures": [],
+  "sizes": {
+    "170": {
+      "lid_socket_diameter_mm": 1.0,
+      "lid_socket_depth_per_half_mm": 1.1,
+      "tab_width_mm": 4.695217873729614,
+      "tab_height_mm": 5.117391586303711,
+      "axis_yz_mm": [
+        22.997608555395082,
+        27.558695793151855
+      ]
+    },
+    "340": {
+      "lid_socket_diameter_mm": 2.0,
+      "lid_socket_depth_per_half_mm": 2.2,
+      "tab_width_mm": 9.390435747459229,
+      "tab_height_mm": 10.234783172607422,
+      "axis_yz_mm": [
+        45.995217110790165,
+        55.11739158630371
+      ]
+    }
+  }
+}
