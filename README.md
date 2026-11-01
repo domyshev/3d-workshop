@@ -1,10 +1,4 @@
-```text
-*****  ****        ‖   ‖  *****  ****   *****  ‖      *****  ‖   ‖  *****
-    ‖  ‖   ‖       ‖* *‖  ‖   ‖  ‖   ‖  ‖      ‖        ‖    ‖*  ‖  ‖
-*****  ‖   ‖       ‖ * ‖  ‖   ‖  ‖   ‖  ****   ‖        ‖    ‖ * ‖  ‖ ***
-    ‖  ‖   ‖       ‖   ‖  ‖   ‖  ‖   ‖  ‖      ‖        ‖    ‖  *‖  ‖   ‖
-*****  ****        ‖   ‖  *****  ****   *****  *****  *****  ‖   ‖  *****
-```
+![Collage of workshop projects and printed prototypes](docs/images/workshop-project-collage.jpg)
 
 # Personal Engineering Workshop
 
@@ -212,6 +206,14 @@ Successful renders of the overall scene and individual parts are recorded for th
 
 **Status:** ongoing experiment. Checks of the committed version do not validate subsequent changes.
 
+### October 2026 — Printed modular shower-grid assembly
+
+Designed an 80 × 80 mm modular grid and iterated printed threaded studs and
+knurled nuts. Four printed panels were assembled in a row; the physical assembly
+was photographed by November 1. The [project record](models/modular_shower_grid/README.md)
+contains the photograph, joint detail, printable parts and a pastel inspection
+scene. The photo documents assembly, not a load or long-term bathroom test.
+
 ### October 19, 2026 — Sarepta hull reconstruction
 
 Created a [170 mm Sarepta hull study](models/sarepta/README.md) from the published
@@ -265,6 +267,7 @@ corrections are subsequent work, not claimed by the archived versions.
 - **[Funny ATV](models/funnyAtv.scad):** gears, frames, and LEGO-compatible connections.
 - **[Sarepta](models/sarepta/README.md):** a 170 mm reconstruction of the motorboat hull.
 - **[Bathroom holder](models/bathroomHolderCircle.scad):** household mounting and structural reinforcement.
+- **[Modular shower grid](models/modular_shower_grid/README.md):** printed grid panels and threaded connections assembled into a four-panel strip.
 - **[Phone / MagSafe holder](models/iphone_holder/):** bases, supports, clamps, and indexed connections, including [historical designs](models/iphone_holder/old/) and the [insert experiment](models/iphone-holder-ring/).
 - **[Super Cubes](models/super_cubes/):** a threaded modular construction system.
 - **[Mechanical blocks](models/mechanical_blocks/):** exploration of locks and household construction interfaces, with an [interactive concept board](concepts/smart-mechanical-blocks/).

@@ -1,10 +1,217 @@
 {
     "error_string": "Success.",
-    "export_time": 0,
-    "layer_height": 0.0,
+    "export_time": 1505,
+    "layer_height": 0.1599999964237213,
     "plate_index": 0,
-    "prepare_time": 1,
+    "prepare_time": 266,
     "return_code": 0,
-    "sparse_infill_density": 0.0,
-    "wall_loops": 0
+    "sliced_plates": [
+        {
+            "feature_type_times": {
+                "Bottom surface": 28.388195037841797,
+                "Bridge": 216.46298217773438,
+                "Brim": 19.26108169555664,
+                "Custom": 349.0367126464844,
+                "Flush": 28.0,
+                "Gap infill": 20.343137741088867,
+                "Inner wall": 1439.693115234375,
+                "Internal solid infill": 914.5150756835938,
+                "Outer wall": 1706.0977783203125,
+                "Overhang wall": 660.3444213867188,
+                "Sparse infill": 191.30018615722656,
+                "Support": 4624.84716796875,
+                "Support interface": 342.27606201171875,
+                "Top surface": 132.1983642578125,
+                "Travel": 3332.365234375,
+                "Undefined": 3314.482177734375
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL01",
+                    "id": 1,
+                    "main_used_g": 53.77261734008789,
+                    "total_used_g": 53.77261734008789
+                }
+            ],
+            "generate_support_material_time": 5889,
+            "id": 1,
+            "infill_time": 182,
+            "layer_filament_change": 0,
+            "main_predication": 13598.779296875,
+            "make_perimeters_time": 446,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 162.01968383789063,
+                        "height": 25.0,
+                        "width": 162.01968383789063,
+                        "x": 8.990157127380371,
+                        "y": 8.990157127380371,
+                        "z": 0.0
+                    },
+                    "id": 5,
+                    "name": "Sarepta lower",
+                    "triangle_count": 71584
+                }
+            ],
+            "sliced_time": 8640,
+            "sliced_time_with_cache": 1996,
+            "total_predication": 13985.93359375,
+            "triangle_count": 71584,
+            "warning_message": ""
+        },
+        {
+            "feature_type_times": {
+                "Bottom surface": 106.46849822998047,
+                "Bridge": 239.4769744873047,
+                "Brim": 98.96935272216797,
+                "Custom": 349.61224365234375,
+                "Flush": 28.0,
+                "Gap infill": 7.063606262207031,
+                "Inner wall": 400.2323303222656,
+                "Internal solid infill": 718.6068115234375,
+                "Outer wall": 410.8954162597656,
+                "Overhang wall": 24.257898330688477,
+                "Sparse infill": 77.03326416015625,
+                "Support": 150.15740966796875,
+                "Support interface": 12.858543395996094,
+                "Top surface": 169.39634704589844,
+                "Travel": 409.6005859375,
+                "Undefined": 391.5799560546875
+            },
+            "filament_change_times": 0,
+            "filaments": [
+                {
+                    "filament_id": "GFL01",
+                    "id": 1,
+                    "main_used_g": 19.929672241210938,
+                    "total_used_g": 19.929672241210938
+                }
+            ],
+            "generate_support_material_time": 113,
+            "id": 2,
+            "infill_time": 159,
+            "layer_filament_change": 0,
+            "main_predication": 2797.123046875,
+            "make_perimeters_time": 133,
+            "obj_cached_cnt": 0,
+            "objects": [
+                {
+                    "bbox": {
+                        "depth": 40.80000305175781,
+                        "height": 8.391305923461914,
+                        "width": 7.141300201416016,
+                        "x": 237.42935180664063,
+                        "y": 124.5999984741211,
+                        "z": -1.7309567112988589e-09
+                    },
+                    "id": 9,
+                    "name": "Sarepta dashboard",
+                    "triangle_count": 244
+                },
+                {
+                    "bbox": {
+                        "depth": 156.77279663085938,
+                        "height": 5.579347610473633,
+                        "width": 156.77279663085938,
+                        "x": 227.6136016845703,
+                        "y": 11.613601684570313,
+                        "z": 4.763183625300371e-09
+                    },
+                    "id": 13,
+                    "name": "Sarepta upper",
+                    "triangle_count": 6634
+                },
+                {
+                    "bbox": {
+                        "depth": 40.79999923706055,
+                        "height": 4.0,
+                        "width": 2.239564895629883,
+                        "x": 364.8802185058594,
+                        "y": 9.600000381469727,
+                        "z": 0.0
+                    },
+                    "id": 17,
+                    "name": "Sarepta retainer",
+                    "triangle_count": 332
+                },
+                {
+                    "bbox": {
+                        "depth": 4.0,
+                        "height": 8.0,
+                        "width": 4.0,
+                        "x": 234.0,
+                        "y": 13.0,
+                        "z": 0.0
+                    },
+                    "id": 21,
+                    "name": "Sarepta pin_1",
+                    "triangle_count": 508
+                },
+                {
+                    "bbox": {
+                        "depth": 4.0,
+                        "height": 8.0,
+                        "width": 4.0,
+                        "x": 249.0,
+                        "y": 13.0,
+                        "z": 0.0
+                    },
+                    "id": 25,
+                    "name": "Sarepta pin_2",
+                    "triangle_count": 508
+                },
+                {
+                    "bbox": {
+                        "depth": 4.0,
+                        "height": 8.0,
+                        "width": 4.0,
+                        "x": 264.0,
+                        "y": 13.0,
+                        "z": 0.0
+                    },
+                    "id": 29,
+                    "name": "Sarepta pin_3",
+                    "triangle_count": 508
+                },
+                {
+                    "bbox": {
+                        "depth": 4.0,
+                        "height": 8.0,
+                        "width": 4.0,
+                        "x": 279.0,
+                        "y": 13.0,
+                        "z": 0.0
+                    },
+                    "id": 33,
+                    "name": "Sarepta pin_4",
+                    "triangle_count": 508
+                }
+            ],
+            "sliced_time": 1040,
+            "sliced_time_with_cache": 607,
+            "total_predication": 3184.714599609375,
+            "triangle_count": 9242,
+            "warning_message": ""
+        }
+    ],
+    "sparse_infill_density": 15.0,
+    "upward_compatible_machine": [
+        "Bambu Lab P1S 0.4 nozzle",
+        "Bambu Lab P1P 0.4 nozzle",
+        "Bambu Lab X1 0.4 nozzle",
+        "Bambu Lab X1 Carbon 0.4 nozzle",
+        "Bambu Lab X1E 0.4 nozzle",
+        "Bambu Lab A1 0.4 nozzle",
+        "Bambu Lab H2D 0.4 nozzle",
+        "Bambu Lab H2D Pro 0.4 nozzle",
+        "Bambu Lab H2S 0.4 nozzle",
+        "Bambu Lab P2S 0.4 nozzle",
+        "Bambu Lab H2C 0.4 nozzle",
+        "Bambu Lab X2D 0.4 nozzle",
+        "Bambu Lab A2L 0.4 nozzle"
+    ],
+    "wall_loops": 3
 }

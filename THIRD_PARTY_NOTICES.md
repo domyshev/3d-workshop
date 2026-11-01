@@ -17,6 +17,7 @@ The library's original copyright, contributor credits, license notice, and warra
 The repository-authored OpenSCAD sources listed below are distributed under the GNU General Public License, version 3 or any later version. They use the thread library directly or import another model that does. Their earlier versions in this repository are included under the same terms.
 
 - [`models/2026-07-02_sample_screw_and_hole.scad`](models/2026-07-02_sample_screw_and_hole.scad)
+- [`models/modular_shower_grid/src/fasteners.scad`](models/modular_shower_grid/src/fasteners.scad), with the original [vendored copy](models/modular_shower_grid/src/lib/threads.scad)
 - [`models/iphone-holder-ring/holder_index_insert_experiment.scad`](models/iphone-holder-ring/holder_index_insert_experiment.scad)
 - [`models/iphoneHolder.scad`](models/iphoneHolder.scad)
 - [`models/iphone_holder/circle_holder.scad`](models/iphone_holder/circle_holder.scad)
