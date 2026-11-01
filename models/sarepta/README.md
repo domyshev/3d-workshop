@@ -94,8 +94,8 @@ The skill packages the methods and lessons from this project; it is not globally
 installed. Its supporting notes distinguish McNeel guidance from original
 OpenSCAD adaptations and rejected external role instructions.
 
-Export newly generated STLs with the repository `export_stl` tool and the
-conversation-authorized export base. Existing historical exports are preserved,
+Export newly generated STLs with the repository `export_stl` tool into the
+dated repository export directory. Existing historical exports are preserved,
 not regenerated. During design, provide STL/OpenSCAD views; Bambu preparation is
 performed when requested.
 

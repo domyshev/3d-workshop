@@ -14,12 +14,7 @@
 - Export STL artifacts with the repository's `./export_stl` tool. For assembly
   models, pass the model's part selector after `--`, for example
   `-D 'part="cube"'`.
-- Use the external destination template
-  `<STL_BASE_PATH>/<YYYY>/<YYYY.MM>/<YYYY.MM.DD>/`, replacing every date token
-  with the export date. Pass the resolved directory through `--output-dir`.
-- `STL_BASE_PATH` must come from the current conversation. If it is not present
-  in the agent's context, ask the user for it before exporting instead of
-  assuming a path.
+- Save STL exports under `stl/YYYY/YYYY.MM/YYYY.MM.DD/` using the export date.
 
 ## macOS OpenSCAD launch safety
 
