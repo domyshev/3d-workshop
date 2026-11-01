@@ -78,7 +78,7 @@ module lid_tabs(){intersection(){
  scale(model_scale)belt_full_blank();
 }}
 // At overall length 340 mm: two 4.3 mm through lid sockets for M4 bolts.
-module lid_joint_bores(){for(p=lid_axes())translate([cut_x-glue_axial_depth-.2,p[0],p[1]])rotate([0,90,0])cylinder(d=2.15*model_scale,h=2*glue_axial_depth+.4,$fn=64);}
+module lid_joint_bores(){for(p=lid_axes())translate([cut_x-glue_axial_depth-.2,p[0],p[1]])rotate([0,90,0])cylinder(d=4.3,h=2*glue_axial_depth+.4,$fn=64);}
 module lid_joint_pin(){scale(model_scale)rotate_extrude($fn=48)polygon(points=[[0,0],[.875,0],[.95,.15],[.95,1.85],[.875,2],[0,2]]);}
 module upper_piece(bow=true){intersection(){split_clip(bow);difference(){union(){scale(model_scale)original("upper");lid_tabs();}lid_joint_bores();}}}
 module joint_pin(){

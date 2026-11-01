@@ -2,194 +2,206 @@
   "revision": "2026-11-01_lid-through-bolts",
   "parent": "2026-11-01_four-mm-lid-guides",
   "files": {
-    "cleanup-340-lid_joint_pin.json": {
-      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_print_upper_bow.stl": {
-      "sha256": "89f9b5b789e19f5048944cc9dd19021c08e95ed4ed173dbfe81cceca8235b9e0"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_print_lower_stern.stl": {
-      "sha256": "79770a4c13e11d0a4a1827593540a8d0e1243b055ca34056740a875ee7cf309b"
-    },
     "2026-11-01_sarepta_170mm_lid_through_lower_bow.stl": {
       "sha256": "48d5cac62b71e3f8d7b564e75cf9a93ceb6484095cbc6238b224ebbe2a9b340e"
-    },
-    "stringer-guards.scad": {
-      "sha256": "4adff7cbb6364bcc1a930998293186d3e7160e3da43e62247d2586a0a8c109f1"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_upper_bow.stl": {
-      "sha256": "5f9d2af34e4cd83ab03e9b78b37e1084d113af4f40256d957b22116f77f599cd"
-    },
-    "joint-axes.json": {
-      "sha256": "43a1c316d051861a2e2ed0b453d8a1740224a88bd35efaeb66e9e52ddb54afc8"
-    },
-    "print-170-lower_stern.scad": {
-      "sha256": "4bc79243d9c635c4d2bcd3a51d69638f9b276c348b71814b6996d19c675f9009"
-    },
-    "roof-section.json": {
-      "sha256": "112520407af13b4fe5d620ce349cce9b811e43e8f000527fd0e8d9467196a17b"
-    },
-    "joint-face-view.scad": {
-      "sha256": "217fa955b9e5561039f9e07021cba32497df42b00b09490338e86100a40e110b"
-    },
-    "mesh_helpers.py": {
-      "sha256": "7ff0fc8a8488856df3530887570f807a6ed968f060934468d9f60556b1e44a15"
-    },
-    "print-verification.json": {
-      "sha256": "20dac2f2024dd967a46b478d5ce5603f9f326566b8ec7b13bc3c852e1c883c79"
-    },
-    "inspection-view.scad": {
-      "sha256": "baed9ecda07a267af8341bc8841f2a99121f5584f01ad2f837dcea7b8933e4ae"
-    },
-    "lid-through-verification.json": {
-      "sha256": "ab2ed0532a9b45310db988245d4817881366f398819bbda53239789a84c01591"
-    },
-    "roof-section.scad": {
-      "sha256": "f5f951a77b08e993e037c4a0cf271793d70e1796479325c3fbb66d03a7fe6f1a"
-    },
-    "cleanup-print-upper_stern.json": {
-      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_pin.stl": {
-      "sha256": "73a1d0ed63de449bd903994cee175340e1d0d12861ffd723a59c1ce5e4ef2550"
-    },
-    "print-340-upper_stern.scad": {
-      "sha256": "6267445b0f0d6d582cb220332d3924fadaf42057e11d796efa1bc8695af3a853"
-    },
-    "source.scad": {
-      "sha256": "491c921ae5d1e3d144b7f9d34f206f68ccccff2ceb97ef27e022d041d902dc93"
-    },
-    "locator-axes.scad": {
-      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_print_upper_stern.stl": {
-      "sha256": "1102352e08eb006789cd448af4d69fbcbec9e6110f3529aaf3f458b2e8ce60e7"
-    },
-    "verify_lid.py": {
-      "sha256": "aa9bd165499337e5de3f3c742b8b397f23e30ca6c08f1636e2e983a4603ab24c"
-    },
-    "front-axes.scad": {
-      "sha256": "385f5f91e93b3e7f2528994905dbfc6ae70e87211408f525bddfc4f8188f0987"
-    },
-    "clean_export.py": {
-      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902"
-    },
-    "joint-view.scad": {
-      "sha256": "db23a3c31a0e1f257894ccd22296fa73a8018e221cf058ea9a2f7da08b899c4f"
-    },
-    "cleanup-170-upper_stern.json": {
-      "sha256": "38a3103ab4fe4a2aa408a1b142b7037b9417f13617d8991938a60d8e2322d5e8"
-    },
-    "stringer-guards.json": {
-      "sha256": "a9438b8e26f18520cbc5fb94ce6f3da012b680794a3b3b5daab79b52b57ff8dc"
-    },
-    "cleanup-print-upper_bow.json": {
-      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92"
-    },
-    "generate_axes.py": {
-      "sha256": "7da714fbb38ae21734670409bc5d7d7299e634513d93a9781ae0d83eaea39bd7"
-    },
-    "roof-plan.scad": {
-      "sha256": "1974abe7d98d4dae295cf525616842756923765f300a5fb87a85ecd2ef42d9a3"
-    },
-    "cleanup-170-upper_bow.json": {
-      "sha256": "65b829ed585499d500d6cbb430fe6d698b5916e1a97e25e463e0f2282bf5b508"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_print_lower_bow.stl": {
-      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490"
-    },
-    "2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
-      "sha256": "e1baea26e952fa0722de55f04c60e5a622e4ed729dac07127bc63890ac425495"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_lower_bow.stl": {
-      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490"
-    },
-    "print-340-upper_bow.scad": {
-      "sha256": "5b95622b353df32307167838abf9c4617f8d3951ab2e4c5c0aef9bf141e7dc94"
-    },
-    "lid-face-view.scad": {
-      "sha256": "8e2fcf8073513715aef15410afb186307ef884ce7a43d57d6aaf1fe6b27c088c"
-    },
-    "2026-11-01_sarepta_340mm_lid_through_upper_stern.stl": {
-      "sha256": "6ed55f06464861e43a1b2c4f34267c0e75ccc57bc8f0ff7f567510c692e46afc"
-    },
-    "README.md": {
-      "sha256": "38631a0658d85a96ede14f73551c038f855a1fe313ca5e1fc6b33b8bf6d8db4d"
-    },
-    "assembly-view.scad": {
-      "sha256": "1589598e2902131deedbe49d4e612721db1511ccd89b6dc744cb40e47e35fc52"
-    },
-    "2026-11-01_sarepta_170mm_lid_through_pin.stl": {
-      "sha256": "a97c3087598d9e22144e827ea1fee3f0ace8ea41b9487c0b8329518b57a8cf70"
     },
     "2026-11-01_sarepta_170mm_lid_through_lower_stern.stl": {
       "sha256": "6ebebd89c0ee0b55a8fdd5d9dc855c7e20f600c7121fc17f95024c538533c1f4"
     },
-    "print-170-upper_bow.scad": {
-      "sha256": "5d5b6eeb7df53167db4501cb183440cd2ab8d5495d8dc7ab7b628ebe7a26c348"
+    "2026-11-01_sarepta_170mm_lid_through_pin.stl": {
+      "sha256": "a97c3087598d9e22144e827ea1fee3f0ace8ea41b9487c0b8329518b57a8cf70"
     },
-    "print-340-lower_stern.scad": {
-      "sha256": "50a091a3072f8ff6873daaa12c272c7a40aeba731cb864b5898cbdb1c64f1124"
+    "2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
+      "sha256": "a2d6004cee7482a6b282cd13b4891f06e37bce13f5c90c8c1fc82fa9172df4b7"
     },
-    "section-profile.json": {
-      "sha256": "d17e7607457ea8d0ada644090fbc7dfecb4540d3d7fa0012cf54423e0baf0386"
+    "2026-11-01_sarepta_170mm_lid_through_upper_stern.stl": {
+      "sha256": "1b33427e97a70488c239db947f0afa1ab84caf928598b01a175b770fdb2e4236"
     },
-    "cleanup-340-upper_bow.json": {
-      "sha256": "e6abdbbbcc7fda50156e3bfabeb9c124aabd5eb2c4139148edfb30126c6e0aef"
-    },
-    "cleanup-170-lid_joint_pin.json": {
-      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33"
-    },
-    "cleanup-340-upper_stern.json": {
-      "sha256": "193136545742eea20093cb921807e0292da9194cc2e3311f523baa13d1bddb02"
-    },
-    "FASTENERS.md": {
-      "sha256": "6d50ab65c0d956d24ae84d4d76975fe01235acc8d2607b485c3fa94eb48b98a8"
+    "2026-11-01_sarepta_340mm_lid_through_lower_bow.stl": {
+      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490"
     },
     "2026-11-01_sarepta_340mm_lid_through_lower_stern.stl": {
       "sha256": "d0d57edd78b1847b64303f3c04ec634b2fdf0a7ae93429f80d1c54be713bd566"
     },
-    "print-340-lower_bow.scad": {
-      "sha256": "b33b14e0692f60c93a0614a7652b74e61b75a5963f460b3a1bb91f058d7497e3"
+    "2026-11-01_sarepta_340mm_lid_through_pin.stl": {
+      "sha256": "73a1d0ed63de449bd903994cee175340e1d0d12861ffd723a59c1ce5e4ef2550"
     },
-    "section-profile.scad": {
-      "sha256": "ea58203ccc387dba35f52f82b716a00cd767c8dc05b1ab12abd4680024a8e5f6"
+    "2026-11-01_sarepta_340mm_lid_through_print_lower_bow.stl": {
+      "sha256": "a4983238c396025c2a97d163929badc9f0eb8485a729eeb02ca8944cac8d8490"
     },
-    "print-170-upper_stern.scad": {
-      "sha256": "901e52c530ebaedb0c3bde935ad4771a6c0a01b26a5faede8366d03601e64921"
+    "2026-11-01_sarepta_340mm_lid_through_print_lower_stern.stl": {
+      "sha256": "79770a4c13e11d0a4a1827593540a8d0e1243b055ca34056740a875ee7cf309b"
+    },
+    "2026-11-01_sarepta_340mm_lid_through_print_upper_bow.stl": {
+      "sha256": "89f9b5b789e19f5048944cc9dd19021c08e95ed4ed173dbfe81cceca8235b9e0"
+    },
+    "2026-11-01_sarepta_340mm_lid_through_print_upper_stern.stl": {
+      "sha256": "1102352e08eb006789cd448af4d69fbcbec9e6110f3529aaf3f458b2e8ce60e7"
+    },
+    "2026-11-01_sarepta_340mm_lid_through_upper_bow.stl": {
+      "sha256": "5f9d2af34e4cd83ab03e9b78b37e1084d113af4f40256d957b22116f77f599cd"
+    },
+    "2026-11-01_sarepta_340mm_lid_through_upper_stern.stl": {
+      "sha256": "6ed55f06464861e43a1b2c4f34267c0e75ccc57bc8f0ff7f567510c692e46afc"
+    },
+    "FASTENERS.md": {
+      "sha256": "be2a6cd1c3526b35e8104e9682cd017cdc8c40b8cc706f004a9027864b99b4b1"
+    },
+    "README.md": {
+      "sha256": "c773dc5ae37287e9535cde175eb17612bc4a762e3baa4f0f0f5c550fda3394ca"
+    },
+    "assembly-view.scad": {
+      "sha256": "1589598e2902131deedbe49d4e612721db1511ccd89b6dc744cb40e47e35fc52"
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902"
+    },
+    "cleanup-170-lid_joint_pin.json": {
+      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33"
+    },
+    "cleanup-170-upper_bow.json": {
+      "sha256": "6c41a7be132f3f86f30be9d462c667dcb952aecbf70823c4742a9e162a8e5c22"
+    },
+    "cleanup-170-upper_stern.json": {
+      "sha256": "38a3103ab4fe4a2aa408a1b142b7037b9417f13617d8991938a60d8e2322d5e8"
+    },
+    "cleanup-340-lid_joint_pin.json": {
+      "sha256": "463cbccb7fa2da527f0900f7d73631f19d29ef4332d3f776c1fb983f50773d33"
+    },
+    "cleanup-340-upper_bow.json": {
+      "sha256": "e6abdbbbcc7fda50156e3bfabeb9c124aabd5eb2c4139148edfb30126c6e0aef"
+    },
+    "cleanup-340-upper_stern.json": {
+      "sha256": "193136545742eea20093cb921807e0292da9194cc2e3311f523baa13d1bddb02"
+    },
+    "cleanup-print-upper_bow.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92"
+    },
+    "cleanup-print-upper_stern.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92"
+    },
+    "front-axes.scad": {
+      "sha256": "385f5f91e93b3e7f2528994905dbfc6ae70e87211408f525bddfc4f8188f0987"
+    },
+    "generate_axes.py": {
+      "sha256": "7da714fbb38ae21734670409bc5d7d7299e634513d93a9781ae0d83eaea39bd7"
+    },
+    "inspection-view.scad": {
+      "sha256": "baed9ecda07a267af8341bc8841f2a99121f5584f01ad2f837dcea7b8933e4ae"
+    },
+    "joint-axes.json": {
+      "sha256": "43a1c316d051861a2e2ed0b453d8a1740224a88bd35efaeb66e9e52ddb54afc8"
+    },
+    "joint-face-view.scad": {
+      "sha256": "217fa955b9e5561039f9e07021cba32497df42b00b09490338e86100a40e110b"
+    },
+    "joint-view.scad": {
+      "sha256": "db23a3c31a0e1f257894ccd22296fa73a8018e221cf058ea9a2f7da08b899c4f"
+    },
+    "lid-face-view.scad": {
+      "sha256": "8e2fcf8073513715aef15410afb186307ef884ce7a43d57d6aaf1fe6b27c088c"
+    },
+    "lid-through-verification.json": {
+      "sha256": "c71b69f1957749f2aebda6bef4d45d6b92b827840e0274957ad3f142a70b2f01"
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc"
+    },
+    "mesh_helpers.py": {
+      "sha256": "7ff0fc8a8488856df3530887570f807a6ed968f060934468d9f60556b1e44a15"
     },
     "print-170-lower_bow.scad": {
       "sha256": "d4a2c91808037eedcfd8ac0f2cada26e485d7bc7300e8b23b366a4b2cf95da90"
     },
-    "roof-plan.json": {
-      "sha256": "49f20ee4d62b4bd9561c1824eb8fd9ba98fbc92b248ff17de99a74ce78c966f0"
+    "print-170-lower_stern.scad": {
+      "sha256": "4bc79243d9c635c4d2bcd3a51d69638f9b276c348b71814b6996d19c675f9009"
     },
-    "2026-11-01_sarepta_170mm_lid_through_upper_stern.stl": {
-      "sha256": "0812220976a10f853d0c7bac24d5e3b46ce5ee98de4fe6fc93f205fd7d891138"
+    "print-170-upper_bow.scad": {
+      "sha256": "5d5b6eeb7df53167db4501cb183440cd2ab8d5495d8dc7ab7b628ebe7a26c348"
     },
-    "raw/2026-11-01_sarepta_340mm_lid_through_print_upper_bow.stl": {
-      "sha256": "a2125d7baeb72da3cd201980193922ae83f698e04c7be3a3740a0c289871fe59"
+    "print-170-upper_stern.scad": {
+      "sha256": "901e52c530ebaedb0c3bde935ad4771a6c0a01b26a5faede8366d03601e64921"
     },
-    "raw/2026-11-01_sarepta_340mm_lid_through_upper_bow.stl": {
-      "sha256": "9ab771808aa765948038f586751c7e163d8acd4bbde89f014dad682c118d4cd0"
+    "print-340-lower_bow.scad": {
+      "sha256": "b33b14e0692f60c93a0614a7652b74e61b75a5963f460b3a1bb91f058d7497e3"
     },
-    "raw/2026-11-01_sarepta_340mm_lid_through_pin.stl": {
-      "sha256": "3c51855d946703d7ffb922a74ae97cb7613320f777d0cf02186fb841def8682d"
+    "print-340-lower_stern.scad": {
+      "sha256": "50a091a3072f8ff6873daaa12c272c7a40aeba731cb864b5898cbdb1c64f1124"
     },
-    "raw/2026-11-01_sarepta_340mm_lid_through_print_upper_stern.stl": {
-      "sha256": "40a8a94cffa88bcf98a13bb77a06aeca9ae8cec0c6971020be53c0410a020f84"
+    "print-340-upper_bow.scad": {
+      "sha256": "5b95622b353df32307167838abf9c4617f8d3951ab2e4c5c0aef9bf141e7dc94"
     },
-    "raw/2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
-      "sha256": "2d5850db4f18d94615265793944df9985cff45beb4751334c22a302a414bd943"
+    "print-340-upper_stern.scad": {
+      "sha256": "6267445b0f0d6d582cb220332d3924fadaf42057e11d796efa1bc8695af3a853"
     },
-    "raw/2026-11-01_sarepta_340mm_lid_through_upper_stern.stl": {
-      "sha256": "a30512c127589e06a501851f449e2fa6e0aa3fc0a7d4328a69cf82583c064b47"
+    "print-verification.json": {
+      "sha256": "20dac2f2024dd967a46b478d5ce5603f9f326566b8ec7b13bc3c852e1c883c79"
     },
     "raw/2026-11-01_sarepta_170mm_lid_through_pin.stl": {
       "sha256": "961843af7389cfa0dc9087d08ba2e59244f93c4c259a76074ec78469ecdc9605"
     },
+    "raw/2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
+      "sha256": "f36ae5af325f1f298edf07d246726d284ba39c57d4b5f1df085ea5135fd1ee64"
+    },
     "raw/2026-11-01_sarepta_170mm_lid_through_upper_stern.stl": {
+      "sha256": "23e9d1afb2bff237054ca48a7b86b59afaef5c193b013fb3ba461ecefa82ad5c"
+    },
+    "raw/2026-11-01_sarepta_340mm_lid_through_pin.stl": {
+      "sha256": "3c51855d946703d7ffb922a74ae97cb7613320f777d0cf02186fb841def8682d"
+    },
+    "raw/2026-11-01_sarepta_340mm_lid_through_print_upper_bow.stl": {
+      "sha256": "a2125d7baeb72da3cd201980193922ae83f698e04c7be3a3740a0c289871fe59"
+    },
+    "raw/2026-11-01_sarepta_340mm_lid_through_print_upper_stern.stl": {
+      "sha256": "40a8a94cffa88bcf98a13bb77a06aeca9ae8cec0c6971020be53c0410a020f84"
+    },
+    "raw/2026-11-01_sarepta_340mm_lid_through_upper_bow.stl": {
+      "sha256": "9ab771808aa765948038f586751c7e163d8acd4bbde89f014dad682c118d4cd0"
+    },
+    "raw/2026-11-01_sarepta_340mm_lid_through_upper_stern.stl": {
+      "sha256": "a30512c127589e06a501851f449e2fa6e0aa3fc0a7d4328a69cf82583c064b47"
+    },
+    "raw/pre-review-scaled-holes/2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
+      "sha256": "2d5850db4f18d94615265793944df9985cff45beb4751334c22a302a414bd943"
+    },
+    "raw/pre-review-scaled-holes/2026-11-01_sarepta_170mm_lid_through_upper_stern.stl": {
       "sha256": "30e6eafda84a0ff0a9af6c91fa20d64b677f52b0f4632d5d31a4c65ee925b61b"
+    },
+    "raw/pre-review-scaled-holes/refined_2026-11-01_sarepta_170mm_lid_through_upper_bow.stl": {
+      "sha256": "e1baea26e952fa0722de55f04c60e5a622e4ed729dac07127bc63890ac425495"
+    },
+    "raw/pre-review-scaled-holes/refined_2026-11-01_sarepta_170mm_lid_through_upper_stern.stl": {
+      "sha256": "0812220976a10f853d0c7bac24d5e3b46ce5ee98de4fe6fc93f205fd7d891138"
+    },
+    "roof-plan.json": {
+      "sha256": "49f20ee4d62b4bd9561c1824eb8fd9ba98fbc92b248ff17de99a74ce78c966f0"
+    },
+    "roof-plan.scad": {
+      "sha256": "1974abe7d98d4dae295cf525616842756923765f300a5fb87a85ecd2ef42d9a3"
+    },
+    "roof-section.json": {
+      "sha256": "112520407af13b4fe5d620ce349cce9b811e43e8f000527fd0e8d9467196a17b"
+    },
+    "roof-section.scad": {
+      "sha256": "f5f951a77b08e993e037c4a0cf271793d70e1796479325c3fbb66d03a7fe6f1a"
+    },
+    "section-profile.json": {
+      "sha256": "d17e7607457ea8d0ada644090fbc7dfecb4540d3d7fa0012cf54423e0baf0386"
+    },
+    "section-profile.scad": {
+      "sha256": "ea58203ccc387dba35f52f82b716a00cd767c8dc05b1ab12abd4680024a8e5f6"
+    },
+    "source.scad": {
+      "sha256": "bec668cbd0ef896d4def237d80ae6497c3005f35dd5aa3d83b939e2f3522260b"
+    },
+    "stringer-guards.json": {
+      "sha256": "a9438b8e26f18520cbc5fb94ce6f3da012b680794a3b3b5daab79b52b57ff8dc"
+    },
+    "stringer-guards.scad": {
+      "sha256": "4adff7cbb6364bcc1a930998293186d3e7160e3da43e62247d2586a0a8c109f1"
+    },
+    "verify_lid.py": {
+      "sha256": "d0e15b9e9d51bf5b850c8e31160c63fabbbdde90908fb8121436373d13190bc3"
     }
   }
 }

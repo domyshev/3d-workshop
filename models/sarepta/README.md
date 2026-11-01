@@ -207,3 +207,6 @@ The [larger lid-guide milestone](releases/2026-11-01_four-mm-lid-guides/README.m
 ## Lid through bolts
 
 The current lid uses two through holes for bolts, 4.3 mm diameter at overall length 340 mm. See [FASTENERS.md](FASTENERS.md).
+
+
+The current lid and hull bolt holes remain 4.3 mm at both supported whole-boat lengths. The 340 mm whole boat with 170 mm halves is the primary configuration.
