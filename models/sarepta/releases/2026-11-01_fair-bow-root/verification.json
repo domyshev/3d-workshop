@@ -1,0 +1,339 @@
+{
+  "mesh": {
+    "lower": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_lower.stl",
+      "vertices": 73426,
+      "triangles": 146856,
+      "bounds_mm": [
+        [
+          1.8197427988052368,
+          -27.947391510009766,
+          0.0
+        ],
+        [
+          170.0,
+          27.947391510009766,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        168.18025720119476,
+        55.89478302001953,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.300859821966427e-11,
+      "signed_volume_mm3": 23247.757329923465,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "upper": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_upper.stl",
+      "vertices": 20356,
+      "triangles": 40716,
+      "bounds_mm": [
+        [
+          2.1465330123901367,
+          -27.10268211364746,
+          25.0
+        ],
+        [
+          170.0,
+          27.10268211364746,
+          30.579347610473633
+        ]
+      ],
+      "size_mm": [
+        167.85346698760986,
+        54.20536422729492,
+        5.579347610473633
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.999253496542306e-07,
+      "signed_volume_mm3": 5782.340609169451,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "pin": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_pin.stl",
+      "vertices": 160,
+      "triangles": 316,
+      "bounds_mm": [
+        [
+          -0.800000011920929,
+          -0.800000011920929,
+          0.0
+        ],
+        [
+          0.800000011920929,
+          0.800000011920929,
+          2.0
+        ]
+      ],
+      "size_mm": [
+        1.600000023841858,
+        1.600000023841858,
+        2.0
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 0.0015046549724262448,
+      "signed_volume_mm3": 3.842291178053584,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "rim_bow": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_rim_bow.stl",
+      "vertices": 6477,
+      "triangles": 12950,
+      "bounds_mm": [
+        [
+          0.0,
+          -29.565217971801758,
+          22.050434112548828
+        ],
+        [
+          57.900001525878906,
+          29.565217971801758,
+          24.790868759155273
+        ]
+      ],
+      "size_mm": [
+        57.900001525878906,
+        59.130435943603516,
+        2.7404346466064453
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 6.259015402642127e-11,
+      "signed_volume_mm3": 293.34304459050526,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "rim_port": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_rim_port.stl",
+      "vertices": 2040,
+      "triangles": 4076,
+      "bounds_mm": [
+        [
+          58.099998474121094,
+          -29.565217971801758,
+          19.126928329467773
+        ],
+        [
+          169.99839782714844,
+          -27.390329360961914,
+          23.275217056274414
+        ]
+      ],
+      "size_mm": [
+        111.89839935302734,
+        2.1748886108398438,
+        4.148288726806641
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 5.359393529087982e-09,
+      "signed_volume_mm3": 223.46829156225763,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "rim_starboard": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_rim_starboard.stl",
+      "vertices": 2060,
+      "triangles": 4116,
+      "bounds_mm": [
+        [
+          58.099998474121094,
+          27.390329360961914,
+          19.1269474029541
+        ],
+        [
+          169.99822998046875,
+          29.565217971801758,
+          23.275218963623047
+        ]
+      ],
+      "size_mm": [
+        111.89823150634766,
+        2.1748886108398438,
+        4.148271560668945
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 1.633782866954175e-08,
+      "signed_volume_mm3": 223.46539360616055,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "rim_pin": {
+      "file": "2026-11-01_sarepta_170mm_fair_root_rim_pin.stl",
+      "vertices": 192,
+      "triangles": 380,
+      "bounds_mm": [
+        [
+          -0.4000000059604645,
+          -0.4000000059604645,
+          0.0
+        ],
+        [
+          0.4000000059604645,
+          0.4000000059604645,
+          1.5
+        ]
+      ],
+      "size_mm": [
+        0.800000011920929,
+        0.800000011920929,
+        1.5
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 0.00016889570079436922,
+      "signed_volume_mm3": 0.6957046013296353,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "material_probes": 482,
+  "failures": [],
+  "bow_closure_probes": 24,
+  "locator_count": 14,
+  "locator_diameter_mm": 0.8,
+  "pin_length_mm": 1.5,
+  "skirt_blind_socket_depth_mm": 0.8,
+  "bore_diameter_mm": 1.0,
+  "blind_socket_depth_mm": 0.95,
+  "measured_lateral_gaps_mm": [
+    0.15114131528173047,
+    0.1511412803861738,
+    0.1502494962096712,
+    0.15025820249463706,
+    0.15000343563678697,
+    0.15000325382419533,
+    0.15000448450880555,
+    0.15000497378384026,
+    0.15000466339611052,
+    0.15000428117750175,
+    0.15000323925247017,
+    0.15000323001692095,
+    0.15018144834269975,
+    0.15018131488005793
+  ],
+  "nominal_pin_insertions_mm": [
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ],
+    [
+      0.675,
+      0.675
+    ]
+  ],
+  "body_socket_end_walls_mm": [
+    3.6068080667824347,
+    3.6068080667824347,
+    0.9476559319924966,
+    0.9476559319924966,
+    0.5030415406716173,
+    0.5030415406716173,
+    0.503041939027522,
+    0.503041939027522,
+    0.503041935933549,
+    0.503041935933549,
+    0.5035513597710306,
+    0.5035513597710306,
+    0.4995067704784404,
+    0.4995067704784404
+  ],
+  "skirt_socket_end_walls_mm": [
+    0.8675916198402369,
+    0.8675916198402369,
+    0.857665334339945,
+    0.857665334339945,
+    0.8538265228271484,
+    0.8538265228271484,
+    0.8538265228271484,
+    0.8538265228271484,
+    0.8538265228271484,
+    0.8538265228271484,
+    0.8533191680908203,
+    0.8533191680908203,
+    0.8548513841280325,
+    0.8548513841280325
+  ],
+  "regression_pass": true,
+  "limits": "Finite samples and topology checks; physical print, fit, flexural strength and watertightness are untested.",
+  "checks_pass": true
+}

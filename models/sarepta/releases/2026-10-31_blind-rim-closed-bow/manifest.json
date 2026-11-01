@@ -1,0 +1,191 @@
+{
+  "revision": "2026-10-31_blind-rim-closed-bow",
+  "export_date": "2026-10-31",
+  "completed_date": "2026-11-01",
+  "source_available": true,
+  "physical_print_verified": false,
+  "raw_export_origin": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31",
+  "parent": "2026-10-31_detachable-rim",
+  "files": {
+    "2026-10-31_sarepta_170mm_blind_rim_lower.stl": {
+      "sha256": "405ab1fd7d164c304e9007bfa1692b495e828511f9ab5b25f1c9a4d6ca30b3d6",
+      "bytes": 6635284
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_rim_bow.stl": {
+      "sha256": "595dbe73de3c6f0bdce415e17a2b05c87c800bbdd592d019473dad1336b938d9",
+      "bytes": 647584
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_rim_pin.stl": {
+      "sha256": "f8563eea95d668a235c611b5e0b0b552b31000c1c711e541798e5ea8d912efde",
+      "bytes": 19084
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_rim_port.stl": {
+      "sha256": "dea7f988208003e96ccfeca498515c2b6a81448ba295ab37577e34427b2cdcb2",
+      "bytes": 203884
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_rim_starboard.stl": {
+      "sha256": "fe4d99e2cf486170a624f6ed833a1eabe7335acf9a8192e7cd0b5eefc22ccfc7",
+      "bytes": 205884
+    },
+    "2026-10-31_sarepta_170mm_blind_rim_upper.stl": {
+      "sha256": "ae15fee2fbc0fc9e61173367a398d38ac86bd0ba54cdd552a33c3cd810182e6d",
+      "bytes": 2035884
+    },
+    "README.md": {
+      "sha256": "81595fb45b63a3e864bde85f1df05f44eb174c3001e76669034995d7b270110d",
+      "bytes": 3682
+    },
+    "assembly-view.scad": {
+      "sha256": "f132cbd2c976790607407d6bd2d36f3727a2d5b6601a652a63abf42b36113637",
+      "bytes": 77
+    },
+    "bow-closure-probes.json": {
+      "sha256": "462ca0f0139e55d7bddb1c82cd759a9eaef23bca75c5fcef3675c328afa5918b",
+      "bytes": 2177
+    },
+    "bow-front.png": {
+      "sha256": "e4f8f575541a4768772aebf544e8d2b7a1e9ae1c61d2bb8e74617d86ecf70f1c",
+      "bytes": 197616
+    },
+    "bow-inside.png": {
+      "sha256": "9642388c1f680c7533ff9c9a3e1f871cca1fcbe8595980ba7659dd85ac5701fe",
+      "bytes": 129549
+    },
+    "bow-view.scad": {
+      "sha256": "eb0ce5183e5b212e88734f0a46d2d5c35ec8213b57d44c9c36732cca45c8c0b9",
+      "bytes": 89
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "a6e22e30d0d14d1ba80fe905f53a469af9e347e93ec12b224fc31ac8415addbd",
+      "bytes": 209
+    },
+    "cleanup-rim_bow.json": {
+      "sha256": "c0ea5085edf877d48164fa39070b125d0ac98d46db236558a46e852356c778ba",
+      "bytes": 210
+    },
+    "cleanup-rim_pin.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-rim_port.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "cleanup-rim_starboard.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "clearance.scad": {
+      "sha256": "c13218817292dfd8f0172ef3ee18c360571438c11a262f0320509ae45b281b74",
+      "bytes": 2037050
+    },
+    "export.log": {
+      "sha256": "b075b1aab86b279b5634b4438afb70245b101b2789d2d78d10b297ad7c5ffbd0",
+      "bytes": 4098
+    },
+    "export.sh": {
+      "sha256": "a1608cd61eaa37dae0f7ff221956ca6bd12db7e6ab15e51ad0bedff48b22cc1b",
+      "bytes": 435
+    },
+    "fastener-section.png": {
+      "sha256": "58d56ca0804a86ea1bb0a1e33c0f11f107b0c086e0ce691f29889a1a3017b4ce",
+      "bytes": 18797
+    },
+    "fastener-section.scad": {
+      "sha256": "ea572c1755a45c420c3c4f0ce0869bc7c7a379fc7ed6928bcb141116d96f7e43",
+      "bytes": 527
+    },
+    "feedback/bow-openings-01.png": {
+      "sha256": "f1ad8aee6a174b91b9c277ce69131469e545f396f9fa48a8ae23c79608e210fa",
+      "bytes": 43296
+    },
+    "feedback/bow-openings-02.png": {
+      "sha256": "038e4623eff59d30f94da97ebdaf9a78bf02445e55ad1c040c8fbc00adef3ea2",
+      "bytes": 40681
+    },
+    "feedback/exposed-headed-pin.png": {
+      "sha256": "f3ad3e69685d7f92ac1d6e1d6a445add8df484f422bbb5434c8062fdb098e8a3",
+      "bytes": 9355
+    },
+    "generate_clearance.py": {
+      "sha256": "7043d15cdfa786dc6a23d0ba7b516457e79f3b6bd2e23b9b6d7bb78cf4e95977",
+      "bytes": 1527
+    },
+    "inspection-view.scad": {
+      "sha256": "6395b7b91878ce9d53152ac4170f17ccb89d3db873a5e498635d7afadb914b3d",
+      "bytes": 1282
+    },
+    "inspection.png": {
+      "sha256": "634d2172660ed41fdc413e5e9bfb06edecf4241c314988c8304f8955b76ce9d3",
+      "bytes": 91044
+    },
+    "interface.scad": {
+      "sha256": "0fa8fbb42ee62d5efe84bc277af72217dd464df90cc548be57fd85c1276a381a",
+      "bytes": 2036974
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "print-rim-bow.scad": {
+      "sha256": "80e866d30be8dc5738ffdee468d3067db11a9358d8187b0de931d121e8d72643",
+      "bytes": 200
+    },
+    "print-rim-port.scad": {
+      "sha256": "41af15cb021a0299ceded033b6d2323cd1af35864e19612bb876461f55a9dd08",
+      "bytes": 201
+    },
+    "print-rim-starboard.scad": {
+      "sha256": "40026bf7148658007c8d2c0d86f12960a073026a1a3c890d2b69502e0bdadf79",
+      "bytes": 206
+    },
+    "raw/2026-10-31_sarepta_170mm_blind_rim_lower.stl": {
+      "sha256": "69cf1b0d4a49e2d78c646f1e3b39f74095ba62150871b4e8d237e8e87d0412e9",
+      "bytes": 6635484
+    },
+    "raw/2026-10-31_sarepta_170mm_blind_rim_rim_bow.stl": {
+      "sha256": "2b8dc96c151b8b42d8c332e330c69c565f6a07276d4f203216c90d0c9ad149a2",
+      "bytes": 648184
+    },
+    "raw/2026-10-31_sarepta_170mm_blind_rim_rim_pin.stl": {
+      "sha256": "3adcde75041f7795199d23505e1ab1dfee69c49fd79a9134c25aaa78345103f3",
+      "bytes": 19084
+    },
+    "raw/2026-10-31_sarepta_170mm_blind_rim_rim_port.stl": {
+      "sha256": "fc8c19ad6cbca77a12812389eb917ae7ddc1bbe95c4e711b68ae200333f5a40e",
+      "bytes": 203884
+    },
+    "raw/2026-10-31_sarepta_170mm_blind_rim_rim_starboard.stl": {
+      "sha256": "924f7168ec2d2926f5690bbac6980a638af7f507fdda22072a3db016b6fcabdf",
+      "bytes": 205884
+    },
+    "regression.json": {
+      "sha256": "950cef59e64ff106f5aa4644d9c2596a4b528ea33a3a5fe6a3a8588a7a063822",
+      "bytes": 3298
+    },
+    "regression.py": {
+      "sha256": "22bc145e9e5f5d834c7942c8ae79793e86638b8ab02fef402b6da91a9b3a2cf2",
+      "bytes": 9860
+    },
+    "source.scad": {
+      "sha256": "4d9149b66a497ae68ce531ba93a7037e19515c3314734dd476380e978bd168e7",
+      "bytes": 3591
+    },
+    "verification.json": {
+      "sha256": "cf1e64eab6897207e6b1898083189013d84c600f5e66d10d09dd3c11f67d54d9",
+      "bytes": 8326
+    },
+    "verify.py": {
+      "sha256": "0cfa1040518af97fcefed1819d798dab5451477ba0fed858835a6327b6168c14",
+      "bytes": 4589
+    }
+  }
+}

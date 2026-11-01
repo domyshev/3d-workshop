@@ -126,3 +126,33 @@ the crucial difference from the archived diagonal layout.
 Latest design study: [2026-10-31 lightweight open deck](releases/2026-10-31_lightweight-open-deck/README.md)
 — one roof skin, open ribs, small glue locators, single panel and higher rear
 transom. Digitally checked, physically untested; candidate 0.1 remains archived.
+
+Latest cover correction: [fair cover joint](releases/2026-10-31_fair-cover-joint/README.md). Open `sarepta_fair_joint.scad` for editable construction or the release's `assembly-view.scad` for exact exported meshes.
+
+Latest revision: [clean stern and continuous rim](releases/2026-10-31_clean-stern/README.md). Open `sarepta_inspection.scad` for the default combined pastel inspection scene.
+
+Current geometry: [continuous belt and open stern](releases/2026-10-31_continuous-belt/README.md). Use `sarepta_current.scad` for construction and `sarepta_inspection.scad` for the combined pastel scene.
+
+Current view: [open bow with panel hidden](releases/2026-10-31_open-bow/README.md). The default combined inspection omits the dashboard and the obsolete internal mounting remnants are removed.
+
+Current inspection: [level stern ribs and clear bow floor](releases/2026-10-31_clean-bow-floor/README.md). Level stern-rib tops, aligned outlets with 0.8 mm lower clearance, and additional bow-floor cleanup are included.
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).
+
+## Closed bow cap and hidden skirt studs — 2026-11-01
+
+The [new correction](releases/2026-10-31_blind-rim-closed-bow/README.md) removes the bow cutter that opened two triangular passages, restores the original cap and blends the board root. Separate 0.8 x 1.5 mm headless studs now enter blind pockets in both hull and skirt; neither component is pierced. Actual archived meshes, 564 inherited material checks and 458 additional probes pass, including 24 checks in the former bow openings. Physical printing and assembled fit remain untested.
+
+## Fair inner bow-board root — 2026-11-01
+
+The [fair-root revision](releases/2026-11-01_fair-bow-root/README.md) replaces the projecting rectangular root/end with one swept inner transition to the horizontal landing, fading into the original sidewall. The accepted bow cap and all hidden stud/skirt components are preserved. The exact exported meshes, closure probes, legacy regression and targeted end-face checks pass; physical print and fit remain untested.
+
+## Forward hatch-hinge mounting sockets — 2026-11-01
+
+The [hinge-socket revision](releases/2026-11-01_hatch-hinge-sockets/README.md) adds two 2 mm top-entry blind bores ahead of the hatch, at X=32.2 and Y=±5 mm. Solid 4.4 mm underside bosses support the 2.8 mm deep holes with 0.4 mm closed bottoms. The upper export and sampled geometry checks pass; all other component meshes are byte-identical. Physical hinge/print fit remains untested.
+
+## Forward protective-skirt sockets — 2026-11-01
+
+The [front-socket revision](releases/2026-11-01_front-skirt-sockets/README.md) adds four matching pairs of blind 1 mm sockets on the forward V faces and inner bow skirt. Existing 0.8 x 1.5 mm headless studs remain hidden in both components. There are now eighteen skirt studs. Both modified exported meshes and finite fit/closure checks pass; physical assembly is untested.

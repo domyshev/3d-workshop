@@ -1,0 +1,170 @@
+{
+  "revision": "2026-11-01_fair-bow-root",
+  "export_date": "2026-11-01",
+  "source_available": true,
+  "physical_print_verified": false,
+  "raw_export_origin": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.11/2026.11.01",
+  "parent": "2026-10-31_blind-rim-closed-bow",
+  "files": {
+    "2026-11-01_sarepta_170mm_fair_root_lower.stl": {
+      "sha256": "48a3c96145b80b019b5a8f619154fe8615766fe8414ba48b3b98dd77a69148b3",
+      "bytes": 7342884
+    },
+    "2026-11-01_sarepta_170mm_fair_root_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-11-01_sarepta_170mm_fair_root_rim_bow.stl": {
+      "sha256": "595dbe73de3c6f0bdce415e17a2b05c87c800bbdd592d019473dad1336b938d9",
+      "bytes": 647584
+    },
+    "2026-11-01_sarepta_170mm_fair_root_rim_pin.stl": {
+      "sha256": "f8563eea95d668a235c611b5e0b0b552b31000c1c711e541798e5ea8d912efde",
+      "bytes": 19084
+    },
+    "2026-11-01_sarepta_170mm_fair_root_rim_port.stl": {
+      "sha256": "dea7f988208003e96ccfeca498515c2b6a81448ba295ab37577e34427b2cdcb2",
+      "bytes": 203884
+    },
+    "2026-11-01_sarepta_170mm_fair_root_rim_starboard.stl": {
+      "sha256": "fe4d99e2cf486170a624f6ed833a1eabe7335acf9a8192e7cd0b5eefc22ccfc7",
+      "bytes": 205884
+    },
+    "2026-11-01_sarepta_170mm_fair_root_upper.stl": {
+      "sha256": "ae15fee2fbc0fc9e61173367a398d38ac86bd0ba54cdd552a33c3cd810182e6d",
+      "bytes": 2035884
+    },
+    "README.md": {
+      "sha256": "6505a2f036d11aedfee3ba623901ffbdc209315e3bece86fdadf3fffa23ebbb0",
+      "bytes": 3591
+    },
+    "assembly-view.scad": {
+      "sha256": "8265fd3d7bc9779a4ed79dab1bd7ae075990cdad1ab6ed12b6e3a4db67f85221",
+      "bytes": 77
+    },
+    "assembly.png": {
+      "sha256": "aac8a0f7bc999a7d2e4ff70ff50f3428237633c390c10bcec5333c37b3ef523d",
+      "bytes": 74886
+    },
+    "bow-close.png": {
+      "sha256": "b4cff69d0770627d4530edeae13f6ea414f042c540526c2a75774d88dc8e369f",
+      "bytes": 42369
+    },
+    "bow-closure-probes.json": {
+      "sha256": "462ca0f0139e55d7bddb1c82cd759a9eaef23bca75c5fcef3675c328afa5918b",
+      "bytes": 2177
+    },
+    "bow-front.png": {
+      "sha256": "c5dd90a75451447a61a6e76a762d1ae13208bdc0220e90e932ab5331e3c7b532",
+      "bytes": 192277
+    },
+    "bow-inside.png": {
+      "sha256": "b813744535717eb8b2789b23aba4523df89f9dd634d658327296c42bf1f54d9a",
+      "bytes": 124242
+    },
+    "bow-view.scad": {
+      "sha256": "9e2265f4f064091de31514b4e723fb17febea367c344fa3143e16017a5db5f50",
+      "bytes": 89
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "a6e22e30d0d14d1ba80fe905f53a469af9e347e93ec12b224fc31ac8415addbd",
+      "bytes": 209
+    },
+    "clearance.scad": {
+      "sha256": "c13218817292dfd8f0172ef3ee18c360571438c11a262f0320509ae45b281b74",
+      "bytes": 2037050
+    },
+    "export.log": {
+      "sha256": "3567c722c38062330582f22082d0e4d8d8f1dbbc2830cacf43bc7a2ca09606e4",
+      "bytes": 808
+    },
+    "export.sh": {
+      "sha256": "5ecf147e83fc6d097f873e15f657b33cdbd506dc375db7eb0ac3c4a7ac64a2ee",
+      "bytes": 363
+    },
+    "fair-root.scad": {
+      "sha256": "6ea1626037005f581b477c32f22df0e80a9ea792ebc554e6e2c6acad544cad07",
+      "bytes": 5410562
+    },
+    "fastener-section.scad": {
+      "sha256": "3dea8d376d40939a628a21ad8712a04bfbc9837bc6cf854a52b46c4ce54130c4",
+      "bytes": 527
+    },
+    "feedback/rectangular-root-end.png": {
+      "sha256": "c83fff12627d8cad8370fd8515a454a4245d0d64a2c9a880b8e93f38fdf85e72",
+      "bytes": 56612
+    },
+    "generate_root.py": {
+      "sha256": "ea114f5284e00683b3bc4980fee0526e43115ac4b1f37c1095a05d15f3104801",
+      "bytes": 2512
+    },
+    "inspection-view.scad": {
+      "sha256": "58f9edcfed4ff8369339b8f7af733b34ba2819806507c3b709f9dd266d1ced82",
+      "bytes": 1282
+    },
+    "inspection.png": {
+      "sha256": "794be91ed490ebc5146611fdf9507a469c638d877fc72702ac1dd7350242fb49",
+      "bytes": 90929
+    },
+    "interface.scad": {
+      "sha256": "0fa8fbb42ee62d5efe84bc277af72217dd464df90cc548be57fd85c1276a381a",
+      "bytes": 2036974
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "print-rim-bow.scad": {
+      "sha256": "63d4f8b8ccd4f7239242ec6213003941420a51cb0638eff7eaa8d6b77cb2044a",
+      "bytes": 200
+    },
+    "print-rim-port.scad": {
+      "sha256": "6f07c5bffafd236579c8b8dc668ae55ac7df666be5cb85ce2d4960c669c46163",
+      "bytes": 201
+    },
+    "print-rim-starboard.scad": {
+      "sha256": "fbe375064096915cc7fc40cfc0d1429c30a0e604d7d4dd678c5de494782797cd",
+      "bytes": 206
+    },
+    "raw/2026-11-01_sarepta_170mm_fair_root_lower.stl": {
+      "sha256": "58a05738f879c993ed6ebc56f1dadcd47076b945e8b03ae158d441b79af431ed",
+      "bytes": 7343084
+    },
+    "regression.json": {
+      "sha256": "f10c6599f752ece96e57736e3c74760bc2ddf5080c75de841ea51911f73cc8b5",
+      "bytes": 3299
+    },
+    "regression.py": {
+      "sha256": "ff015c8ac2b5a1569e88d59d710133145ae252a6f9ff7090608ff8cc992ca3c3",
+      "bytes": 9860
+    },
+    "root-guides.json": {
+      "sha256": "c732bdd7cbf6d9d667240978d1e6e4669cc119a193e40f9b7aa251037c80b46d",
+      "bytes": 2732
+    },
+    "root-verification.json": {
+      "sha256": "f7739675192e710785b1951aa24e3b0506ac54f98c366f89c5b0daca70a82946",
+      "bytes": 367
+    },
+    "source.scad": {
+      "sha256": "bbc431e59fe7ef3a964a03cf26b20ad07e335d052ada7845fda6ece3b5af3182",
+      "bytes": 3477
+    },
+    "verification.json": {
+      "sha256": "abf6529ff602e007d18cb05f3ab5777b46060247d597b983cecc9f8139adccf2",
+      "bytes": 8327
+    },
+    "verify.py": {
+      "sha256": "c97a6220c3f03a5df82f56a32f1d54945ba81fe8b76476ad77748ca8681f1b91",
+      "bytes": 5601
+    },
+    "verify_root.py": {
+      "sha256": "e692c7653426c34f5661f7b36609bf644ff5c1563a0748e9ef35e9eca1a0b77e",
+      "bytes": 1344
+    }
+  }
+}

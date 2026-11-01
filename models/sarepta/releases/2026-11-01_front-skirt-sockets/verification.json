@@ -1,0 +1,146 @@
+{
+  "checks_pass": true,
+  "front_pin_count": 4,
+  "total_skirt_pin_count": 18,
+  "bow_closure_probes": 24,
+  "material_probes": 756,
+  "failures": [],
+  "front_pocket_measurements": [
+    {
+      "axis": [
+        5.215501105538416,
+        -7.5,
+        24.04481301463813,
+        -0.9153150324227656,
+        -0.40273861426601687,
+        0
+      ],
+      "body_blind_floor_d_mm": -0.9799998978203803,
+      "skirt_blind_floor_d_mm": 0.9200001343790817,
+      "body_end_wall_mm": 3.231467168612622,
+      "skirt_end_wall_mm": 0.8332866821936603,
+      "pin_inner_tip_d_mm": -0.705,
+      "pin_outer_tip_d_mm": 0.795
+    },
+    {
+      "axis": [
+        9.587912599921719,
+        -17.5,
+        23.930750106089,
+        -0.9153150324227656,
+        -0.40273861426601687,
+        0
+      ],
+      "body_blind_floor_d_mm": -0.9800001115632931,
+      "skirt_blind_floor_d_mm": 0.9199999206315917,
+      "body_end_wall_mm": 3.256719526187193,
+      "skirt_end_wall_mm": 0.8080345516592481,
+      "pin_inner_tip_d_mm": -0.705,
+      "pin_outer_tip_d_mm": 0.795
+    },
+    {
+      "axis": [
+        5.215501105538416,
+        7.5,
+        24.04481301463813,
+        -0.9153150324227656,
+        0.40273861426601687,
+        0
+      ],
+      "body_blind_floor_d_mm": -0.9799998978197266,
+      "skirt_blind_floor_d_mm": 0.9200001343795314,
+      "body_end_wall_mm": 3.2314671686132757,
+      "skirt_end_wall_mm": 0.8332866821932103,
+      "pin_inner_tip_d_mm": -0.705,
+      "pin_outer_tip_d_mm": 0.795
+    },
+    {
+      "axis": [
+        9.587912599921719,
+        17.5,
+        23.930750106089,
+        -0.9153150324227656,
+        0.40273861426601687,
+        0
+      ],
+      "body_blind_floor_d_mm": -0.9800001115678333,
+      "skirt_blind_floor_d_mm": 0.9199999206361318,
+      "body_end_wall_mm": 3.256719526182653,
+      "skirt_end_wall_mm": 0.808034551654708,
+      "pin_inner_tip_d_mm": -0.705,
+      "pin_outer_tip_d_mm": 0.795
+    }
+  ],
+  "byte_identical_components": [
+    "upper",
+    "pin",
+    "rim_port",
+    "rim_starboard",
+    "rim_pin"
+  ],
+  "mesh": {
+    "lower": {
+      "file": "2026-11-01_sarepta_170mm_front_skirt_lower.stl",
+      "vertices": 74000,
+      "triangles": 148004,
+      "bounds_mm": [
+        [
+          1.8197427988052368,
+          -27.947391510009766,
+          0.0
+        ],
+        [
+          170.0,
+          27.947391510009766,
+          25.0
+        ]
+      ],
+      "size_mm": [
+        168.18025720119476,
+        55.89478302001953,
+        25.0
+      ],
+      "components": 1,
+      "euler_characteristic": -2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 2.300859821966427e-11,
+      "signed_volume_mm3": 23244.777608971446,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    },
+    "rim_bow": {
+      "file": "2026-11-01_sarepta_170mm_front_skirt_rim_bow.stl",
+      "vertices": 7039,
+      "triangles": 14074,
+      "bounds_mm": [
+        [
+          0.0,
+          -29.565217971801758,
+          22.050434112548828
+        ],
+        [
+          57.900001525878906,
+          29.565217971801758,
+          24.790868759155273
+        ]
+      ],
+      "size_mm": [
+        57.900001525878906,
+        59.130435943603516,
+        2.7404346466064453
+      ],
+      "components": 1,
+      "euler_characteristic": 2,
+      "edge_pairing_errors": 0,
+      "vertex_link_errors": 0,
+      "zero_area_triangles": 0,
+      "minimum_double_triangle_area_mm2": 6.259015402642127e-11,
+      "signed_volume_mm3": 290.8338061958975,
+      "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+      "basic_mesh_checks_pass": true
+    }
+  },
+  "limits": "Finite material and topology checks; physical pin/assembly fit and print strength are untested."
+}

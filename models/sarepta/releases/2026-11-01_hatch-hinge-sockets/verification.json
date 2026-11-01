@@ -1,0 +1,71 @@
+{
+  "checks_pass": true,
+  "material_probes": 306,
+  "failures": [],
+  "hinge_socket_measurements": [
+    {
+      "axis_mm": [
+        32.2,
+        -5
+      ],
+      "floor_mm": 27.779348373413086,
+      "boss_bottom_mm": 27.379348754882812,
+      "bottom_skin_mm": 0.39999961853027344,
+      "depth_from_top_mm": 2.799999237060547,
+      "diameter_y_mm": 1.9999999400476032
+    },
+    {
+      "axis_mm": [
+        32.2,
+        5
+      ],
+      "floor_mm": 27.779348373413086,
+      "boss_bottom_mm": 27.379348754882812,
+      "bottom_skin_mm": 0.39999961853027344,
+      "depth_from_top_mm": 2.799999237060547,
+      "diameter_y_mm": 1.9999999400476032
+    }
+  ],
+  "unchanged_surface_samples": 118,
+  "max_unchanged_surface_difference_mm": 0.0,
+  "byte_identical_parts": [
+    "lower",
+    "pin",
+    "rim_bow",
+    "rim_port",
+    "rim_starboard",
+    "rim_pin"
+  ],
+  "upper_mesh": {
+    "file": "2026-11-01_sarepta_170mm_hinge_upper.stl",
+    "vertices": 20996,
+    "triangles": 41996,
+    "bounds_mm": [
+      [
+        2.1465330123901367,
+        -27.10268211364746,
+        25.0
+      ],
+      [
+        170.0,
+        27.10268211364746,
+        30.579347610473633
+      ]
+    ],
+    "size_mm": [
+      167.85346698760986,
+      54.20536422729492,
+      5.579347610473633
+    ],
+    "components": 1,
+    "euler_characteristic": -2,
+    "edge_pairing_errors": 0,
+    "vertex_link_errors": 0,
+    "zero_area_triangles": 0,
+    "minimum_double_triangle_area_mm2": 2.999253496542306e-07,
+    "signed_volume_mm3": 5817.566406971016,
+    "limits": "No self-intersection, minimum-wall, fairness, factory-dimension or physical-print certification.",
+    "basic_mesh_checks_pass": true
+  },
+  "limits": "Finite geometry and topology checks. No hinge assembly or physical print fit has been tested."
+}

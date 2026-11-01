@@ -1,0 +1,96 @@
+{
+  "revision": "2026-10-31_clean-bow-floor",
+  "source_available": true,
+  "physical_print_verified": false,
+  "unchanged_component_parent": "2026-10-31_level-stern-ribs",
+  "files": {
+    "2026-10-31_sarepta_170mm_clean_bow_dashboard.stl": {
+      "sha256": "a444f15090879a9a0ff9f326fe8b6e7a2d5fd790ad6dc9f3ff1bc5762ffbcd81",
+      "bytes": 1484
+    },
+    "2026-10-31_sarepta_170mm_clean_bow_lower.stl": {
+      "sha256": "c26dcad23ae779cb3af7e4bb2e48c3d53df52bb91ab96e3c1842cf8e21962feb",
+      "bytes": 5750484
+    },
+    "2026-10-31_sarepta_170mm_clean_bow_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-10-31_sarepta_170mm_clean_bow_upper.stl": {
+      "sha256": "ae15fee2fbc0fc9e61173367a398d38ac86bd0ba54cdd552a33c3cd810182e6d",
+      "bytes": 2035884
+    },
+    "README.md": {
+      "sha256": "d32ea6e03df633c8d7ff4f23bfe57bfabe1b1c4bf930586509984f7b006f50b4",
+      "bytes": 3285
+    },
+    "assembly-view.scad": {
+      "sha256": "fab099bbdc5979013380050c294366737d7c60a76b25dd2cf547bae159873a22",
+      "bytes": 82
+    },
+    "belt-guides.json": {
+      "sha256": "7886a530907acf7313e3962f424f5816a496102d9024f1ccc2e5b9eaa35d1ab3",
+      "bytes": 1117689
+    },
+    "bow-floor.png": {
+      "sha256": "25ebdce3ea11565ab845f0b66b2284933dc843495d9b93372c843202e8e74e91",
+      "bytes": 166524
+    },
+    "bow-view.scad": {
+      "sha256": "356f7f04825f00c099c2a98f910c9455e30821e324aa81732166e988df2c9817",
+      "bytes": 93
+    },
+    "bow.png": {
+      "sha256": "4a13113afb22fc39b47fa904138e4aee7433ca853a9049ddcf271d05ac2cfda9",
+      "bytes": 149550
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "6f6a2ce53f09a7f5f82a907e748f906ef2d3a98a84cb6646c4f446afbee46295",
+      "bytes": 210
+    },
+    "export.sh": {
+      "sha256": "1b88a3bbde10d0a62700c0a86c22758b80f332b74237ebb72c3c1f0f49d77def",
+      "bytes": 576
+    },
+    "feedback/owner-bow-floor-01.png": {
+      "sha256": "1c98c04d02ca339c451919c3355c8960a2e86f2c6287a739c47ff29d9a3391e7",
+      "bytes": 125288
+    },
+    "feedback/owner-bow-floor-02.png": {
+      "sha256": "60b4c78b4fda9cd3b0287ec17867f9cfaa587982eea0e078e19f8b1707df4fc4",
+      "bytes": 35445
+    },
+    "inspection-view.scad": {
+      "sha256": "f0fd12b4377553b83c6534a74e29af882b3030170e8afef8f515c18091147a5e",
+      "bytes": 1302
+    },
+    "inspection.png": {
+      "sha256": "1c6396392776816cf728453c3839983034f9bddc5e0a64459acfa7479f295acb",
+      "bytes": 98465
+    },
+    "raw/2026-10-31_sarepta_170mm_clean_bow_lower.stl": {
+      "sha256": "3772a6214bbd5b46f3394bd4a220942d7f992ec052dfea60e639beb8b1edc45e",
+      "bytes": 5755284
+    },
+    "source.scad": {
+      "sha256": "67ec1274655196265efec6a1e8447eb8706f449fbe0a0283a550b717eb10a7c9",
+      "bytes": 2058
+    },
+    "stern.png": {
+      "sha256": "6b7840254a3269ea34e977ccff2ca0a764c7cf40fd3bd96dfb87c9b1a2f85071",
+      "bytes": 71474
+    },
+    "verification.json": {
+      "sha256": "82acd4ca362f48d053e34cc7943444ee9309029e9a48acd7a15b58dab56096f1",
+      "bytes": 3256
+    },
+    "verify.py": {
+      "sha256": "f1bf85b78a5d71c84bfde3f9c4488c706088ee429bf00ee27eb9a507f0f72a94",
+      "bytes": 9746
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "revision": "2026-11-01_hatch-hinge-sockets",
+  "export_date": "2026-11-01",
+  "source_available": true,
+  "physical_print_verified": false,
+  "parent": "2026-11-01_fair-bow-root",
+  "raw_export_origin": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.11/2026.11.01",
+  "files": {
+    "2026-11-01_sarepta_170mm_hinge_lower.stl": {
+      "sha256": "48a3c96145b80b019b5a8f619154fe8615766fe8414ba48b3b98dd77a69148b3",
+      "bytes": 7342884
+    },
+    "2026-11-01_sarepta_170mm_hinge_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-11-01_sarepta_170mm_hinge_rim_bow.stl": {
+      "sha256": "595dbe73de3c6f0bdce415e17a2b05c87c800bbdd592d019473dad1336b938d9",
+      "bytes": 647584
+    },
+    "2026-11-01_sarepta_170mm_hinge_rim_pin.stl": {
+      "sha256": "f8563eea95d668a235c611b5e0b0b552b31000c1c711e541798e5ea8d912efde",
+      "bytes": 19084
+    },
+    "2026-11-01_sarepta_170mm_hinge_rim_port.stl": {
+      "sha256": "dea7f988208003e96ccfeca498515c2b6a81448ba295ab37577e34427b2cdcb2",
+      "bytes": 203884
+    },
+    "2026-11-01_sarepta_170mm_hinge_rim_starboard.stl": {
+      "sha256": "fe4d99e2cf486170a624f6ed833a1eabe7335acf9a8192e7cd0b5eefc22ccfc7",
+      "bytes": 205884
+    },
+    "2026-11-01_sarepta_170mm_hinge_upper.stl": {
+      "sha256": "58b17d433ef6abf99158fc8910869218c569de0423b5dff336eee98a852bf818",
+      "bytes": 2099884
+    },
+    "README.md": {
+      "sha256": "fcfcd54ab593e19ef97b556c480558e4f1474ae957ae43cd9ea3024531e589bd",
+      "bytes": 2754
+    },
+    "assembly-view.scad": {
+      "sha256": "8265fd3d7bc9779a4ed79dab1bd7ae075990cdad1ab6ed12b6e3a4db67f85221",
+      "bytes": 77
+    },
+    "assembly.png": {
+      "sha256": "073bdfb80f69d4a03c3e975c51ba741e2cf96c9cad054468e671baa2aa2aa38f",
+      "bytes": 75179
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-upper.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.log": {
+      "sha256": "6be576e889366d11dad67a760847dee53e8c1ba04e93ced9eef98569081a0b26",
+      "bytes": 803
+    },
+    "export.sh": {
+      "sha256": "5afab2fbfecfa2a09649620b261b4503c7f8dbb6566786a6c387a2f99d5381d7",
+      "bytes": 359
+    },
+    "fastener-section.scad": {
+      "sha256": "2ebf1cdc3170371773f48cba4b1d858c5871705b5ea899ab74d91805ce90b55d",
+      "bytes": 523
+    },
+    "hinge-bottom.png": {
+      "sha256": "f1fb188b3916947663db41682c0ef544d0fc497081ea0a12c9cf1d87f44b2514",
+      "bytes": 42794
+    },
+    "hinge-top.png": {
+      "sha256": "b2dc05db924147987c2010b52b99b52e9e4847cf585c3cefcb55bf685896c143",
+      "bytes": 34403
+    },
+    "hinge-top.scad": {
+      "sha256": "2be39966beb04e913e2d5c7623ccef90607998b08dba3fa13f156088bafb6f10",
+      "bytes": 85
+    },
+    "inspection-view.scad": {
+      "sha256": "45de5634541ac184dbfbb03bfae9d25ad7d31ea7b59b1d93eaa5ed857b843819",
+      "bytes": 1278
+    },
+    "inspection.png": {
+      "sha256": "cbd2400cd6a7ca6c9d7d776ec3acee4f1ae11f31e7822025f96e6c332888111e",
+      "bytes": 91233
+    },
+    "locator-axes.scad": {
+      "sha256": "0d8879667b05df19f1d9d609b978a196c203288cd52825bbe214d6531bf64fdc",
+      "bytes": 476
+    },
+    "print-rim-bow.scad": {
+      "sha256": "ba2a8fba75a275f890007938c9c91180bcdf39430fce4ae37dcd7fdb27df6086",
+      "bytes": 196
+    },
+    "print-rim-port.scad": {
+      "sha256": "20f030fff02213c6bc76d74e9b40b0be110805a9b456d9f89a27bdcfbe4ae6d9",
+      "bytes": 197
+    },
+    "print-rim-starboard.scad": {
+      "sha256": "b7c38cc93013efd859c292057e038972919286a3d0399c756b867bc3c61b26e1",
+      "bytes": 202
+    },
+    "raw/2026-11-01_sarepta_170mm_hinge_upper.stl": {
+      "sha256": "b75c9a27933bf79ef32810d4114208e8c48ce3fe7a87c44312887d2645a2eebf",
+      "bytes": 2099884
+    },
+    "source.scad": {
+      "sha256": "0eb318a47ac56c2f9105c9093f485c83f07678481cf4029ae9b8cb750df19518",
+      "bytes": 1697
+    },
+    "verification.json": {
+      "sha256": "5898435ef48d0b83012443cdca55c65a53d3d30330586d4748e65684ba6e197c",
+      "bytes": 1802
+    },
+    "verify.py": {
+      "sha256": "3dab948919c3b60c6faeeb9ee78b31339842e93a24ef6750cb42de009b5b94d6",
+      "bytes": 4301
+    }
+  }
+}

@@ -105,8 +105,47 @@ locators and a higher motor-transom top are implemented and digitally checked.
 Physical fit, strength and flotation are untested; this does not replace the
 reported successful-print baseline with a new physically verified release.
 
-The requested next construction changes are not yet exported: remove the
-protective perimeter rim into one bow piece and two aft strips with small side
-locators; split lower and upper transversely with reinforced locating joints;
-add a separately printable opening hatch lid and hinge. The hinge direction is
+The protective perimeter rim is now separate in the detachable-rim milestone below.
+Remaining construction requests: split lower and upper transversely with reinforced
+locating joints; add a separately printable opening hatch lid and hinge. The hinge direction is
 only photo-inferred at present, not established as a factory specification.
+
+## Fair cover joint — 2026-10-31
+
+Owner screenshots exposed bow-side thinning and cover-to-lower offset in the lightweight revision. The [fair-joint revision](releases/2026-10-31_fair-cover-joint/README.md) corrects the cover exterior and cavity and moves both halves' guide bores inward. Sampled join, tangent, wall and unchanged lower-exterior checks pass. Physical fit remains untested.
+
+## Stern and guide corrections — 2026-10-31
+
+The [clean-stern revision](releases/2026-10-31_clean-stern/README.md) replaces stepped mating-edge pockets, boxed stern sides and the inset transom cap. The added transom rise is halved; drain diameter is doubled; both halves' blind guide bores are enlarged to 2 mm with lead-ins for 1.6 mm pins. All sampled geometry checks pass. Physical printing, fit and drainage remain untested.
+
+## Continuous belt and open stern — 2026-10-31
+
+The [continuous-belt revision](releases/2026-10-31_continuous-belt/README.md) supersedes the triangle-normal fairing: straight planar V bow, trimmed shoulder offset, a shared surface across the horizontal join, closed rear corners, removed raised well floor and aligned full-height divider contact. The bottom remains unchanged in sampled comparisons. Physical print and fit remain untested.
+
+## Panel hidden and obsolete bow supports removed — 2026-10-31
+
+See [open-bow revision](releases/2026-10-31_open-bow/README.md). The dashboard is temporarily hidden, and its old shelf/lap and the excess internal bow webs are removed. External plating, bottom and current blind guide seats remain in place. Digital checks pass; print fit and strength remain untested.
+
+## Level stern ribs and additional bow cleanup — 2026-10-31
+
+The [current revision](releases/2026-10-31_clean-bow-floor/README.md) includes horizontal stern ribs stopped at the last transverse floor, two aligned outlets 0.8 mm above their crests, and removal of remaining inner bow-floor remnants. Original bottom/exterior and exposed stringer heights are unchanged in sampled comparisons. Physical print and fit remain untested.
+
+## Detachable protective rim — 2026-10-31
+
+See [detachable-rim revision](releases/2026-10-31_detachable-rim/README.md). The inward bow-board return is trimmed; the skirt is now three separately printable pieces with fourteen side-inserted micro pins and blind hull pockets. Actual archived mesh, sampled geometry and clearance checks pass; physical print and fit remain untested. Prior geometry checkpoint: [PR #1](https://github.com/domyshev/3d-workshop/pull/1).
+
+## Closed bow cap and hidden skirt studs — 2026-11-01
+
+The [new correction](releases/2026-10-31_blind-rim-closed-bow/README.md) removes the bow cutter that opened two triangular passages, restores the original cap and blends the board root. Separate 0.8 x 1.5 mm headless studs now enter blind pockets in both hull and skirt; neither component is pierced. Actual archived meshes, 564 inherited material checks and 458 additional probes pass, including 24 checks in the former bow openings. Physical printing and assembled fit remain untested.
+
+## Fair inner bow-board root — 2026-11-01
+
+The [fair-root revision](releases/2026-11-01_fair-bow-root/README.md) replaces the projecting rectangular root/end with one swept inner transition to the horizontal landing, fading into the original sidewall. The accepted bow cap and all hidden stud/skirt components are preserved. The exact exported meshes, closure probes, legacy regression and targeted end-face checks pass; physical print and fit remain untested.
+
+## Forward hatch-hinge mounting sockets — 2026-11-01
+
+The [hinge-socket revision](releases/2026-11-01_hatch-hinge-sockets/README.md) adds two 2 mm top-entry blind bores ahead of the hatch, at X=32.2 and Y=±5 mm. Solid 4.4 mm underside bosses support the 2.8 mm deep holes with 0.4 mm closed bottoms. The upper export and sampled geometry checks pass; all other component meshes are byte-identical. Physical hinge/print fit remains untested.
+
+## Forward protective-skirt sockets — 2026-11-01
+
+The [front-socket revision](releases/2026-11-01_front-skirt-sockets/README.md) adds four matching pairs of blind 1 mm sockets on the forward V faces and inner bow skirt. Existing 0.8 x 1.5 mm headless studs remain hidden in both components. There are now eighteen skirt studs. Both modified exported meshes and finite fit/closure checks pass; physical assembly is untested.

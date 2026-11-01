@@ -1,0 +1,128 @@
+{
+  "revision": "2026-10-31_continuous-belt",
+  "raw_export_directory": "/Users/ilia/Documents/Codex/2026-10-31/https-github-com-domyshev-3d-workshop/work/3d-workshop/stl/2026/2026.10/2026.10.31",
+  "source_available": true,
+  "physical_print_verified": false,
+  "files": {
+    "2026-10-31_sarepta_170mm_continuous_dashboard.stl": {
+      "sha256": "a444f15090879a9a0ff9f326fe8b6e7a2d5fd790ad6dc9f3ff1bc5762ffbcd81",
+      "bytes": 1484
+    },
+    "2026-10-31_sarepta_170mm_continuous_lower.stl": {
+      "sha256": "f387fa54f8a048f97399e9721f9ecb685a01944e9f02e3fa92a2c7c82d7ee072",
+      "bytes": 4837684
+    },
+    "2026-10-31_sarepta_170mm_continuous_pin.stl": {
+      "sha256": "e2b7cead6cc83c4b90a4aa564b3ba6e4803b1a386188ea5ba33f77e92233efbf",
+      "bytes": 15884
+    },
+    "2026-10-31_sarepta_170mm_continuous_upper.stl": {
+      "sha256": "8fb19f29e09d7acce6ede08dc1004bc23804734db516e008322f53e0bd39e4d1",
+      "bytes": 2037584
+    },
+    "README.md": {
+      "sha256": "c2cebb2ca5b4558727ee95b227606c7bfd9cbeac6bf62ff8f6479994fca87754",
+      "bytes": 4140
+    },
+    "assembly-view.scad": {
+      "sha256": "fab099bbdc5979013380050c294366737d7c60a76b25dd2cf547bae159873a22",
+      "bytes": 82
+    },
+    "belt-guides.json": {
+      "sha256": "7886a530907acf7313e3962f424f5816a496102d9024f1ccc2e5b9eaa35d1ab3",
+      "bytes": 1117689
+    },
+    "belt.scad": {
+      "sha256": "ca8f33fea969434066fd3abebfd4cad093ea07b99f54a3b2b8620919d6b98f0e",
+      "bytes": 2050161
+    },
+    "bow.png": {
+      "sha256": "611f5e7e23d2825d949cf76dfb26483b259c4072930e989b5b2288e348940710",
+      "bytes": 59360
+    },
+    "clean_export.py": {
+      "sha256": "117148909cbe397759f9b881114ab8066e1bffbcc566494bdeec64873eaf1902",
+      "bytes": 2234
+    },
+    "cleanup-lower.json": {
+      "sha256": "83406b28112ddf0c000cc4b382b995bd9d3b9ca481dfb23bb3de05ed6a6467ff",
+      "bytes": 233
+    },
+    "cleanup-upper.json": {
+      "sha256": "db19195f66c14abd014cb4c45e96c535da008375a406486a5beb32361cb9fb92",
+      "bytes": 209
+    },
+    "export.sh": {
+      "sha256": "7423f037321e29037165018e88c4766bbd9c2ae84a57d9828b65d6e845004c2a",
+      "bytes": 654
+    },
+    "feedback/owner-feedback-01.png": {
+      "sha256": "fd84fff2ca0f648241c9a9d4197f698aee90d6c6b59fb2ceaa0165dd81191f2f",
+      "bytes": 76869
+    },
+    "feedback/owner-feedback-02.png": {
+      "sha256": "594becf14301a6f2dda59e6de67f6d6dc9714d82ebc776197d4f99652511ac69",
+      "bytes": 25109
+    },
+    "feedback/owner-feedback-03.png": {
+      "sha256": "2868c5d62019ef4895561f82174cae8577aea9fe5e29288dc924f3c5f0b2023a",
+      "bytes": 18113
+    },
+    "feedback/owner-feedback-04.png": {
+      "sha256": "076e10f75f973b302962bc8bfe2bb60e46d4d70ddd54d614b29a860068b17d28",
+      "bytes": 15842
+    },
+    "feedback/owner-feedback-05.png": {
+      "sha256": "addfc25dc9dc350d9cdfe225c15d42b26962ab5de3fafa837dcef0cc4e3fbe93",
+      "bytes": 12298
+    },
+    "feedback/owner-feedback-06.png": {
+      "sha256": "c434ee2f21b65cdd83a2518e5e31e6aa96faddda018fc023b34a924c50950608",
+      "bytes": 34090
+    },
+    "feedback/owner-feedback-07.png": {
+      "sha256": "cbd9f862b3cdb6dd0884dd53f89bc70c21e4a1097de45f0eb40d9730c26ca78f",
+      "bytes": 73238
+    },
+    "generate_belt.py": {
+      "sha256": "831a7f4b75192cf901988788f4a7a9ed0baa314955e73d0f705aa33cba390ddc",
+      "bytes": 3154
+    },
+    "inspection-view.scad": {
+      "sha256": "11f658b369e9e903eb192b4d2831bd0c193ba3f01ffdffa9bf730c0d22859247",
+      "bytes": 1246
+    },
+    "inspection.png": {
+      "sha256": "a731f6dbb9f2dbb11ae60c34dcc479552fa297ac4d4c8ae12200020e6a21980f",
+      "bytes": 87392
+    },
+    "raw/2026-10-31_sarepta_170mm_continuous_lower.stl": {
+      "sha256": "a65aa5c6f60b249be357a57709e2bc0d7873401011b17a244de28c9c4aa8aae9",
+      "bytes": 4890784
+    },
+    "raw/2026-10-31_sarepta_170mm_continuous_upper.stl": {
+      "sha256": "c0a0d9e8bc4866c03cdbc04e6565f63191d511925aa33213e0624c6c65a1fd19",
+      "bytes": 2037584
+    },
+    "source.scad": {
+      "sha256": "7b6f3389772560c7f8202a7eff6787607a039c7068c5424076b9eca7240c59a6",
+      "bytes": 8978
+    },
+    "starboard.png": {
+      "sha256": "9ab052b40777ee228208881ae14bc32cdbddbb763af49501080bb08e4202a41d",
+      "bytes": 61869
+    },
+    "stern.png": {
+      "sha256": "44f5f21fd0686339e6ed372e42ec3d11edd3ad703ea64fee48de6c56bf164fa9",
+      "bytes": 101453
+    },
+    "verification.json": {
+      "sha256": "43d44455f529207a9a60b3617bb63f2e70716924f68fc1b4d3d4f0be662d35b2",
+      "bytes": 2398
+    },
+    "verify.py": {
+      "sha256": "4886f67507a10ab7e8ba0c4324d37635d13a898deccf2695ea6954c4f2421c84",
+      "bytes": 5948
+    }
+  }
+}
