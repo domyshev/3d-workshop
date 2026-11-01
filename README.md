@@ -286,7 +286,7 @@ Group small changes from one iteration into a single entry. Distinguish creation
 
 Models are developed in OpenSCAD. Shared libraries support several areas of work.
 
-Export STLs with [`export_stl`](export_stl). Select an individual part when exporting an assembly model. Supply an explicit output directory following `<STL_BASE_PATH>/<YYYY>/<YYYY.MM>/<YYYY.MM.DD>/`; the base path must be provided for the current export. Exported filenames include the export date. On macOS the exporter checks whether OpenSCAD can start normally and falls back to x86_64 compatibility mode when required and available. Native builds and non-macOS execution are preserved.
+Export STLs with [`export_stl`](export_stl). Select an individual part when exporting an assembly model. Supply an explicit output directory following `<STL_BASE_PATH>/<YYYY>/<YYYY.MM>/<YYYY.MM.DD>/`; the base path must be provided for the current export. Exported filenames include the export date. On macOS the exporter inspects binary metadata and selects x86_64 for Intel-capable Mach-O builds, avoiding ARM startup probes that can trigger crash-report dialogs. ARM-only builds, command wrappers and non-macOS execution retain their normal invocation.
 
 For example, after resolving the destination directory:
 

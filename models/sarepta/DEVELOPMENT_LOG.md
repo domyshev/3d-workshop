@@ -591,3 +591,17 @@ lower/bow exports and the hinge upper export pass mesh checks and match their
 archived solid volumes. Real compatibility-mode exports also pass. Re-exported
 bytes can differ because of triangulation order; archived STLs were not replaced.
 The current `sarepta_inspection.scad` entry point was opened locally in OpenSCAD.
+
+## 2026-11-01 — Avoid intrusive crash-report dialogs
+
+The owner reported macOS "OpenSCAD quit unexpectedly" dialogs during agent work.
+The previous native-startup probe could itself trigger those dialogs before a
+successful compatibility-mode export. Replace probing with passive Mach-O
+metadata selection: Intel-capable macOS binaries run directly through x86_64,
+while ARM-only binaries, wrappers and non-macOS commands keep their invocation.
+Only a harmless `/usr/bin/true` checks Intel compatibility availability; no
+OpenSCAD `--version` probe is run. Five launcher tests pass, including proof that
+the universal build is never launched natively or probed. The current hull/rim
+scripts export successfully through the compatibility path. Repository guidance
+now records safe CLI and GUI invocation. System-wide crash reporting settings
+were not changed, and historical geometry was not regenerated in the archive.

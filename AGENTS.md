@@ -20,3 +20,13 @@
 - `STL_BASE_PATH` must come from the current conversation. If it is not present
   in the agent's context, ask the user for it before exporting instead of
   assuming a path.
+
+## macOS OpenSCAD launch safety
+
+- Use `./export_stl` for CLI exports; it selects Intel compatibility mode from
+  Mach-O metadata without starting OpenSCAD as a capability probe.
+- Do not test a known-incompatible ARM build with `--version` or a render:
+  even a handled abort can display an intrusive macOS crash dialog.
+- When opening an Intel-capable OpenSCAD app bundle for inspection on macOS,
+  use `open --arch x86_64 -a <app-bundle> <inspection-file>`. Reuse the existing
+  application instance; do not force-close it or discard unsaved documents.

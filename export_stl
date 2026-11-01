@@ -90,18 +90,19 @@ if [[ -z "${openscad_bin}" ]]; then
     exit 1
 fi
 
-# Probe macOS builds before rendering: some universal bundles fail in ARM mode.
-# Keep working native builds and existing caller-provided wrappers unchanged.
+# Inspect Mach-O metadata; never crash the ARM build as a compatibility probe.
+# Universal OpenSCAD bundles use Intel mode on macOS to avoid the known Qt abort.
+# Scripts/wrappers and ARM-only binaries retain their original invocation.
 openscad_command=("${openscad_bin}")
 if [[ "$(uname -s)" == Darwin ]]; then
-    if ! { "${openscad_command[@]}" --version; } >/dev/null 2>&1; then
-        if { arch -x86_64 "${openscad_bin}" --version; } >/dev/null 2>&1; then
-            openscad_command=(arch -x86_64 "${openscad_bin}")
-            echo "Using OpenSCAD in x86_64 compatibility mode."
-        else
-            echo "OpenSCAD cannot start natively or in x86_64 compatibility mode." >&2
+    openscad_format="$(file -bL "${openscad_bin}" 2>/dev/null || true)"
+    if [[ "${openscad_format}" == *Mach-O*x86_64* ]]; then
+        if ! { arch -x86_64 /usr/bin/true; } >/dev/null 2>&1; then
+            echo "OpenSCAD needs x86_64 compatibility support on this Mac." >&2
             exit 1
         fi
+        openscad_command=(arch -x86_64 "${openscad_bin}")
+        echo "Using OpenSCAD in x86_64 compatibility mode."
     fi
 fi
 
