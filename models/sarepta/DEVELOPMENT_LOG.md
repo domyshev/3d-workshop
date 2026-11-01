@@ -578,3 +578,16 @@ The [hinge-socket revision](releases/2026-11-01_hatch-hinge-sockets/README.md) a
 ## Forward protective-skirt sockets — 2026-11-01
 
 The [front-socket revision](releases/2026-11-01_front-skirt-sockets/README.md) adds four matching pairs of blind 1 mm sockets on the forward V faces and inner bow skirt. Existing 0.8 x 1.5 mm headless studs remain hidden in both components. There are now eighteen skirt studs. Both modified exported meshes and finite fit/closure checks pass; physical assembly is untested.
+
+## 2026-11-01 — PR #1 accepted; shared exporter compatibility
+
+Accepted and merged ilia-108's geometry/rim review as PR #1, with the macOS
+OpenSCAD launcher issue explicitly accepted for our own follow-up. The shared
+`export_stl` now checks the native macOS launch and falls back to x86_64 when
+needed and available; release snapshots do not need rewritten launcher wrappers.
+Native builds and non-macOS execution remain unchanged. Four launcher tests pass,
+including argument preservation and failure before export. Real front-skirt
+lower/bow exports and the hinge upper export pass mesh checks and match their
+archived solid volumes. Real compatibility-mode exports also pass. Re-exported
+bytes can differ because of triangulation order; archived STLs were not replaced.
+The current `sarepta_inspection.scad` entry point was opened locally in OpenSCAD.

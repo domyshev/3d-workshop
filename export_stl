@@ -90,6 +90,21 @@ if [[ -z "${openscad_bin}" ]]; then
     exit 1
 fi
 
+# Probe macOS builds before rendering: some universal bundles fail in ARM mode.
+# Keep working native builds and existing caller-provided wrappers unchanged.
+openscad_command=("${openscad_bin}")
+if [[ "$(uname -s)" == Darwin ]]; then
+    if ! { "${openscad_command[@]}" --version; } >/dev/null 2>&1; then
+        if { arch -x86_64 "${openscad_bin}" --version; } >/dev/null 2>&1; then
+            openscad_command=(arch -x86_64 "${openscad_bin}")
+            echo "Using OpenSCAD in x86_64 compatibility mode."
+        else
+            echo "OpenSCAD cannot start natively or in x86_64 compatibility mode." >&2
+            exit 1
+        fi
+    fi
+fi
+
 mkdir -p "${output_dir}"
 today="$(date +%F)"
 output_stl="${output_dir%/}/${today}_${output_name}.stl"
@@ -98,9 +113,9 @@ echo "Rendering ${source_scad}"
 echo "Exporting ${output_stl}"
 
 if [[ ${#openscad_args[@]} -gt 0 ]]; then
-    "${openscad_bin}" "${openscad_args[@]}" -o "${output_stl}" "${source_scad}"
+    "${openscad_command[@]}" "${openscad_args[@]}" -o "${output_stl}" "${source_scad}"
 else
-    "${openscad_bin}" -o "${output_stl}" "${source_scad}"
+    "${openscad_command[@]}" -o "${output_stl}" "${source_scad}"
 fi
 
 echo "Done: ${output_stl}"
